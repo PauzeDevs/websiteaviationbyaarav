@@ -1,149 +1,119 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js';
 
-const canvas = document.querySelector('#aircraft-canvas');
-const stage = document.querySelector('#aircraft-stage');
-if (canvas && stage) {
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.7));
-  renderer.setSize(stage.clientWidth, stage.clientHeight, false);
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.15;
+const canvas=document.querySelector('#aircraft-canvas');
+const stage=document.querySelector('#aircraft-stage');
 
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(34, stage.clientWidth / stage.clientHeight, .1, 100);
-  camera.position.set(0, 3.1, 13.5);
-  camera.lookAt(0, 0, 0);
+if(canvas&&stage){
+  try{
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'default'});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.35));
+    renderer.outputColorSpace=THREE.SRGBColorSpace;
+    renderer.toneMapping=THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure=1.18;
 
-  scene.add(new THREE.HemisphereLight(0xc7e4ff, 0x101a2a, 2.0));
-  const key = new THREE.DirectionalLight(0xf2f8ff, 3.4);
-  key.position.set(-5, 7, 8); scene.add(key);
-  const rim = new THREE.DirectionalLight(0x68b9ff, 3.1);
-  rim.position.set(6, 2, -7); scene.add(rim);
-  const under = new THREE.PointLight(0x367fc1, 24, 18);
-  under.position.set(0, -3, 1); scene.add(under);
+    const scene=new THREE.Scene();
+    const camera=new THREE.PerspectiveCamera(38,1,.1,120);
+    camera.position.set(5.2,4.0,18.5);
+    camera.lookAt(0,0,0);
 
-  const aircraft = new THREE.Group();
-  scene.add(aircraft);
-  const paint = new THREE.MeshPhysicalMaterial({ color: 0xdce9f5, metalness: .62, roughness: .27, clearcoat: .8, clearcoatRoughness: .2 });
-  const dark = new THREE.MeshStandardMaterial({ color: 0x263d56, metalness: .72, roughness: .32 });
-  const glass = new THREE.MeshPhysicalMaterial({ color: 0x142b43, metalness: .42, roughness: .12, clearcoat: 1 });
-  const accent = new THREE.MeshStandardMaterial({ color: 0x79bfff, metalness: .55, roughness: .23, emissive: 0x102c49, emissiveIntensity: .45 });
+    scene.add(new THREE.HemisphereLight(0xd8edff,0x142033,2.1));
+    const key=new THREE.DirectionalLight(0xffffff,3.1);key.position.set(-6,8,10);scene.add(key);
+    const rim=new THREE.DirectionalLight(0x65baff,2.8);rim.position.set(7,3,-8);scene.add(rim);
+    const fill=new THREE.PointLight(0x3b8ed0,15,24);fill.position.set(0,-4,3);scene.add(fill);
 
-  function mesh(geometry, material, parent=aircraft) {
-    const item = new THREE.Mesh(geometry, material);
-    item.castShadow = true; item.receiveShadow = true; parent.add(item); return item;
-  }
-  function cylinderBetween(radiusA, radiusB, length, material, x, y, z, rotationX=Math.PI/2) {
-    const item = mesh(new THREE.CylinderGeometry(radiusA, radiusB, length, 32, 1, false), material);
-    item.position.set(x,y,z); item.rotation.x=rotationX; return item;
-  }
+    const aircraft=new THREE.Group();scene.add(aircraft);
+    const finish=new THREE.MeshPhysicalMaterial({color:0xdce8f4,metalness:.32,roughness:.3,clearcoat:.85,clearcoatRoughness:.22});
+    const engineMat=new THREE.MeshStandardMaterial({color:0x263c52,metalness:.55,roughness:.36});
+    const windowMat=new THREE.MeshPhysicalMaterial({color:0x102940,metalness:.25,roughness:.14,clearcoat:1});
+    const blue=new THREE.MeshStandardMaterial({color:0x82c5ff,emissive:0x12395c,emissiveIntensity:.35,metalness:.35,roughness:.25});
+    function add(geo,mat,x=0,y=0,z=0,parent=aircraft){const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);m.castShadow=true;parent.add(m);return m;}
 
-  // Smooth tapered fuselage, nose pointing toward the viewer.
-  const fuselageProfile = [
-    new THREE.Vector2(0, -5.25), new THREE.Vector2(.10, -5.08), new THREE.Vector2(.28, -4.65),
-    new THREE.Vector2(.43, -3.7), new THREE.Vector2(.49, -2.2), new THREE.Vector2(.50, 1.8),
-    new THREE.Vector2(.46, 3.6), new THREE.Vector2(.34, 4.45), new THREE.Vector2(.12, 5.05),
-    new THREE.Vector2(0, 5.2)
-  ];
-  const body = mesh(new THREE.LatheGeometry(fuselageProfile, 48), paint);
-  body.rotation.x = Math.PI/2;
-  // Cockpit glazing on the forward upper fuselage.
-  const cockpit = mesh(new THREE.SphereGeometry(.39, 24, 12, 0, Math.PI*2, 0, Math.PI*.42), glass);
-  cockpit.scale.set(1.02,.45,.78); cockpit.position.set(0,.36,4.36); cockpit.rotation.x=.15;
+    // Build around the fuselage's longitudinal Z axis.
+    const profile=[new THREE.Vector2(0,-5.3),new THREE.Vector2(.12,-5.12),new THREE.Vector2(.3,-4.7),new THREE.Vector2(.43,-3.8),new THREE.Vector2(.48,-2),new THREE.Vector2(.48,2.7),new THREE.Vector2(.4,4),new THREE.Vector2(.22,4.8),new THREE.Vector2(0,5.15)];
+    const fuselage=add(new THREE.LatheGeometry(profile,48),finish);fuselage.rotation.x=Math.PI/2;
 
-  // Wing planforms are extruded for a clean, solid silhouette.
-  function wingShape(span, rootChord, tipChord, sweep) {
-    const s = new THREE.Shape();
-    s.moveTo(-.42, -rootChord*.48);
-    s.lineTo(span, -rootChord*.48+sweep);
-    s.lineTo(span, -rootChord*.48+sweep+tipChord);
-    s.lineTo(.42, rootChord*.48);
-    s.closePath();
-    return new THREE.ExtrudeGeometry(s,{depth:.12,bevelEnabled:true,bevelSegments:2,steps:1,bevelSize:.045,bevelThickness:.035});
-  }
-  const wings = mesh(wingShape(5.4,2.65,.55,1.25), paint);
-  wings.rotation.x=Math.PI/2; wings.position.y=-.12;
-  // Opposite wing half.
-  const wing2=mesh(wingShape(5.4,2.65,.55,1.25),paint);
-  wing2.rotation.x=Math.PI/2; wing2.rotation.z=Math.PI; wing2.position.y=-.12;
-
-  // Horizontal stabilisers and upright tail.
-  const tailGeo = wingShape(2.25,1.45,.42,.45);
-  const tail=mesh(tailGeo,paint); tail.scale.set(.52,.52,.72); tail.rotation.x=Math.PI/2; tail.position.set(0,.1,-4.35);
-  const finShape = new THREE.Shape();
-  finShape.moveTo(0,0); finShape.lineTo(0,2.05); finShape.lineTo(.72,1.48); finShape.lineTo(.9,0); finShape.closePath();
-  const fin=mesh(new THREE.ExtrudeGeometry(finShape,{depth:.13,bevelEnabled:true,bevelSegments:2,bevelSize:.04,bevelThickness:.035}),paint);
-  fin.position.set(0,.25,-4.25);
-
-  // Two turbofan nacelles, pylons and dark intakes.
-  for (const side of [-1,1]) {
-    const x=side*1.85;
-    const engine=cylinderBetween(.48,.57,1.75,dark,x,-.48,.35);
-    const intake=mesh(new THREE.TorusGeometry(.47,.075,12,36),accent);
-    intake.position.set(x,-.48,.35); intake.rotation.x=Math.PI/2;
-    const fan=mesh(new THREE.CylinderGeometry(.34,.34,.035,32),glass);
-    fan.position.set(x,-.48,.39); fan.rotation.x=Math.PI/2;
-    for(let i=0;i<8;i++){
-      const blade=mesh(new THREE.BoxGeometry(.035,.025,.27),accent);
-      blade.position.set(x+Math.cos(i*Math.PI/4)*.18,-.48+Math.sin(i*Math.PI/4)*.18,.415);
-      blade.rotation.z=i*Math.PI/4;
+    // Cockpit glazing and cabin windows.
+    const cockpit=add(new THREE.SphereGeometry(.34,24,16),windowMat,0,.37,4.62);cockpit.scale.set(1.05,.48,.78);
+    for(const side of [-1,1])for(let i=0;i<19;i++){
+      const z=2.8-i*.34;
+      const w=add(new THREE.SphereGeometry(.047,10,8),windowMat,side*.465,.18,z);w.scale.set(.55,1,.8);
     }
-    const pylon=mesh(new THREE.BoxGeometry(.16,.55,.72),dark);
-    pylon.position.set(x,-.24,.2);
-    const gear=mesh(new THREE.CylinderGeometry(.045,.045,.8,12),dark);
-    gear.position.set(side*3.7,-.12,-1.3); gear.rotation.z=side*.14;
-  }
 
-  // Subtle cabin windows along both visible sides.
-  for (const side of [-1,1]) {
-    for(let i=0;i<18;i++){
-      const z=2.65-i*.34;
-      const w=mesh(new THREE.SphereGeometry(.045,8,8),glass);
-      w.scale.set(.55,1,.72); w.position.set(side*.475,.17,z);
+    // Swept wings with a single continuous profile on each side.
+    function makeWing(side){
+      const shape=new THREE.Shape();
+      shape.moveTo(0,-1.25);shape.lineTo(side*5.25,-.1);shape.lineTo(side*5.25,.42);shape.lineTo(side*.5,1.3);shape.lineTo(0,1.3);shape.closePath();
+      const wing=add(new THREE.ExtrudeGeometry(shape,{depth:.13,bevelEnabled:true,bevelSegments:2,steps:1,bevelSize:.035,bevelThickness:.025}),finish,0,-.12,0);
+      wing.rotation.x=Math.PI/2;
     }
-  }
-  // Wingtip navigation lights.
-  for (const side of [-1,1]) {
-    const light=mesh(new THREE.SphereGeometry(.075,12,12),accent);
-    light.position.set(side*5.15,-.04,-.65);
-  }
+    makeWing(1);makeWing(-1);
 
-  // A floating orbital ring and soft point field establish depth without visual noise.
-  const orbit = new THREE.Mesh(new THREE.TorusGeometry(6.1,.008,6,180), new THREE.MeshBasicMaterial({color:0x8fcaff,transparent:true,opacity:.22}));
-  orbit.rotation.x=1.12; orbit.rotation.y=-.18; orbit.position.y=-.15; scene.add(orbit);
-  const points = new THREE.BufferGeometry();
-  const positions=[];
-  for(let i=0;i<260;i++){positions.push((Math.random()-.5)*23,(Math.random()-.5)*13,(Math.random()-.5)*18-4);}
-  points.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
-  scene.add(new THREE.Points(points,new THREE.PointsMaterial({color:0xaed8ff,size:.018,transparent:true,opacity:.48})));
+    // Tailplane and vertical stabiliser.
+    for(const side of [-1,1]){
+      const tail=add(new THREE.BoxGeometry(2.45,.12,.82),finish,side*.92,.05,-4.45);
+      tail.rotation.y=side*.16;
+    }
+    const fin=add(new THREE.BoxGeometry(.14,1.8,1.25),finish,0,.82,-4.35);fin.rotation.x=-.12;
 
-  const pointer={x:0,y:0,tx:0,ty:0};
-  stage.addEventListener('pointermove',e=>{
-    const r=stage.getBoundingClientRect();
-    pointer.tx=((e.clientX-r.left)/r.width-.5)*.7;
-    pointer.ty=((e.clientY-r.top)/r.height-.5)*.28;
-  },{passive:true});
-  stage.addEventListener('pointerleave',()=>{pointer.tx=0;pointer.ty=0;},{passive:true});
-  let frame=0;
-  function resize(){
-    const w=stage.clientWidth,h=stage.clientHeight;
-    if(!w||!h)return;
-    renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix();
+    // Two turbofan engines under the wings.
+    for(const side of [-1,1]){
+      const x=side*1.85;
+      const nacelle=add(new THREE.CylinderGeometry(.48,.54,1.65,32),engineMat,x,-.48,.15);nacelle.rotation.x=Math.PI/2;
+      const lip=add(new THREE.TorusGeometry(.46,.065,12,36),blue,x,-.48,.99);lip.rotation.x=Math.PI/2;
+      const intake=add(new THREE.CircleGeometry(.39,32),windowMat,x,-.48,1.005);intake.rotation.x=0;
+      const pylon=add(new THREE.BoxGeometry(.18,.52,.7),engineMat,x,-.22,.05);
+      const gear=add(new THREE.CylinderGeometry(.045,.045,.62,12),engineMat,side*3.65,-.38,-1.15);gear.rotation.z=side*.1;
+    }
+
+    // Small wingtip lights.
+    for(const side of [-1,1])add(new THREE.SphereGeometry(.07,12,12),blue,side*5.12,-.02,.05);
+
+    const planeBounds=new THREE.Box3().setFromObject(aircraft);
+    const center=planeBounds.getCenter(new THREE.Vector3());aircraft.position.sub(center);
+    aircraft.scale.setScalar(.88);
+
+    const halo=new THREE.Mesh(new THREE.TorusGeometry(6.5,.009,6,180),new THREE.MeshBasicMaterial({color:0x8fcaff,transparent:true,opacity:.17}));
+    halo.rotation.set(1.12,0,-.2);halo.position.y=-.2;scene.add(halo);
+
+    const starsGeo=new THREE.BufferGeometry(),coords=[];
+    for(let i=0;i<150;i++)coords.push((Math.random()-.5)*22,(Math.random()-.5)*12,(Math.random()-.5)*16-3);
+    starsGeo.setAttribute('position',new THREE.Float32BufferAttribute(coords,3));
+    scene.add(new THREE.Points(starsGeo,new THREE.PointsMaterial({color:0xb6dcff,size:.018,transparent:true,opacity:.38})));
+
+    const pointer={x:0,y:0,tx:0,ty:0};
+    stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();pointer.tx=((e.clientX-r.left)/r.width-.5)*.42;pointer.ty=((e.clientY-r.top)/r.height-.5)*.2;},{passive:true});
+    stage.addEventListener('pointerleave',()=>{pointer.tx=0;pointer.ty=0;},{passive:true});
+
+    function resize(){
+      const w=Math.max(1,stage.clientWidth),h=Math.max(1,stage.clientHeight),aspect=w/h;
+      renderer.setSize(w,h,false);camera.aspect=aspect;
+      // Pull the camera back on portrait screens so both wingtips stay in frame.
+      camera.position.z=aspect<1.05?22.5:aspect<1.45?19.5:17.5;
+      camera.position.x=aspect<1.05?2.8:5.2;
+      camera.position.y=aspect<1.05?3.3:4;
+      camera.lookAt(0,0,0);camera.updateProjectionMatrix();
+    }
+    const observer=new ResizeObserver(resize);observer.observe(stage);resize();
+
+    let frame=0,raf=0;
+    function animate(){
+      if(document.hidden){raf=requestAnimationFrame(animate);return;}
+      frame+=.006;
+      pointer.x+=(pointer.tx-pointer.x)*.035;pointer.y+=(pointer.ty-pointer.y)*.035;
+      aircraft.rotation.y=(reduced?-.12:Math.sin(frame*.55)*.08)+pointer.x;
+      aircraft.rotation.x=-.025+pointer.y;
+      aircraft.position.y=Math.sin(frame*.7)*.055;
+      halo.rotation.z=frame*.018;
+      renderer.render(scene,camera);
+      raf=requestAnimationFrame(animate);
+    }
+    animate();
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else animate();});
+    window.addEventListener('pagehide',()=>{observer.disconnect();cancelAnimationFrame(raf);renderer.dispose();},{once:true});
+  }catch(error){
+    console.warn('3D aircraft scene unavailable:',error);
+    stage.classList.add('scene-fallback');
+    canvas.hidden=true;
   }
-  const observer=new ResizeObserver(resize); observer.observe(stage);
-  function animate(){
-    if(document.hidden){requestAnimationFrame(animate);return;}
-    frame+=.006;
-    pointer.x+=(pointer.tx-pointer.x)*.035; pointer.y+=(pointer.ty-pointer.y)*.035;
-    aircraft.rotation.y=(reduced?-.18:Math.sin(frame*.7)*.12)+pointer.x;
-    aircraft.rotation.x=-.035+pointer.y;
-    aircraft.position.y=Math.sin(frame*.8)*.09;
-    orbit.rotation.z=frame*.035;
-    renderer.render(scene,camera);
-    requestAnimationFrame(animate);
-  }
-  animate();
-  window.addEventListener('pagehide',()=>{observer.disconnect();renderer.dispose();},{once:true});
 }
