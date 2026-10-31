@@ -26,7 +26,7 @@ function render(){
     const imageMarkup=image?'<img src="'+esc(image)+'" alt="'+esc(s.title)+'" loading="lazy" decoding="async" onerror="this.remove()">':'<span class="image-placeholder">IMAGE NOT PROVIDED BY SOURCE</span>';
     return `<article class="story-card">
       <a class="story-image-link" href="${esc(href)}" aria-label="Open ${esc(s.title)}">
-        <div class="story-image \${image?'has-image':'no-image'}">\${imageMarkup}<span class="image-tag">\${esc(s.category||'AVIATION')}</span></div>
+        <div class="story-image ${image?'has-image':'no-image'}">${imageMarkup}<span class="image-tag">${esc(s.category||'AVIATION')}</span></div>
       </a>
       <div class="story-content"><div class="story-meta"><span>${esc(s.source||'News desk')}</span><time>${dateLabel(s.published)}</time></div>
       <h3>${esc(s.title)}</h3><p>${esc(s.summary||'Read the original report for the full story.')}</p>
