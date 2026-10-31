@@ -51,9 +51,9 @@ if(canvas){
    if(!reduced){mists.forEach((m,i)=>{m.position.x+=.004+(i%3)*.001;if(m.position.x>22)m.position.x=-22;});}
    const p=geo.attributes.position.array;
    if(!reduced){for(let i=0;i<count;i++){p[i*3+1]-=speeds[i];p[i*3]+=.002;if(p[i*3+1]<-6){p[i*3+1]=19;p[i*3]=(Math.random()-.5)*48;}}geo.attributes.position.needsUpdate=true;temple.rotation.y=Math.sin(frame*.25)*.012;}
-   renderer.render(scene,camera);raf=requestAnimationFrame(animate);
+   renderer.render(scene,camera);raf=reduced?0:requestAnimationFrame(animate);
   }
-  function start(){if(!reduced&&!document.hidden&&!raf)raf=requestAnimationFrame(animate);else if(!raf)raf=requestAnimationFrame(animate);}
+  function start(){if(!document.hidden&&!raf)raf=requestAnimationFrame(animate);}
   function stop(){if(raf){cancelAnimationFrame(raf);raf=0;}}
   document.addEventListener("visibilitychange",()=>{if(document.hidden)stop();else start();});
   start();
