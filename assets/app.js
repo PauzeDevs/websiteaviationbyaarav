@@ -1,6 +1,6 @@
 const grid=document.querySelector('#story-grid');
 const scriptUrl=document.currentScript?.src||new URL('assets/app.js',location.href).href;
-const fromSiteRoot=path=>new URL('../'+path.replace(/^\\//,''),scriptUrl).href;
+const fromSiteRoot=path=>new URL('../'+path,scriptUrl).href;
 let stories=[];
 let activeFilter='All';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
