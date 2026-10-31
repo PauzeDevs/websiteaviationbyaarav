@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="assets/pauzex-editorial.css">
 </head>
 <body>
+<canvas id="ambient-three-canvas" aria-hidden="true"></canvas>
 <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
 <div class="flight-layer" aria-hidden="true">
  <svg class="flight-path path-one" viewBox="0 0 1200 360" preserveAspectRatio="none"><path d="M-80 290 C180 40 390 40 610 180 S980 330 1280 50"/></svg>
@@ -74,6 +75,7 @@
 </section>
 </main>
 <footer><a class="brand brand-logo footer-brand" href="/" aria-label="Aviation by Aarav home"><img src="assets/file_000000008260821183c81398641a4ae8.png" alt="Aviation by Aarav" /></a><span>Aviation news · Aircraft · India</span><span>© <span id="year"></span> AVIATION BY AARAV</span></footer>
+<script type="module" src="assets/ambient-scene.js"></script>
 <script type="module" src="assets/aircraft-scene.js"></script>
 <script src="assets/app.js"></script>
 </body></html>
