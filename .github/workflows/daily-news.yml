@@ -6,6 +6,8 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+    paths-ignore:
+      - "data/news.json"
 
 permissions:
   contents: write
@@ -14,7 +16,7 @@ permissions:
 
 concurrency:
   group: aviation-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   publish:
