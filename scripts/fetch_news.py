@@ -20,7 +20,7 @@ HEADERS = {"User-Agent": "AviationByAaravNewsBot/1.0 (+https://github.com/PauzeD
 
 def clean(value):
     value = re.sub(r"<[^>]+>", " ", unescape(value or ""))
-    return re.sub(r"\\s+", " ", value).strip()
+    return re.sub(r"\s+", " ", value).strip()
 
 def slugify(value):
     return re.sub(r"^-|-$", "", re.sub(r"[^a-z0-9]+", "-", value.lower()))[:90] or "aviation-story"
@@ -122,7 +122,7 @@ def main():
         (ARTICLE_DIR / (article["slug"] + ".html")).write_text(article_page(article), encoding="utf-8")
     payload = {"updated": datetime.now(timezone.utc).isoformat(), "articles": unique, "feed_warnings": failed}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Saved {len(unique)} stories and generated {len(unique)} article pages.")
 
 if __name__ == "__main__": main()
