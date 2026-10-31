@@ -30,7 +30,7 @@ function render(){
       </a>
       <div class="story-content"><div class="story-meta"><span>${esc(s.source||'News desk')}</span><time>${dateLabel(s.published)}</time></div>
       <h3>${esc(s.title)}</h3><p>${esc(s.summary||'Read the original report for the full story.')}</p>
-      <a class="story-source" href="${esc(href)}"><span>Read story</span><span>↗</span></a></div></article>`;
+      <div class="story-source"><a href="${esc(href)}"><span>Read our report ↗</span></a><a href="${esc(s.url||"#")}" target="_blank" rel="noopener noreferrer"><span>Original source ↗</span></a></div></div></article>`;
   }).join('');
 }
 document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
