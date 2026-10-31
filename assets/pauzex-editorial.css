@@ -29,7 +29,12 @@ body::after{content:"";position:fixed;inset:0;z-index:5;pointer-events:none;opac
 .ambient{display:none!important}
 a{color:inherit}
 .topbar{max-width:1440px;height:88px;padding:0 clamp(22px,5vw,76px);border-bottom:1px solid var(--line);color:var(--ink);background:rgba(239,244,243,.72);backdrop-filter:blur(26px) saturate(145%);-webkit-backdrop-filter:blur(26px) saturate(145%);z-index:20}
-.brand-logo img{display:block;width:clamp(150px,17vw,205px);max-height:52px;object-fit:contain;filter:none!important}
+.brand-logo{display:flex;align-items:center;flex:0 0 auto;width:168px;height:58px;overflow:hidden}
+.brand-logo img{display:block;width:168px;height:58px;max-width:48vw;max-height:none;object-fit:cover;object-position:center;filter:none!important;mix-blend-mode:multiply;background:transparent}
+.topbar .brand-logo{width:168px;height:58px}
+.footer-brand{width:150px;height:48px}
+.footer-brand img{width:150px;height:48px;max-height:none;object-fit:cover;mix-blend-mode:multiply}
+@media(max-width:760px){.topbar .brand-logo{width:142px;height:50px}.topbar .brand-logo img{width:142px;height:50px;max-width:44vw}.footer-brand,.footer-brand img{width:132px;height:44px}}
 .topbar nav{color:var(--ink-soft);font:500 11px var(--mono);letter-spacing:.04em}
 .topbar nav a{transition:color .25s ease}
 .topbar nav a:hover,.topbar nav a[aria-current=page]{color:var(--ink)}
@@ -115,7 +120,7 @@ a{color:inherit}
 .instagram-card small{color:var(--muted)}
 .ig-icon{color:#688b9c}
 footer{max-width:none;min-height:110px;padding:22px clamp(22px,5vw,76px);border-top:1px solid var(--line);background:rgba(236,242,240,.82);color:var(--muted);font:9px var(--mono);letter-spacing:.08em;backdrop-filter:blur(20px)}
-.footer-brand img{filter:none!important}
+.footer-brand img{filter:none!important;mix-blend-mode:multiply}
 .story-grid{gap:20px}
 .story-card{min-height:360px;overflow:hidden}
 .story-image{height:190px;background:#d9e1e1}
