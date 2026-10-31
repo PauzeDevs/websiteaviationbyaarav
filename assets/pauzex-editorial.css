@@ -249,3 +249,9 @@ footer{background:rgba(7,15,21,.76)!important;color:#8fa4ad!important;border-col
  .hero::before{inset:10px 8px!important;border-radius:22px!important}
  .topbar{background:rgba(7,15,21,.78)!important}
 }
+
+/* Brand lockup: use the transparent vector artwork, never a square raster tile. */
+.topbar .brand-logo{display:flex!important;width:166px!important;height:48px!important;flex:0 0 166px!important;overflow:visible!important;background:transparent!important}
+.topbar .brand-logo img{display:block!important;width:166px!important;height:48px!important;max-width:46vw!important;max-height:48px!important;object-fit:contain!important;object-position:left center!important;background:transparent!important;mix-blend-mode:normal!important;filter:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.footer-brand,.footer-brand img{width:145px!important;height:42px!important;max-height:42px!important;object-fit:contain!important;object-position:left center!important;background:transparent!important;mix-blend-mode:normal!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+@media(max-width:600px){.topbar .brand-logo{width:148px!important;height:44px!important;flex-basis:148px!important}.topbar .brand-logo img{width:148px!important;height:44px!important;max-width:44vw!important}}
