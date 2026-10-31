@@ -197,6 +197,9 @@ def main():
             if image: article["image"] = image
             if final_url and final_url.startswith("https://"): article["url"] = final_url
     ARTICLE_DIR.mkdir(parents=True, exist_ok=True)
+    # Remove stale pages from older feed runs so the directory matches this dataset.
+    for stale_page in ARTICLE_DIR.glob("*.html"):
+        stale_page.unlink()
     for article in unique:
         (ARTICLE_DIR / (article["slug"] + ".html")).write_text(article_page(article), encoding="utf-8")
     payload = {"updated": datetime.now(timezone.utc).isoformat(), "articles": unique, "feed_warnings": failed}
