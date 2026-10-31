@@ -1,0 +1,161 @@
+/* Aviation by Aarav — PauzeX-inspired editorial glass system.
+   Original design implementation, using the reference site's visual language. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root{
+  color-scheme:light;
+  --bg:#e9eef0;
+  --paper:#f5f7f7;
+  --paper-deep:#dfe6e9;
+  --ink:#1d3444;
+  --ink-soft:#4b6373;
+  --muted:#748895;
+  --line:rgba(29,52,68,.17);
+  --accent:#789fbd;
+  --accent-soft:#b8d0df;
+  --display:'Instrument Serif',Georgia,serif;
+  --font:'DM Sans',sans-serif;
+  --mono:'DM Mono',monospace;
+  --glass:rgba(255,255,255,.42);
+  --glass-strong:rgba(247,250,251,.72);
+  --glass-border:rgba(255,255,255,.78);
+  --glass-shadow:0 24px 70px rgba(31,61,82,.10),inset 0 1px 0 rgba(255,255,255,.9);
+}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:90px}
+body{position:relative;isolation:isolate;background:linear-gradient(135deg,#e9eef0 0%,#f2f5f4 48%,#e2e9e9 100%);background-attachment:fixed;color:var(--ink);font-family:var(--font);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 18% 22%,rgba(255,255,255,.9),transparent 34%),radial-gradient(ellipse at 82% 70%,rgba(183,203,211,.42),transparent 38%),radial-gradient(ellipse at 55% 10%,rgba(210,222,223,.6),transparent 42%);animation:px-atmosphere 24s ease-in-out infinite alternate;transform:translate3d(0,0,0)}
+body::after{content:"";position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.10;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E")}
+@keyframes px-atmosphere{0%{transform:translate3d(-2%,0,0) scale(1)}100%{transform:translate3d(2%,-1.5%,0) scale(1.06)}}
+.ambient{display:none!important}
+a{color:inherit}
+.topbar{max-width:1440px;height:88px;padding:0 clamp(22px,5vw,76px);border-bottom:1px solid var(--line);color:var(--ink);background:rgba(239,244,243,.72);backdrop-filter:blur(26px) saturate(145%);-webkit-backdrop-filter:blur(26px) saturate(145%);z-index:20}
+.brand-logo img{display:block;width:clamp(150px,17vw,205px);max-height:52px;object-fit:contain;filter:none!important}
+.topbar nav{color:var(--ink-soft);font:500 11px var(--mono);letter-spacing:.04em}
+.topbar nav a{transition:color .25s ease}
+.topbar nav a:hover,.topbar nav a[aria-current=page]{color:var(--ink)}
+.instagram-link{color:var(--ink);background:rgba(255,255,255,.38);border:1px solid var(--glass-border);box-shadow:inset 0 1px 0 white,0 8px 28px rgba(31,61,82,.06);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.instagram-link span{color:var(--accent)}
+.hero{max-width:1440px;min-height:690px;padding:clamp(92px,11vw,160px) clamp(22px,7vw,100px) 70px;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);align-items:center;gap:clamp(20px,4vw,65px);isolation:isolate}
+.hero::before{content:"";position:absolute;inset:7% 4%;z-index:-1;border:1px solid rgba(255,255,255,.72);border-radius:34px;background:linear-gradient(135deg,rgba(255,255,255,.40),rgba(255,255,255,.10));box-shadow:var(--glass-shadow);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.hero-copy-block{position:relative;z-index:2;max-width:650px}
+.eyebrow{color:var(--muted);font:500 9px var(--mono);letter-spacing:.16em;line-height:1.6}
+.live-dot,.status-dot{background:#789c88;box-shadow:0 0 12px rgba(120,156,136,.45)}
+.eyebrow-line{background:var(--line)}
+.hero h1{color:var(--ink);font:400 clamp(4.4rem,8.4vw,8.6rem)/.86 var(--display);letter-spacing:-.045em;margin:34px 0 26px}
+.hero h1 em,.briefing h2 em,.about h2 em,.india-copy h2 em{color:#789fbd;font-style:italic}
+.hero-copy{max-width:500px;color:var(--ink-soft);font-size:14px;line-height:1.9}
+.primary-button{color:#f5f7f7;background:var(--ink);border:1px solid var(--ink);border-radius:3px;padding:16px 20px;box-shadow:0 12px 30px rgba(29,52,68,.12);transition:transform .3s ease,background .3s ease,box-shadow .3s ease}
+.primary-button:hover{color:white;background:#36566a;transform:translateY(-3px);box-shadow:0 18px 36px rgba(29,52,68,.17)}
+.text-button{color:var(--ink-soft)}
+.text-button:hover{color:var(--ink)}
+.hero-meta{color:var(--muted);font:9px var(--mono);letter-spacing:.13em}
+.aircraft-stage{min-height:420px;height:min(48vw,520px);max-height:540px;position:relative;z-index:2;overflow:hidden;border:1px solid rgba(255,255,255,.32);border-radius:28px;background:radial-gradient(ellipse at 52% 45%,rgba(89,122,143,.24),transparent 48%),linear-gradient(145deg,#172b39,#0d1821 68%,#142431);box-shadow:0 35px 90px rgba(20,43,61,.24),inset 0 1px 0 rgba(255,255,255,.16)}
+.aircraft-stage::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(130deg,rgba(255,255,255,.09),transparent 35%),radial-gradient(ellipse at 80% 15%,rgba(195,218,228,.16),transparent 35%);z-index:1}
+.aircraft-stage::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background-image:linear-gradient(rgba(218,232,237,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(218,232,237,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+#aircraft-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+.aircraft-fallback{opacity:.8}
+.stage-vignette{z-index:3}
+.stage-label,.stage-bottom{z-index:4;color:rgba(224,237,241,.68);font:8px var(--mono);letter-spacing:.16em}
+.glass-float{z-index:5;background:linear-gradient(145deg,rgba(239,246,247,.18),rgba(239,246,247,.06));border:1px solid rgba(230,243,246,.25);border-radius:15px;box-shadow:0 16px 45px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.24);backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%);color:#eff5f5}
+.glass-float .glass-label{color:#b9d0d8;font:8px var(--mono);letter-spacing:.15em}
+.glass-float strong{font:400 25px/1.05 var(--display)}
+.glass-float small{color:rgba(224,237,241,.68)}
+.ticker{position:relative;z-index:2;background:var(--ink);color:#d9e4e7;border:0;height:64px;font:9px var(--mono);letter-spacing:.16em}
+.ticker-label{color:#c1d4d7}
+.ticker i{color:#9bb9b9}
+.newsroom-teaser,.india-section,.briefing,.about,.section{position:relative;z-index:1}
+.newsroom-teaser{max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,145px) clamp(22px,7vw,100px);display:grid;grid-template-columns:1fr .8fr;gap:8%;align-items:center;background:rgba(244,247,246,.34)}
+.newsroom-teaser h2,.india-copy h2,.briefing h2,.about h2{font:400 clamp(3rem,5.5vw,5.7rem)/.94 var(--display);letter-spacing:-.035em;color:var(--ink)}
+.newsroom-teaser p{max-width:460px;color:var(--ink-soft);font-size:14px;line-height:1.9}
+.teaser-orbit{filter:grayscale(.55);opacity:.72}
+.teaser-orbit-ring{border-color:rgba(29,52,68,.17)}
+.teaser-orbit span{color:var(--ink)}
+.teaser-orbit small{color:var(--muted);font:9px var(--mono);letter-spacing:.15em}
+.india-section{max-width:1280px;margin:24px auto 80px;padding:clamp(32px,5vw,72px);border:1px solid var(--glass-border);border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.64),rgba(255,255,255,.24));box-shadow:var(--glass-shadow);backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%)}
+.india-copy h2{margin:22px 0}
+.india-copy p{color:var(--ink-soft);font-size:14px;line-height:1.85}
+.india-section:after{border-color:rgba(29,52,68,.08);box-shadow:0 0 0 35px rgba(29,52,68,.025),0 0 0 70px rgba(29,52,68,.018)}
+.glass-panel{background:rgba(255,255,255,.50);border:1px solid rgba(255,255,255,.85);border-radius:20px;box-shadow:inset 0 1px 0 white,0 18px 48px rgba(31,61,82,.08);backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%)}
+.panel-top{color:var(--muted);border-color:var(--line);font:8px var(--mono)}
+.panel-live{color:#648d73}
+.india-stat{border-color:var(--line)}
+.india-stat strong{color:var(--accent);font:400 26px var(--display)}
+.india-stat span{color:var(--ink-soft)}
+.glass-panel>small{color:var(--muted)}
+.section{max-width:1440px;padding:clamp(80px,9vw,130px) clamp(22px,7vw,100px)}
+.section-heading{border-bottom:1px solid var(--line);padding-bottom:22px}
+.section h2,.about h2{color:var(--ink);font:400 clamp(3rem,5.3vw,5.2rem)/.98 var(--display);letter-spacing:-.035em}
+.section h2 .accent{color:var(--accent)}
+.muted,.heading-note,.gallery-note{color:var(--muted)}
+.heading-note{font-size:12px;line-height:1.8}
+.aircraft-grid{gap:18px}
+.aircraft-card,.story-card,.model-card,.discovery-card{border:1px solid rgba(255,255,255,.82);border-radius:20px;background:rgba(255,255,255,.46);color:var(--ink);box-shadow:var(--glass-shadow);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%);transition:transform .35s cubic-bezier(.2,.75,.25,1),box-shadow .35s ease,border-color .35s ease}
+.aircraft-card:hover,.gallery-tile:hover,.story-card:hover,.model-card:hover,.discovery-card:hover{transform:translateY(-5px);border-color:white;box-shadow:0 28px 65px rgba(31,61,82,.14),inset 0 1px 0 white}
+.aircraft-info{padding:22px}
+.aircraft-info>span,.model-copy small{color:#718d9e;font:8px var(--mono);letter-spacing:.15em}
+.aircraft-info h3,.model-copy h2{color:var(--ink);font:400 28px var(--display)}
+.aircraft-info p,.model-copy p{color:var(--ink-soft);line-height:1.8}
+.aircraft-info a,.model-source{color:#587f99}
+.gallery-section{padding-top:40px}
+.gallery-tile{border:1px solid rgba(255,255,255,.45);border-radius:18px;box-shadow:0 18px 50px rgba(31,61,82,.12)}
+.gallery-tile>span{font:9px var(--mono);letter-spacing:.12em}
+.gallery-disclaimer{color:var(--muted)}
+.briefing{max-width:1280px;margin:40px auto 100px;padding:clamp(38px,6vw,82px);border:1px solid rgba(255,255,255,.16);border-radius:28px;background:linear-gradient(135deg,#1d3444,#10232f);color:#edf3f2;box-shadow:0 30px 80px rgba(20,43,61,.19);overflow:hidden}
+.briefing h2{color:#f0f4f2}
+.briefing h2 em{color:#b7c9c7}
+.briefing-copy p,.about-right>p{color:#c0cece;line-height:1.9}
+.radar-ring{border-color:rgba(209,228,226,.22)}
+.radar-sweep{background:linear-gradient(135deg,rgba(188,213,208,.20),transparent 70%)}
+.radar-plane{color:#d3e0dd;text-shadow:0 0 22px rgba(185,218,207,.55)}
+.radar-coordinate,.radar-caption{color:#a2b8b5;font-family:var(--mono)}
+.about{max-width:1280px;padding:20px clamp(22px,7vw,100px) 110px;gap:50px}
+.about-right{padding-top:25px}
+.instagram-card{max-width:440px;border:1px solid rgba(255,255,255,.84);border-radius:16px;background:rgba(255,255,255,.45);box-shadow:var(--glass-shadow);backdrop-filter:blur(20px);color:var(--ink)}
+.instagram-card strong{color:var(--ink)}
+.instagram-card small{color:var(--muted)}
+.ig-icon{color:#688b9c}
+footer{max-width:none;min-height:110px;padding:22px clamp(22px,5vw,76px);border-top:1px solid var(--line);background:rgba(236,242,240,.82);color:var(--muted);font:9px var(--mono);letter-spacing:.08em;backdrop-filter:blur(20px)}
+.footer-brand img{filter:none!important}
+.story-grid{gap:20px}
+.story-card{min-height:360px;overflow:hidden}
+.story-image{height:190px;background:#d9e1e1}
+.story-image img{opacity:1}
+.story-image:after{background:linear-gradient(0deg,rgba(12,27,35,.38),transparent 70%)}
+.story-image .image-tag{color:white;font:8px var(--mono);letter-spacing:.15em}
+.story-content{padding:21px}
+.story-meta{color:var(--muted);font:8px var(--mono);letter-spacing:.09em}
+.story-content h3{color:var(--ink);font:400 24px/1.1 var(--display);letter-spacing:0}
+.story-content p{color:var(--ink-soft);font-size:12px;line-height:1.8}
+.story-source{color:#587f99;font:10px var(--mono)}
+.filters{gap:9px}
+.filter{color:var(--ink-soft);background:rgba(255,255,255,.34);border:1px solid rgba(255,255,255,.8);border-radius:4px;font:9px var(--mono);letter-spacing:.05em;backdrop-filter:blur(16px)}
+.filter.active,.filter:hover{color:#f4f7f7;background:var(--ink);border-color:var(--ink)}
+.loading-card,.empty-state{color:var(--ink-soft);background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.8);border-radius:16px}
+.disclaimer,.gallery-disclaimer,.models-note{color:var(--muted)}
+.newsroom-heading,.models-heading{max-width:1440px;margin:auto;padding:clamp(85px,11vw,150px) clamp(22px,7vw,100px) 35px}
+.newsroom-heading h1,.models-heading h1{font:400 clamp(4rem,8vw,7.5rem)/.88 var(--display);letter-spacing:-.04em;color:var(--ink);margin:28px 0}
+.newsroom-heading h1 em,.models-heading h1 em{color:var(--accent);font-style:italic}
+.newsroom-heading>p,.models-heading p{max-width:640px;color:var(--ink-soft);font-size:14px;line-height:1.9}
+.newsroom-heading-meta{color:var(--muted);font:9px var(--mono);letter-spacing:.1em}
+.newsroom-feed{padding-top:35px}
+.newsroom-feed .section-heading{align-items:center}
+.newsroom-feed .section-heading h2{font:400 clamp(2.5rem,4vw,4rem) var(--display)}
+.newsroom-feed .section-heading h2 em{color:var(--accent)}
+.newsroom-feed .section-foot{border-color:var(--line);color:var(--muted);font:8px var(--mono)}
+.newsroom-feed .section-foot a{color:#587f99}
+.models-grid{max-width:1440px;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:30px clamp(22px,7vw,100px) 110px}
+.model-card{overflow:hidden}
+.model-image{height:230px;background:#d5dede}
+.model-image span{font:8px var(--mono);letter-spacing:.15em}
+.model-copy{padding:24px}
+.model-copy h2{margin:12px 0}
+.model-copy p{font-size:12px}
+.model-spec{border-color:var(--line);color:#587f99;font:9px var(--mono)}
+.model-source{font:9px var(--mono)}
+.models-note{max-width:1240px;margin:-65px auto 90px;padding:0 clamp(22px,5vw,76px);font-size:10px;line-height:1.8}
+.image-placeholder{display:grid;place-items:center;height:100%;background:linear-gradient(120deg,#e2e9e8,#f3f5f2);color:#7e9297;font:8px var(--mono);letter-spacing:.12em}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:38px;padding-top:90px}.hero-copy-block{max-width:760px}.aircraft-stage{width:100%;height:460px;min-height:360px}.newsroom-teaser{grid-template-columns:1fr .65fr}.models-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .topbar{height:72px;padding:0 18px}.topbar nav{display:none}.brand-logo img{width:160px;max-height:44px}.hero{padding:68px 19px 40px;min-height:0;gap:28px}.hero::before{inset:10px 8px;border-radius:22px}.hero h1{font-size:clamp(3.7rem,15vw,5.6rem);letter-spacing:-.04em;margin:25px 0 18px}.hero-copy{font-size:13px;line-height:1.8}.hero-actions{flex-wrap:wrap;gap:18px}.aircraft-stage{height:390px;min-height:340px;border-radius:20px}.hero-meta{padding-top:28px;font-size:7px}.ticker{justify-content:flex-start;padding:0 20px;gap:22px;font-size:8px}.newsroom-teaser{grid-template-columns:1fr;padding:78px 22px}.teaser-orbit{height:220px;max-width:100%}.india-section{margin:14px 14px 55px;padding:28px 22px;grid-template-columns:1fr;gap:25px;border-radius:22px}.india-copy h2,.briefing h2,.about h2{font-size:3.5rem}.section{padding:76px 20px}.section-heading{align-items:flex-start;gap:16px;flex-direction:column}.aircraft-grid,.gallery-grid{grid-template-columns:1fr}.aircraft-card{display:grid;grid-template-columns:1fr}.aircraft-photo{height:210px}.aircraft-info p{min-height:0}.briefing{margin:25px 14px 65px;padding:32px 24px;grid-template-columns:1fr;border-radius:22px}.briefing-visual{height:240px}.about{padding:15px 22px 75px;grid-template-columns:1fr;gap:10px}.about-right{padding-top:0}footer{padding:22px 18px;gap:18px;flex-wrap:wrap;font-size:8px}.story-grid{grid-template-columns:1fr}.story-card{min-height:0}.story-image{height:205px}.newsroom-heading,.models-heading{padding:72px 21px 28px}.newsroom-heading h1,.models-heading h1{font-size:clamp(3.8rem,15vw,5.4rem)}.newsroom-feed{padding-top:25px}.models-grid{grid-template-columns:1fr;padding:24px 20px 80px}.model-image{height:220px}.models-note{margin:-42px 0 65px;padding:0 20px}.newsroom-heading>p,.models-heading p{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
