@@ -1,37 +1,58 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#080d16"><meta name="description" content="Aviation by Aarav. Daily aviation news, airline updates, aircraft stories and industry briefings.">
-  <meta property="og:title" content="Aviation by Aarav"><meta property="og:description" content="The world of aviation, in focus."><meta property="og:type" content="website">
-  <title>Aviation by Aarav | The world of aviation, in focus</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070d17"><meta name="description" content="Aviation by Aarav: daily aviation news, Indian aviation updates, aircraft profiles and aviation photography.">
+<meta property="og:title" content="Aviation by Aarav"><meta property="og:description" content="The world of aviation, in focus."><meta property="og:type" content="website">
+<title>Aviation by Aarav | The world of aviation, in focus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="topbar"><a class="brand" href="#" aria-label="Aviation by Aarav home"><span class="brand-mark">A<span>✈</span></span><span class="brand-copy">AVIATION <small>BY AARAV</small></span></a>
-    <nav><a href="#latest">Latest</a><a href="#briefing">Briefing</a><a href="#about">About</a></nav>
-    <a class="instagram-link" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="eyebrow"><span class="live-dot"></span> INDEPENDENT AVIATION COVERAGE <span class="eyebrow-line"></span> <span id="today-label">DAILY BRIEFING</span></div>
-      <h1>The world of aviation,<br><em>in focus.</em></h1>
-      <p class="hero-copy">Airlines, aircraft, airports and the stories moving the industry. A clearer view of what's happening in the skies.</p>
-      <div class="hero-actions"><a class="primary-button" href="#latest">Explore the latest <span>↓</span></a><a class="text-button" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer">Follow the journey ↗</a></div>
-      <div class="hero-meta"><span>CURIOUS ABOUT WHAT'S NEXT?</span><span>YOU'RE CLEARED FOR TAKEOFF.</span></div>
-    </section>
-    <section class="ticker"><span class="ticker-label">ON THE RADAR</span><span>AVIATION NEWS</span><i>✳</i><span>INDUSTRY UPDATES</span><i>✳</i><span>AIRCRAFT & TECHNOLOGY</span><i>✳</i><span>GLOBAL PERSPECTIVES</span></section>
-    <section class="section" id="latest"><div class="section-heading"><div><div class="eyebrow muted">THE NEWSROOM</div><h2>Latest stories<span class="accent">.</span></h2></div><div class="feed-status"><span class="status-dot"></span><span id="updated-label">Checking latest updates</span></div></div>
-      <div class="filters" role="group" aria-label="Filter stories"><button class="filter active" data-filter="All">All stories</button><button class="filter" data-filter="Airlines">Airlines</button><button class="filter" data-filter="Aircraft">Aircraft</button><button class="filter" data-filter="Industry">Industry</button><button class="filter" data-filter="Safety">Safety</button></div>
-      <div class="story-grid" id="story-grid"><div class="loading-card"><span class="loader"></span><p>Scanning the latest aviation headlines…</p></div></div>
-      <p class="disclaimer">Headlines and summaries are attributed to their original publishers. Read the source article for full reporting and context.</p>
-    </section>
-    <section class="briefing" id="briefing"><div class="briefing-copy"><div class="eyebrow muted">THE DAILY BRIEFING</div><h2>Stay ahead<br>of the <em>curve.</em></h2><p>A daily snapshot of the stories shaping commercial aviation, aerospace and the wider industry.</p><a class="primary-button" href="#latest">Read today's coverage <span>↗</span></a></div><div class="briefing-visual"><div class="radar-ring ring-a"></div><div class="radar-ring ring-b"></div><div class="radar-ring ring-c"></div><div class="radar-sweep"></div><span class="radar-plane">✈</span><span class="radar-coordinate">26°49' N&nbsp; 80°53' E</span><span class="radar-caption">A GLOBAL VIEW<br>FROM THE GROUND UP</span></div></section>
-    <section class="about" id="about"><div><div class="eyebrow muted">ABOUT THE PLATFORM</div><h2>Built for people<br>who look <em>up.</em></h2></div><div class="about-right"><p>Aviation by Aarav is an independent aviation news and storytelling platform covering the aircraft, airlines, technology and people shaping flight.</p><a href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer" class="instagram-card"><span class="ig-icon">◎</span><span><strong>Follow @aviation_byaarav</strong><small>News, visuals and updates on Instagram</small></span><b>↗</b></a></div></section>
-  </main>
-  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">A<span>✈</span></span><span class="brand-copy">AVIATION <small>BY AARAV</small></span></a><span>Independent aviation coverage.</span><span>© <span id="year"></span> AVIATION BY AARAV</span></footer>
-  <script src="assets/app.js"></script>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<div class="flight-layer" aria-hidden="true">
+ <svg class="flight-path path-one" viewBox="0 0 1200 360" preserveAspectRatio="none"><path d="M-80 290 C180 40 390 40 610 180 S980 330 1280 50"/></svg>
+ <svg class="flight-path path-two" viewBox="0 0 1200 360" preserveAspectRatio="none"><path d="M-80 60 C230 330 420 310 640 150 S1010 30 1280 270"/></svg>
+ <svg class="flying-plane plane-one" viewBox="0 0 100 100"><path d="M50 4 L59 43 L94 63 L94 72 L59 64 L56 91 L70 98 L70 100 L50 95 L30 100 L30 98 L44 91 L41 64 L6 72 L6 63 L41 43 Z"/></svg>
+ <svg class="flying-plane plane-two" viewBox="0 0 100 100"><path d="M50 4 L59 43 L94 63 L94 72 L59 64 L56 91 L70 98 L70 100 L50 95 L30 100 L30 98 L44 91 L41 64 L6 72 L6 63 L41 43 Z"/></svg>
+ <svg class="flying-plane plane-three" viewBox="0 0 100 100"><path d="M50 4 L59 43 L94 63 L94 72 L59 64 L56 91 L70 98 L70 100 L50 95 L30 100 L30 98 L44 91 L41 64 L6 72 L6 63 L41 43 Z"/></svg>
+</div>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">A<span>✈</span></span><span class="brand-copy">AVIATION <small>BY AARAV</small></span></a>
+<nav><a href="#latest">News</a><a href="#india">India</a><a href="#aircraft">Aircraft</a><a href="#gallery">Gallery</a></nav>
+<a class="instagram-link" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a></header>
+<main>
+<section class="hero">
+ <div class="eyebrow"><span class="live-dot"></span> INDEPENDENT AVIATION COVERAGE <span class="eyebrow-line"></span><span id="today-label">DAILY BRIEFING</span></div>
+ <h1>The world of aviation,<br><em>in focus.</em></h1>
+ <p class="hero-copy">Airlines, aircraft, airports and the stories moving the industry. A clearer view of what's happening in the skies.</p>
+ <div class="hero-actions"><a class="primary-button" href="#latest">Explore the latest <span>↓</span></a><a class="text-button" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer">Follow the journey ↗</a></div>
+ <div class="hero-meta"><span>INDEPENDENT. CURIOUS. ALWAYS LOOKING UP.</span><span>YOUR DAILY VIEW FROM THE SKIES.</span></div>
+ <div class="hero-glass"><span class="glass-kicker">AVIATION INTELLIGENCE</span><strong>Beyond the headlines.</strong><span>Stories that move the world.</span><i>✈</i></div>
+</section>
+<section class="ticker"><span class="ticker-label">ON THE RADAR</span><span>AVIATION NEWS</span><i>✳</i><span>INDIA AVIATION</span><i>✳</i><span>AIRCRAFT & TECHNOLOGY</span><i>✳</i><span>GLOBAL PERSPECTIVES</span></section>
+<section class="section" id="latest"><div class="section-heading"><div><div class="eyebrow muted">THE NEWSROOM</div><h2>Latest stories<span class="accent">.</span></h2></div><div class="feed-status"><span class="status-dot"></span><span id="updated-label">Checking latest updates</span></div></div>
+ <div class="filters" role="group" aria-label="Filter stories"><button class="filter active" data-filter="All">All stories</button><button class="filter" data-filter="Airlines">Airlines</button><button class="filter" data-filter="Aircraft">Aircraft</button><button class="filter" data-filter="Industry">Industry</button><button class="filter" data-filter="Safety">Safety</button></div>
+ <div class="story-grid" id="story-grid"><div class="loading-card"><span class="loader"></span><p>Scanning the latest aviation headlines…</p></div></div>
+ <div class="section-foot"><span>THE LATEST FROM OUR SELECTED SOURCES</span><a href="#briefing">About our coverage ↗</a></div>
+</section>
+<section class="india-section" id="india"><div class="india-copy"><div class="eyebrow"><span class="india-flag">✦</span> THE INDIAN SKIES</div><h2>India is<br><em>taking off.</em></h2><p>Follow the airlines, airports, routes, aircraft orders and policy decisions shaping one of the world's fastest-growing aviation markets.</p><a class="primary-button" href="#latest" data-india-filter>Explore India coverage <span>↗</span></a></div>
+ <div class="india-panel glass-panel"><div class="panel-top"><span>INDIA AVIATION WATCH</span><span class="panel-live"><i></i> LIVE FEED</span></div><div class="india-stat"><strong>01</strong><span>Airlines & route networks</span><b>↗</b></div><div class="india-stat"><strong>02</strong><span>Airports & infrastructure</span><b>↗</b></div><div class="india-stat"><strong>03</strong><span>Fleet orders & deliveries</span><b>↗</b></div><div class="india-stat"><strong>04</strong><span>DGCA & policy updates</span><b>↗</b></div><small>Curated coverage. Original sources linked in every story.</small></div>
+</section>
+<section class="section aircraft-section" id="aircraft"><div class="section-heading"><div><div class="eyebrow muted">THE HANGAR</div><h2>Aircraft, up close<span class="accent">.</span></h2></div><p class="heading-note">A quick look at some of the machines<br>shaping modern aviation.</p></div>
+ <div class="aircraft-grid">
+ <article class="aircraft-card aircraft-wide"><div class="aircraft-photo photo-a"></div><div class="aircraft-info"><span>WIDEBODY · LONG HAUL</span><h3>Airbus A350</h3><p>Composite construction, long-range efficiency and a cabin designed around the passenger.</p><a href="https://www.airbus.com/en/products-services/commercial-aircraft/passenger-aircraft/a350-family" target="_blank" rel="noreferrer">Explore aircraft ↗</a></div></article>
+ <article class="aircraft-card"><div class="aircraft-photo photo-b"></div><div class="aircraft-info"><span>NARROWBODY · SINGLE AISLE</span><h3>Boeing 737 MAX</h3><p>A new generation in one of aviation's best-known aircraft families.</p><a href="https://www.boeing.com/commercial/737max" target="_blank" rel="noreferrer">Explore aircraft ↗</a></div></article>
+ <article class="aircraft-card"><div class="aircraft-photo photo-c"></div><div class="aircraft-info"><span>REGIONAL · TURBOPROP</span><h3>ATR 72-600</h3><p>Regional connectivity built for shorter routes and smaller airports.</p><a href="https://www.atr-aircraft.com/our-aircraft/atr-72-600/" target="_blank" rel="noreferrer">Explore aircraft ↗</a></div></article>
+ </div>
+</section>
+<section class="section gallery-section" id="gallery"><div class="section-heading"><div><div class="eyebrow muted">THROUGH THE LENS</div><h2>Above the ordinary<span class="accent">.</span></h2></div><span class="gallery-note">AVIATION IN FRAME</span></div>
+ <div class="gallery-grid"><a class="gallery-tile gallery-main" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer"><div class="gallery-photo gallery-photo-a"></div><span>THE ART OF FLIGHT <b>↗</b></span></a><a class="gallery-tile" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer"><div class="gallery-photo gallery-photo-b"></div><span>ON THE TARMAC <b>↗</b></span></a><a class="gallery-tile" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer"><div class="gallery-photo gallery-photo-c"></div><span>IN THE CLOUDS <b>↗</b></span></a></div>
+ <p class="gallery-disclaimer">Photography shown is illustrative. Visit our Instagram for Aviation by Aarav's own posts and aircraft spotting.</p>
+</section>
+<section class="briefing" id="briefing"><div class="briefing-copy"><div class="eyebrow muted">THE DAILY BRIEFING</div><h2>Stay ahead<br>of the <em>curve.</em></h2><p>A daily snapshot of the stories shaping commercial aviation, aerospace and the wider industry.</p><a class="primary-button" href="#latest">Read today's coverage <span>↗</span></a></div><div class="briefing-visual"><div class="radar-ring ring-a"></div><div class="radar-ring ring-b"></div><div class="radar-ring ring-c"></div><div class="radar-sweep"></div><span class="radar-plane">✈</span><span class="radar-coordinate">26°49' N&nbsp; 80°53' E</span><span class="radar-caption">A GLOBAL VIEW<br>FROM THE GROUND UP</span></div></section>
+<section class="about" id="about"><div><div class="eyebrow muted">ABOUT THE PLATFORM</div><h2>Built for people<br>who look <em>up.</em></h2></div><div class="about-right"><p>Aviation by Aarav is an independent aviation news and storytelling platform covering the aircraft, airlines, technology and people shaping flight.</p><a href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer" class="instagram-card"><span class="ig-icon">◎</span><span><strong>Follow @aviation_byaarav</strong><small>News, visuals and updates on Instagram</small></span><b>↗</b></a></div></section>
+</main>
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">A<span>✈</span></span><span class="brand-copy">AVIATION <small>BY AARAV</small></span></a><span>Independent aviation coverage.</span><span>© <span id="year"></span> AVIATION BY AARAV</span></footer>
+<script src="assets/app.js"></script>
 </body></html>
