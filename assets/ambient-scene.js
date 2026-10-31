@@ -1,32 +1,116 @@
+// Aviation by Aarav | ThreeUI Bestsellers Book Showcase-inspired 3D background
+// Original Three.js implementation. Decorative background only; no page content or branding is modified.
 const canvas=document.querySelector("#ambient-three-canvas");
-if(canvas){(async()=>{try{
-const T=await import("https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js");
-const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
-const renderer=new T.WebGLRenderer({canvas,alpha:false,antialias:true,powerPreference:"low-power"});
-renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;
-const scene=new T.Scene();scene.background=new T.Color(0x080e14);scene.fog=new T.FogExp2(0x101b22,.022);
-const camera=new T.PerspectiveCamera(48,innerWidth/innerHeight,.1,180);camera.position.set(0,5.5,25);
-scene.add(new T.HemisphereLight(0x9eb8c8,0x080d12,1.05));const moonLight=new T.DirectionalLight(0xaec5d1,1.6);moonLight.position.set(-12,18,8);scene.add(moonLight);
-const moon=new T.Mesh(new T.SphereGeometry(2.25,32,32),new T.MeshBasicMaterial({color:0xe0d2b9}));moon.position.set(-11,10,-32);scene.add(moon);
-for(const q of [{z:-38,y:-1.8,c:0x1a2a31,s:1},{z:-30,y:-3.5,c:0x122128,s:3},{z:-22,y:-5.1,c:0x0c171e,s:5}]){const pts=[];for(let i=0;i<=48;i++){const x=-42+i*1.75;pts.push(new T.Vector2(x,q.y+Math.sin(i*.37+q.s)*1.9+Math.sin(i*.13+q.s*2)*3.2));}pts.push(new T.Vector2(42,-16),new T.Vector2(-42,-16));const ridge=new T.Mesh(new T.ShapeGeometry(new T.Shape(pts)),new T.MeshBasicMaterial({color:q.c}));ridge.position.z=q.z;scene.add(ridge);}
-const wood=new T.MeshStandardMaterial({color:0x202c30,roughness:1}),roofMat=new T.MeshStandardMaterial({color:0x111b20,roughness:.92}),lanternMat=new T.MeshStandardMaterial({color:0xb98553,emissive:0x9b5728,emissiveIntensity:1.5});
-function block(p,w,h,d,x,y,z,m){const o=new T.Mesh(new T.BoxGeometry(w,h,d),m);o.position.set(x,y,z);p.add(o);return o;}
-function roof(p,w,y){const r=new T.Mesh(new T.ConeGeometry(w*.78,.72,4),roofMat);r.rotation.y=Math.PI/4;r.scale.z=.62;r.position.y=y;p.add(r);block(p,w*1.18,.12,1.65,0,y-.28,0,roofMat);}
-const temple=new T.Group();temple.position.set(5,-2.1,-16);temple.scale.setScalar(2.15);scene.add(temple);
-block(temple,5.2,.38,2.8,0,.15,0,wood);block(temple,4.35,1.55,2.15,0,1.05,0,wood);
-for(const x of [-1.35,-.45,.45,1.35])block(temple,.42,.75,.035,x,1.1,1.09,lanternMat);
-roof(temple,4.1,2.15);roof(temple,5.15,2.62);
-const pagoda=new T.Group();pagoda.position.set(-4.2,-.1,-1.1);temple.add(pagoda);block(pagoda,1.65,.48,1.55,0,.2,0,wood);
-for(let i=0;i<3;i++){const y=.8+i*1.05;block(pagoda,1.2-i*.22,.72,1.05-i*.18,0,y,0,wood);roof(pagoda,2.35-i*.38,y+.48);}
-const finial=new T.Mesh(new T.CylinderGeometry(.035,.09,1.45,8),lanternMat);finial.position.y=4.1;pagoda.add(finial);
-const trunkMat=new T.MeshStandardMaterial({color:0x101a1e}),pineMat=new T.MeshStandardMaterial({color:0x0b171b});
-for(let i=0;i<22;i++){const x=-25+i*2.4+Math.sin(i*4.1)*1.2,z=-9-(i%5)*3.2,h=3.2+(i%4)*.8,g=new T.Group();g.position.set(x,-4.2,z);scene.add(g);const tr=new T.Mesh(new T.CylinderGeometry(.09,.16,h*.65,5),trunkMat);tr.position.y=h*.3;g.add(tr);for(let k=0;k<3;k++){const c=new T.Mesh(new T.ConeGeometry(1.05-k*.19,h*.48,6),pineMat);c.position.y=h*.35+k*h*.19;g.add(c);}}
-for(const x of [-2.9,2.9,7.1]){const g=new T.Group();g.position.set(x,-1.9,-12);scene.add(g);block(g,.34,.58,.34,0,0,0,wood);const l=new T.PointLight(0xd99a5c,3.2,8);l.position.y=.25;g.add(l);}
-const mistMat=new T.MeshBasicMaterial({color:0x9baeb2,transparent:true,opacity:.075,depthWrite:false}),mists=[];
-for(let i=0;i<7;i++){const m=new T.Mesh(new T.PlaneGeometry(22,2.6),mistMat);m.position.set((Math.random()-.5)*28,-3.5+Math.random()*2.4,-11-Math.random()*18);scene.add(m);mists.push(m);}
-const pointer={x:0,y:0,tx:0,ty:0};addEventListener("pointermove",e=>{pointer.tx=(e.clientX/innerWidth-.5)*.42;pointer.ty=(e.clientY/innerHeight-.5)*.18;},{passive:true});
-function resize(){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();}addEventListener("resize",resize,{passive:true});
-let raf=0;function render(){if(document.hidden){raf=0;return;}pointer.x+=(pointer.tx-pointer.x)*.018;pointer.y+=(pointer.ty-pointer.y)*.018;camera.position.x=pointer.x;camera.position.y=5.5-pointer.y;camera.lookAt(pointer.x*.18,-1,-13);if(!reduced){mists.forEach((m,i)=>{m.position.x+=.003+(i%3)*.001;if(m.position.x>23)m.position.x=-23;});temple.rotation.y=Math.sin(performance.now()*.00012)*.008;}renderer.render(scene,camera);raf=requestAnimationFrame(render);}
-function start(){if(!document.hidden&&!raf)raf=requestAnimationFrame(render);}function stop(){if(raf)cancelAnimationFrame(raf);raf=0;}
-document.addEventListener("visibilitychange",()=>document.hidden?stop():start());addEventListener("pagehide",()=>{stop();renderer.dispose();},{once:true});start();
-}catch(e){console.warn("Temple Night background unavailable:",e);canvas.style.display="none";}})();}
+if(canvas){
+(async()=>{
+ let renderer;
+ try{
+  let THREE;
+  for(const url of [
+   "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js",
+   "https://unpkg.com/three@0.166.1/build/three.module.js"
+  ]){try{THREE=await import(url);break;}catch(e){console.warn("Three.js CDN failed",url,e);}}
+  if(!THREE)throw new Error("Three.js could not load");
+  const mobile=()=>matchMedia("(max-width: 700px)").matches;
+  const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  renderer=new THREE.WebGLRenderer({canvas,alpha:false,antialias:!mobile(),powerPreference:"high-performance"});
+  renderer.setPixelRatio(Math.min(devicePixelRatio||1,mobile()?1.25:1.65));
+  renderer.outputColorSpace=THREE.SRGBColorSpace;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure=1.12;
+  const scene=new THREE.Scene();
+  scene.background=new THREE.Color(0x09121a);
+  scene.fog=new THREE.FogExp2(0x0b1720,.026);
+  const camera=new THREE.PerspectiveCamera(42,1,.1,120);
+  camera.position.set(0,0,15);
+  scene.add(new THREE.HemisphereLight(0xc2d4dc,0x111923,2.0));
+  const key=new THREE.DirectionalLight(0xffdfb6,3.0);key.position.set(-5,8,9);scene.add(key);
+  const rim=new THREE.PointLight(0x4e91b5,22,36);rim.position.set(7,1,5);scene.add(rim);
+  const warm=new THREE.PointLight(0xc98b58,13,28);warm.position.set(-7,-3,3);scene.add(warm);
+  const backdrop=new THREE.Mesh(new THREE.PlaneGeometry(200,120),new THREE.MeshBasicMaterial({color:0x09121a}));
+  backdrop.position.z=-22;scene.add(backdrop);
+
+  function coverTexture(title,subtitle,accent,number){
+   const c=document.createElement("canvas");c.width=768;c.height=1024;
+   const x=c.getContext("2d");
+   const g=x.createLinearGradient(0,0,768,1024);g.addColorStop(0,accent);g.addColorStop(1,"#101d29");
+   x.fillStyle=g;x.fillRect(0,0,768,1024);
+   x.strokeStyle="rgba(236,224,202,.55)";x.lineWidth=3;x.strokeRect(34,34,700,956);
+   x.strokeStyle="rgba(236,224,202,.2)";x.lineWidth=1;x.strokeRect(52,52,664,920);
+   x.fillStyle="rgba(7,16,24,.42)";x.beginPath();x.moveTo(0,590);x.lineTo(768,410);x.lineTo(768,1024);x.lineTo(0,1024);x.fill();
+   // Original aviation line art: wings, fuselage and horizon, not a stock aircraft photo.
+   x.save();x.translate(384,430);x.strokeStyle="rgba(239,225,201,.8)";x.lineWidth=8;x.lineCap="round";
+   x.beginPath();x.moveTo(-245,20);x.lineTo(-70,-12);x.lineTo(-22,-115);x.lineTo(12,-115);x.lineTo(55,-12);x.lineTo(245,20);x.lineTo(55,48);x.lineTo(18,18);x.lineTo(-18,18);x.lineTo(-55,48);x.closePath();x.stroke();x.restore();
+   x.fillStyle="#e9e2d5";x.font="600 25px Arial";x.letterSpacing="8px";x.fillText("AVIATION BY AARAV",78,112);
+   x.fillStyle="#f4eee4";x.font="700 68px Georgia";x.letterSpacing="0px";
+   const words=title.split(" ");let lines=[],line="";
+   for(const word of words){const test=(line+" "+word).trim();if(x.measureText(test).width>610&&line){lines.push(line);line=word;}else line=test;}if(line)lines.push(line);
+   lines.slice(0,3).forEach((s,i)=>x.fillText(s,78,690+i*82));
+   x.fillStyle="#d8b98f";x.font="28px Arial";x.fillText(subtitle.toUpperCase(),80,940);
+   x.fillStyle="rgba(255,255,255,.55)";x.font="22px Arial";x.fillText(number,650,940);
+   const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=renderer.capabilities.getMaxAnisotropy();return tex;
+  }
+  const materials=[
+   new THREE.MeshStandardMaterial({color:0x18232c,roughness:.82}),
+   new THREE.MeshStandardMaterial({color:0x18232c,roughness:.82}),
+   new THREE.MeshStandardMaterial({color:0x18232c,roughness:.82}),
+   new THREE.MeshStandardMaterial({color:0x18232c,roughness:.82}),
+   new THREE.MeshStandardMaterial({color:0xd9d0bd,roughness:1}),
+   new THREE.MeshStandardMaterial({map:coverTexture("THE ART OF FLIGHT","A field guide to the skies","#34566a","VOL. 01"),roughness:.7})
+  ];
+  function makeBook({title,subtitle,accent,number,w=2.8,h=3.9,d=.42,x=0,y=0,z=0,rot=0,scale=1}){
+   const group=new THREE.Group();group.position.set(x,y,z);group.rotation.z=rot;group.scale.setScalar(scale);scene.add(group);
+   const body=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),materials[4]);group.add(body);
+   const cover=coverTexture(title,subtitle,accent,number);
+   const front=new THREE.Mesh(new THREE.BoxGeometry(w+.035,h+.035,.055),[
+    new THREE.MeshStandardMaterial({color:0x18232c}),new THREE.MeshStandardMaterial({color:0x18232c}),
+    new THREE.MeshStandardMaterial({color:0x18232c}),new THREE.MeshStandardMaterial({color:0x18232c}),
+    new THREE.MeshStandardMaterial({color:0x18232c}),new THREE.MeshStandardMaterial({map:cover,roughness:.72})
+   ]);
+   front.position.z=d/2+.028;group.add(front);
+   const spine=new THREE.Mesh(new THREE.BoxGeometry(.16,h,.07),new THREE.MeshStandardMaterial({color:accent,roughness:.78}));spine.position.x=-w/2+.05;spine.position.z=d/2+.055;group.add(spine);
+   // Fine page signatures on the fore edge.
+   for(let i=0;i<5;i++){const line=new THREE.Mesh(new THREE.BoxGeometry(.012,h*.94,.012),new THREE.MeshBasicMaterial({color:0x9f967f,transparent:true,opacity:.35}));line.position.set(w/2-.012-i*.018,0,d/2+.01);group.add(line);}
+   group.userData={baseY:y,baseRot:rot,phase:Math.random()*6.28};return group;
+  }
+  const books=[
+   makeBook({title:"THE ART OF FLIGHT",subtitle:"A field guide to the skies",accent:"#31576a",number:"01",w:3.0,h:4.15,d:.48,x:-4.7,y:.1,z:-1.8,rot:-.19,scale:1.0}),
+   makeBook({title:"INDIA ABOVE",subtitle:"Aviation in a changing nation",accent:"#76533c",number:"02",w:2.65,h:3.65,d:.4,x:4.1,y:-.45,z:-3.0,rot:.17,scale:1.0}),
+   makeBook({title:"AIRCRAFT ATLAS",subtitle:"Machines that shape the sky",accent:"#385c50",number:"03",w:2.2,h:3.05,d:.36,x:-1.8,y:-2.55,z:-5.2,rot:.1,scale:.82}),
+   makeBook({title:"RUNWAY STORIES",subtitle:"People places departures",accent:"#6b493d",number:"04",w:2.0,h:2.8,d:.34,x:2.35,y:2.35,z:-6.0,rot:-.12,scale:.8})
+  ];
+  // A restrained stack of closed volumes adds depth without visual clutter.
+  const stack=new THREE.Group();stack.position.set(6.4,-3.1,-7);stack.rotation.z=-.08;scene.add(stack);
+  for(let i=0;i<3;i++){const m=new THREE.Mesh(new THREE.BoxGeometry(2.8,.18,.95),new THREE.MeshStandardMaterial({color:[0x263b48,0x73533e,0x293f43][i],roughness:.85}));m.position.y=i*.2;stack.add(m);}
+  const dust=new THREE.Mesh(new THREE.PlaneGeometry(200,120),new THREE.MeshBasicMaterial({color:0x0b1720,transparent:true,opacity:.12,depthWrite:false}));dust.position.z=-12;scene.add(dust);
+  const pointer={x:0,y:0,tx:0,ty:0};
+  addEventListener("pointermove",e=>{pointer.tx=(e.clientX/innerWidth-.5)*.35;pointer.ty=(e.clientY/innerHeight-.5)*.22;},{passive:true});
+  function resize(){
+   const w=Math.max(1,document.documentElement.clientWidth||innerWidth),h=Math.max(1,visualViewport?.height||innerHeight);
+   renderer.setPixelRatio(Math.min(devicePixelRatio||1,mobile()?1.25:1.65));renderer.setSize(w,h,false);
+   canvas.style.width="100%";canvas.style.height="100%";
+   camera.aspect=w/h;camera.fov=mobile()?53:42;camera.position.z=mobile()?19:15;camera.updateProjectionMatrix();
+   // Keep the books inside the narrower phone viewport while retaining the editorial desktop spread.
+   books[0].position.x=mobile()?-2.25:-4.7;books[0].position.y=mobile()?1.6:.1;books[0].scale.setScalar(mobile()?.62:1);
+   books[1].position.x=mobile()?2.25:4.1;books[1].position.y=mobile()?-.7:-.45;books[1].scale.setScalar(mobile()?.62:1);
+   books[2].position.x=mobile()?-1.45:-1.8;books[2].position.y=mobile()?-2.7:-2.55;books[2].scale.setScalar(mobile()?.52:.82);
+   books[3].visible=!mobile();stack.visible=!mobile();
+  }
+  addEventListener("resize",resize,{passive:true});addEventListener("orientationchange",()=>setTimeout(resize,150),{passive:true});
+  if(window.visualViewport)visualViewport.addEventListener("resize",resize,{passive:true});resize();
+  let raf=0;
+  function render(){
+   if(document.hidden){raf=0;return;}
+   pointer.x+=(pointer.tx-pointer.x)*.025;pointer.y+=(pointer.ty-pointer.y)*.025;
+   camera.position.x=pointer.x;camera.position.y=pointer.y*.45;
+   camera.lookAt(0,0,-1.5);
+   if(!reduced){const t=performance.now()*.00035;books.forEach((b,i)=>{b.position.y+=Math.sin(t+b.userData.phase)*.0009;b.rotation.y=Math.sin(t*.7+b.userData.phase)*.035;});}
+   renderer.render(scene,camera);raf=requestAnimationFrame(render);
+  }
+  function start(){if(!document.hidden&&!raf)raf=requestAnimationFrame(render);}
+  function stop(){if(raf)cancelAnimationFrame(raf);raf=0;}
+  document.addEventListener("visibilitychange",()=>document.hidden?stop():start());
+  addEventListener("pagehide",()=>{stop();renderer.dispose();},{once:true});start();
+ }catch(e){console.warn("Aviation book showcase background unavailable:",e);canvas.style.display="none";}
+})();
+}

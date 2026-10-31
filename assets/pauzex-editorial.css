@@ -199,3 +199,9 @@ footer{background:rgba(7,15,21,.78)!important;color:#91a4ac!important;border-col
 #ambient-three-canvas{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important;display:block!important;pointer-events:none!important}
 body{background:transparent!important}
 body>*:not(#ambient-three-canvas){position:relative;z-index:1}
+
+/* 3D Aviation Books background canvas. Keep existing content and brand assets untouched. */
+html{background:#09121a!important}
+body{position:relative!important;isolation:isolate!important;background:transparent!important}
+#ambient-three-canvas{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;height:100dvh!important;display:block!important;z-index:0!important;pointer-events:none!important;opacity:1!important;visibility:visible!important}
+body>*:not(#ambient-three-canvas){position:relative;z-index:1}
