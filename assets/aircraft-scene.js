@@ -5,7 +5,6 @@ if(canvas&&stage){
   (async()=>{
   try{
     const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js');
-    stage.classList.add('scene-ready');
     const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'default'});
     renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.35));
@@ -15,7 +14,7 @@ if(canvas&&stage){
 
     const scene=new THREE.Scene();
     const camera=new THREE.PerspectiveCamera(38,1,.1,120);
-    camera.position.set(5.2,4.0,18.5);
+    camera.position.set(8.8,4.8,19.5);
     camera.lookAt(0,0,0);
 
     scene.add(new THREE.HemisphereLight(0xd8edff,0x142033,2.1));
@@ -90,14 +89,14 @@ if(canvas&&stage){
       const w=Math.max(1,stage.clientWidth),h=Math.max(1,stage.clientHeight),aspect=w/h;
       renderer.setSize(w,h,false);camera.aspect=aspect;
       // Pull the camera back on portrait screens so both wingtips stay in frame.
-      camera.position.z=aspect<1.05?22.5:aspect<1.45?19.5:17.5;
-      camera.position.x=aspect<1.05?2.8:5.2;
-      camera.position.y=aspect<1.05?3.3:4;
+      camera.position.z=aspect<1.05?23.5:aspect<1.45?21:19.5;
+      camera.position.x=aspect<1.05?5.8:8.8;
+      camera.position.y=aspect<1.05?4.0:4.8;
       camera.lookAt(0,0,0);camera.updateProjectionMatrix();
     }
     const observer=new ResizeObserver(resize);observer.observe(stage);resize();
 
-    let frame=0,raf=0;
+    let frame=0,raf=0,hasRendered=false;
     function animate(){
       if(document.hidden){raf=requestAnimationFrame(animate);return;}
       frame+=.006;
@@ -107,6 +106,7 @@ if(canvas&&stage){
       aircraft.position.y=Math.sin(frame*.7)*.055;
       halo.rotation.z=frame*.018;
       renderer.render(scene,camera);
+      if(!hasRendered){stage.classList.add('scene-ready');hasRendered=true;}
       raf=requestAnimationFrame(animate);
     }
     animate();
