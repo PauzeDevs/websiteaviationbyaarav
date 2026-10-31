@@ -37,6 +37,7 @@ jobs:
           python -m py_compile scripts/fetch_news.py
           node --check assets/app.js
           node --check assets/ambient-scene.js
+          node --check assets/aircraft-scene.js
           python - <<'PY'
           from pathlib import Path
           import sys
@@ -49,11 +50,11 @@ jobs:
           if bad:
               print('Literal \\n escape found in HTML:', ', '.join(bad))
               sys.exit(1)
-          logo = Path('assets/file_000000008260821183c81398641a4ae8.png')
-          if not logo.is_file():
-              print('Original transparent logo is missing')
+          logo = Path('assets/aviation-by-aarav-logo.svg')
+          if not logo.is_file() or '<svg' not in logo.read_text(encoding='utf-8'):
+              print('Transparent SVG brand logo is missing or invalid')
               sys.exit(1)
-          print(f'Validated {len(html_files)} HTML files and the original logo.')
+          print(f'Validated {len(html_files)} HTML files and the transparent SVG brand logo.')
           PY
       - name: Collect aviation headlines and build attributed report pages
         run: python scripts/fetch_news.py

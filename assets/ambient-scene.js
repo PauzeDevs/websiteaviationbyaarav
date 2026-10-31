@@ -31,8 +31,8 @@ if(canvas){
   block(4,.28,1.8,0,0,0);block(3.2,.22,1.4,0,.55,0);block(2.5,.18,1.2,0,1.05,0);block(.28,1.1,.35,0,1.7,0);
   for(const [w,y] of [[5.2,.22],[4.1,.77],[3.2,1.25]]){const roof=new THREE.Mesh(new THREE.ConeGeometry(w*.62,.55,4),stone);roof.rotation.y=Math.PI/4;roof.position.set(0,y,0);temple.add(roof);}
   const warm=new THREE.PointLight(0xe0a66c,4.5,12);warm.position.set(0,.5,1.1);temple.add(warm);
-  const moon=new THREE.Mesh(new THREE.SphereGeometry(2.15,24,24),new THREE.MeshBasicMaterial({color:0xc6a987,transparent:true,opacity:.52}));
-  moon.position.set(-10,8,-23);scene.add(moon);
+  const moonMesh=new THREE.Mesh(new THREE.SphereGeometry(2.15,24,24),new THREE.MeshBasicMaterial({color:0xc6a987,transparent:true,opacity:.52}));
+  moonMesh.position.set(-10,8,-23);scene.add(moonMesh);
   // Mist banks: low-opacity planes drift slowly across the distant valley.
   const mistMat=new THREE.MeshBasicMaterial({color:0x9aadb0,transparent:true,opacity:.055,depthWrite:false});
   const mists=[];for(let i=0;i<9;i++){const m=new THREE.Mesh(new THREE.PlaneGeometry(17,2.2),mistMat);m.position.set((Math.random()-.5)*30,-3+Math.random()*4,-8-Math.random()*18);scene.add(m);mists.push(m);}
