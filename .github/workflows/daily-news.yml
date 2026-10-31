@@ -36,7 +36,7 @@ jobs:
         run: |
           python -m py_compile scripts/fetch_news.py
           node --check assets/app.js
-          node --check assets/aircraft-scene.js
+          node --check assets/ambient-scene.js
           python - <<'PY'
           from pathlib import Path
           import sys
