@@ -43,6 +43,7 @@ jobs:
             echo "Newsroom content is unchanged."
           else
             git commit -m "(news): refresh aviation headlines and story pages"
+            git pull --rebase origin main
             git push
           fi
       - name: Configure GitHub Pages
