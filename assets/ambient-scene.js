@@ -65,7 +65,7 @@ if(canvas){
    const front=new THREE.Mesh(new THREE.BoxGeometry(w+.035,h+.035,.055),[
     new THREE.MeshStandardMaterial({color:0x18232c}),new THREE.MeshStandardMaterial({color:0x18232c}),
     new THREE.MeshStandardMaterial({color:0x18232c}),new THREE.MeshStandardMaterial({color:0x18232c}),
-    new THREE.MeshStandardMaterial({color:0x18232c}),new THREE.MeshStandardMaterial({map:cover,roughness:.72})
+    new THREE.MeshStandardMaterial({map:cover,roughness:.72}),new THREE.MeshStandardMaterial({color:0x18232c})
    ]);
    front.position.z=d/2+.028;group.add(front);
    const spine=new THREE.Mesh(new THREE.BoxGeometry(.16,h,.07),new THREE.MeshStandardMaterial({color:accent,roughness:.78}));spine.position.x=-w/2+.05;spine.position.z=d/2+.055;group.add(spine);
