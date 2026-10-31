@@ -34,7 +34,8 @@ def child_text(node, names):
 
 def category_for(text):
     t = text.lower()
-    if any(k in t for k in ("india", "indigo", "air india", "dgca", "aai ", "mumbai airport", "delhi airport")): return "India"\n    if any(k in t for k in ("crash", "incident", "investigation", "safety", "emergency")): return "Safety"
+    if any(k in t for k in ("india", "indigo", "air india", "dgca", "aai ", "mumbai airport", "delhi airport")): return "India"
+    if any(k in t for k in ("crash", "incident", "investigation", "safety", "emergency")): return "Safety"
     if any(k in t for k in ("aircraft", "boeing", "airbus", "engine", "delivery", "fleet", "737", "787", "a350")): return "Aircraft"
     if any(k in t for k in ("airline", "indigo", "air india", "emirates", "qatar airways", "lufthansa", "routes", "flight")): return "Airlines"
     return "Industry"
