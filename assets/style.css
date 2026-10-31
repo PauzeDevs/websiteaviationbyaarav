@@ -138,7 +138,7 @@ footer{position:relative;z-index:1}
  box-shadow:0 1px 0 rgba(255,255,255,.025),0 15px 50px rgba(0,0,0,.12)
 }
 .brand-logo{display:inline-flex;align-items:center;min-width:0}
-.brand-logo img{display:block;width:224px;max-width:48vw;height:auto;max-height:54px;object-fit:contain;filter:brightness(0) invert(1)}
+.brand-logo img{display:block;width:224px;max-width:48vw;height:auto;max-height:54px;object-fit:contain;filter:none;background:transparent}
 .footer-brand img{width:190px;max-height:46px}
 .story-card,.aircraft-card,.glass-panel,.briefing,.newsroom-teaser,.instagram-card,.glass-float,.aircraft-stage{
  border-color:rgba(194,225,252,.2);
