@@ -64,7 +64,7 @@ jobs:
           from pathlib import Path
 
           data = json.loads(Path("data/news.json").read_text(encoding="utf-8"))
-          stories = data if isinstance(data, list) else data.get("stories", [])
+          stories = data if isinstance(data, list) else data.get("articles", data.get("stories", []))
           pages = list(Path("articles").glob("*.html"))
           if not stories:
               raise SystemExit("News collector returned no aviation stories.")
