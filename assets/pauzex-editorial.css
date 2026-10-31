@@ -165,97 +165,6 @@ footer{max-width:none;min-height:110px;padding:22px clamp(22px,5vw,76px);border-
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
-/* Fit the complete logo artwork. Its white pixels blend into the light header. */
-.brand-logo{width:180px;height:66px;flex:0 0 180px;overflow:visible}
-.brand-logo img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:left center;mix-blend-mode:multiply;background:transparent;filter:none!important}
-.topbar .brand-logo{width:180px;height:66px}
-.footer-brand,.footer-brand img{width:150px;height:56px;object-fit:contain;mix-blend-mode:multiply}
-@media(max-width:760px){.topbar .brand-logo{width:146px;height:54px;flex-basis:146px}.topbar .brand-logo img{width:100%;height:100%;max-width:100%;object-fit:contain}.footer-brand,.footer-brand img{width:132px;height:48px}}
-
-/* ThreeUI Temple Night-inspired full-page WebGL atmosphere */
-html{background:#080d12}
-body{background:transparent!important;isolation:isolate}
-#ambient-three-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block}
-body>*:not(#ambient-three-canvas){position:relative;z-index:1}
-.ambient,.flight-layer{z-index:0;pointer-events:none}
-.topbar,.hero,.ticker,.newsroom-teaser,.india-section,.section,.briefing,.about,footer{background-color:transparent}
-.story-card,.glass-panel,.india-section,.aircraft-card,.briefing,.instagram-card,.discovery-card{backdrop-filter:blur(24px) saturate(125%);-webkit-backdrop-filter:blur(24px) saturate(125%)}
-@media(prefers-reduced-motion:reduce){#ambient-three-canvas{opacity:.55}}
-
-/* Text-led hero: remove the synthetic aircraft viewer and give the editorial intro room. */
-.hero-immersive{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:690px;padding-top:110px;padding-bottom:34px;gap:0}
-.hero-copy-block{width:min(100%,720px);padding:0 0 30px}
-.hero-copy-block .hero-copy{max-width:560px}
-.hero-meta{margin-top:auto;padding-top:36px}
-@media(max-width:760px){.hero-immersive{min-height:590px;padding:82px 22px 30px}.hero-copy-block{padding-bottom:20px}.hero-copy-block h1{font-size:clamp(45px,12vw,68px)}}
-
-/* Temple Night visual correction: deep ink palette, warm temple light, clear WebGL visibility. */
-:root{
- color-scheme:dark;
- --bg:#070d12;--paper:#101a20;--paper-deep:#14232b;
- --ink:#e5edf0;--ink-soft:#b3c2c8;--muted:#81949c;
- --line:rgba(190,211,218,.16);--accent:#d5a574;--accent-soft:#e4c29b;
- --glass:rgba(13,25,32,.34);--glass-strong:rgba(14,27,35,.68);
- --glass-border:rgba(190,211,218,.24);
- --glass-shadow:0 24px 70px rgba(0,0,0,.28),inset 0 1px 0 rgba(225,239,242,.12);
-}
-html{background:#070d12}
-body{background:transparent!important;color:var(--ink)}
-body::before{display:none!important}
-body::after{opacity:.055}
-#ambient-three-canvas{z-index:0!important;opacity:1}
-body>*:not(#ambient-three-canvas){position:relative;z-index:1}
-.topbar{background:rgba(7,15,21,.62)!important;border-bottom:1px solid rgba(190,211,218,.12)!important;color:var(--ink)!important;backdrop-filter:blur(24px) saturate(135%);-webkit-backdrop-filter:blur(24px) saturate(135%)}
-.topbar nav,.text-button{color:#b7c5ca}
-.topbar nav a:hover,.topbar nav a[aria-current=page],.text-button:hover{color:#f1f5f5}
-.instagram-link{color:#e5edf0!important;background:rgba(210,226,230,.08)!important;border:1px solid rgba(215,230,233,.25)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 8px 28px rgba(0,0,0,.18)!important}
-.instagram-link span{color:#d5a574!important}
-.hero{background:transparent!important}
-.hero::before{
- background:linear-gradient(145deg,rgba(10,22,29,.30),rgba(9,20,27,.18))!important;
- border:1px solid rgba(204,220,224,.24)!important;
- box-shadow:0 24px 80px rgba(0,0,0,.18),inset 0 1px 0 rgba(230,241,243,.12)!important;
- backdrop-filter:blur(5px) saturate(110%)!important;
- -webkit-backdrop-filter:blur(5px) saturate(110%)!important;
-}
-.hero h1,.newsroom-teaser h2,.india-copy h2,.briefing h2,.about h2,.section h2,.newsroom-heading h1,.models-heading h1{color:#edf3f4!important}
-.hero h1 em,.newsroom-teaser h2 em,.india-copy h2 em,.briefing h2 em,.about h2 em,.section h2 .accent,.newsroom-heading h1 em,.models-heading h1 em{color:#d5a574!important}
-.hero-copy,.newsroom-teaser p,.india-copy p,.briefing-copy p,.about-right>p,.newsroom-heading>p,.models-heading p{color:#b7c5ca!important}
-.eyebrow,.hero-meta,.muted,.heading-note,.gallery-note,.gallery-disclaimer,.disclaimer,.models-note{color:#8fa4ad!important}
-.eyebrow-line{background:rgba(190,211,218,.2)!important}
-.primary-button{background:#b78355!important;border-color:#b78355!important;color:#10191e!important;box-shadow:0 12px 32px rgba(0,0,0,.25)!important}
-.primary-button:hover{background:#d19a69!important;color:#0b1419!important}
-.ticker{background:rgba(10,24,32,.88)!important;color:#d7e2e5!important;border-top:1px solid rgba(190,211,218,.12)!important;border-bottom:1px solid rgba(190,211,218,.12)!important}
-.ticker-label,.ticker i{color:#d5a574!important}
-.newsroom-teaser{background:rgba(12,25,33,.28)!important;border:1px solid rgba(190,211,218,.16);border-radius:26px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.india-section,.glass-panel,.aircraft-card,.story-card,.model-card,.discovery-card,.instagram-card{
- background:rgba(13,27,35,.66)!important;color:#e5edf0!important;
- border-color:rgba(190,211,218,.2)!important;
- box-shadow:0 18px 50px rgba(0,0,0,.22),inset 0 1px 0 rgba(230,241,243,.08)!important;
- backdrop-filter:blur(20px) saturate(125%)!important;-webkit-backdrop-filter:blur(20px) saturate(125%)!important;
-}
-.india-copy h2,.section h2,.aircraft-info h3,.model-copy h2,.story-content h3,.instagram-card strong{color:#e5edf0!important}
-.aircraft-info p,.model-copy p,.story-content p,.india-stat span,.about-right>p{color:#b5c4c9!important}
-.india-stat,.section-heading,.newsroom-feed .section-foot{border-color:rgba(190,211,218,.16)!important}
-.india-stat strong,.aircraft-info>span,.model-copy small,.story-source,.model-source,.model-spec{color:#d5a574!important}
-.story-image,.model-image{background:#14232b!important}
-.filter,.loading-card,.empty-state{background:rgba(16,31,40,.78)!important;color:#c2d0d4!important;border-color:rgba(190,211,218,.2)!important}
-.filter.active,.filter:hover{background:#b78355!important;color:#10191e!important;border-color:#b78355!important}
-footer{background:rgba(7,15,21,.76)!important;color:#8fa4ad!important;border-color:rgba(190,211,218,.14)!important}
-.briefing{background:linear-gradient(145deg,rgba(13,28,36,.88),rgba(8,18,24,.9))!important;border-color:rgba(190,211,218,.18)!important}
-.briefing h2 em{color:#d5a574!important}
-@media(max-width:760px){
- .hero-immersive{min-height:590px!important;padding:82px 22px 30px!important}
- .hero::before{inset:10px 8px!important;border-radius:22px!important}
- .topbar{background:rgba(7,15,21,.78)!important}
-}
-
-/* Brand lockup: use the transparent vector artwork, never a square raster tile. */
-.topbar .brand-logo{display:flex!important;width:166px!important;height:48px!important;flex:0 0 166px!important;overflow:visible!important;background:transparent!important}
-.topbar .brand-logo img{display:block!important;width:166px!important;height:48px!important;max-width:46vw!important;max-height:48px!important;object-fit:contain!important;object-position:left center!important;background:transparent!important;mix-blend-mode:normal!important;filter:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-.footer-brand,.footer-brand img{width:145px!important;height:42px!important;max-height:42px!important;object-fit:contain!important;object-position:left center!important;background:transparent!important;mix-blend-mode:normal!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-@media(max-width:600px){.topbar .brand-logo{width:148px!important;height:44px!important;flex-basis:148px!important}.topbar .brand-logo img{width:148px!important;height:44px!important;max-width:44vw!important}}
-
 /* Final shared visual contract: Temple Night canvas + restrained midnight glass. */
 :root{color-scheme:dark!important;--bg:#070d12;--paper:#101a20;--paper-deep:#14232b;--ink:#e5edf0;--ink-soft:#b7c5ca;--muted:#91a4ac;--line:rgba(190,211,218,.16);--accent:#d5a574;--accent-soft:#e4c29b;--glass:rgba(13,25,32,.34);--glass-strong:rgba(14,27,35,.72);--glass-border:rgba(190,211,218,.22);--glass-shadow:0 24px 70px rgba(0,0,0,.28),inset 0 1px 0 rgba(225,239,242,.10)}
 html{background:#070d12!important}
@@ -284,7 +193,9 @@ body::after{opacity:.045!important;z-index:2!important}
 .filter.active,.filter:hover{background:#b78355!important;color:#10191e!important;border-color:#b78355!important}
 footer{background:rgba(7,15,21,.78)!important;color:#91a4ac!important;border-color:rgba(190,211,218,.14)!important}
 .briefing{background:linear-gradient(145deg,rgba(13,28,36,.9),rgba(8,18,24,.94))!important;border-color:rgba(190,211,218,.18)!important}
-.topbar .brand-logo{display:flex!important;width:166px!important;height:48px!important;flex:0 0 166px!important;overflow:visible!important;background:transparent!important}
-.topbar .brand-logo img{display:block!important;width:166px!important;height:48px!important;max-width:46vw!important;max-height:48px!important;object-fit:contain!important;object-position:left center!important;background:transparent!important;mix-blend-mode:normal!important;filter:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-.footer-brand,.footer-brand img{width:145px!important;height:42px!important;max-height:42px!important;object-fit:contain!important;object-position:left center!important;background:transparent!important;mix-blend-mode:normal!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-@media(max-width:600px){.topbar .brand-logo{width:148px!important;height:44px!important;flex-basis:148px!important}.topbar .brand-logo img{width:148px!important;height:44px!important;max-width:44vw!important}}
+.topbar .brand-logo img{width:148px!important;height:44px!important;max-width:44vw!important}}
+
+/* Background layer only. Preserve all existing site content above it. */
+#ambient-three-canvas{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important;display:block!important;pointer-events:none!important}
+body{background:transparent!important}
+body>*:not(#ambient-three-canvas){position:relative;z-index:1}
