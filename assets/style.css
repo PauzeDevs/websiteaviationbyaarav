@@ -102,3 +102,60 @@
 .teaser-orbit small{position:absolute;bottom:0;font-size:8px;letter-spacing:2px;color:#718da8}
 @keyframes orbit-spin{to{transform:rotate(360deg)}}
 @media(max-width:760px){.newsroom-teaser{margin:45px 14px 65px;padding:34px 24px;grid-template-columns:1fr;gap:0}.teaser-orbit{height:180px}.teaser-orbit .ring-three{width:175px}.teaser-orbit .ring-two{width:130px}.teaser-orbit .ring-one{width:75px}}
+
+
+/* Atmosphere: animated aviation routes and Apple-like liquid glass */
+body{position:relative;isolation:isolate;background:#070d17}
+body:before{
+ content:"";position:fixed;inset:-18%;z-index:-1;pointer-events:none;
+ background:
+  radial-gradient(ellipse at 18% 22%,rgba(61,132,194,.23),transparent 27%),
+  radial-gradient(ellipse at 78% 17%,rgba(42,95,151,.22),transparent 30%),
+  radial-gradient(ellipse at 58% 78%,rgba(28,76,123,.2),transparent 29%),
+  radial-gradient(ellipse at 5% 85%,rgba(27,75,117,.16),transparent 26%),
+  linear-gradient(135deg,#060b13 0%,#091625 48%,#070d17 100%);
+ background-size:150% 150%;animation:aviation-atmosphere 26s ease-in-out infinite alternate;
+}
+@keyframes aviation-atmosphere{
+ 0%{background-position:0% 0%;transform:scale(1)}
+ 50%{background-position:100% 30%;transform:scale(1.045)}
+ 100%{background-position:20% 100%;transform:scale(1.02)}
+}
+.flight-layer{position:fixed;inset:0;width:100%;height:100dvh;z-index:0;opacity:.46;overflow:hidden}
+.flight-path{width:145%;height:100%;min-height:0;stroke:rgba(136,190,232,.3);stroke-width:1.1;stroke-dasharray:2 14;animation:route-flow 46s linear infinite}
+.path-one{top:4%;left:-12%}
+.path-two{top:48%;left:-22%;opacity:.55;animation-duration:62s;animation-direction:reverse}
+@keyframes route-flow{to{stroke-dashoffset:-420}}
+.plane-one{top:22%;left:-8%;animation-duration:36s}
+.plane-two{top:63%;left:-8%;animation-duration:45s;animation-delay:8s}
+.plane-three{top:82%;left:-8%;animation-duration:40s;animation-delay:15s}
+main{position:relative;z-index:1}
+footer{position:relative;z-index:1}
+.topbar{
+ background:rgba(7,13,23,.54);backdrop-filter:blur(28px) saturate(155%);
+ -webkit-backdrop-filter:blur(28px) saturate(155%);
+ border-bottom-color:rgba(198,226,252,.13);
+ box-shadow:0 1px 0 rgba(255,255,255,.025),0 15px 50px rgba(0,0,0,.12)
+}
+.brand-logo{display:inline-flex;align-items:center;min-width:0}
+.brand-logo img{display:block;width:224px;max-width:48vw;height:auto;max-height:54px;object-fit:contain;filter:brightness(0) invert(1)}
+.footer-brand img{width:190px;max-height:46px}
+.story-card,.aircraft-card,.glass-panel,.briefing,.newsroom-teaser,.instagram-card,.glass-float,.aircraft-stage{
+ border-color:rgba(194,225,252,.2);
+ background-image:linear-gradient(135deg,rgba(225,242,255,.115),rgba(131,177,219,.045) 43%,rgba(12,26,42,.54));
+ backdrop-filter:blur(30px) saturate(155%);
+ -webkit-backdrop-filter:blur(30px) saturate(155%);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.18),inset 0 -1px 0 rgba(120,176,221,.09),0 22px 70px rgba(0,0,0,.24);
+}
+.story-card:hover,.aircraft-card:hover,.gallery-tile:hover{
+ border-color:rgba(171,218,255,.42);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.21),0 25px 80px rgba(0,0,0,.32),0 0 30px rgba(80,151,210,.08)
+}
+.glass-float{background:linear-gradient(135deg,rgba(227,242,255,.19),rgba(105,160,207,.065) 48%,rgba(9,22,36,.58))}
+.filter{background:rgba(176,211,241,.055);border-color:rgba(193,226,253,.17);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%)}
+.aircraft-stage{background:radial-gradient(ellipse at 52% 50%,rgba(74,137,190,.17),transparent 56%),rgba(7,16,27,.42)}
+/* Cleaner layout and the transparent brand lockup */
+@media(max-width:600px){.brand-logo img{width:190px;max-height:46px}.footer-brand img{width:162px}}
+@media(prefers-reduced-motion:reduce){
+ body:before,.flight-path,.flying-plane{animation:none!important}
+}
