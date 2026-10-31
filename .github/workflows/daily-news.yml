@@ -88,8 +88,21 @@ jobs:
             echo "Newsroom content is unchanged."
           else
             git commit -m "(news): refresh aviation news and attributed report pages"
-            git pull --rebase -X theirs origin main
-            git push
+            pushed=false
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git rebase -X theirs origin/main
+              if git push origin HEAD:main; then
+                pushed=true
+                break
+              fi
+              echo "Push raced with another commit (attempt $attempt/3); retrying."
+              sleep 2
+            done
+            if [ "$pushed" != true ]; then
+              echo "Could not publish newsroom update after 3 attempts."
+              exit 1
+            fi
           fi
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
