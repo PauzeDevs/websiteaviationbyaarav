@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Collect and normalise aviation headlines from public RSS feeds."""
-import json, re, sys, time
+"""Collect aviation RSS headlines and generate attributed static story pages."""
+import html, json, re, sys
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "news.json"
+ARTICLE_DIR = ROOT / "articles"
 FEEDS = [
     ("Simple Flying", "https://simpleflying.com/feed/"),
     ("FlightGlobal", "https://www.flightglobal.com/rss"),
@@ -19,7 +20,10 @@ HEADERS = {"User-Agent": "AviationByAaravNewsBot/1.0 (+https://github.com/PauzeD
 
 def clean(value):
     value = re.sub(r"<[^>]+>", " ", unescape(value or ""))
-    return re.sub(r"\s+", " ", value).strip()
+    return re.sub(r"\\s+", " ", value).strip()
+
+def slugify(value):
+    return re.sub(r"^-|-$", "", re.sub(r"[^a-z0-9]+", "-", value.lower()))[:90] or "aviation-story"
 
 def child_text(node, names):
     for name in names:
@@ -49,9 +53,7 @@ def fetch_feed(name, url):
     with urlopen(req, timeout=20) as response:
         payload = response.read(4_000_000)
     root = ET.fromstring(payload)
-    items = root.findall(".//item")
-    if not items:
-        items = root.findall(".//{*}entry")
+    items = root.findall(".//item") or root.findall(".//{*}entry")
     results = []
     for item in items:
         title = clean(child_text(item, ["title", "{*}title"]))
@@ -59,7 +61,7 @@ def fetch_feed(name, url):
         if not link:
             link_node = item.find("{*}link")
             if link_node is not None: link = link_node.attrib.get("href", "")
-        description = child_text(item, ["description", "{*}description", "{*}summary", "{*}content"])
+        description = clean(child_text(item, ["description", "{*}description", "{*}summary", "{*}content"]))
         published = child_text(item, ["pubDate", "{*}published", "{*}updated", "{*}date"])
         image = ""
         for node in item.iter():
@@ -67,10 +69,33 @@ def fetch_feed(name, url):
                 image = node.attrib.get("url", "")
                 if image: break
         if title and link.startswith("http"):
-            results.append({"title": title, "url": link, "summary": clean(description)[:280], "source": name,
+            results.append({"title": title, "slug": slugify(title), "url": link,
+                            "summary": description[:360], "source": name,
                             "published": parse_date(published).isoformat(), "image": image,
                             "category": category_for(title + " " + description)})
     return results
+
+def article_page(article):
+    title = html.escape(article["title"])
+    summary = html.escape(article.get("summary") or "Open the original publisher's report for the full story.")
+    source = html.escape(article.get("source") or "Original publisher")
+    url = html.escape(article["url"], quote=True)
+    category = html.escape(article.get("category", "Aviation"))
+    published = html.escape(article.get("published", ""))
+    image = article.get("image", "")
+    image_markup = f'<img class="cover" src="{html.escape(image, quote=True)}" alt="" />' if image.startswith("https://") else ""
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d16"><meta name="description" content="{summary[:155]}">
+<meta property="og:title" content="{title} | Aviation by Aarav"><meta property="og:description" content="{summary[:180]}">
+<title>{title} | Aviation by Aarav</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{{box-sizing:border-box}}body{{margin:0;background:#080d16;color:#f4f7fb;font-family:'DM Sans',sans-serif}}a{{color:#a9d2f5;text-decoration:none}}.nav{{max-width:900px;margin:auto;padding:25px 24px;border-bottom:1px solid #ffffff18;font:700 11px 'Manrope',sans-serif;letter-spacing:1.5px}}main{{max-width:820px;margin:70px auto;padding:0 24px}}.tag{{color:#9bcfff;font-size:10px;letter-spacing:2px;text-transform:uppercase}}h1{{font:700 clamp(34px,6vw,58px)/1.12 'Manrope',sans-serif;letter-spacing:-2px;margin:20px 0}}.meta{{color:#8295ab;font-size:12px;margin-bottom:28px}}.cover{{width:100%;max-height:420px;object-fit:cover;border-radius:18px;margin-bottom:26px}}.panel{{border:1px solid #c4e0ff24;border-radius:20px;background:linear-gradient(145deg,#17283a99,#0c1624bb);padding:28px;backdrop-filter:blur(18px)}}.panel p{{font-size:16px;line-height:1.8;color:#c0ccda}}.note{{font-size:11px!important;color:#8194aa!important;border-top:1px solid #ffffff18;padding-top:17px;margin-top:24px}}.button{{display:inline-block;margin-top:18px;background:#eaf4ff;color:#0a1726;padding:14px 19px;border-radius:30px;font-size:12px;font-weight:700}}footer{{max-width:820px;margin:80px auto 35px;padding:0 24px;color:#718198;font-size:10px}}
+</style></head><body><header class="nav"><a href="../index.html">✈ AVIATION BY AARAV</a></header>
+<main><div class="tag">{category} · NEWS DESK</div><h1>{title}</h1><div class="meta">{source} &nbsp;·&nbsp; {published}</div>{image_markup}
+<section class="panel"><p>{summary}</p><p class="note">This page is an attributed news brief generated from the publisher's public RSS feed. It is not a substitute for the original reporting and does not reproduce the full article. Follow the source link for complete details, context and updates.</p><a class="button" href="{url}" target="_blank" rel="noopener noreferrer">Read the original report ↗</a></section>
+</main><footer>© Aviation by Aarav · Independent aviation coverage · <a href="https://www.instagram.com/aviation_byaarav/">Instagram ↗</a></footer></body></html>"""
 
 def main():
     articles, failed = [], []
@@ -81,7 +106,6 @@ def main():
         except Exception as exc:
             failed.append(f"{name}: {exc}")
             print(f"Feed failed: {name}: {exc}", file=sys.stderr)
-    # Preserve the last successful feed if every upstream publisher is temporarily unavailable.
     if not articles:
         if OUTPUT.exists() and json.loads(OUTPUT.read_text()).get("articles"):
             print("No feeds responded; preserving previous news data.")
@@ -92,10 +116,13 @@ def main():
         key = article["url"].split("#")[0].rstrip("/")
         if key in seen: continue
         seen.add(key); unique.append(article)
-    payload = {"updated": datetime.now(timezone.utc).isoformat(), "articles": unique[:45],
-               "feed_warnings": failed}
+    unique = unique[:45]
+    ARTICLE_DIR.mkdir(parents=True, exist_ok=True)
+    for article in unique:
+        (ARTICLE_DIR / (article["slug"] + ".html")).write_text(article_page(article), encoding="utf-8")
+    payload = {"updated": datetime.now(timezone.utc).isoformat(), "articles": unique, "feed_warnings": failed}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Saved {len(payload['articles'])} stories.")
+    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    print(f"Saved {len(unique)} stories and generated {len(unique)} article pages.")
 
 if __name__ == "__main__": main()
