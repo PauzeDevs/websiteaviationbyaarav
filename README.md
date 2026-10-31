@@ -2,16 +2,16 @@
 
 # Aviation by Aarav ✈️
 
-<a href="https://pauzedevs.github.io/websiteaviationbyaarav/">
+<a href="https://aviationbyaarav.devs.surf/">
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=24&pause=900&color=58A6FF&center=true&vCenter=true&width=520&lines=EXPLORE+AVIATION+BY+AARAV;YOUR+DAILY+AVIATION+NEWSROOM;OPEN+THE+LIVE+WEBSITE+%E2%86%92" alt="Explore Aviation by Aarav, your daily aviation newsroom" />
 </a>
 
 <br />
 
-[![Visit Website](https://img.shields.io/badge/🌐_VISIT_WEBSITE-Open_Newsroom-1D75BD?style=for-the-badge)](https://pauzedevs.github.io/websiteaviationbyaarav/)
+[![Visit Website](https://img.shields.io/badge/🌐_VISIT_WEBSITE-Open_Newsroom-1D75BD?style=for-the-badge)](https://aviationbyaarav.devs.surf/)
 [![Instagram](https://img.shields.io/badge/INSTAGRAM-@aviation__byaarav-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/aviation_byaarav/)
 
-*An Apple-inspired aviation newsroom with a dark matte palette, translucent glass cards and subtle animated aircraft flight paths.*
+*An editorial aviation newsroom with a cinematic Three.js night atmosphere, glass surfaces and responsive reporting pages.*
 
 </div>
 
@@ -35,8 +35,10 @@ In **Settings → Pages**, select **GitHub Actions** as the build and deployment
 
 ## Project structure
 - `index.html` – homepage and publication sections
-- `assets/style.css` – responsive glass UI and animated aircraft
-- `assets/app.js` – news feed rendering and filters
+- `assets/style.css` and `assets/pauzex-editorial.css` – responsive editorial and glass UI
+- `assets/ambient-scene.js` – shared Three.js atmospheric background
+- `assets/app.js` – news feed rendering, source links and category filters
+- `aircraft/` – aircraft directory
 - `data/news.json` – generated news feed
 - `articles/` – generated story pages
 - `scripts/fetch_news.py` – RSS collector and static article generator
