@@ -1,10 +1,11 @@
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js';
-
 const canvas=document.querySelector('#aircraft-canvas');
 const stage=document.querySelector('#aircraft-stage');
 
 if(canvas&&stage){
+  (async()=>{
   try{
+    const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js');
+    stage.classList.add('scene-ready');
     const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'default'});
     renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.35));
@@ -113,7 +114,9 @@ if(canvas&&stage){
     window.addEventListener('pagehide',()=>{observer.disconnect();cancelAnimationFrame(raf);renderer.dispose();},{once:true});
   }catch(error){
     console.warn('3D aircraft scene unavailable:',error);
+    stage.classList.remove('scene-ready');
     stage.classList.add('scene-fallback');
     canvas.hidden=true;
   }
+  })();
 }
