@@ -1,6 +1,19 @@
+<div align="center">
+
 # Aviation by Aarav ✈️
 
-An Apple-inspired aviation newsroom with a dark matte palette, translucent glass cards and subtle animated aircraft flight paths.
+<a href="https://pauzedevs.github.io/websiteaviationbyaarav/">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=24&pause=900&color=58A6FF&center=true&vCenter=true&width=520&lines=EXPLORE+AVIATION+BY+AARAV;YOUR+DAILY+AVIATION+NEWSROOM;OPEN+THE+LIVE+WEBSITE+%E2%86%92" alt="Explore Aviation by Aarav, your daily aviation newsroom" />
+</a>
+
+<br />
+
+[![Visit Website](https://img.shields.io/badge/🌐_VISIT_WEBSITE-Open_Newsroom-1D75BD?style=for-the-badge)](https://pauzedevs.github.io/websiteaviationbyaarav/)
+[![Instagram](https://img.shields.io/badge/INSTAGRAM-@aviation__byaarav-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/aviation_byaarav/)
+
+*An Apple-inspired aviation newsroom with a dark matte palette, translucent glass cards and subtle animated aircraft flight paths.*
+
+</div>
 
 ## Website features
 - Daily aviation headlines with source, date and category filters.
@@ -9,7 +22,6 @@ An Apple-inspired aviation newsroom with a dark matte palette, translucent glass
 - Aircraft profiles and manufacturer reference links.
 - Aviation photography showcase linked to Instagram.
 - Responsive layout and reduced-motion accessibility support.
-- Instagram: [@aviation_byaarav](https://www.instagram.com/aviation_byaarav/).
 
 ## Daily newsroom automation
 GitHub Actions runs every day at **08:00 India Standard Time** and on manual dispatch. It collects public RSS entries from Simple Flying, FlightGlobal and Aviation Week, deduplicates them, writes `data/news.json`, generates static pages under `articles/`, and deploys the site to GitHub Pages.
@@ -32,5 +44,7 @@ In **Settings → Pages**, select **GitHub Actions** as the build and deployment
 
 ## Local preview
 Run `python -m http.server 8000` from the repository root, then open `http://localhost:8000`.
+
+---
 
 © Aviation by Aarav
