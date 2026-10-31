@@ -64,10 +64,20 @@ def fetch_feed(name, url):
         description = clean(child_text(item, ["description", "{*}description", "{*}summary", "{*}content"]))
         published = child_text(item, ["pubDate", "{*}published", "{*}updated", "{*}date"])
         image = ""
+        # RSS publishers use several different image conventions.
         for node in item.iter():
-            if node.tag.endswith(("content", "thumbnail")):
-                image = node.attrib.get("url", "")
-                if image: break
+            tag = node.tag.lower()
+            candidate = node.attrib.get("url", "") or node.attrib.get("href", "")
+            is_image_node = tag.endswith(("content", "thumbnail", "enclosure"))
+            mime = node.attrib.get("type", "").lower()
+            if candidate.startswith("https://") and (is_image_node or mime.startswith("image/")):
+                image = candidate
+                break
+        if not image:
+            raw_description = child_text(item, ["description", "{*}description", "{*}summary", "{*}content"])
+            match = re.search(r'<img[^>]+(?:src|data-src)=["\\']([^"\\']+)["\\']', raw_description, re.I)
+            if match and match.group(1).startswith("https://"):
+                image = match.group(1)
         if title and link.startswith("http"):
             results.append({"title": title, "slug": slugify(title), "url": link,
                             "summary": description[:360], "source": name,
