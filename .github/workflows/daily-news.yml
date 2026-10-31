@@ -55,8 +55,30 @@ jobs:
               sys.exit(1)
           print(f'Validated {len(html_files)} HTML files and the original logo.')
           PY
-      - name: Collect aviation headlines and build story pages
+      - name: Collect aviation headlines and build attributed report pages
         run: python scripts/fetch_news.py
+      - name: Validate refreshed reports and original-source links
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("data/news.json").read_text(encoding="utf-8"))
+          stories = data if isinstance(data, list) else data.get("stories", [])
+          pages = list(Path("articles").glob("*.html"))
+          if not stories:
+              raise SystemExit("News collector returned no aviation stories.")
+          if not pages:
+              raise SystemExit("No individual report pages were generated.")
+          missing = []
+          for page in pages:
+              content = page.read_text(encoding="utf-8")
+              if "Read the complete original report" not in content or "Source credit:" not in content:
+                  missing.append(str(page))
+          if missing:
+              raise SystemExit("Report page is missing attribution or original-source link: " + ", ".join(missing))
+          print(f"Validated {len(stories)} news records and {len(pages)} attributed report pages.")
+          PY
       - name: Commit refreshed newsroom data and article pages
         run: |
           git config user.name "github-actions[bot]"
@@ -65,7 +87,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Newsroom content is unchanged."
           else
-            git commit -m "(news): refresh aviation headlines and story pages"
+            git commit -m "(news): refresh aviation news and attributed report pages"
             git pull --rebase -X theirs origin main
             git push
           fi
