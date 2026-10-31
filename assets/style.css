@@ -41,3 +41,28 @@
 .story-card{min-height:0}
 .scene-fallback{background:radial-gradient(ellipse at 55% 48%,rgba(87,151,205,.25),transparent 56%)}
 @media(max-width:600px){.story-image{height:190px;min-height:190px}}
+
+
+/* Mobile-safe aircraft scene fallback */
+.aircraft-stage{
+  background:radial-gradient(ellipse at 50% 48%,rgba(58,119,171,.24),transparent 58%),linear-gradient(145deg,#0b1929,#070d17);
+  border:1px solid rgba(166,207,244,.09);
+  border-radius:24px;
+  overflow:hidden;
+}
+.aircraft-fallback{
+  position:absolute;inset:0;z-index:1;display:grid;place-items:center;
+  background:transparent;pointer-events:none;
+}
+.aircraft-fallback svg{width:min(94%,720px);height:auto;max-height:82%;filter:drop-shadow(0 24px 36px rgba(0,0,0,.38));transform:rotate(-8deg)}
+.aircraft-fallback span{position:absolute;bottom:18%;left:50%;transform:translateX(-50%);font-size:7px;letter-spacing:2px;color:#718da8;white-space:nowrap}
+#aircraft-canvas{background:transparent!important;z-index:2}
+.stage-vignette{z-index:3}
+.stage-label,.stage-coordinate,.stage-hint,.stage-bottom,.glass-float{z-index:4}
+.aircraft-stage.scene-ready .aircraft-fallback{opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s ease}
+.aircraft-stage.scene-fallback #aircraft-canvas{display:none}
+.aircraft-stage.scene-fallback .aircraft-fallback{opacity:1;visibility:visible}
+@media(max-width:520px){
+  .aircraft-stage{border-radius:18px;min-height:320px}
+  .aircraft-fallback svg{width:110%;max-height:75%}
+}
