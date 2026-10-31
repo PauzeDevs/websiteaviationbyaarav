@@ -1,4 +1,6 @@
 const grid=document.querySelector('#story-grid');
+const scriptUrl=document.currentScript?.src||new URL('assets/app.js',location.href).href;
+const fromSiteRoot=path=>new URL('../'+path.replace(/^\\//,''),scriptUrl).href;
 let stories=[];
 let activeFilter='All';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -19,7 +21,7 @@ function render(){
   const list=activeFilter==='All'?stories:stories.filter(s=>s.category===activeFilter);
   if(!list.length){grid.innerHTML='<div class="empty-state">No stories in this category yet. Check back after the next newsroom update.</div>';return}
   grid.innerHTML=list.slice(0,18).map(s=>{
-    const href='articles/'+(s.slug||slug(s.title))+'.html';
+    const href=fromSiteRoot('articles/'+(s.slug||slug(s.title))+'.html');
     const image=storyImage(s);
     return `<article class="story-card">
       <a class="story-image-link" href="${esc(href)}" aria-label="Open ${esc(s.title)}">
@@ -36,7 +38,7 @@ document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
 document.querySelector('[data-india-filter]')?.addEventListener('click',()=>document.querySelector('.filter[data-filter="All"]')?.click());
 async function load(){
   try{
-    const response=await fetch('data/news.json',{cache:'no-store'});if(!response.ok)throw Error('News feed unavailable');
+    const response=await fetch(fromSiteRoot('data/news.json'),{cache:'no-store'});if(!response.ok)throw Error('News feed unavailable');
     const data=await response.json();stories=Array.isArray(data.articles)?data.articles:[];
     stories.sort((a,b)=>new Date(b.published)-new Date(a.published));
     const updated=document.querySelector('#updated-label');
