@@ -76,7 +76,7 @@ def fetch_feed(name, url):
                 break
         if not image:
             raw_description = child_text(item, ["description", "{*}description", "{*}summary", "{*}content"])
-            match = re.search(r'<img[^>]+(?:src|data-src)=["\\']([^"\\']+)["\\']', raw_description, re.I)
+            match = re.search(r"""<img[^>]+(?:src|data-src)=["']([^"']+)["']""", raw_description, re.I)
             if match and match.group(1).startswith("https://"):
                 image = match.group(1)
         if title and link.startswith("http"):
