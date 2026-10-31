@@ -16,6 +16,8 @@ FEEDS = [
     ("FlightGlobal", "https://www.flightglobal.com/rss"),
     ("Aviation Week", "https://aviationweek.com/rss.xml"),
 ]
+GOOGLE_NEWS = "https://news.google.com/rss/search?q=(aviation+OR+airline+OR+aircraft+OR+airport+OR+aerospace+OR+DGCA)+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
+AVIATION_TERMS = ("aviation", "airline", "aircraft", "airport", "airbus", "boeing", "flight", "pilot", "runway", "aeroplane", "airplane", "aerospace", "helicopter", "dgca", "aai", "indigo", "air india", "spicejet", "akasa", "vistara", "jet engine", "air traffic")
 HEADERS = {"User-Agent": "AviationByAaravNewsBot/1.0 (+https://github.com/PauzeDevs/websiteaviationbyaarav)"}
 
 def clean(value):
@@ -49,6 +51,32 @@ def parse_date(raw):
         try: return datetime.fromisoformat(raw.replace("Z", "+00:00")).astimezone(timezone.utc)
         except Exception: return datetime.now(timezone.utc)
 
+
+def is_aviation(title, description=""):
+    text = (title + " " + description).lower()
+    return any(term in text for term in AVIATION_TERMS)
+
+def page_image(url):
+    """Best-effort publisher hero image from Open Graph/Twitter metadata."""
+    try:
+        req = Request(url, headers=HEADERS)
+        with urlopen(req, timeout=8) as response:
+            final_url = response.geturl()
+            raw = response.read(1_500_000).decode("utf-8", "ignore")
+        patterns = [
+            r'<meta[^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\'][^>]+content=["\']([^"\']+)',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\']',
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, raw, re.I)
+            if match:
+                image = html.unescape(match.group(1)).strip()
+                if image.startswith("//"): image = "https:" + image
+                if image.startswith("https://"): return image, final_url
+        return "", final_url
+    except Exception:
+        return "", url
+
 def fetch_feed(name, url):
     req = Request(url, headers=HEADERS)
     with urlopen(req, timeout=20) as response:
@@ -79,7 +107,7 @@ def fetch_feed(name, url):
             match = re.search(r"""<img[^>]+(?:src|data-src)=["']([^"']+)["']""", raw_description, re.I)
             if match and match.group(1).startswith("https://"):
                 image = match.group(1)
-        if title and link.startswith("http"):
+        if title and link.startswith("http") and (name != "Google News" or is_aviation(title, description)):
             results.append({"title": title, "slug": slugify(title), "url": link,
                             "summary": description[:360], "source": name,
                             "published": parse_date(published).isoformat(), "image": image,
@@ -127,7 +155,26 @@ def main():
         key = article["url"].split("#")[0].rstrip("/")
         if key in seen: continue
         seen.add(key); unique.append(article)
+    # Google News is a filtered backup feed, used when publisher feeds are sparse.
+    if len(unique) < 25:
+        try:
+            google_items = fetch_feed("Google News", GOOGLE_NEWS)
+            for article in sorted(google_items, key=lambda x: x["published"], reverse=True):
+                key = article["url"].split("#")[0].rstrip("/")
+                if key not in seen:
+                    seen.add(key); unique.append(article)
+            print(f"Google News fallback supplied {len(google_items)} aviation-filtered items.")
+        except Exception as exc:
+            failed.append(f"Google News fallback: {exc}")
+            print(f"Google News fallback failed: {exc}", file=sys.stderr)
     unique = unique[:45]
+    # Prefer each publisher's own image. If RSS omits one, retrieve the article's
+    # Open Graph/Twitter image. Never substitute a category-wide stock photo.
+    for article in unique[:30]:
+        if not article.get("image"):
+            image, final_url = page_image(article["url"])
+            if image: article["image"] = image
+            if final_url and final_url.startswith("https://"): article["url"] = final_url
     ARTICLE_DIR.mkdir(parents=True, exist_ok=True)
     for article in unique:
         (ARTICLE_DIR / (article["slug"] + ".html")).write_text(article_page(article), encoding="utf-8")
