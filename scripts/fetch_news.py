@@ -16,8 +16,8 @@ FEEDS = [
     ("FlightGlobal", "https://www.flightglobal.com/rss"),
     ("Aviation Week", "https://aviationweek.com/rss.xml"),
 ]
-GOOGLE_NEWS = "https://news.google.com/rss/search?q=(aviation+OR+airline+OR+aircraft+OR+airport+OR+aerospace+OR+DGCA)+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
-AVIATION_TERMS = ("aviation", "airline", "aircraft", "airport", "airbus", "boeing", "flight", "pilot", "runway", "aeroplane", "airplane", "aerospace", "helicopter", "dgca", "aai", "indigo", "air india", "spicejet", "akasa", "vistara", "jet engine", "air traffic")
+GOOGLE_NEWS = "https://news.google.com/rss/search?q=(aviation+OR+airline+OR+aircraft+OR+airport+OR+Airbus+OR+Boeing+OR+DGCA)+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
+AVIATION_TERMS = ("aviation", "airline", "aircraft", "airport", "airbus", "boeing", "runway", "aeroplane", "airplane", "aerospace", "helicopter", "dgca", "aai", "indigo", "air india", "spicejet", "akasa", "vistara", "jet engine", "air traffic", "airbus a", "boeing 7", "boeing 8", "pilot union", "air force aircraft")
 HEADERS = {"User-Agent": "AviationByAaravNewsBot/1.0 (+https://github.com/PauzeDevs/websiteaviationbyaarav)"}
 
 def clean(value):
