@@ -30,3 +30,14 @@
 @media(max-width:900px){.hero-immersive{grid-template-columns:1fr;grid-template-rows:auto minmax(390px,1fr) auto;gap:0;padding:76px 22px 25px;min-height:900px}.hero-copy-block{padding:0;max-width:620px}.hero-copy-block h1{font-size:clamp(46px,10vw,70px);margin:20px 0 14px}.hero-copy-block .hero-copy{max-width:470px}.aircraft-stage{height:490px;min-height:390px;margin-top:-12px}.glass-flight{right:2%;top:24%}.glass-altitude{left:2%;bottom:24%}.hero-immersive .hero-meta{margin-top:0}}
 @media(max-width:520px){.hero-immersive{min-height:850px;padding-top:67px}.hero-copy-block h1{letter-spacing:-3px}.hero-copy-block .hero-copy{font-size:12px;max-width:320px}.hero-actions{gap:16px;flex-wrap:wrap}.aircraft-stage{height:390px;min-height:340px;margin:0 -8px}.glass-float{padding:12px 13px;border-radius:13px}.glass-flight{min-width:138px;right:0;top:20%}.glass-altitude{min-width:112px;bottom:20%}.glass-float strong{font-size:12px}.glass-altitude strong{font-size:19px}.stage-label{font-size:7px}.stage-coordinate{right:2%}.stage-hint{font-size:7px;bottom:12%}.stage-bottom{font-size:6px}.hero-immersive .hero-meta{font-size:6px}}
 @media(prefers-reduced-motion:reduce){#aircraft-canvas{opacity:.9}}
+
+/* News thumbnails: reliable crop, no collapsed image wrappers */
+.story-image-link{display:block;color:inherit}
+.story-image{height:180px;min-height:180px;background:#12243a;position:relative;overflow:hidden}
+.story-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.94;transition:transform .45s ease}
+.story-card:hover .story-image img{transform:scale(1.045)}
+.story-image:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(0deg,rgba(7,13,23,.78),transparent);pointer-events:none}
+.story-image .image-tag{z-index:2}
+.story-card{min-height:0}
+.scene-fallback{background:radial-gradient(ellipse at 55% 48%,rgba(87,151,205,.25),transparent 56%)}
+@media(max-width:600px){.story-image{height:190px;min-height:190px}}
