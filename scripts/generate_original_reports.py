@@ -115,15 +115,27 @@ def related_groups(items):
             if len(shared) >= 2 and overlap >= 0.38:
                 group.append(candidate)
                 group_indices.append(candidate_index)
-        if len({x["domain"] for x in group}) >= 2:
+            if len({x["domain"] for x in group}) >= 2:
             group.sort(key=lambda x: x.get("published", ""), reverse=True)
             groups.append(group[:2])
             used_indices.update(group_indices)
         if len(groups) >= 3:
             break
+
+    # Do not let strict cross-publisher matching leave the AI newsroom empty.
+    # Remaining recent stories may produce a clearly attributed single-source
+    # analysis, with the page explicitly disclosing that it is not corroborated.
+    if len(groups) < 3:
+        for index, item in enumerate(prepared):
+            if index in used_indices:
+                continue
+            groups.append([item])
+            used_indices.add(index)
+            if len(groups) >= 3:
+                break
     return groups
 
-SYSTEM_PROMPT = """You are the Aviation by Aarav editorial desk. Write original, accurate aviation journalism from the supplied source material only.
+SYSTEM_PROMPT = """You are the Aviation by Aarav editorial desk. Write an accurate, original aviation report or analysis from the supplied source material only. A report may have one publisher or multiple independent publishers. When only one publisher is supplied, attribute all material claims to that publisher and explicitly state that the account has not been independently corroborated.
 Return one valid JSON object with exactly these keys:
 headline, dek, category, summary, sections, key_facts, analysis, limitations, seo_description.
 sections is an array of 3 to 5 objects with heading and body. key_facts is an array of 2 to 5 concise strings. category must be one of India, Airlines, Aircraft, Industry, Safety.
@@ -257,7 +269,7 @@ def main():
     ARTICLE_DIR.mkdir(parents=True, exist_ok=True)
     created = []
     for group in groups:
-        if len({item["domain"] for item in group}) < 2:
+        if not group:
             continue
         article = call_model(group)
         slug = slugify(article["headline"])
