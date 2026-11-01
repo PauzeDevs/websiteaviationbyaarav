@@ -1,0 +1,50 @@
+name: Clear stale GitHub Pages deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      deployment_sha:
+        description: "Commit SHA whose stuck Pages deployment should be cleared"
+        required: true
+        default: "6414ccdf1d1d03c3ec9eef3943527c3cc9404740"
+        type: string
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  clear-stale-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark stale Pages deployment inactive
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ inputs.deployment_sha }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ ! "$TARGET_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Expected a full 40-character commit SHA."
+            exit 1
+          fi
+
+          deployments="$(gh api --paginate "repos/$REPOSITORY/deployments?sha=$TARGET_SHA&environment=github-pages&per_page=100")"
+          count="$(jq 'length' <<< "$deployments")"
+
+          if [[ "$count" -eq 0 ]]; then
+            echo "No github-pages deployment records found for $TARGET_SHA."
+            exit 0
+          fi
+
+          while IFS= read -r deployment_id; do
+            [[ -n "$deployment_id" ]] || continue
+            echo "Marking deployment $deployment_id inactive..."
+            gh api --method POST "repos/$REPOSITORY/deployments/$deployment_id/statuses" \
+              -f state=inactive \
+              -f description="Cleared stale GitHub Pages deployment lock"
+          done < <(jq -r '.[].id' <<< "$deployments")
+
+          echo "Cleanup request completed for $count deployment record(s)."
