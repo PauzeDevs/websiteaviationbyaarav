@@ -21,36 +21,21 @@ class NewsroomTests(unittest.TestCase):
         self.assertIn("india", result)
         self.assertIn("a350", result)
 
-    def test_related_story_requires_two_independent_domains(self):
+    def test_every_news_story_gets_its_own_report(self):
         now = datetime.now(timezone.utc).isoformat()
         items = [
-            {"title": "Air India orders six A350 aircraft", "published": now},
-            {"title": "Air India to add six Airbus A350 aircraft", "published": now},
+            {"title": "Air India orders six A350 aircraft", "published": now, "url": "https://one.example/a"},
+            {"title": "Air India to add six Airbus A350 aircraft", "published": now, "url": "https://two.example/b"},
         ]
         enriched = [
-            {"title": items[0]["title"], "publisher": "Publisher One", "domain": "one.example", "url": "https://one.example/a", "published": now, "summary": "", "page_text": "", "tokens": newsroom.tokens(items[0]["title"])},
-            {"title": items[1]["title"], "publisher": "Publisher Two", "domain": "two.example", "url": "https://two.example/b", "published": now, "summary": "", "page_text": "", "tokens": newsroom.tokens(items[1]["title"])},
+            {"title": items[0]["title"], "publisher": "Publisher One", "domain": "one.example", "url": items[0]["url"], "published": now, "summary": "", "page_text": "", "image": "https://img.example/one.jpg"},
+            {"title": items[1]["title"], "publisher": "Publisher Two", "domain": "two.example", "url": items[1]["url"], "published": now, "summary": "", "page_text": "", "image": "https://img.example/two.jpg"},
         ]
         with patch.object(newsroom, "enrich", side_effect=enriched):
             groups = newsroom.related_groups(items)
-        self.assertEqual(len(groups), 1)
-        self.assertEqual({item["domain"] for item in groups[0]}, {"one.example", "two.example"})
-
-    def test_same_domain_falls_back_to_attributed_single_source_reports(self):
-        now = datetime.now(timezone.utc).isoformat()
-        items = [
-            {"title": "Air India orders six A350 aircraft", "published": now},
-            {"title": "Air India to add six Airbus A350 aircraft", "published": now},
-        ]
-        enriched = [
-            {"title": items[0]["title"], "publisher": "Publisher One", "domain": "same.example", "url": "https://same.example/a", "published": now, "summary": "", "page_text": "", "tokens": newsroom.tokens(items[0]["title"])},
-            {"title": items[1]["title"], "publisher": "Publisher One", "domain": "same.example", "url": "https://same.example/b", "published": now, "summary": "", "page_text": "", "tokens": newsroom.tokens(items[1]["title"])},
-        ]
-        with patch.object(newsroom, "enrich", side_effect=enriched):
-            groups = newsroom.related_groups(items)
-        self.assertEqual(len(groups), 2)
+        self.assertEqual(len(groups), len(items))
         self.assertTrue(all(len(group) == 1 for group in groups))
-        self.assertEqual({item["domain"] for group in groups for item in group}, {"same.example"})
+        self.assertEqual({group[0]["url"] for group in groups}, {item["url"] for item in items})
 
     def test_article_html_escapes_untrusted_text_and_lists_sources(self):
         article = {
