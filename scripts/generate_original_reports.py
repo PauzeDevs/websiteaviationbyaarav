@@ -88,6 +88,12 @@ def enrich(item):
         domain = (urlparse(final_url).hostname or "").lower().removeprefix("www.")
         if not domain or domain.endswith("google.com") or domain == "news.google.com":
             return None
+        rss_image = item.get("image", "")
+        if not (re.match(r"^https?://", str(rss_image)) and not re.search(r"news\\.google\\.com|lh3\\.googleusercontent\\.com|gstatic\\.com", str(rss_image), re.I)):
+            rss_image = ""
+        selected_image = rss_image or page_image
+        image_credit = f"Image via {source_name(item, domain)}" if selected_image else "Illustrative aviation image"
+        selected_image = selected_image or FALLBACK_IMAGES.get(item.get("category", "Industry"), FALLBACK_IMAGES["Industry"])
         return {
             "title": item.get("title", ""),
             "publisher": source_name(item, domain),
@@ -96,12 +102,8 @@ def enrich(item):
             "feed_url": url,
             "published": item.get("published", ""),
             "summary": item.get("summary", "")[:1800],
-            "image": (
-                item.get("image", "")
-                if re.match(r"^https?://", str(item.get("image", "")))
-                and not re.search(r"news\\.google\\.com|lh3\\.googleusercontent\\.com|gstatic\\.com", str(item.get("image", "")), re.I)
-                else page_image
-            ) or FALLBACK_IMAGES.get(item.get("category", "Industry"), FALLBACK_IMAGES["Industry"]),
+            "image": selected_image,
+            "image_credit": image_credit,
             "page_text": page_text,
         }
     except Exception as exc:
@@ -118,6 +120,7 @@ def enrich(item):
             "published": item.get("published", ""),
             "summary": item.get("summary", "")[:1800],
             "image": item.get("image") if str(item.get("image", "")).startswith("https://") else FALLBACK_IMAGES.get(item.get("category", "Industry"), FALLBACK_IMAGES["Industry"]),
+            "image_credit": f"Image via {source_name(item, domain)}" if str(item.get("image", "")).startswith("https://") else "Illustrative aviation image",
             "page_text": item.get("summary", "")[:9000],
         }
 
@@ -250,7 +253,7 @@ footer{{max-width:900px;margin:65px auto 30px;padding:0 24px;color:#82939c;font:
 <header class="nav"><a href="../index.html" aria-label="Aviation by Aarav home"><img src="../assets/aviation-by-aarav-logo.svg" alt="Aviation by Aarav"></a></header>
 <main><div class="tag">{esc(article['category'])} · ORIGINAL AVIATION BY AARAV REPORT</div>
 <h1>{esc(article['headline'])}</h1><p class="dek">{esc(article['dek'])}</p>
-{f'<figure class="report-hero"><img src="{esc(sources[0].get("image") or FALLBACK_IMAGES.get(article["category"], FALLBACK_IMAGES["Industry"]))}" alt="{esc(article["headline"])}" loading="eager"><figcaption>Image via {esc(sources[0]["publisher"])}</figcaption></figure>' if sources else ''}
+{f'<figure class="report-hero"><img src="{esc(sources[0].get("image") or FALLBACK_IMAGES.get(article["category"], FALLBACK_IMAGES["Industry"]))}" alt="{esc(article["headline"])}" loading="eager"><figcaption>{esc(sources[0].get("image_credit") or ("Image via " + sources[0]["publisher"]))}</figcaption></figure>' if sources else ''}
 <div class="meta">AVIATION BY AARAV NEWSROOM · {esc(published[:10])} · {len(sources)} SOURCE{'S' if len(sources) != 1 else ''} · {'CROSS-PUBLISHER REVIEW' if len(sources) > 1 else 'SINGLE-SOURCE ANALYSIS'}</div>
 <article class="report"><section><h2>At a glance</h2><p>{esc(article['summary'])}</p></section>
 {sections}
