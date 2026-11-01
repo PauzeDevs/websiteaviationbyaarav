@@ -276,7 +276,7 @@ def main():
         existing["articles"] = created + existing.get("articles", [])
         existing["articles"] = existing["articles"][:100]
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-        OUTPUT.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        OUTPUT.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Prepared {len(created)} new original report(s).")
     if not created:
         print("No sufficiently corroborated new stories qualified. No article was invented; no files changed.")
