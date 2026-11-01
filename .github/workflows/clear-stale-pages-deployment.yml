@@ -10,7 +10,7 @@ on:
       deployment_sha:
         description: "Commit SHA of the stale GitHub Pages deployment"
         required: true
-        default: "3403ebbeb766d84ebaf91811cb081b78624c76c4"
+        default: "21f3a15e4e4bed406daa886066a3589eba1754e1"
         type: string
 
 permissions:
@@ -26,7 +26,7 @@ jobs:
       - name: Cancel the stale GitHub Pages deployment
         env:
           GH_TOKEN: ${{ github.token }}
-          TARGET_SHA: ${{ inputs.deployment_sha || '3403ebbeb766d84ebaf91811cb081b78624c76c4' }}
+          TARGET_SHA: ${{ inputs.deployment_sha || '21f3a15e4e4bed406daa886066a3589eba1754e1' }}
           REPOSITORY: ${{ github.repository }}
         shell: bash
         run: |
@@ -51,7 +51,7 @@ jobs:
       - name: Remove the stale inactive deployment record
         env:
           GH_TOKEN: ${{ github.token }}
-          TARGET_SHA: ${{ inputs.deployment_sha || '3403ebbeb766d84ebaf91811cb081b78624c76c4' }}
+          TARGET_SHA: ${{ inputs.deployment_sha || '21f3a15e4e4bed406daa886066a3589eba1754e1' }}
           REPOSITORY: ${{ github.repository }}
         shell: bash
         run: |
