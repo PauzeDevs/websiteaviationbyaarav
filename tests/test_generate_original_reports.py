@@ -70,6 +70,19 @@ class NewsroomTests(unittest.TestCase):
         self.assertIn("https://publisher.example/story", page)
         self.assertIn("Sources & further reading", page)
 
+    def test_report_page_renders_source_image(self):
+        article = {
+            "headline": "Aviation update", "dek": "A sourced summary.", "category": "Aircraft",
+            "summary": "Summary", "sections": [{"heading": "Details", "body": "Evidence."}] * 3,
+            "key_facts": ["Fact one", "Fact two"], "analysis": "Interpretation.",
+            "limitations": "Limits.", "seo_description": "A report",
+        }
+        sources = [{"publisher": "Publisher", "title": "Source", "url": "https://publisher.example/story",
+                    "published": "2026-11-01", "image": "https://publisher.example/plane.jpg"}]
+        page = newsroom.render_page(article, sources, "aviation-update", "2026-11-01T00:00:00+00:00")
+        self.assertIn('src="https://publisher.example/plane.jpg"', page)
+        self.assertIn('meta property="og:image"', page)
+
 
 if __name__ == "__main__":
     unittest.main()
