@@ -37,6 +37,7 @@ jobs:
           python -m py_compile scripts/fetch_news.py
           node --check assets/app.js
           node --check assets/ambient-scene.js
+          node --check assets/templeNightRenderer.js
           node --check assets/aircraft-scene.js
           python - <<'PY'
           from pathlib import Path
@@ -54,7 +55,7 @@ jobs:
           if not logo.is_file() or '<svg' not in logo.read_text(encoding='utf-8'):
               print('Transparent SVG brand logo is missing or invalid')
               sys.exit(1)
-          print(f'Validated {len(html_files)} HTML files and the transparent SVG brand logo.')
+          license = Path('THREEUI-LICENSE.md')\n          renderer = Path('assets/templeNightRenderer.js')\n          if not renderer.is_file() or 'createTempleNightRenderer' not in renderer.read_text(encoding='utf-8'):\n              print('ThreeUI Temple Night renderer is missing or invalid')\n              sys.exit(1)\n          if not license.is_file() or 'MIT License' not in license.read_text(encoding='utf-8'):\n              print('ThreeUI MIT license attribution is missing')\n              sys.exit(1)\n          print(f'Validated {len(html_files)} HTML files, the transparent SVG brand logo, and the Temple Night renderer/license.')
           PY
       - name: Collect aviation headlines and build attributed report pages
         run: python scripts/fetch_news.py
