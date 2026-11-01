@@ -38,14 +38,17 @@ jobs:
           fi
 
           echo "Cancelling stale Pages deployment for $TARGET_SHA..."
-          # This is the GitHub Pages deployment cancellation endpoint.
-          # Marking a generic deployment status inactive is not equivalent.
-          gh api --method POST --silent \
-            "repos/$REPOSITORY/pages/deployments/$TARGET_SHA/cancel"
+          if cancel_output="$(gh api --method POST \
+            "repos/$REPOSITORY/pages/deployments/$TARGET_SHA/cancel" 2>&1)"; then
+            echo "GitHub Pages accepted the cancellation request."
+          elif grep -qi "as it's finished" <<< "$cancel_output"; then
+            echo "Pages API reports the Pages deployment is finished; continuing with stale deployment-record cleanup."
+          else
+            echo "::error::Pages deployment cancellation failed: $cancel_output"
+            exit 1
+          fi
 
-          echo "GitHub Pages accepted the cancellation request."
-
-      - name: Close the generic deployment record
+      - name: Remove the stale inactive deployment record
         env:
           GH_TOKEN: ${{ github.token }}
           TARGET_SHA: ${{ inputs.deployment_sha || '6414ccdf1d1d03c3ec9eef3943527c3cc9404740' }}
@@ -53,15 +56,23 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
           deployments="$(gh api --paginate "repos/$REPOSITORY/deployments?sha=$TARGET_SHA&environment=github-pages&per_page=100")"
+          count="$(jq 'length' <<< "$deployments")"
+          echo "Found $count generic deployment record(s) for the stale SHA."
+
           while IFS= read -r deployment_id; do
             [[ -n "$deployment_id" ]] || continue
+            echo "Marking deployment $deployment_id inactive..."
             gh api --method POST --silent \
               "repos/$REPOSITORY/deployments/$deployment_id/statuses" \
               -f state=inactive \
-              -f description="Stale GitHub Pages deployment cancelled through Pages API"
+              -f description="Stale GitHub Pages deployment recovery"
+
+            echo "Deleting inactive deployment record $deployment_id..."
+            gh api --method DELETE --silent \
+              "repos/$REPOSITORY/deployments/$deployment_id"
           done < <(jq -r '.[].id' <<< "$deployments")
-          echo "Generic deployment records marked inactive."
 
       - name: Queue a fresh GitHub Pages build
         env:
