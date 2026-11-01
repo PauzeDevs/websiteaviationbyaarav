@@ -23,16 +23,16 @@ function render(){
   const list=activeFilter==='All'?stories:stories.filter(s=>s.category===activeFilter);
   if(!list.length){grid.innerHTML='<div class="empty-state">No stories in this category yet. Check back after the next newsroom update.</div>';return}
   grid.innerHTML=list.slice(0,18).map(s=>{
-    const href=fromSiteRoot('articles/'+(s.slug||slug(s.title))+'.html');
+    const href=fromSiteRoot((s.type==='original'?'originals/':'articles/')+(s.slug||slug(s.title))+'.html');
     const image=storyImage(s);
     const imageMarkup=image?'<img src="'+esc(image)+'" alt="'+esc(s.title)+'" loading="lazy" decoding="async" onerror="this.remove()">':'';
     return `<article class="story-card">
       <a class="story-image-link" href="${esc(href)}" aria-label="Open ${esc(s.title)}">
         <div class="story-image ${image?'has-image':'no-image'}">${imageMarkup}<span class="image-tag">${esc(s.category||'AVIATION')}</span></div>
       </a>
-      <div class="story-content"><div class="story-meta"><span>${esc(s.source||'News desk')}</span><time>${dateLabel(s.published)}</time></div>
+      <div class="story-content"><div class="story-meta"><span>${esc(s.type==='original'?'ORIGINAL REPORT':(s.source||'News desk'))}</span><time>${dateLabel(s.published)}</time></div>
       <h3>${esc(s.title)}</h3><p>${esc(s.summary||'Read the original report for the full story.')}</p>
-      <div class="story-source"><a href="${esc(href)}"><span>Read our report ↗</span></a><a href="${esc(s.url||"#")}" target="_blank" rel="noopener noreferrer"><span>Original source ↗</span></a></div></div></article>`;
+      <div class="story-source"><a href="${esc(href)}"><span>Read our report ↗</span></a><a href="${esc(s.type==='original'?(s.sources?.[0]?.url||'#'):(s.url||'#'))}" target="_blank" rel="noopener noreferrer"><span>${s.type==='original'?'Research sources ↗':'Original source ↗'}</span></a></div></div></article>`;
   }).join('');
 }
 document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
@@ -42,7 +42,7 @@ document.querySelector('[data-india-filter]')?.addEventListener('click',()=>docu
 async function load(){
   try{
     const response=await fetch(fromSiteRoot('data/news.json'),{cache:'no-store'});if(!response.ok)throw Error('News feed unavailable');
-    const data=await response.json();stories=Array.isArray(data.articles)?data.articles:[];
+    const data=await response.json();\n    const originalsResponse=await fetch(fromSiteRoot('data/original-reports.json'),{cache:'no-store'}).catch(()=>null);\n    const originalsData=originalsResponse?.ok?await originalsResponse.json():{articles:[]};\n    stories=[...(Array.isArray(data.articles)?data.articles:[]),...(Array.isArray(originalsData.articles)?originalsData.articles:[])];
     stories.sort((a,b)=>new Date(b.published)-new Date(a.published));
     const updated=document.querySelector('#updated-label');
     if(updated)updated.textContent=data.updated?'Updated '+new Date(data.updated).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Kolkata'}):'Waiting for first update';
