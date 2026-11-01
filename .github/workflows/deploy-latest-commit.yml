@@ -1,6 +1,8 @@
 name: Deploy latest main commit
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -33,7 +35,7 @@ jobs:
           echo "sha=$latest_sha" >> "$GITHUB_OUTPUT"
           echo "Latest main commit: $latest_sha"
 
-      - name: Clear stuck Pages deployments and target latest main
+      - name: Clear stale Pages deployments and deploy latest main
         env:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
@@ -47,6 +49,8 @@ jobs:
           echo "Checking $count GitHub Pages deployment records."
 
           recovered=0
+          latest_in_progress=false
+
           while IFS=$'\t' read -r deployment_id deployment_sha; do
             [[ -n "$deployment_id" && -n "$deployment_sha" ]] || continue
 
@@ -55,11 +59,17 @@ jobs:
               continue
             fi
 
-            echo "Cancelling stuck deployment $deployment_id ($deployment_sha; $state)."
+            if [[ "$deployment_sha" == "$LATEST_SHA" ]]; then
+              echo "Latest main commit already has an active Pages deployment ($deployment_id). Leaving it alone."
+              latest_in_progress=true
+              continue
+            fi
+
+            echo "Cancelling stale deployment $deployment_id ($deployment_sha; $state)."
             if ! cancel_output="$(gh api --method POST "repos/$REPOSITORY/pages/deployments/$deployment_sha/cancel" 2>&1)"; then
               if ! grep -Eqi "finished|not found|404" <<< "$cancel_output"; then
-                echo "::error::Could not cancel stuck deployment $deployment_sha: $cancel_output"
-                exit 1
+                echo "::warning::Could not cancel stale deployment $deployment_sha: $cancel_output"
+                continue
               fi
               echo "Pages reports this deployment already finished or missing; cleaning its generic record."
             fi
@@ -67,12 +77,19 @@ jobs:
             gh api --method POST --silent \
               "repos/$REPOSITORY/deployments/$deployment_id/statuses" \
               -f state=inactive \
-              -f description="Cleared before deploying latest main commit"
+              -f description="Automatically cleared stale Pages deployment"
             gh api --method DELETE --silent "repos/$REPOSITORY/deployments/$deployment_id"
             recovered=$((recovered + 1))
           done < <(jq -r 'add | .[] | [.id, .sha] | @tsv' <<< "$deployments")
 
-          echo "Cleared $recovered stuck deployment record(s)."
-          echo "Requesting a fresh GitHub Pages build for latest main: $LATEST_SHA"
-          gh api --method POST --silent "repos/$REPOSITORY/pages/builds"
-          echo "Latest-main Pages build queued."
+          echo "Cleared $recovered stale deployment record(s)."
+
+          if [[ "$latest_in_progress" == true ]]; then
+            echo "The latest commit is already deploying. No duplicate build requested."
+          elif [[ "$recovered" -gt 0 ]]; then
+            echo "Requesting a fresh Pages build for latest main: $LATEST_SHA"
+            gh api --method POST --silent "repos/$REPOSITORY/pages/builds"
+            echo "Latest-main Pages build queued."
+          else
+            echo "No stale deployment found and no active latest deployment. GitHub's normal Pages workflow will handle this push."
+          fi
