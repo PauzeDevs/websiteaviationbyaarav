@@ -1,26 +1,32 @@
-name: Clear stale GitHub Pages deployment
+name: Recover stale GitHub Pages deployment
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/clear-stale-pages-deployment.yml"
   workflow_dispatch:
     inputs:
       deployment_sha:
-        description: "Commit SHA whose stuck Pages deployment should be cleared"
+        description: "Commit SHA of the stale GitHub Pages deployment"
         required: true
         default: "6414ccdf1d1d03c3ec9eef3943527c3cc9404740"
         type: string
 
 permissions:
   contents: read
+  pages: write
   deployments: write
 
 jobs:
-  clear-stale-deployment:
+  recover-pages:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - name: Mark stale Pages deployment inactive
+      - name: Cancel the stale GitHub Pages deployment
         env:
           GH_TOKEN: ${{ github.token }}
-          TARGET_SHA: ${{ inputs.deployment_sha }}
+          TARGET_SHA: ${{ inputs.deployment_sha || '6414ccdf1d1d03c3ec9eef3943527c3cc9404740' }}
           REPOSITORY: ${{ github.repository }}
         shell: bash
         run: |
@@ -31,20 +37,38 @@ jobs:
             exit 1
           fi
 
+          echo "Cancelling stale Pages deployment for $TARGET_SHA..."
+          # This is the GitHub Pages deployment cancellation endpoint.
+          # Marking a generic deployment status inactive is not equivalent.
+          gh api --method POST --silent \
+            "repos/$REPOSITORY/pages/deployments/$TARGET_SHA/cancel"
+
+          echo "GitHub Pages accepted the cancellation request."
+
+      - name: Close the generic deployment record
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ inputs.deployment_sha || '6414ccdf1d1d03c3ec9eef3943527c3cc9404740' }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
           deployments="$(gh api --paginate "repos/$REPOSITORY/deployments?sha=$TARGET_SHA&environment=github-pages&per_page=100")"
-          count="$(jq 'length' <<< "$deployments")"
-
-          if [[ "$count" -eq 0 ]]; then
-            echo "No github-pages deployment records found for $TARGET_SHA."
-            exit 0
-          fi
-
           while IFS= read -r deployment_id; do
             [[ -n "$deployment_id" ]] || continue
-            echo "Marking deployment $deployment_id inactive..."
-            gh api --method POST "repos/$REPOSITORY/deployments/$deployment_id/statuses" \
+            gh api --method POST --silent \
+              "repos/$REPOSITORY/deployments/$deployment_id/statuses" \
               -f state=inactive \
-              -f description="Cleared stale GitHub Pages deployment lock"
+              -f description="Stale GitHub Pages deployment cancelled through Pages API"
           done < <(jq -r '.[].id' <<< "$deployments")
+          echo "Generic deployment records marked inactive."
 
-          echo "Cleanup request completed for $count deployment record(s)."
+      - name: Queue a fresh GitHub Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method POST --silent "repos/$REPOSITORY/pages/builds"
+          echo "A fresh build of the latest main revision has been queued."
