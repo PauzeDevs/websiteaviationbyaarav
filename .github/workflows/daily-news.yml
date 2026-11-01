@@ -67,6 +67,30 @@ jobs:
           PY
       - name: Collect aviation headlines and build attributed report pages
         run: python scripts/fetch_news.py
+      - name: Test AI newsroom helpers
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Research and write original aviation reports
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_MODEL: openai/gpt-oss-120b
+        run: python scripts/generate_original_reports.py
+      - name: Validate generated original reports
+        run: |
+          python -m py_compile scripts/generate_original_reports.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("data/original-reports.json").read_text(encoding="utf-8"))
+          for item in data.get("articles", []):
+              page = Path(item["url"])
+              if not page.is_file():
+                  raise SystemExit(f"Missing original report page: {page}")
+              body = page.read_text(encoding="utf-8")
+              for required in ("Sources & further reading", "What we could not verify", "ORIGINAL AVIATION BY AARAV REPORT"):
+                  if required not in body:
+                      raise SystemExit(f"{page} is missing required editorial section: {required}")
+          print(f"Validated {len(data.get('articles', []))} original report(s).")
+          PY
       - name: Validate refreshed reports and original-source links
         run: |
           python - <<'PY'
@@ -93,7 +117,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json articles/
+          git add -A -- data/news.json articles/ originals/ data/original-reports.json
           if git diff --cached --quiet; then
             echo "Newsroom content is unchanged."
           else
