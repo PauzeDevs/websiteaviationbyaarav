@@ -122,7 +122,7 @@ def article_page(article):
     url = html.escape(article["url"], quote=True)
     category = html.escape(article.get("category", "Aviation"))
     published = html.escape(article.get("published", ""))
-    image = article.get("image", "")
+    image = "" if article.get("source") == "Google News" else article.get("image", "")
     image_markup = f'<img class="cover" src="{html.escape(image, quote=True)}" alt="{title}" loading="lazy" />' if image.startswith("https://") else ""
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -150,7 +150,7 @@ h1{{font:400 clamp(42px,7vw,76px)/.96 'Instrument Serif',Georgia,serif;letter-sp
 .button.secondary{{background:rgba(255,255,255,.52);color:#e5edf0;border:1px solid rgba(29,52,68,.18)}}
 footer{{max-width:900px;margin:65px auto 30px;padding:0 24px;color:#748895;font:9px 'DM Mono',monospace;letter-spacing:.06em}}
 @media(max-width:600px){{.nav{{padding:15px 20px}}.nav img{{width:145px;height:52px}}main{{padding:0 18px}}.report{{padding:24px 20px}}.report p{{font-size:14px}}}}
-</style></head><body><canvas id="ambient-three-canvas" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"></canvas><header class="nav"><a href="../index.html" aria-label="Aviation by Aarav home"><img src="../assets/file_000000008260821183c81398641a4ae8.png" alt="Aviation by Aarav" /></a></header>
+</style></head><body><canvas id="ambient-three-canvas" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"></canvas><header class="nav"><a href="../index.html" aria-label="Aviation by Aarav home"><img src="../assets/aviation-logo-transparent.png" alt="Aviation by Aarav" /></a></header>
 <main><div class="tag">{category} · AVIATION BY AARAV REPORT</div><h1>{title}</h1><div class="meta">SOURCE: {source} &nbsp;·&nbsp; {published}</div>{image_markup}
 <article class="report"><h2>Report overview</h2><p>{summary}</p>
 <div class="source-note">Source credit: reporting and source summary supplied by {source}. This page presents the publisher-provided summary with attribution; it does not reproduce the publisher's complete copyrighted article. For the full report, original wording, additional context and subsequent updates, visit the publisher directly.</div>
@@ -192,6 +192,9 @@ def main():
     # Prefer each publisher's own image. If RSS omits one, retrieve the article's
     # Open Graph/Twitter image. Never substitute a category-wide stock photo.
     for article in unique[:30]:
+        if article.get("source") == "Google News":
+            article["image"] = ""
+            continue
         if not article.get("image"):
             image, final_url = page_image(article["url"])
             if image: article["image"] = image
