@@ -115,16 +115,15 @@ def related_groups(items):
             if len(shared) >= 2 and overlap >= 0.38:
                 group.append(candidate)
                 group_indices.append(candidate_index)
-            if len({x["domain"] for x in group}) >= 2:
+        if len({x["domain"] for x in group}) >= 2:
             group.sort(key=lambda x: x.get("published", ""), reverse=True)
             groups.append(group[:2])
             used_indices.update(group_indices)
         if len(groups) >= 3:
             break
 
-    # Do not let strict cross-publisher matching leave the AI newsroom empty.
-    # Remaining recent stories may produce a clearly attributed single-source
-    # analysis, with the page explicitly disclosing that it is not corroborated.
+    # Keep the AI newsroom useful when no story has two matching publishers.
+    # Single-source reports are explicitly labelled as uncorroborated analysis.
     if len(groups) < 3:
         for index, item in enumerate(prepared):
             if index in used_indices:
@@ -248,14 +247,14 @@ footer{{max-width:900px;margin:65px auto 30px;padding:0 24px;color:#82939c;font:
 <header class="nav"><a href="../index.html" aria-label="Aviation by Aarav home"><img src="../assets/aviation-by-aarav-logo.svg" alt="Aviation by Aarav"></a></header>
 <main><div class="tag">{esc(article['category'])} · ORIGINAL AVIATION BY AARAV REPORT</div>
 <h1>{esc(article['headline'])}</h1><p class="dek">{esc(article['dek'])}</p>
-<div class="meta">AVIATION BY AARAV NEWSROOM · {esc(published[:10])} · RESEARCHED AGAINST {len(sources)} INDEPENDENT PUBLISHERS</div>
+<div class="meta">AVIATION BY AARAV NEWSROOM · {esc(published[:10])} · {len(sources)} SOURCE{'S' if len(sources) != 1 else ''} · {'CROSS-PUBLISHER REVIEW' if len(sources) > 1 else 'SINGLE-SOURCE ANALYSIS'}</div>
 <article class="report"><section><h2>At a glance</h2><p>{esc(article['summary'])}</p></section>
 {sections}
 <section class="facts"><h2>Key facts</h2><ul>{facts}</ul></section>
 <section class="analysis"><h2>What this means</h2><p>{esc(article['analysis'])}</p></section>
 <section class="limitations"><h2>What we could not verify</h2><p>{esc(article['limitations'])}</p></section>
 <section class="sources"><h2>Sources & further reading</h2><ul>{source_items}</ul></section>
-<p class="disclosure">Editorial note: This is original Aviation by Aarav reporting synthesised from the sources listed above. It is not affiliated with those publishers. Claims are attributed where independent confirmation is unavailable. Corrections should be sent through our publication contact channels.</p>
+<p class="disclosure">Editorial note: This is an original Aviation by Aarav AI-assisted report synthesised from the sources listed above. It is not affiliated with those publishers. A single-source report is attributed analysis, not independently corroborated reporting. Claims are attributed where independent confirmation is unavailable. Corrections should be sent through our publication contact channels.</p>
 </article><a class="back" href="../news/">← Back to the newsroom</a></main>
 <footer>AVIATION BY AARAV · INDEPENDENT AVIATION COVERAGE · <a href="https://www.instagram.com/aviation_byaarav/">INSTAGRAM ↗</a></footer>
 <script type="module" src="../assets/ambient-scene.js"></script></body></html>"""
