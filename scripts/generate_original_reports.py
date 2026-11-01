@@ -82,7 +82,7 @@ def enrich(item):
 def related_groups(items):
     prepared = []
     cutoff = datetime.now(timezone.utc) - timedelta(days=14)
-    for item in items:
+    for item in items[:35]:
         try:
             published = datetime.fromisoformat(item.get("published", "").replace("Z", "+00:00"))
             if published.tzinfo is None:
@@ -159,6 +159,7 @@ def call_model(group):
     payload = {
         "model": MODEL,
         "temperature": 0.2,
+        "max_tokens": 3000,
         "response_format": {"type": "json_object"},
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
