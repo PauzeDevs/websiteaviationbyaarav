@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 NEWS = ROOT / "data" / "news.json"
 OUTPUT = ROOT / "data" / "original-reports.json"
 ARTICLE_DIR = ROOT / "originals"
-API_URL = "https://api.openai.com/v1/chat/completions"
-MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+API_URL = "https://api.groq.com/openai/v1/chat/completions"
+MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 HEADERS = {"User-Agent": "AviationByAaravNewsroom/1.0 (+https://aviationbyaarav.devs.surf/)"}
 STOP = set("""about after again against all also amid and are around as at back been before being between both but by can could did does for from had has have her his how into its just more most new not now of off on one only or other our over said says she should since some such than that the their them then there these they this those through to under up us was were what when where which while who will with would you your aviation airline airlines aircraft flight flights airport airports plane planes air""".split())
 
@@ -142,9 +142,9 @@ HARD RULES:
 Return JSON only, without Markdown fences."""
 
 def call_model(group):
-    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    api_key = os.getenv("GROQ_API_KEY", "").strip()
     if not api_key:
-        raise RuntimeError("Missing OPENAI_API_KEY repository secret. Add it in Settings > Secrets and variables > Actions.")
+        raise RuntimeError("Missing GROQ_API_KEY repository secret. Add it in Settings > Secrets and variables > Actions.")
     sources = []
     for item in group:
         sources.append({
