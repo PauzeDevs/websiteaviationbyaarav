@@ -27,7 +27,7 @@ jobs:
           ref: main
       - name: Require OpenAI API key
         env:
-          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           if [ -z "$OPENAI_API_KEY" ]; then
             echo "::error::Add OPENAI_API_KEY under Settings > Secrets and variables > Actions."
@@ -39,7 +39,7 @@ jobs:
           python-version: "3.12"
       - name: Research and write original aviation reports
         env:
-          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-4.1-mini
         run: python scripts/generate_original_reports.py
       - name: Validate generated editorial drafts
@@ -54,7 +54,7 @@ jobs:
               if not page.is_file():
                   raise SystemExit(f"Missing original report page: {page}")
               text = page.read_text(encoding="utf-8")
-              for required in ("Sources &amp; further reading", "What we could not verify", "ORIGINAL AVIATION BY AARAV REPORT"):
+              for required in ("Sources & further reading", "What we could not verify", "ORIGINAL AVIATION BY AARAV REPORT"):
                   if required not in text:
                       raise SystemExit(f"{page} is missing required editorial section: {required}")
           print(f"Validated {len(data.get('articles', []))} original report record(s).")
@@ -62,7 +62,7 @@ jobs:
       - name: Open or update a draft pull request
         uses: peter-evans/create-pull-request@v7
         with:
-          token: \${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: bot/ai-newsroom-drafts
           delete-branch: false
           draft: true
