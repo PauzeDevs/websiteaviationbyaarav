@@ -93,6 +93,7 @@ def enrich(item):
             "publisher": source_name(item, domain),
             "domain": domain,
             "url": final_url,
+            "feed_url": url,
             "published": item.get("published", ""),
             "summary": item.get("summary", "")[:1800],
             "image": (
@@ -104,8 +105,21 @@ def enrich(item):
             "page_text": page_text,
         }
     except Exception as exc:
-        print(f"Research fetch skipped: {url}: {exc}", file=sys.stderr)
-        return None
+        print(f"Publisher page unavailable; using attributed RSS material: {url}: {exc}", file=sys.stderr)
+        domain = (urlparse(url).hostname or "").lower().removeprefix("www.")
+        if not domain or domain.endswith("google.com") or domain == "news.google.com":
+            return None
+        return {
+            "title": item.get("title", ""),
+            "publisher": source_name(item, domain),
+            "domain": domain,
+            "url": url,
+            "feed_url": url,
+            "published": item.get("published", ""),
+            "summary": item.get("summary", "")[:1800],
+            "image": item.get("image") if str(item.get("image", "")).startswith("https://") else FALLBACK_IMAGES.get(item.get("category", "Industry"), FALLBACK_IMAGES["Industry"]),
+            "page_text": item.get("summary", "")[:9000],
+        }
 
 def related_groups(items):
     """Prepare one report per story currently present in the public newsroom feed."""
@@ -253,7 +267,7 @@ def main():
     existing = json.loads(OUTPUT.read_text(encoding="utf-8")) if OUTPUT.exists() else {"updated": None, "articles": []}
     known = {item.get("slug") for item in existing.get("articles", [])}
     known_sources = {
-        source.get("url", "").split("#")[0].rstrip("/")
+(source.get("feed_url") or source.get("url", "")).split("#")[0].rstrip("/")
         for report in existing.get("articles", [])
         for source in report.get("sources", [])
     }
@@ -265,7 +279,7 @@ def main():
     for group in groups:
         if not group:
             continue
-        source_url = group[0].get("url", "").split("#")[0].rstrip("/")
+        source_url = (group[0].get("feed_url") or group[0].get("url", "")).split("#")[0].rstrip("/")
         if source_url in known_sources:
             continue
         article = call_model(group)
@@ -283,7 +297,7 @@ def main():
             "summary": article["dek"], "source": "Aviation by Aarav",
             "published": published, "image": group[0].get("image") or FALLBACK_IMAGES.get(article["category"], FALLBACK_IMAGES["Industry"]), "category": article["category"],
             "type": "original",
-            "sources": [{"publisher": x["publisher"], "title": x["title"], "url": x["url"], "published": x["published"]} for x in group],
+            "sources": [{"publisher": x["publisher"], "title": x["title"], "url": x["url"], "feed_url": x.get("feed_url", x["url"]), "published": x["published"]} for x in group],
         }
         created.append(record)
         known.add(slug)
