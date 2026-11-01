@@ -117,7 +117,7 @@ def related_groups(items):
                 group_indices.append(candidate_index)
         if len({x["domain"] for x in group}) >= 2:
             group.sort(key=lambda x: x.get("published", ""), reverse=True)
-            groups.append(group[:4])
+            groups.append(group[:2])
             used_indices.update(group_indices)
         if len(groups) >= 3:
             break
@@ -154,12 +154,12 @@ def call_model(group):
             "published": item["published"],
             "url": item["url"],
             "rss_summary": item["summary"],
-            "article_text_excerpt": item["page_text"][:6500],
+            "article_text_excerpt": item["page_text"][:3000],
         })
     payload = {
         "model": MODEL,
         "temperature": 0.2,
-        "max_tokens": 3000,
+        "max_completion_tokens": 2200,
         "response_format": {"type": "json_object"},
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
