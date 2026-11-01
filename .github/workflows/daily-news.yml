@@ -140,16 +140,5 @@ jobs:
               exit 1
             fi
           fi
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: .
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Finish newsroom publication
+        run: echo "Newsroom content committed. GitHub Pages handles deployment from the main branch."
