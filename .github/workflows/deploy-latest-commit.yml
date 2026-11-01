@@ -1,0 +1,78 @@
+name: Deploy latest main commit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  deployments: write
+
+concurrency:
+  group: latest-main-pages-deployment
+  cancel-in-progress: false
+
+jobs:
+  deploy-latest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Resolve the latest main commit
+        id: latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          latest_sha="$(gh api "repos/$REPOSITORY/commits/main" --jq '.sha')"
+          if [[ ! "$latest_sha" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Could not resolve the latest main commit."
+            exit 1
+          fi
+          echo "sha=$latest_sha" >> "$GITHUB_OUTPUT"
+          echo "Latest main commit: $latest_sha"
+
+      - name: Clear stuck Pages deployments and target latest main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          LATEST_SHA: ${{ steps.latest.outputs.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          deployments="$(gh api --paginate --slurp "repos/$REPOSITORY/deployments?environment=github-pages&per_page=100")"
+          count="$(jq 'add | length' <<< "$deployments")"
+          echo "Checking $count GitHub Pages deployment records."
+
+          recovered=0
+          while IFS=$'\t' read -r deployment_id deployment_sha; do
+            [[ -n "$deployment_id" && -n "$deployment_sha" ]] || continue
+
+            state="$(gh api "repos/$REPOSITORY/deployments/$deployment_id/statuses" --jq '.[0].state // "unknown"')"
+            if [[ "$state" != "in_progress" && "$state" != "queued" && "$state" != "pending" ]]; then
+              continue
+            fi
+
+            echo "Cancelling stuck deployment $deployment_id ($deployment_sha; $state)."
+            if ! cancel_output="$(gh api --method POST "repos/$REPOSITORY/pages/deployments/$deployment_sha/cancel" 2>&1)"; then
+              if ! grep -Eqi "finished|not found|404" <<< "$cancel_output"; then
+                echo "::error::Could not cancel stuck deployment $deployment_sha: $cancel_output"
+                exit 1
+              fi
+              echo "Pages reports this deployment already finished or missing; cleaning its generic record."
+            fi
+
+            gh api --method POST --silent \
+              "repos/$REPOSITORY/deployments/$deployment_id/statuses" \
+              -f state=inactive \
+              -f description="Cleared before deploying latest main commit"
+            gh api --method DELETE --silent "repos/$REPOSITORY/deployments/$deployment_id"
+            recovered=$((recovered + 1))
+          done < <(jq -r 'add | .[] | [.id, .sha] | @tsv' <<< "$deployments")
+
+          echo "Cleared $recovered stuck deployment record(s)."
+          echo "Requesting a fresh GitHub Pages build for latest main: $LATEST_SHA"
+          gh api --method POST --silent "repos/$REPOSITORY/pages/builds"
+          echo "Latest-main Pages build queued."
