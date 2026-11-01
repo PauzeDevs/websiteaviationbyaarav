@@ -21,7 +21,8 @@
 - Dedicated India aviation coverage section.
 - Aircraft profiles and manufacturer reference links.
 - Aviation photography showcase linked to Instagram.
-- Full-page ThreeUI Temple Night background with lazy initialisation, visibility-aware rendering, responsive quality and reduced-motion support.\n- Darker liquid-glass cards and translucent navigation across the homepage, newsroom, aircraft directory and report pages.
+- Full-page ThreeUI Temple Night background with lazy initialisation, visibility-aware rendering, responsive quality and reduced-motion support.
+- Darker liquid-glass cards and translucent navigation across the homepage, newsroom, aircraft directory and report pages.
 
 ## Hybrid AI newsroom
 The existing daily workflow continues to collect and publish attributed RSS briefs. After a successful collection, the separate **AI newsroom drafts** workflow researches recent stories, checks for coverage by at least two independent publisher domains, and uses the OpenAI API to draft original Aviation by Aarav reports. It writes report pages under `originals/` and an index at `data/original-reports.json`, then opens or updates a **draft pull request**. Nothing written by the AI workflow is published until a human reviews and merges that PR.
@@ -41,7 +42,9 @@ In **Settings → Pages**, select **GitHub Actions** as the build and deployment
 ## Project structure
 - `index.html` – homepage and publication sections
 - `assets/style.css` and `assets/pauzex-editorial.css` – responsive editorial and glass UI
-- `assets/ambient-scene.js` – shared Temple Night background loader\n- `assets/templeNightRenderer.js` – ThreeUI Temple Night WebGL renderer (MIT licensed; see `THREEUI-LICENSE.md`)\n- `THREEUI-LICENSE.md` – upstream MIT attribution and license
+- `assets/ambient-scene.js` – shared Temple Night background loader
+- `assets/templeNightRenderer.js` – ThreeUI Temple Night WebGL renderer (MIT licensed; see `THREEUI-LICENSE.md`)
+- `THREEUI-LICENSE.md` – upstream MIT attribution and license
 - `assets/app.js` – news feed rendering, source links and category filters
 - `aircraft/` – aircraft directory
 - `data/news.json` – generated news feed
