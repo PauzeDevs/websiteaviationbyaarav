@@ -23,12 +23,17 @@
 - Aviation photography showcase linked to Instagram.
 - Full-page ThreeUI Temple Night background with lazy initialisation, visibility-aware rendering, responsive quality and reduced-motion support.\n- Darker liquid-glass cards and translucent navigation across the homepage, newsroom, aircraft directory and report pages.
 
-## Daily newsroom automation
-GitHub Actions runs every day at **08:00 India Standard Time** and on manual dispatch. It collects public RSS entries from Simple Flying, FlightGlobal and Aviation Week, deduplicates them, writes `data/news.json`, generates static pages under `articles/`, and deploys the site to GitHub Pages.
+## Hybrid AI newsroom
+The existing daily workflow continues to collect and publish attributed RSS briefs. After a successful collection, the separate **AI newsroom drafts** workflow researches recent stories, checks for coverage by at least two independent publisher domains, and uses the OpenAI API to draft original Aviation by Aarav reports. It writes report pages under `originals/` and an index at `data/original-reports.json`, then opens or updates a **draft pull request**. Nothing written by the AI workflow is published until a human reviews and merges that PR.
 
-Story pages contain the publisher's headline and a short RSS excerpt, with a clear attribution and link to the original report. They are news briefs, not AI-written full-length articles or a replacement for the source publisher. No article is invented when feeds are unavailable; the previous feed is preserved if every feed fails.
+The writer is instructed to use only the retrieved source material, avoid invented quotes or figures, attribute claims that are not independently confirmed, and disclose evidence gaps. Stories without enough corroboration are skipped. Source links are included on every original report.
 
-Some publishers may block automated feed requests or change their RSS endpoints. A feed failure is logged while other available feeds continue.
+### Required repository secret
+Add `OPENAI_API_KEY` under **Settings → Secrets and variables → Actions**. The workflow uses `gpt-4.1-mini` by default. OpenAI API usage is billed separately from ChatGPT subscriptions.
+
+The AI workflow is triggered after the daily RSS workflow succeeds, or manually with **Actions → AI newsroom drafts → Run workflow**. It creates a draft PR for editorial approval; it never auto-merges or directly publishes AI-written reports.
+
+Some publishers may block automated page requests. Such sources are skipped, and no report is generated unless at least two independent publisher domains can be researched.
 
 ## Enable GitHub Pages
 In **Settings → Pages**, select **GitHub Actions** as the build and deployment source. The workflow attempts to enable Pages and deploy the repository root.
@@ -41,8 +46,11 @@ In **Settings → Pages**, select **GitHub Actions** as the build and deployment
 - `aircraft/` – aircraft directory
 - `data/news.json` – generated news feed
 - `articles/` – generated story pages
-- `scripts/fetch_news.py` – RSS collector and static article generator
-- `.github/workflows/daily-news.yml` – scheduled collection and deployment
+- `scripts/fetch_news.py` – RSS collector and attributed brief generator
+- `scripts/generate_original_reports.py` – multi-source research and original article drafting
+- `originals/` and `data/original-reports.json` – generated original report pages and index
+- `.github/workflows/daily-news.yml` – scheduled RSS collection and deployment
+- `.github/workflows/ai-newsroom.yml` – AI drafting and human-review PR automation
 
 ## Local preview
 Run `python -m http.server 8000` from the repository root, then open `http://localhost:8000`.
