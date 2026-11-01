@@ -11,6 +11,7 @@ on:
       - "articles/**"
       - "originals/**"
       - "data/original-reports.json"
+      - ".github/workflows/**"
 
 permissions:
   contents: write
