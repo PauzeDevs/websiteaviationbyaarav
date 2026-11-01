@@ -11,7 +11,7 @@
 [![Visit Website](https://img.shields.io/badge/🌐_VISIT_WEBSITE-Open_Newsroom-1D75BD?style=for-the-badge)](https://aviationbyaarav.devs.surf/)
 [![Instagram](https://img.shields.io/badge/INSTAGRAM-@aviation__byaarav-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/aviation_byaarav/)
 
-*An editorial aviation newsroom with a cinematic Three.js night atmosphere, glass surfaces and responsive reporting pages.*
+*An editorial aviation newsroom with the ThreeUI Temple Night WebGL scene, darker liquid-glass surfaces and responsive reporting pages.*
 
 </div>
 
@@ -21,7 +21,7 @@
 - Dedicated India aviation coverage section.
 - Aircraft profiles and manufacturer reference links.
 - Aviation photography showcase linked to Instagram.
-- Responsive layout and reduced-motion accessibility support.
+- Full-page ThreeUI Temple Night background with lazy initialisation, visibility-aware rendering, responsive quality and reduced-motion support.\n- Darker liquid-glass cards and translucent navigation across the homepage, newsroom, aircraft directory and report pages.
 
 ## Daily newsroom automation
 GitHub Actions runs every day at **08:00 India Standard Time** and on manual dispatch. It collects public RSS entries from Simple Flying, FlightGlobal and Aviation Week, deduplicates them, writes `data/news.json`, generates static pages under `articles/`, and deploys the site to GitHub Pages.
@@ -36,7 +36,7 @@ In **Settings → Pages**, select **GitHub Actions** as the build and deployment
 ## Project structure
 - `index.html` – homepage and publication sections
 - `assets/style.css` and `assets/pauzex-editorial.css` – responsive editorial and glass UI
-- `assets/ambient-scene.js` – shared Three.js atmospheric background
+- `assets/ambient-scene.js` – shared Temple Night background loader\n- `assets/templeNightRenderer.js` – ThreeUI Temple Night WebGL renderer (MIT licensed; see `THREEUI-LICENSE.md`)\n- `THREEUI-LICENSE.md` – upstream MIT attribution and license
 - `assets/app.js` – news feed rendering, source links and category filters
 - `aircraft/` – aircraft directory
 - `data/news.json` – generated news feed
