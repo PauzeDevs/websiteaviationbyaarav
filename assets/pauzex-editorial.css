@@ -212,3 +212,59 @@ body>*:not(#ambient-three-canvas){position:relative;z-index:1}
 .topbar .brand-logo img{width:178px!important;height:72px!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
 .footer-brand,.footer-brand img{width:158px!important;height:64px!important;max-height:none!important;object-fit:contain!important}
 @media(max-width:760px){.topbar .brand-logo{width:146px!important;height:58px!important}.topbar .brand-logo img{width:146px!important;height:58px!important;max-width:none!important}.footer-brand,.footer-brand img{width:138px!important;height:56px!important}}
+
+
+/* ThreeUI Temple Night: full-viewport cinematic scene behind every page. */
+html{background:#05090e!important}
+body{position:relative!important;isolation:isolate!important;background:transparent!important}
+#ambient-three-canvas{
+  position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;height:100dvh!important;
+  display:block!important;z-index:0!important;pointer-events:none!important;opacity:1!important;visibility:visible!important;
+  background:#05090e;
+}
+body>*:not(#ambient-three-canvas){position:relative;z-index:1}
+body::before{display:none!important}
+body::after{z-index:2!important;pointer-events:none!important;opacity:.035!important}
+.topbar,.nav{
+  position:relative;z-index:5!important;
+  background:rgba(5,10,15,.72)!important;border-color:rgba(190,211,218,.16)!important;
+  color:#edf3f4!important;backdrop-filter:blur(22px) saturate(135%)!important;
+  -webkit-backdrop-filter:blur(22px) saturate(135%)!important;
+}
+footer{position:relative;z-index:2!important;background:rgba(5,10,15,.78)!important}
+main,.newsroom-page{background:transparent!important}
+
+/* Darker liquid-glass surfaces. Keep photography and card content untouched. */
+.aircraft-card,.story-card,.model-card,.discovery-card,.glass-panel,.india-section,
+.newsroom-teaser,.instagram-card,.report,.loading-card,.empty-state,.hero-glass{
+  background:linear-gradient(145deg,rgba(8,17,24,.88),rgba(7,14,20,.76))!important;
+  border:1px solid rgba(196,218,228,.19)!important;
+  box-shadow:0 22px 58px rgba(0,0,0,.34),inset 0 1px 0 rgba(231,243,247,.10)!important;
+  -webkit-backdrop-filter:blur(24px) saturate(125%)!important;
+  backdrop-filter:blur(24px) saturate(125%)!important;
+}
+.briefing{
+  background:linear-gradient(145deg,rgba(5,12,18,.94),rgba(8,19,26,.90))!important;
+  border:1px solid rgba(196,218,228,.17)!important;
+  box-shadow:0 28px 75px rgba(0,0,0,.38),inset 0 1px 0 rgba(231,243,247,.08)!important;
+  -webkit-backdrop-filter:blur(24px)!important;backdrop-filter:blur(24px)!important;
+}
+.story-card,.aircraft-card,.model-card,.discovery-card{overflow:hidden}
+.story-card:hover,.aircraft-card:hover,.model-card:hover,.discovery-card:hover{
+  border-color:rgba(213,165,116,.42)!important;
+  box-shadow:0 28px 68px rgba(0,0,0,.42),inset 0 1px 0 rgba(231,243,247,.13)!important;
+}
+.filter,.instagram-link,.button.secondary{
+  background:rgba(7,15,21,.78)!important;border-color:rgba(196,218,228,.20)!important;
+  color:#dce7eb!important;backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important;
+}
+.filter.active,.filter:hover{background:#b78355!important;color:#10191e!important;border-color:#b78355!important}
+@media(max-width:760px){
+  .topbar,.nav{backdrop-filter:blur(16px)!important;-webkit-backdrop-filter:blur(16px)!important}
+  .aircraft-card,.story-card,.model-card,.discovery-card,.glass-panel,.india-section,
+  .newsroom-teaser,.instagram-card,.report,.loading-card,.empty-state,.hero-glass{
+    background:rgba(7,14,20,.90)!important;
+    backdrop-filter:blur(16px)!important;-webkit-backdrop-filter:blur(16px)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){#ambient-three-canvas{opacity:1}}
