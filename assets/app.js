@@ -42,7 +42,10 @@ document.querySelector('[data-india-filter]')?.addEventListener('click',()=>docu
 async function load(){
   try{
     const response=await fetch(fromSiteRoot('data/news.json'),{cache:'no-store'});if(!response.ok)throw Error('News feed unavailable');
-    const data=await response.json();\n    const originalsResponse=await fetch(fromSiteRoot('data/original-reports.json'),{cache:'no-store'}).catch(()=>null);\n    const originalsData=originalsResponse?.ok?await originalsResponse.json():{articles:[]};\n    stories=[...(Array.isArray(data.articles)?data.articles:[]),...(Array.isArray(originalsData.articles)?originalsData.articles:[])];
+    const data=await response.json();
+    const originalsResponse=await fetch(fromSiteRoot('data/original-reports.json'),{cache:'no-store'}).catch(()=>null);
+    const originalsData=originalsResponse?.ok?await originalsResponse.json():{articles:[]};
+    stories=[...(Array.isArray(data.articles)?data.articles:[]),...(Array.isArray(originalsData.articles)?originalsData.articles:[])];
     stories.sort((a,b)=>new Date(b.published)-new Date(a.published));
     const updated=document.querySelector('#updated-label');
     if(updated)updated.textContent=data.updated?'Updated '+new Date(data.updated).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Kolkata'}):'Waiting for first update';
