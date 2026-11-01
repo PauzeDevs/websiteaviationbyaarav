@@ -1,85 +1,76 @@
 name: Recover stale GitHub Pages deployment
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/clear-stale-pages-deployment.yml"
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
   workflow_dispatch:
-    inputs:
-      deployment_sha:
-        description: "Commit SHA of the stale GitHub Pages deployment"
-        required: true
-        default: "21f3a15e4e4bed406daa886066a3589eba1754e1"
-        type: string
 
 permissions:
   contents: read
   pages: write
   deployments: write
+  actions: read
 
 jobs:
   recover-pages:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'failure')
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
-      - name: Cancel the stale GitHub Pages deployment
+      - name: Find and clear stale GitHub Pages deployments automatically
         env:
           GH_TOKEN: ${{ github.token }}
-          TARGET_SHA: ${{ inputs.deployment_sha || '21f3a15e4e4bed406daa886066a3589eba1754e1' }}
           REPOSITORY: ${{ github.repository }}
+          FAILED_SHA: ${{ github.event.workflow_run.head_sha || '' }}
+          CURRENT_SHA: ${{ github.sha }}
         shell: bash
         run: |
           set -euo pipefail
 
-          if [[ ! "$TARGET_SHA" =~ ^[0-9a-f]{40}$ ]]; then
-            echo "::error::Expected a full 40-character commit SHA."
-            exit 1
-          fi
-
-          echo "Cancelling stale Pages deployment for $TARGET_SHA..."
-          if cancel_output="$(gh api --method POST \
-            "repos/$REPOSITORY/pages/deployments/$TARGET_SHA/cancel" 2>&1)"; then
-            echo "GitHub Pages accepted the cancellation request."
-          elif grep -qi "as it's finished" <<< "$cancel_output"; then
-            echo "Pages API reports the Pages deployment is finished; continuing with stale deployment-record cleanup."
-          else
-            echo "::error::Pages deployment cancellation failed: $cancel_output"
-            exit 1
-          fi
-
-      - name: Remove the stale inactive deployment record
-        env:
-          GH_TOKEN: ${{ github.token }}
-          TARGET_SHA: ${{ inputs.deployment_sha || '21f3a15e4e4bed406daa886066a3589eba1754e1' }}
-          REPOSITORY: ${{ github.repository }}
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          deployments="$(gh api --paginate "repos/$REPOSITORY/deployments?sha=$TARGET_SHA&environment=github-pages&per_page=100")"
+          deployments="$(gh api --paginate "repos/$REPOSITORY/deployments?environment=github-pages&per_page=100")"
           count="$(jq 'length' <<< "$deployments")"
-          echo "Found $count generic deployment record(s) for the stale SHA."
+          echo "Inspecting $count GitHub Pages deployment record(s)."
 
-          while IFS= read -r deployment_id; do
-            [[ -n "$deployment_id" ]] || continue
-            echo "Marking deployment $deployment_id inactive..."
+          recovered=0
+          while IFS=$'\t' read -r deployment_id deployment_sha; do
+            [[ -n "$deployment_id" && -n "$deployment_sha" ]] || continue
+
+            # Never cancel the deployment for the commit that triggered this recovery.
+            if [[ "$deployment_sha" == "$FAILED_SHA" || "$deployment_sha" == "$CURRENT_SHA" ]]; then
+              echo "Keeping current/failed workflow revision $deployment_sha."
+              continue
+            fi
+
+            state="$(gh api --paginate "repos/$REPOSITORY/deployments/$deployment_id/statuses" --jq '.[0].state // "unknown"')"
+            if [[ "$state" != "in_progress" && "$state" != "queued" && "$state" != "pending" ]]; then
+              continue
+            fi
+
+            echo "Cancelling stale Pages deployment $deployment_sha (deployment $deployment_id; state $state)."
+            if ! cancel_output="$(gh api --method POST "repos/$REPOSITORY/pages/deployments/$deployment_sha/cancel" 2>&1)"; then
+              if grep -Eqi "finished|not found|404" <<< "$cancel_output"; then
+                echo "Pages deployment is already finished or no longer exists; cleaning up its stale record."
+              else
+                echo "::warning::Could not cancel $deployment_sha: $cancel_output"
+                continue
+              fi
+            fi
+
             gh api --method POST --silent \
               "repos/$REPOSITORY/deployments/$deployment_id/statuses" \
               -f state=inactive \
-              -f description="Stale GitHub Pages deployment recovery"
+              -f description="Automatically recovered stale GitHub Pages deployment"
+            gh api --method DELETE --silent "repos/$REPOSITORY/deployments/$deployment_id"
+            recovered=$((recovered + 1))
+          done < <(jq -r '.[] | [.id, .sha] | @tsv' <<< "$deployments")
 
-            echo "Deleting inactive deployment record $deployment_id..."
-            gh api --method DELETE --silent \
-              "repos/$REPOSITORY/deployments/$deployment_id"
-          done < <(jq -r '.[].id' <<< "$deployments")
-
-      - name: Queue a fresh GitHub Pages build
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPOSITORY: ${{ github.repository }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          gh api --method POST --silent "repos/$REPOSITORY/pages/builds"
-          echo "A fresh build of the latest main revision has been queued."
+          echo "Recovered $recovered stale deployment record(s)."
+          if [[ "$recovered" -gt 0 ]]; then
+            gh api --method POST --silent "repos/$REPOSITORY/pages/builds"
+            echo "Queued a fresh GitHub Pages build from the latest default-branch revision."
+          else
+            echo "No stale in-progress deployment records were found. No build was queued."
+          fi
