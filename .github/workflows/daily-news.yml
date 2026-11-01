@@ -88,7 +88,11 @@ jobs:
               page = Path(item["url"])
               if not page.is_file():
                   raise SystemExit(f"Missing original report page: {page}")
+              if not item.get("image", "").startswith("https://"):
+                  raise SystemExit(f"Original report has no photo: {item.get('title')}")
               body = page.read_text(encoding="utf-8")
+              if 'class="report-hero"' not in body or "<img" not in body:
+                  raise SystemExit(f"Original report has no hero photo: {page}")
               for required in ("Sources & further reading", "What we could not verify", "ORIGINAL AVIATION BY AARAV REPORT"):
                   if required not in body:
                       raise SystemExit(f"{page} is missing required editorial section: {required}")
