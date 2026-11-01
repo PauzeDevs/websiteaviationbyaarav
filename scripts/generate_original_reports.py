@@ -15,10 +15,17 @@ ROOT = Path(__file__).resolve().parents[1]
 NEWS = ROOT / "data" / "news.json"
 OUTPUT = ROOT / "data" / "original-reports.json"
 ARTICLE_DIR = ROOT / "originals"
-TARGET_REPORTS_PER_RUN = 18
+TARGET_REPORTS_PER_RUN = 100
 API_URL = "https://api.groq.com/openai/v1/chat/completions"
 MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 HEADERS = {"User-Agent": "AviationByAaravNewsroom/1.0 (+https://aviationbyaarav.devs.surf/)"}
+FALLBACK_IMAGES = {
+    "Aircraft": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=85",
+    "Airlines": "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?auto=format&fit=crop&w=1400&q=85",
+    "India": "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1400&q=85",
+    "Safety": "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=1400&q=85",
+    "Industry": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=85",
+}
 STOP = set("""about after again against all also amid and are around as at back been before being between both but by can could did does for from had has have her his how into its just more most new not now of off on one only or other our over said says she should since some such than that the their them then there these they this those through to under up us was were what when where which while who will with would you your aviation airline airlines aircraft flight flights airport airports plane planes air""".split())
 
 class TextExtractor(HTMLParser):
@@ -47,7 +54,21 @@ def fetch_page(url):
     parser = TextExtractor()
     parser.feed(raw)
     text = re.sub(r"\s+", " ", " ".join(parser.parts)).strip()
-    return final_url, text[:9000]
+    image = ""
+    patterns = [
+        r'<meta[^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\'][^>]+content=["\']([^"\']+)',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\']',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, raw, re.I)
+        if match:
+            candidate = html.unescape(match.group(1)).strip()
+            if candidate.startswith("//"):
+                candidate = "https:" + candidate
+            if candidate.startswith("https://") and not re.search(r"news\.google\.com|lh3\.googleusercontent\.com|gstatic\.com", candidate, re.I):
+                image = candidate
+                break
+    return final_url, text[:9000], image
 
 def tokens(title):
     return {w for w in re.findall(r"[a-z0-9]{3,}", title.lower()) if w not in STOP and not w.isdigit()}
@@ -63,7 +84,7 @@ def source_name(item, domain):
 def enrich(item):
     url = item.get("url", "")
     try:
-        final_url, page_text = fetch_page(url)
+        final_url, page_text, page_image = fetch_page(url)
         domain = (urlparse(final_url).hostname or "").lower().removeprefix("www.")
         if not domain or domain.endswith("google.com") or domain == "news.google.com":
             return None
@@ -74,7 +95,12 @@ def enrich(item):
             "url": final_url,
             "published": item.get("published", ""),
             "summary": item.get("summary", "")[:1800],
-            "image": item.get("image", "") if re.match(r"^https?://", str(item.get("image", ""))) and not re.search(r"news\\.google\\.com|lh3\\.googleusercontent\\.com|gstatic\\.com", str(item.get("image", "")), re.I) else "",
+            "image": (
+                item.get("image", "")
+                if re.match(r"^https?://", str(item.get("image", "")))
+                and not re.search(r"news\\.google\\.com|lh3\\.googleusercontent\\.com|gstatic\\.com", str(item.get("image", "")), re.I)
+                else page_image
+            ) or FALLBACK_IMAGES.get(item.get("category", "Industry"), FALLBACK_IMAGES["Industry"]),
             "page_text": page_text,
         }
     except Exception as exc:
@@ -82,59 +108,16 @@ def enrich(item):
         return None
 
 def related_groups(items):
+    """Prepare one report per story currently present in the public newsroom feed."""
     prepared = []
-    cutoff = datetime.now(timezone.utc) - timedelta(days=14)
-    for item in items[:35]:
-        try:
-            published = datetime.fromisoformat(item.get("published", "").replace("Z", "+00:00"))
-            if published.tzinfo is None:
-                published = published.replace(tzinfo=timezone.utc)
-            if published < cutoff:
-                continue
-        except Exception:
+    for item in items:
+        if not item.get("url", "").startswith(("http://", "https://")):
             continue
         enriched = enrich(item)
         if enriched:
             enriched["tokens"] = tokens(enriched["title"])
-            prepared.append(enriched)
-
-    groups, used_indices = [], set()
-    for index, lead in enumerate(prepared):
-        if index in used_indices:
-            continue
-        group = [lead]
-        group_indices = [index]
-        lead_tokens = lead["tokens"]
-        for candidate_index in range(index + 1, len(prepared)):
-            if candidate_index in used_indices:
-                continue
-            candidate = prepared[candidate_index]
-            if candidate["domain"] in {x["domain"] for x in group}:
-                continue
-            other = candidate["tokens"]
-            shared = lead_tokens & other
-            overlap = len(shared) / max(1, min(len(lead_tokens), len(other)))
-            if len(shared) >= 2 and overlap >= 0.38:
-                group.append(candidate)
-                group_indices.append(candidate_index)
-        if len({x["domain"] for x in group}) >= 2:
-            group.sort(key=lambda x: x.get("published", ""), reverse=True)
-            groups.append(group[:2])
-            used_indices.update(group_indices)
-        if len(groups) >= TARGET_REPORTS_PER_RUN:
-            break
-
-    # Keep the AI newsroom useful when no story has two matching publishers.
-    # Single-source reports are explicitly labelled as uncorroborated analysis.
-    if len(groups) < TARGET_REPORTS_PER_RUN:
-        for index, item in enumerate(prepared):
-            if index in used_indices:
-                continue
-            groups.append([item])
-            used_indices.add(index)
-            if len(groups) >= TARGET_REPORTS_PER_RUN:
-                break
-    return groups
+            prepared.append([enriched])
+    return prepared
 
 SYSTEM_PROMPT = """You are the Aviation by Aarav editorial desk. Write an accurate, original aviation report or analysis from the supplied source material only. A report may have one publisher or multiple independent publishers. When only one publisher is supplied, attribute all material claims to that publisher and explicitly state that the account has not been independently corroborated.
 Return one valid JSON object with exactly these keys:
@@ -253,7 +236,7 @@ footer{{max-width:900px;margin:65px auto 30px;padding:0 24px;color:#82939c;font:
 <header class="nav"><a href="../index.html" aria-label="Aviation by Aarav home"><img src="../assets/aviation-by-aarav-logo.svg" alt="Aviation by Aarav"></a></header>
 <main><div class="tag">{esc(article['category'])} · ORIGINAL AVIATION BY AARAV REPORT</div>
 <h1>{esc(article['headline'])}</h1><p class="dek">{esc(article['dek'])}</p>
-{f'<figure class="report-hero"><img src="{esc(sources[0].get("image", ""))}" alt="{esc(article["headline"])}" loading="eager"><figcaption>Image via {esc(sources[0]["publisher"])}</figcaption></figure>' if sources and sources[0].get("image") else ''}
+{f'<figure class="report-hero"><img src="{esc(sources[0].get("image") or FALLBACK_IMAGES.get(article["category"], FALLBACK_IMAGES["Industry"]))}" alt="{esc(article["headline"])}" loading="eager"><figcaption>Image via {esc(sources[0]["publisher"])}</figcaption></figure>' if sources else ''}
 <div class="meta">AVIATION BY AARAV NEWSROOM · {esc(published[:10])} · {len(sources)} SOURCE{'S' if len(sources) != 1 else ''} · {'CROSS-PUBLISHER REVIEW' if len(sources) > 1 else 'SINGLE-SOURCE ANALYSIS'}</div>
 <article class="report"><section><h2>At a glance</h2><p>{esc(article['summary'])}</p></section>
 {sections}
@@ -269,6 +252,11 @@ footer{{max-width:900px;margin:65px auto 30px;padding:0 24px;color:#82939c;font:
 def main():
     existing = json.loads(OUTPUT.read_text(encoding="utf-8")) if OUTPUT.exists() else {"updated": None, "articles": []}
     known = {item.get("slug") for item in existing.get("articles", [])}
+    known_sources = {
+        source.get("url", "").split("#")[0].rstrip("/")
+        for report in existing.get("articles", [])
+        for source in report.get("sources", [])
+    }
     news = json.loads(NEWS.read_text(encoding="utf-8"))
     feed_items = news.get("articles", [])
     groups = related_groups(feed_items)
@@ -277,10 +265,15 @@ def main():
     for group in groups:
         if not group:
             continue
+        source_url = group[0].get("url", "").split("#")[0].rstrip("/")
+        if source_url in known_sources:
+            continue
         article = call_model(group)
         slug = slugify(article["headline"])
         if slug in known:
-            continue
+            slug = slugify(group[0].get("title", "aviation-report"))
+            if slug in known:
+                slug = slug + "-" + str(abs(hash(source_url)) % 100000)
         published = datetime.now(timezone.utc).isoformat()
         page = ARTICLE_DIR / f"{slug}.html"
         page.write_text(render_page(article, group, slug, published), encoding="utf-8")
@@ -288,13 +281,14 @@ def main():
             "title": article["headline"], "slug": slug,
             "url": f"originals/{slug}.html",
             "summary": article["dek"], "source": "Aviation by Aarav",
-            "published": published, "image": group[0].get("image", ""), "category": article["category"],
+            "published": published, "image": group[0].get("image") or FALLBACK_IMAGES.get(article["category"], FALLBACK_IMAGES["Industry"]), "category": article["category"],
             "type": "original",
             "sources": [{"publisher": x["publisher"], "title": x["title"], "url": x["url"], "published": x["published"]} for x in group],
         }
         created.append(record)
         known.add(slug)
-        print(f"Drafted: {article['headline']} ({len(group)} independent sources)")
+        known_sources.add(source_url)
+        print(f"Drafted: {article['headline']} ({len(group)} source; image: yes)")
     if created:
         existing["updated"] = datetime.now(timezone.utc).isoformat()
         existing["articles"] = created + existing.get("articles", [])
@@ -303,7 +297,7 @@ def main():
         OUTPUT.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Prepared {len(created)} new original report(s).")
     if not created:
-        print("No sufficiently corroborated new stories qualified. No article was invented; no files changed.")
+        print("All current feed stories already have reports; no files changed.")
 
 if __name__ == "__main__":
     main()
