@@ -16,7 +16,7 @@ jobs:
       (github.event_name == 'workflow_dispatch') ||
       (github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     steps:
       - name: Check out the latest main branch
         uses: actions/checkout@v4
@@ -52,7 +52,11 @@ jobs:
               page = Path(item["url"])
               if not page.is_file():
                   raise SystemExit(f"Missing original report page: {page}")
+              if not item.get("image", "").startswith("https://"):
+                  raise SystemExit(f"Original report has no photo: {item.get('title')}")
               text = page.read_text(encoding="utf-8")
+              if 'class="report-hero"' not in text or "<img" not in text:
+                  raise SystemExit(f"Original report has no rendered hero photo: {page}")
               for required in ("Sources & further reading", "What we could not verify", "ORIGINAL AVIATION BY AARAV REPORT"):
                   if required not in text:
                       raise SystemExit(f"{page} is missing required editorial section: {required}")
