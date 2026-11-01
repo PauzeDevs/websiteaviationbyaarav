@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 NEWS = ROOT / "data" / "news.json"
 OUTPUT = ROOT / "data" / "original-reports.json"
 ARTICLE_DIR = ROOT / "originals"
+TARGET_REPORTS_PER_RUN = 18
 API_URL = "https://api.groq.com/openai/v1/chat/completions"
 MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 HEADERS = {"User-Agent": "AviationByAaravNewsroom/1.0 (+https://aviationbyaarav.devs.surf/)"}
@@ -73,6 +74,7 @@ def enrich(item):
             "url": final_url,
             "published": item.get("published", ""),
             "summary": item.get("summary", "")[:1800],
+            "image": item.get("image", "") if re.match(r"^https?://", str(item.get("image", ""))) and not re.search(r"news\\.google\\.com|lh3\\.googleusercontent\\.com|gstatic\\.com", str(item.get("image", "")), re.I) else "",
             "page_text": page_text,
         }
     except Exception as exc:
@@ -119,18 +121,18 @@ def related_groups(items):
             group.sort(key=lambda x: x.get("published", ""), reverse=True)
             groups.append(group[:2])
             used_indices.update(group_indices)
-        if len(groups) >= 3:
+        if len(groups) >= TARGET_REPORTS_PER_RUN:
             break
 
     # Keep the AI newsroom useful when no story has two matching publishers.
     # Single-source reports are explicitly labelled as uncorroborated analysis.
-    if len(groups) < 3:
+    if len(groups) < TARGET_REPORTS_PER_RUN:
         for index, item in enumerate(prepared):
             if index in used_indices:
                 continue
             groups.append([item])
             used_indices.add(index)
-            if len(groups) >= 3:
+            if len(groups) >= TARGET_REPORTS_PER_RUN:
                 break
     return groups
 
@@ -215,6 +217,7 @@ def render_page(article, sources, slug, published):
 <meta name="theme-color" content="#070d12"><meta name="description" content="{esc(article['seo_description'])}">
 <meta property="og:title" content="{esc(article['headline'])} | Aviation by Aarav">
 <meta property="og:description" content="{esc(article['dek'])}">
+<meta property="og:image" content="{esc(sources[0].get('image', ''))}">
 <meta property="og:type" content="article"><title>{esc(article['headline'])} | Aviation by Aarav</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -228,6 +231,9 @@ main{{max-width:900px;margin:clamp(45px,8vw,100px) auto;padding:0 24px}}
 h1{{font:400 clamp(42px,7vw,76px)/.98 'Instrument Serif',Georgia,serif;letter-spacing:-.035em;margin:22px 0;color:#edf2f4}}
 .dek{{font-size:18px;line-height:1.65;color:#b8c6cd;max-width:760px}}
 .meta{{color:#8497a2;font:9px 'DM Mono',monospace;letter-spacing:.08em;margin:26px 0 32px}}
+.report-hero{{margin:30px 0 34px;overflow:hidden;border-radius:20px;border:1px solid rgba(196,218,228,.18);background:#0b151d}}
+.report-hero img{{display:block;width:100%;max-height:520px;object-fit:cover}}
+.report-hero figcaption{{padding:10px 14px;color:#82939c;font:9px 'DM Mono',monospace;letter-spacing:.06em}}
 .report{{border:1px solid rgba(196,218,228,.19);border-radius:22px;background:linear-gradient(145deg,rgba(8,17,24,.91),rgba(7,14,20,.84));padding:clamp(24px,5vw,44px);box-shadow:0 24px 70px rgba(0,0,0,.38),inset 0 1px 0 rgba(231,243,247,.09);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}}
 .report h2{{font:400 30px 'Instrument Serif',Georgia,serif;margin:0 0 14px;color:#e9eff2}}
 .report p{{font-size:15px;line-height:1.9;color:#c0ccd1;margin:0;white-space:pre-line}}
@@ -247,6 +253,7 @@ footer{{max-width:900px;margin:65px auto 30px;padding:0 24px;color:#82939c;font:
 <header class="nav"><a href="../index.html" aria-label="Aviation by Aarav home"><img src="../assets/aviation-by-aarav-logo.svg" alt="Aviation by Aarav"></a></header>
 <main><div class="tag">{esc(article['category'])} · ORIGINAL AVIATION BY AARAV REPORT</div>
 <h1>{esc(article['headline'])}</h1><p class="dek">{esc(article['dek'])}</p>
+{f'<figure class="report-hero"><img src="{esc(sources[0].get("image", ""))}" alt="{esc(article["headline"])}" loading="eager"><figcaption>Image via {esc(sources[0]["publisher"])}</figcaption></figure>' if sources and sources[0].get("image") else ''}
 <div class="meta">AVIATION BY AARAV NEWSROOM · {esc(published[:10])} · {len(sources)} SOURCE{'S' if len(sources) != 1 else ''} · {'CROSS-PUBLISHER REVIEW' if len(sources) > 1 else 'SINGLE-SOURCE ANALYSIS'}</div>
 <article class="report"><section><h2>At a glance</h2><p>{esc(article['summary'])}</p></section>
 {sections}
@@ -281,7 +288,7 @@ def main():
             "title": article["headline"], "slug": slug,
             "url": f"originals/{slug}.html",
             "summary": article["dek"], "source": "Aviation by Aarav",
-            "published": published, "image": "", "category": article["category"],
+            "published": published, "image": group[0].get("image", ""), "category": article["category"],
             "type": "original",
             "sources": [{"publisher": x["publisher"], "title": x["title"], "url": x["url"], "published": x["published"]} for x in group],
         }
