@@ -205,3 +205,10 @@ html{background:#09121a!important}
 body{position:relative!important;isolation:isolate!important;background:transparent!important}
 #ambient-three-canvas{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;height:100dvh!important;display:block!important;z-index:0!important;pointer-events:none!important;opacity:1!important;visibility:visible!important}
 body>*:not(#ambient-three-canvas){position:relative;z-index:1}
+
+
+/* Approved Aviation by Aarav primary logo: two-line horizontal lockup. */
+.topbar .brand-logo{width:178px!important;height:72px!important;overflow:visible!important}
+.topbar .brand-logo img{width:178px!important;height:72px!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+.footer-brand,.footer-brand img{width:158px!important;height:64px!important;max-height:none!important;object-fit:contain!important}
+@media(max-width:760px){.topbar .brand-logo{width:146px!important;height:58px!important}.topbar .brand-logo img{width:146px!important;height:58px!important;max-width:none!important}.footer-brand,.footer-brand img{width:138px!important;height:56px!important}}
