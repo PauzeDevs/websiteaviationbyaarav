@@ -36,7 +36,7 @@ class NewsroomTests(unittest.TestCase):
         self.assertEqual(len(groups), 1)
         self.assertEqual({item["domain"] for item in groups[0]}, {"one.example", "two.example"})
 
-    def test_same_domain_is_not_independent_confirmation(self):
+    def test_same_domain_falls_back_to_attributed_single_source_reports(self):
         now = datetime.now(timezone.utc).isoformat()
         items = [
             {"title": "Air India orders six A350 aircraft", "published": now},
@@ -47,7 +47,10 @@ class NewsroomTests(unittest.TestCase):
             {"title": items[1]["title"], "publisher": "Publisher One", "domain": "same.example", "url": "https://same.example/b", "published": now, "summary": "", "page_text": "", "tokens": newsroom.tokens(items[1]["title"])},
         ]
         with patch.object(newsroom, "enrich", side_effect=enriched):
-            self.assertEqual(newsroom.related_groups(items), [])
+            groups = newsroom.related_groups(items)
+        self.assertEqual(len(groups), 2)
+        self.assertTrue(all(len(group) == 1 for group in groups))
+        self.assertEqual({item["domain"] for group in groups for item in group}, {"same.example"})
 
     def test_article_html_escapes_untrusted_text_and_lists_sources(self):
         article = {
