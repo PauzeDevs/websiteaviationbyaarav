@@ -96,13 +96,17 @@ def related_groups(items):
             enriched["tokens"] = tokens(enriched["title"])
             prepared.append(enriched)
 
-    groups, used = [], set()
+    groups, used_indices = [], set()
     for index, lead in enumerate(prepared):
-        if lead["domain"] in used:
+        if index in used_indices:
             continue
         group = [lead]
+        group_indices = [index]
         lead_tokens = lead["tokens"]
-        for candidate in prepared[index + 1:]:
+        for candidate_index in range(index + 1, len(prepared)):
+            if candidate_index in used_indices:
+                continue
+            candidate = prepared[candidate_index]
             if candidate["domain"] in {x["domain"] for x in group}:
                 continue
             other = candidate["tokens"]
@@ -110,10 +114,11 @@ def related_groups(items):
             overlap = len(shared) / max(1, min(len(lead_tokens), len(other)))
             if len(shared) >= 2 and overlap >= 0.38:
                 group.append(candidate)
+                group_indices.append(candidate_index)
         if len({x["domain"] for x in group}) >= 2:
             group.sort(key=lambda x: x.get("published", ""), reverse=True)
             groups.append(group[:4])
-            used.update(x["domain"] for x in group)
+            used_indices.update(group_indices)
         if len(groups) >= 3:
             break
     return groups
