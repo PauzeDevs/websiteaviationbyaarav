@@ -1,4 +1,62 @@
 {
-  "updated": null,
-  "articles": []
+  "updated": "2026-11-01T08:41:36.047441+00:00",
+  "articles": [
+    {
+      "title": "United 757 declares Mayday after low‑fuel go‑around at San Francisco International Airport",
+      "slug": "united-757-declares-mayday-after-low-fuel-go-around-at-san-francisco-international",
+      "url": "originals/united-757-declares-mayday-after-low-fuel-go-around-at-san-francisco-international.html",
+      "summary": "A United Airlines Boeing 757 on flight UA1023 from Boston to San Francisco aborted its landing due to an unstable approach, later reporting a fuel emergency with just over 5,000 lb remaining before landing safely.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-01T08:41:29.598446+00:00",
+      "image": "",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "United Boeing 757 Declares Mayday As Fuel Runs Low After Aborted Landing At San Francisco",
+          "url": "https://simpleflying.com/united-airlines-boeing-757-mayday-low-fuel-san-francisco/",
+          "published": "2026-11-01T08:06:16+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Helicopter Pilot Compensation Remains Unclear Compared to Airline Counterparts, According to BLS Data",
+      "slug": "helicopter-pilot-compensation-remains-unclear-compared-to-airline-counterparts-acc",
+      "url": "originals/helicopter-pilot-compensation-remains-unclear-compared-to-airline-counterparts-acc.html",
+      "summary": "Simple Flying notes that the Bureau of Labor Statistics aggregates helicopter pilots with other commercial pilots, making direct salary comparisons with airline pilots speculative.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-01T08:41:32.814861+00:00",
+      "image": "",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Much Do Helicopter Pilots Earn Compared To Airline Pilots In 2026?",
+          "url": "https://simpleflying.com/how-much-do-helicopter-pilots-earn-compared-to-airline-pilots-in-2026/",
+          "published": "2026-11-01T08:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Delta Becomes Only U.S. Airline Flying Airbus’ Latest Wide‑Body Jets",
+      "slug": "delta-becomes-only-u-s-airline-flying-airbus-latest-wide-body-jets",
+      "url": "originals/delta-becomes-only-u-s-airline-flying-airbus-latest-wide-body-jets.html",
+      "summary": "Delta’s long‑haul fleet now centers on the A350 and A330neo, a position its domestic rivals have abandoned, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-01T08:41:36.047137+00:00",
+      "image": "",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Fleet Strategy: How Delta Air Lines Became The Only US Carrier Operating Airbus' Newest Widebodies",
+          "url": "https://simpleflying.com/delta-air-lines-only-us-carrier-operating-airbus-newest-widebodies/",
+          "published": "2026-11-01T04:00:17+00:00"
+        }
+      ]
+    }
+  ]
 }
