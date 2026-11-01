@@ -1,9 +1,6 @@
-name: AI newsroom auto-publisher
+name: AI newsroom manual publisher
 
 on:
-  workflow_run:
-    workflows: ["Daily aviation newsroom"]
-    types: [completed]
   workflow_dispatch:
 
 permissions:
