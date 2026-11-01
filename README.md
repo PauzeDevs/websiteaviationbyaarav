@@ -25,12 +25,12 @@
 - Darker liquid-glass cards and translucent navigation across the homepage, newsroom, aircraft directory and report pages.
 
 ## Hybrid AI newsroom
-The existing daily workflow continues to collect and publish attributed RSS briefs. After a successful collection, the separate **AI newsroom drafts** workflow researches recent stories, checks for coverage by at least two independent publisher domains, and uses the OpenAI API to draft original Aviation by Aarav reports. It writes report pages under `originals/` and an index at `data/original-reports.json`, then opens or updates a **draft pull request**. Nothing written by the AI workflow is published until a human reviews and merges that PR.
+The existing daily workflow continues to collect and publish attributed RSS briefs. After a successful collection, the separate **AI newsroom drafts** workflow researches recent stories, checks for coverage by at least two independent publisher domains, and uses the Groq API to draft original Aviation by Aarav reports. It writes report pages under `originals/` and an index at `data/original-reports.json`, then opens or updates a **draft pull request**. Nothing written by the AI workflow is published until a human reviews and merges that PR.
 
 The writer is instructed to use only the retrieved source material, avoid invented quotes or figures, attribute claims that are not independently confirmed, and disclose evidence gaps. Stories without enough corroboration are skipped. Source links are included on every original report.
 
 ### Required repository secret
-Add `OPENAI_API_KEY` under **Settings → Secrets and variables → Actions**. The workflow uses `gpt-4.1-mini` by default. OpenAI API usage is billed separately from ChatGPT subscriptions.
+Add `GROQ_API_KEY` under **Settings → Secrets and variables → Actions**. The workflow uses Groq's OpenAI-compatible chat completions endpoint with `openai/gpt-oss-120b` by default. Groq's free Developer tier has usage limits that can change; check your Groq console for the current limits. This is separate from ChatGPT subscriptions.
 
 The AI workflow is triggered after the daily RSS workflow succeeds, or manually with **Actions → AI newsroom drafts → Run workflow**. It creates a draft PR for editorial approval; it never auto-merges or directly publishes AI-written reports.
 
