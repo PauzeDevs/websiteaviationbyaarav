@@ -9,6 +9,8 @@ on:
     paths-ignore:
       - "data/news.json"
       - "articles/**"
+      - "originals/**"
+      - "data/original-reports.json"
 
 permissions:
   contents: write
