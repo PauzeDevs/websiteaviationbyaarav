@@ -30,10 +30,10 @@ body::after{content:"";position:fixed;inset:0;z-index:5;pointer-events:none;opac
 a{color:inherit}
 .topbar{max-width:1440px;height:88px;padding:0 clamp(22px,5vw,76px);border-bottom:1px solid var(--line);color:var(--ink);background:rgba(239,244,243,.72);backdrop-filter:blur(26px) saturate(145%);-webkit-backdrop-filter:blur(26px) saturate(145%);z-index:20}
 .brand-logo{display:flex;align-items:center;flex:0 0 auto;width:168px;height:58px;overflow:hidden}
-.brand-logo img{display:block;width:168px;height:58px;max-width:48vw;max-height:none;object-fit:cover;object-position:center;filter:none!important;mix-blend-mode:multiply;background:transparent}
+.brand-logo img{display:block;width:168px;height:58px;max-width:48vw;max-height:none;object-fit:contain;object-position:center;filter:none!important;mix-blend-mode:normal;background:transparent}
 .topbar .brand-logo{width:168px;height:58px}
 .footer-brand{width:150px;height:48px}
-.footer-brand img{width:150px;height:48px;max-height:none;object-fit:cover;mix-blend-mode:multiply}
+.footer-brand img{width:150px;height:48px;max-height:none;object-fit:contain;mix-blend-mode:normal}
 @media(max-width:760px){.topbar .brand-logo{width:142px;height:50px}.topbar .brand-logo img{width:142px;height:50px;max-width:44vw}.footer-brand,.footer-brand img{width:132px;height:44px}}
 .topbar nav{color:var(--ink-soft);font:500 11px var(--mono);letter-spacing:.04em}
 .topbar nav a{transition:color .25s ease}
@@ -120,7 +120,7 @@ a{color:inherit}
 .instagram-card small{color:var(--muted)}
 .ig-icon{color:#688b9c}
 footer{max-width:none;min-height:110px;padding:22px clamp(22px,5vw,76px);border-top:1px solid var(--line);background:rgba(236,242,240,.82);color:var(--muted);font:9px var(--mono);letter-spacing:.08em;backdrop-filter:blur(20px)}
-.footer-brand img{filter:none!important;mix-blend-mode:multiply}
+.footer-brand img{filter:none!important;mix-blend-mode:normal}
 .story-grid{gap:20px}
 .story-card{min-height:360px;overflow:hidden}
 .story-image{height:190px;background:#d9e1e1}
@@ -193,7 +193,7 @@ body::after{opacity:.045!important;z-index:2!important}
 .filter.active,.filter:hover{background:#b78355!important;color:#10191e!important;border-color:#b78355!important}
 footer{background:rgba(7,15,21,.78)!important;color:#91a4ac!important;border-color:rgba(190,211,218,.14)!important}
 .briefing{background:linear-gradient(145deg,rgba(13,28,36,.9),rgba(8,18,24,.94))!important;border-color:rgba(190,211,218,.18)!important}
-.topbar .brand-logo img{width:148px!important;height:44px!important;max-width:44vw!important}}
+.topbar .brand-logo img{width:148px!important;height:44px!important;max-width:44vw!important;object-fit:contain!important;mix-blend-mode:normal!important}}
 
 /* Background layer only. Preserve all existing site content above it. */
 #ambient-three-canvas{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important;display:block!important;pointer-events:none!important}

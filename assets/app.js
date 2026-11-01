@@ -14,7 +14,9 @@ const fallbackImages={
   Industry:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=82'
 };
 function storyImage(story){
+  if(String(story.source||'').trim().toLowerCase()==='google news')return '';
   const candidate=String(story.image||'').trim();
+  if(/news\.google\.com|lh3\.googleusercontent\.com|gstatic\.com/i.test(candidate))return '';
   return /^https?:\/\//i.test(candidate)?candidate:'';
 }
 function render(){
@@ -23,7 +25,7 @@ function render(){
   grid.innerHTML=list.slice(0,18).map(s=>{
     const href=fromSiteRoot('articles/'+(s.slug||slug(s.title))+'.html');
     const image=storyImage(s);
-    const imageMarkup=image?'<img src="'+esc(image)+'" alt="'+esc(s.title)+'" loading="lazy" decoding="async" onerror="this.remove()">':'<span class="image-placeholder">IMAGE NOT PROVIDED BY SOURCE</span>';
+    const imageMarkup=image?'<img src="'+esc(image)+'" alt="'+esc(s.title)+'" loading="lazy" decoding="async" onerror="this.remove()">':'';
     return `<article class="story-card">
       <a class="story-image-link" href="${esc(href)}" aria-label="Open ${esc(s.title)}">
         <div class="story-image ${image?'has-image':'no-image'}">${imageMarkup}<span class="image-tag">${esc(s.category||'AVIATION')}</span></div>
