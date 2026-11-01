@@ -30,8 +30,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          deployments="$(gh api --paginate "repos/$REPOSITORY/deployments?environment=github-pages&per_page=100")"
-          count="$(jq 'length' <<< "$deployments")"
+          deployments="$(gh api --paginate --slurp "repos/$REPOSITORY/deployments?environment=github-pages&per_page=100")"
+          count="$(jq 'add | length' <<< "$deployments")"
           echo "Inspecting $count GitHub Pages deployment record(s)."
 
           recovered=0
@@ -65,7 +65,7 @@ jobs:
               -f description="Automatically recovered stale GitHub Pages deployment"
             gh api --method DELETE --silent "repos/$REPOSITORY/deployments/$deployment_id"
             recovered=$((recovered + 1))
-          done < <(jq -r '.[] | [.id, .sha] | @tsv' <<< "$deployments")
+          done < <(jq -r 'add | .[] | [.id, .sha] | @tsv' <<< "$deployments")
 
           echo "Recovered $recovered stale deployment record(s)."
           if [[ "$recovered" -gt 0 ]]; then
