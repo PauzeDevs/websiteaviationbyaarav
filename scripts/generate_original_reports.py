@@ -271,14 +271,15 @@ def main():
         created.append(record)
         known.add(slug)
         print(f"Drafted: {article['headline']} ({len(group)} independent sources)")
-    existing["updated"] = datetime.now(timezone.utc).isoformat()
-    existing["articles"] = created + existing.get("articles", [])
-    existing["articles"] = existing["articles"][:100]
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if created:
+        existing["updated"] = datetime.now(timezone.utc).isoformat()
+        existing["articles"] = created + existing.get("articles", [])
+        existing["articles"] = existing["articles"][:100]
+        OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+        OUTPUT.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     print(f"Prepared {len(created)} new original report(s).")
     if not created:
-        print("No sufficiently corroborated new stories qualified. No article was invented.")
+        print("No sufficiently corroborated new stories qualified. No article was invented; no files changed.")
 
 if __name__ == "__main__":
     main()
