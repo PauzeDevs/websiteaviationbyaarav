@@ -155,10 +155,7 @@ HARD RULES:
 - limitations must state material gaps, uncertainty or "No material source conflict identified in the supplied material." when applicable.
 Return JSON only, without Markdown fences."""
 
-def call_model(group):
-    api_key = os.getenv("GROQ_API_KEY", "").strip()
-    if not api_key:
-        raise RuntimeError("Missing GROQ_API_KEY repository secret. Add it in Settings > Secrets and variables > Actions.")
+def source_payload(group):
     sources = []
     for item in group:
         sources.append({
@@ -170,24 +167,11 @@ def call_model(group):
             "rss_summary": item["summary"],
             "article_text_excerpt": item["page_text"][:3000],
         })
-    payload = {
-        "model": MODEL,
-        "temperature": 0.2,
-        "max_completion_tokens": 2200,
-        "response_format": {"type": "json_object"},
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": "Write one original report using only these independent source materials. Keep the sources list outside the article unchanged.\n\n" + json.dumps(sources, ensure_ascii=False)},
-        ],
-    }
-    req = Request(API_URL, data=json.dumps(payload).encode(), headers={
-        "Authorization": "Bearer " + api_key,
-        "Content-Type": "application/json",
-        "User-Agent": HEADERS["User-Agent"],
-    })
-    with urlopen(req, timeout=100) as response:
-        result = json.loads(response.read().decode("utf-8"))
-    content = result["choices"][0]["message"]["content"]
+    user_prompt = "Write one original report using only these independent source materials. Keep the sources list outside the article unchanged.\\n\\n" + json.dumps(sources, ensure_ascii=False)
+    return sources, user_prompt
+
+
+def validate_article(content):
     article = json.loads(content)
     required = ["headline", "dek", "category", "summary", "sections", "key_facts", "analysis", "limitations", "seo_description"]
     if any(not article.get(key) for key in required):
@@ -197,6 +181,79 @@ def call_model(group):
     if not isinstance(article["sections"], list) or len(article["sections"]) < 3:
         raise ValueError("Model returned too few article sections.")
     return article
+
+
+def call_groq(user_prompt):
+    api_key = os.getenv("GROQ_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("GROQ_API_KEY is not configured.")
+    payload = {
+        "model": MODEL,
+        "temperature": 0.2,
+        "max_completion_tokens": 2200,
+        "response_format": {"type": "json_object"},
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": user_prompt},
+        ],
+    }
+    req = Request(API_URL, data=json.dumps(payload).encode(), headers={
+        "Authorization": "Bearer " + api_key,
+        "Content-Type": "application/json",
+        "User-Agent": HEADERS["User-Agent"],
+    })
+    with urlopen(req, timeout=100) as response:
+        result = json.loads(response.read().decode("utf-8"))
+    return validate_article(result["choices"][0]["message"]["content"])
+
+
+def call_gemini(user_prompt):
+    api_key = os.getenv("GEMINI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY is not configured.")
+    model = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite").strip()
+    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    payload = {
+        "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
+        "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
+        "generationConfig": {
+            "temperature": 0.2,
+            "maxOutputTokens": 3000,
+            "responseMimeType": "application/json",
+        },
+    }
+    req = Request(endpoint, data=json.dumps(payload).encode(), headers={
+        "x-goog-api-key": api_key,
+        "Content-Type": "application/json",
+        "User-Agent": HEADERS["User-Agent"],
+    })
+    with urlopen(req, timeout=100) as response:
+        result = json.loads(response.read().decode("utf-8"))
+    parts = result.get("candidates", [{}])[0].get("content", {}).get("parts", [])
+    content = "".join(part.get("text", "") for part in parts if part.get("text"))
+    if not content:
+        raise ValueError("Gemini returned an empty report.")
+    return validate_article(content)
+
+
+def call_model(group, provider_state):
+    _, user_prompt = source_payload(group)
+    provider = provider_state["provider"]
+    if provider == "gemini":
+        print("Writing report with Gemini fallback.")
+        return call_gemini(user_prompt)
+
+    try:
+        return call_groq(user_prompt)
+    except HTTPError as exc:
+        if exc.code != 429 and exc.code < 500:
+            raise
+        print(f"Groq returned HTTP {exc.code}; switching remaining reports to Gemini.", file=sys.stderr)
+    except (TimeoutError, OSError) as exc:
+        print(f"Groq request failed ({exc}); switching remaining reports to Gemini.", file=sys.stderr)
+
+    provider_state["provider"] = "gemini"
+    return call_gemini(user_prompt)
 
 def slugify(value):
     slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")[:82]
@@ -280,19 +337,17 @@ def main():
     groups = related_groups(feed_items)
     ARTICLE_DIR.mkdir(parents=True, exist_ok=True)
     created = []
+    provider_state = {"provider": "groq" if os.getenv("GROQ_API_KEY", "").strip() else "gemini"}
+    if provider_state["provider"] == "gemini" and not os.getenv("GEMINI_API_KEY", "").strip():
+        print("Neither GROQ_API_KEY nor GEMINI_API_KEY is configured; original report drafting is unavailable.", file=sys.stderr)
+        return
     for group in groups:
         if not group:
             continue
         source_url = (group[0].get("feed_url") or group[0].get("url", "")).split("#")[0].rstrip("/")
         if source_url in known_sources:
             continue
-        try:
-            article = call_model(group)
-        except HTTPError as exc:
-            if exc.code == 429:
-                print("Groq rate limit reached (HTTP 429); stopping AI drafting for this run. News feed publication can continue.", file=sys.stderr)
-                break
-            raise
+        article = call_model(group, provider_state)
         slug = slugify(article["headline"])
         if slug in known:
             slug = slugify(group[0].get("title", "aviation-report"))
