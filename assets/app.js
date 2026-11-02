@@ -39,13 +39,35 @@ document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
   document.querySelector('.filter.active')?.classList.remove('active');b.classList.add('active');activeFilter=b.dataset.filter;render();
 }));
 document.querySelector('[data-india-filter]')?.addEventListener('click',()=>document.querySelector('.filter[data-filter="All"]')?.click());
+async function fetchJsonFromCandidates(paths){
+  let lastError;
+  for(const path of [...new Set(paths)]){
+    try{
+      const response=await fetch(path,{cache:'no-store',headers:{'Accept':'application/json'}});
+      if(!response.ok)throw new Error(`HTTP ${response.status} for ${path}`);
+      const payload=await response.json();
+      return payload;
+    }catch(error){lastError=error;console.warn('[Aviation newsroom] Feed path failed:',path,error);}
+  }
+  throw lastError||new Error('No usable newsroom feed URL was found.');
+}
 async function load(){
   try{
-    const response=await fetch(fromSiteRoot('data/news.json'),{cache:'no-store'});if(!response.ok)throw Error('News feed unavailable');
-    const data=await response.json();
-    const originalsResponse=await fetch(fromSiteRoot('data/original-reports.json'),{cache:'no-store'}).catch(()=>null);
-    const originalsData=originalsResponse?.ok?await originalsResponse.json():{articles:[]};
-    stories=[...(Array.isArray(data.articles)?data.articles:[]),...(Array.isArray(originalsData.articles)?originalsData.articles:[])];
+    const feedPaths=[
+      fromSiteRoot('data/news.json'),
+      new URL('../data/news.json',location.href).href,
+      new URL('/data/news.json',location.origin).href
+    ];
+    const data=await fetchJsonFromCandidates(feedPaths);
+    if(!data||!Array.isArray(data.articles))throw new Error('The newsroom feed JSON has an unexpected format.');
+    const originalPaths=[
+      fromSiteRoot('data/original-reports.json'),
+      new URL('../data/original-reports.json',location.href).href,
+      new URL('/data/original-reports.json',location.origin).href
+    ];
+    let originalsData={articles:[]};
+    try{originalsData=await fetchJsonFromCandidates(originalPaths);}catch(error){console.warn('[Aviation newsroom] Original reports are temporarily unavailable:',error);}
+    stories=[...data.articles,...(Array.isArray(originalsData.articles)?originalsData.articles:[])];
     stories.sort((a,b)=>new Date(b.published)-new Date(a.published));
     const updated=document.querySelector('#updated-label');
     if(updated)updated.textContent=data.updated?'Updated '+new Date(data.updated).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Kolkata'}):'Waiting for first update';
@@ -53,7 +75,8 @@ async function load(){
     if(today)today.textContent=new Intl.DateTimeFormat('en',{weekday:'long',day:'numeric',month:'long'}).format(new Date()).toUpperCase();
     render();
   }catch(e){
-    grid.innerHTML='<div class="empty-state">The newsroom feed is temporarily unavailable. Please try again shortly.</div>';
+    console.error('[Aviation newsroom] Unable to load the public news feed:',e);
+    grid.innerHTML='<div class="empty-state">The newsroom feed could not be reached. Please refresh in a moment.</div>';
     const updated=document.querySelector('#updated-label');if(updated)updated.textContent='Feed temporarily unavailable';
   }
 }
