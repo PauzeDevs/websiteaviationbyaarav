@@ -106,7 +106,7 @@ jobs:
                   if required not in body:
                       raise SystemExit(f"{page} is missing required editorial section: {required}")
           if repaired:
-              Path("data/original-reports.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+              Path("data/original-reports.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
               print("Repaired missing legacy report image metadata with category fallback images.")
           print(f"Validated {len(data.get('articles', []))} original report(s).")
           PY
