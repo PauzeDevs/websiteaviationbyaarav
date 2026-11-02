@@ -10,6 +10,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 
 ROOT = Path(__file__).resolve().parents[1]
 NEWS = ROOT / "data" / "news.json"
@@ -285,7 +286,13 @@ def main():
         source_url = (group[0].get("feed_url") or group[0].get("url", "")).split("#")[0].rstrip("/")
         if source_url in known_sources:
             continue
-        article = call_model(group)
+        try:
+            article = call_model(group)
+        except HTTPError as exc:
+            if exc.code == 429:
+                print("Groq rate limit reached (HTTP 429); stopping AI drafting for this run. News feed publication can continue.", file=sys.stderr)
+                break
+            raise
         slug = slugify(article["headline"])
         if slug in known:
             slug = slugify(group[0].get("title", "aviation-report"))
