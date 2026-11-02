@@ -337,6 +337,7 @@ def main():
     groups = related_groups(feed_items)
     ARTICLE_DIR.mkdir(parents=True, exist_ok=True)
     created = []
+    failed = []
     provider_state = {"provider": "groq" if os.getenv("GROQ_API_KEY", "").strip() else "gemini"}
     if provider_state["provider"] == "gemini" and not os.getenv("GEMINI_API_KEY", "").strip():
         print("Neither GROQ_API_KEY nor GEMINI_API_KEY is configured; original report drafting is unavailable.", file=sys.stderr)
@@ -347,7 +348,14 @@ def main():
         source_url = (group[0].get("feed_url") or group[0].get("url", "")).split("#")[0].rstrip("/")
         if source_url in known_sources:
             continue
-        article = call_model(group, provider_state)
+        try:
+            article = call_model(group, provider_state)
+        except Exception as exc:
+            # A single provider timeout, quota response or malformed completion must
+            # never prevent the remaining eligible stories from receiving reports.
+            failed.append((source_url, str(exc)))
+            print(f"Report generation failed; leaving this story queued for the next run: {group[0].get('title', source_url)}: {exc}", file=sys.stderr)
+            continue
         slug = slugify(article["headline"])
         if slug in known:
             slug = slugify(group[0].get("title", "aviation-report"))
@@ -375,8 +383,10 @@ def main():
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Prepared {len(created)} new original report(s).")
+    if failed:
+        print(f"{len(failed)} story/stories could not be generated and remain eligible for retry on the next run.", file=sys.stderr)
     if not created:
-        print("All current feed stories already have reports; no files changed.")
+        print("No new reports were generated in this run; failed or unprocessed stories remain eligible for a later run.")
 
 if __name__ == "__main__":
     main()
