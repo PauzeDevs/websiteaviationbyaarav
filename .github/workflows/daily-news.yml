@@ -51,7 +51,7 @@ jobs:
               if r'\n' in content:
                   bad.append(str(path))
           if bad:
-              print('Literal \\n escape found in HTML:', ', '.join(bad))
+              print('Literal \n escape found in HTML:', ', '.join(bad))
               sys.exit(1)
           logo = Path('assets/aviation-by-aarav-logo.svg')
           if not logo.is_file() or '<svg' not in logo.read_text(encoding='utf-8'):
