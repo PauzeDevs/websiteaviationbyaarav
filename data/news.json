@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-02T13:58:02.519441+00:00",
+  "updated": "2026-11-02T14:01:45.055020+00:00",
   "articles": [
+    {
+      "title": "Boeing 747-400 Vs. 747-8: How The Last 2 Jumbo Generations Compare",
+      "slug": "boeing-747-400-vs-747-8-how-the-last-2-jumbo-generations-compare",
+      "url": "https://simpleflying.com/boeing-747-400-vs-747-8-last-2-jumbo-generations-compare/",
+      "summary": "This is how the two newest variants of the Queen of the Skies compare.",
+      "source": "Simple Flying",
+      "published": "2026-11-02T14:00:17+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-747-400-vs-747-8-how-the-last-2-jumbo-generations-compare.jpg",
+      "category": "Aircraft"
+    },
     {
       "title": "Nearly 2,000 Boeing 737s Must Get Tail Inspections After Jets Pitched Up And Down Mid-Flight",
       "slug": "nearly-2-000-boeing-737s-must-get-tail-inspections-after-jets-pitched-up-and-down-mid-flig",
@@ -90,16 +100,6 @@
       "published": "2026-11-02T08:38:18+00:00",
       "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/n722bd.jpg",
       "category": "Safety"
-    },
-    {
-      "title": "United Boeing 757 Declares Mayday As Fuel Runs Low After Aborted Landing At San Francisco",
-      "slug": "united-boeing-757-declares-mayday-as-fuel-runs-low-after-aborted-landing-at-san-francisco",
-      "url": "https://simpleflying.com/united-airlines-boeing-757-mayday-low-fuel-san-francisco/",
-      "summary": "An unstable approach forced the 757 into a go-around with low fuel remaining.",
-      "source": "Simple Flying",
-      "published": "2026-11-02T07:11:52+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/united-airlines-boeing-757-200-at-sfo.jpg",
-      "category": "Aircraft"
     },
     {
       "title": "Autoflight V5000 Matrix",
@@ -412,16 +412,6 @@
       "category": "India"
     },
     {
-      "title": "Cyclone Murasu Disrupts Chennai Airport, Cancels 11 Flights - Urban Acres",
-      "slug": "cyclone-murasu-disrupts-chennai-airport-cancels-11-flights-urban-acres",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVWx4aVlpTFhwRXJqb1ByZVBkb1p6dkRYRzNESjVxM01McWdIcnRMX2JTdTB2YWtscGM1b096cGRIRmROeS1jcm1nSWZlci03a3Q0bnM4WmV1R1d3SWhCbUFyQkNJNENVUUEwSTJpbHl1d3JLc2JFZks5MEJ5eU1QdGlvRldBTnI0?oc=5",
-      "summary": "Cyclone Murasu Disrupts Chennai Airport, Cancels 11 Flights Urban Acres",
-      "source": "Google News",
-      "published": "2026-11-02T12:06:48+00:00",
-      "image": "",
-      "category": "Airlines"
-    },
-    {
       "title": "Adani Expects ‘One or Two’ Foreign Airlines to Pause Mumbai Flights Rather Than Move Airports - Skift",
       "slug": "adani-expects-one-or-two-foreign-airlines-to-pause-mumbai-flights-rather-than-move-airport",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWW9Md1hoQVFSRWR0b0pVNVY2RjdoRnloWVpoY0NZR2djcWRrU3NQVUU1dmItR3U1T1RRb2IzT3BfY21OaUhxMzlmbk0zVktjRnNzVWFvalh3eG04dUttb3lFS2ZfZnN4MmxNSUFqX2ZteE9jMXIzclhUSXlWWXlhZEIyaTgzVWN1UVRPSmh3M3dtTm5IZFhFdEtQcC1PSTE5bGtoejh5djVFdFdWSExrSWwzLWZqeDdWcmdQTkV3?oc=5",
@@ -450,6 +440,16 @@
       "published": "2026-11-02T11:55:24+00:00",
       "image": "",
       "category": "Industry"
+    },
+    {
+      "title": "France Prepares Rafale Test Aircraft For F5 Trials - Aviation Week",
+      "slug": "france-prepares-rafale-test-aircraft-for-f5-trials-aviation-week",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOc2FZdUNQNHBtQWNHbEdqeTFzZVh3ZEVibEJMaXVJYmJBaW9RVTQtZlZib3N3a2E3TFRFd3FXNEdlQjhLcTRPVXlJcGNBVVpSdjB4ZFRpU1NrVG03QVI5WW9XQjBUdFduSGhjWjBadG11Y1lKZHFVaGFvWl8tMkNHSTBHRy1qQjd1cUVMTExOR1kyR3JzNUNEYldzbEdKbDBy?oc=5",
+      "summary": "France Prepares Rafale Test Aircraft For F5 Trials Aviation Week",
+      "source": "Google News",
+      "published": "2026-11-02T11:50:47+00:00",
+      "image": "",
+      "category": "Aircraft"
     }
   ],
   "feed_warnings": [
