@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-02T13:23:37.592478+00:00",
+  "updated": "2026-11-02T13:24:42.293087+00:00",
   "articles": [
+    {
+      "title": "FAA Issues Airworthiness Directive for Nearly 2,000 Boeing 737NG Aircraft Over Horizontal‑Stabilizer Anomalies",
+      "slug": "faa-issues-airworthiness-directive-for-nearly-2-000-boeing-737ng-aircraft-over-hor",
+      "url": "originals/faa-issues-airworthiness-directive-for-nearly-2-000-boeing-737ng-aircraft-over-hor.html",
+      "summary": "The U.S. regulator has mandated tail‑section inspections after operators reported unexpected nose‑up and nose‑down motions, citing excessive movement in the stabilizer hinges and jackscrew.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:24:42.292756+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/10/737ng-pitch-problem.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Nearly 2,000 Boeing 737s Must Get Tail Inspections After Jets Pitched Up And Down Mid-Flight",
+          "url": "https://simpleflying.com/video/nearly-2-000-boeing-737s-must-get-tail-inspections-after-jets-pitched-up-and-down-mid-flight/",
+          "feed_url": "https://simpleflying.com/video/nearly-2-000-boeing-737s-must-get-tail-inspections-after-jets-pitched-up-and-down-mid-flight/",
+          "published": "2026-11-02T13:24:18+00:00"
+        }
+      ]
+    },
     {
       "title": "Airbus A380F’s Unfulfilled Promise: Why the Superjumbo Never Took Flight as a Freighter",
       "slug": "airbus-a380f-s-unfulfilled-promise-why-the-superjumbo-never-took-flight-as-a-freig",
