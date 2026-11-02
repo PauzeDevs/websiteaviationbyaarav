@@ -9,6 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/pauzex-editorial.css">
+
+<style>
+.lounge-feature{padding-top:58px;padding-bottom:58px}
+.lounge-feature-card{display:grid;grid-template-columns:1fr minmax(260px,.8fr);gap:28px;align-items:center;min-height:330px;padding:clamp(24px,5vw,56px);border:1px solid rgba(255,255,255,.72);border-radius:28px;background:linear-gradient(120deg,rgba(255,255,255,.66),rgba(222,233,236,.46));box-shadow:0 24px 70px rgba(31,61,82,.10),inset 0 1px 0 white;overflow:hidden}
+.lounge-feature-copy{position:relative;z-index:2}.lounge-feature-copy h2{font:400 clamp(3rem,6vw,5rem)/.94 'Instrument Serif',serif;letter-spacing:-.035em;color:#1d3444;margin:20px 0 14px}.lounge-feature-copy h2 em{color:#789fbd}.lounge-feature-copy p{max-width:470px;color:#4b6373;font-size:14px;line-height:1.85;margin:0 0 24px}
+.lounge-feature-art{position:relative;min-height:245px;border-radius:22px;overflow:hidden;background:radial-gradient(circle at 50% 50%,#66869a 0 2%,transparent 3%),linear-gradient(145deg,#1b3545,#0b1722 75%);box-shadow:0 20px 48px rgba(15,36,51,.2);color:#e9f1f2}
+.lounge-disc{position:absolute;width:210px;height:210px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:repeating-radial-gradient(circle,#111b23 0 2px,#263b49 3px 5px);border:1px solid #b9d0d855;box-shadow:0 0 0 12px #ffffff08,0 0 0 24px #ffffff05}
+.lounge-disc:after{content:"";position:absolute;inset:43%;border-radius:50%;background:#b5cbd2;border:8px solid #162b39}
+.lounge-orbit{position:absolute;width:275px;height:275px;border:1px solid #d5e6e533;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
+.lounge-art-label,.lounge-art-foot{position:absolute;left:22px;font:9px 'DM Mono',monospace;letter-spacing:.18em;color:#b8cbd1}.lounge-art-label{top:20px}.lounge-art-foot{bottom:20px}.lounge-art-title{position:absolute;right:22px;bottom:38px;font:400 34px/.85 'Instrument Serif',serif;text-align:right;color:#e8c49e}
+@media(max-width:760px){.lounge-feature{padding:38px 20px}.lounge-feature-card{grid-template-columns:1fr;gap:25px;padding:23px;border-radius:22px}.lounge-feature-art{min-height:210px}.lounge-feature-copy h2{font-size:3.5rem}}
+</style>
 </head>
 <body>
 <canvas id="ambient-three-canvas" aria-hidden="true"></canvas>
@@ -31,6 +43,23 @@
 <section class="ticker"><span class="ticker-label">AVIATION HEADLINES</span><span>AVIATION NEWS</span><i>✳</i><span>INDIA AVIATION</span><i>✳</i><span>AIRCRAFT & TECHNOLOGY</span><i>✳</i><span>GLOBAL AIRLINES</span></section>
 
 <section class="newsroom-teaser"><div><div class="eyebrow muted">AVIATION NEWSROOM</div><h2>Aviation news,<br><em>in context.</em></h2><p>Track airline announcements, aircraft orders and deliveries, safety updates and Indian aviation policy. Original reporting sits alongside attributed briefs, with source links for verification.</p><a class="primary-button" href="/news/">Enter the newsroom <span>↗</span></a></div></section>
+
+<section class="section lounge-feature" id="listening-lounge">
+ <div class="lounge-feature-card">
+  <div class="lounge-feature-copy">
+   <div class="eyebrow muted">AVIATION BY AARAV · LISTENING LOUNGE</div>
+   <h2>Clear skies.<br><em>Good music.</em></h2>
+   <p>A soundtrack for the journey. Explore curated playlists, discover your next repeat and take the music with you.</p>
+   <a class="primary-button" href="/music.html">Enter the Listening Lounge <span>↗</span></a>
+  </div>
+  <div class="lounge-feature-art" aria-hidden="true">
+   <span class="lounge-disc"></span><span class="lounge-orbit"></span>
+   <span class="lounge-art-label">NOW BOARDING</span>
+   <span class="lounge-art-title">SOUND<br>ON.</span>
+   <span class="lounge-art-foot">PLAYLISTS · MUSIC · FLIGHT</span>
+  </div>
+ </div>
+</section>
 
 <section class="india-section" id="india"><div class="india-copy"><div class="eyebrow"><span class="india-flag">✦</span> THE INDIAN SKIES</div><h2>India’s aviation<br><em>industry.</em></h2><p>Tracking Indian airlines, airport expansion, fleet decisions, routes and aviation policy.</p><a class="primary-button" href="/news/?category=India">Explore India coverage <span>↗</span></a></div>
  <div class="india-panel glass-panel"><div class="panel-top"><span>INDIA AVIATION WATCH</span><span class="panel-live"><i></i> LIVE FEED</span></div><div class="india-stat"><strong>01</strong><span>Airlines & route networks</span><b>↗</b></div><div class="india-stat"><strong>02</strong><span>Airports & infrastructure</span><b>↗</b></div><div class="india-stat"><strong>03</strong><span>Fleet orders & deliveries</span><b>↗</b></div><div class="india-stat"><strong>04</strong><span>DGCA & policy updates</span><b>↗</b></div><small>Curated coverage. Original sources linked in every story.</small></div>
