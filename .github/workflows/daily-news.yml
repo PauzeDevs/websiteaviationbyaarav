@@ -49,7 +49,7 @@ jobs:
           bad = []
           for path in html_files:
               content = path.read_text(encoding='utf-8')
-              if r'\\n' in content:
+              if r'\n' in content:
                   bad.append(str(path))
           if bad:
               print('Literal \\n escape found in HTML:', ', '.join(bad))
