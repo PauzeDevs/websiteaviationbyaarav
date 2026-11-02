@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111d">
+<meta name="description" content="Track live aircraft over India with the Aviation by Aarav live flight radar.">
+<meta property="og:title" content="Live Flight Radar | Aviation by Aarav">
+<meta property="og:description" content="Explore live aircraft positions over India.">
+<meta property="og:type" content="website">
+<title>Live Flight Radar | Aviation by Aarav</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#07111d;--ink:#edf4fb;--soft:#a6b8ca;--muted:#71869b;--line:rgba(184,214,242,.15);--accent:#9bc9ef;--glass:rgba(18,35,53,.7);--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;--display:'Instrument Serif',Georgia,serif}
+*{box-sizing:border-box}
+html{min-height:100%;scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--ink);font-family:var(--sans);background:radial-gradient(ellipse at 14% 8%,rgba(50,111,164,.22),transparent 30%),radial-gradient(ellipse at 86% 34%,rgba(28,78,124,.2),transparent 32%),linear-gradient(145deg,#060c14,#0a1827 52%,#07111d)}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(162,203,238,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(162,203,238,.045) 1px,transparent 1px);background-size:68px 68px;mask-image:linear-gradient(180deg,#000,transparent 92%)}
+a{color:inherit;text-decoration:none}
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;height:82px;padding:0 max(24px,calc((100vw - 1240px)/2));border-bottom:1px solid var(--line);background:rgba(5,12,21,.76);backdrop-filter:blur(28px) saturate(150%);-webkit-backdrop-filter:blur(28px) saturate(150%)}
+.brand{display:flex;align-items:center;flex:0 0 auto;width:190px;height:54px}
+.brand img{display:block;width:100%;height:100%;object-fit:contain;object-position:left center}
+nav{display:flex;align-items:center;gap:clamp(16px,2.5vw,34px);font:10px var(--mono);letter-spacing:.08em;color:#9eb2c6}
+nav a{transition:color .2s ease}
+nav a:hover,nav a[aria-current=page]{color:#eaf5ff}
+.social{padding:10px 14px;border:1px solid var(--line);border-radius:4px;background:rgba(255,255,255,.035);font:9px var(--mono);letter-spacing:.08em;color:#dbeaf7}
+main{position:relative;z-index:1;max-width:1320px;margin:auto;padding:0 34px}
+.heading{padding:76px 0 32px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:#8fa8bf;font:9px var(--mono);letter-spacing:.17em;text-transform:uppercase}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#8bd6ae;box-shadow:0 0 14px rgba(139,214,174,.7);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.45;box-shadow:0 0 4px rgba(139,214,174,.25)}}
+h1{margin:22px 0 14px;font:400 clamp(52px,7vw,86px)/.92 var(--display);letter-spacing:-.035em}
+h1 em{color:var(--accent);font-style:italic}
+.intro{max-width:690px;margin:0;color:#a8bacb;font-size:14px;line-height:1.85}
+.map-shell{overflow:hidden;padding:12px;border:1px solid rgba(181,216,246,.2);border-radius:22px;background:linear-gradient(140deg,rgba(217,239,255,.105),rgba(91,143,187,.035) 46%,rgba(5,15,27,.76));box-shadow:inset 0 1px 0 rgba(255,255,255,.13),0 28px 90px rgba(0,0,0,.3);backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%)}
+.map-topline{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:9px 11px 15px;color:#8ea8c0;font:8px var(--mono);letter-spacing:.12em}
+.map-state{display:flex;align-items:center;gap:8px;color:#a7d7bd}
+.map-frame{overflow:hidden;border:1px solid rgba(180,212,239,.18);border-radius:13px;background:#0b1724}
+.map-frame iframe{display:block;width:100%;height:680px;border:0;max-width:100%;background:#0b1724}
+.map-caption{display:flex;justify-content:space-between;gap:20px;padding:13px 12px 3px;color:#8197ad;font-size:10px;line-height:1.6}
+.map-caption a{color:#b9dcf8;text-decoration:underline;text-underline-offset:3px}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0 78px}
+.info-card{min-height:132px;padding:21px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(140deg,rgba(224,241,255,.075),rgba(255,255,255,.018));box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.info-card small{display:block;margin-bottom:12px;color:#8faec9;font:8px var(--mono);letter-spacing:.15em}
+.info-card p{margin:0;color:#b4c4d3;font-size:12px;line-height:1.75}
+footer{display:flex;justify-content:space-between;gap:18px;max-width:1320px;margin:auto;padding:23px 34px 30px;border-top:1px solid var(--line);color:#71869b;font:8px var(--mono);letter-spacing:.08em}
+footer a{color:#a7c8e4}
+@media(max-width:760px){.topbar{height:70px;padding:0 18px;gap:10px}.brand{width:148px;height:46px}nav{display:none}.social{font-size:8px;padding:9px 11px}main{padding:0 17px}.heading{padding:55px 0 25px}h1{font-size:clamp(48px,12vw,66px)}.intro{font-size:12px}.map-shell{padding:7px;border-radius:16px}.map-topline{font-size:7px;padding:8px 7px 12px}.map-frame{border-radius:10px}.map-frame iframe{height:590px}.map-caption{font-size:9px;padding:11px 7px 3px;display:block}.map-caption span{display:block;margin-bottom:5px}.info-grid{grid-template-columns:1fr;margin:18px 0 55px;gap:10px}.info-card{min-height:0;padding:17px}footer{padding:20px 17px;flex-wrap:wrap;font-size:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.live-dot{animation:none}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <a class="brand" href="/" aria-label="Aviation by Aarav home"><img src="/assets/aviation-by-aarav-logo.svg" alt="Aviation by Aarav"></a>
+ <nav aria-label="Main navigation">
+  <a href="/news/">News</a><a href="/#india">India</a><a href="/#aircraft">Aircraft</a><a href="/radar/" aria-current="page">Live radar</a>
+ </nav>
+ <a class="social" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer">INSTAGRAM ↗</a>
+</header>
+<main>
+ <section class="heading">
+  <div class="eyebrow"><span class="live-dot"></span> LIVE FLIGHT TRACKING <span>·</span> INDIA VIEW</div>
+  <h1>Live flight <em>radar.</em></h1>
+  <p class="intro">Explore aircraft moving across Indian airspace and the surrounding region. Select an aircraft on the map to inspect the flight information currently being received.</p>
+ </section>
+ <section class="map-shell" aria-label="Live aircraft tracking map">
+  <div class="map-topline"><span>AVIATION BY AARAV / LIVE RADAR</span><span class="map-state"><span class="live-dot"></span> LIVE DATA</span></div>
+  <div class="map-frame">
+   <iframe src="https://avioadsb.org/embed/map?lat=22.5&amp;lon=79&amp;zoom=4" width="100%" height="680" style="border:0;max-width:100%" title="Live flight tracker map by AvioADSB" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <div class="map-caption"><span>Live positions refresh every few seconds. Aircraft details may appear when you tap or select a marker.</span><span>Map widget by <a href="https://avioadsb.org/flight-tracker-widget" target="_blank" rel="noreferrer">AvioADSB ↗</a></span></div>
+ </section>
+ <section class="info-grid" aria-label="Radar information">
+  <article class="info-card"><small>01 / AIRCRAFT DETAILS</small><p>Select a visible aircraft marker to view the callsign, altitude and speed where those details are available.</p></article>
+  <article class="info-card"><small>02 / LIVE COVERAGE</small><p>The map displays aircraft received by the community ADS-B network. Coverage varies by receiver location, so it may not show every aircraft.</p></article>
+  <article class="info-card"><small>03 / IMPORTANT NOTE</small><p>This is a community flight-tracking display for information and exploration, not a certified or safety-critical aviation source.</p></article>
+ </section>
+</main>
+<footer><span>© <span id="year"></span> AVIATION BY AARAV</span><a href="/">BACK TO HOME ↗</a><span>DATA WIDGET: AVIOADSB</span></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
