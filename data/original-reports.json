@@ -1,6 +1,346 @@
 {
-  "updated": "2026-11-02T13:02:17.275350+00:00",
+  "updated": "2026-11-02T13:21:15.013544+00:00",
   "articles": [
+    {
+      "title": "Airbus A380 Freighter Ambitions Stumble as Cargo Market Turns Toward Smaller Twins",
+      "slug": "airbus-a380-freighter-ambitions-stumble-as-cargo-market-turns-toward-smaller-twins",
+      "url": "originals/airbus-a380-freighter-ambitions-stumble-as-cargo-market-turns-toward-smaller-twins.html",
+      "summary": "Simple Flying reports that Airbus’s vision for the A380F as the next‑generation freight aircraft was abandoned by major cargo carriers before the type entered service, with the market favoring more modest twin‑engine freighters.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:04.370374+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/79_lh_why-worlds-largest-commerical-aircraft-failed-freighter-even-though-airbus-plotted-sucess_h_site-copy.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why The Airbus A380 Failed As A Cargo Plane",
+          "url": "https://simpleflying.com/video/why-the-airbus-a380-failed-as-a-cargo-plane/",
+          "feed_url": "https://simpleflying.com/video/why-the-airbus-a380-failed-as-a-cargo-plane/",
+          "published": "2026-11-02T12:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "SR‑71 Blackbird’s Two‑Man Flight Deck: Pilot and Recon Officer",
+      "slug": "sr-71-blackbird-s-two-man-flight-deck-pilot-and-recon-officer",
+      "url": "originals/sr-71-blackbird-s-two-man-flight-deck-pilot-and-recon-officer.html",
+      "summary": "An overview of why the legendary Mach‑3 reconnaissance aircraft required a dedicated pilot and a rear‑seat reconnaissance systems officer, based on Simple Flying’s recent analysis.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:07.492079+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/10/clipboard-23-2-20261026-194042.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Many Crew Members Does It Take To Fly An SR-71 Blackbird?",
+          "url": "https://simpleflying.com/how-many-crew-members-fly-sr-71-blackbird/",
+          "feed_url": "https://simpleflying.com/how-many-crew-members-fly-sr-71-blackbird/",
+          "published": "2026-11-02T12:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Premium Economy’s Growing Role in Modern Air Travel",
+      "slug": "premium-economy-s-growing-role-in-modern-air-travel",
+      "url": "originals/premium-economy-s-growing-role-in-modern-air-travel.html",
+      "summary": "An overview of how premium economy has evolved from a niche offering to a strategic revenue driver, based on Simple Flying’s recent coverage.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:10.410843+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/03/passengers-premium-economy.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 Things Passengers Don’t Know About Premium Economy",
+          "url": "https://simpleflying.com/5-things-that-passengers-dont-know-about-premium-economy/",
+          "feed_url": "https://simpleflying.com/5-things-that-passengers-dont-know-about-premium-economy/",
+          "published": "2026-11-02T10:45:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing Authorized to Resume Direct Sales of Parts and Aircraft to Belarusian Carrier Belavia",
+      "slug": "boeing-authorized-to-resume-direct-sales-of-parts-and-aircraft-to-belarusian-carri",
+      "url": "originals/boeing-authorized-to-resume-direct-sales-of-parts-and-aircraft-to-belarusian-carri.html",
+      "summary": "U.S. Commerce Department licensing permits Boeing to supply spare parts, components and new jets to Belavia, a move welcomed by Minsk but raising concerns about potential diversion to Russia amid ongoing sanctions.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:14.238246+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/shutterstock_2541708097_cropped.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Boeing Cleared To Sell Parts & Jets To Belarus Despite Fears They’ll End Up In Russia",
+          "url": "https://simpleflying.com/boeing-cleared-sell-parts-jets-belarus-belavia-despite-russia/",
+          "feed_url": "https://simpleflying.com/boeing-cleared-sell-parts-jets-belarus-belavia-despite-russia/",
+          "published": "2026-11-02T09:18:59+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Evolution of the Boeing 747 Flight Deck: From Three-Crew Operations to Modern Integration",
+      "slug": "evolution-of-the-boeing-747-flight-deck-from-three-crew-operations-to-modern-integ",
+      "url": "originals/evolution-of-the-boeing-747-flight-deck-from-three-crew-operations-to-modern-integ.html",
+      "summary": "An examination of how the 'Queen of the Skies' transitioned from a complex, three-person cockpit to a streamlined, two-pilot digital environment.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:17.066005+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/10/boeing-747-cockpit-how-flying-the-queen-of-the-skies-differs-from-modern-jets.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Boeing 747 Cockpit: How Flying The Queen Of The Skies Differs From Modern Jets",
+          "url": "https://simpleflying.com/boeing-747-cockpit-flying-queen-skies-differs-modern-jets/",
+          "feed_url": "https://simpleflying.com/boeing-747-cockpit-flying-queen-skies-differs-modern-jets/",
+          "published": "2026-11-02T09:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Learjet 60 Crashes in Florida: Nine Fatalities Reported",
+      "slug": "learjet-60-crashes-in-florida-nine-fatalities-reported",
+      "url": "originals/learjet-60-crashes-in-florida-nine-fatalities-reported.html",
+      "summary": "A business jet traveling from Texas to the Bahamas crashed in Greenacres, Florida, resulting in nine deaths and significant local infrastructure damage.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:23.427410+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/n722bd.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Breaking: Learjet 60 With 9 People Onboard Fatally Nose Dives In Missile-Like Crash Near Mar-A-Lago",
+          "url": "https://simpleflying.com/learjet-60-fatally-crashes-missile-like-crash-mar-a-lago/",
+          "feed_url": "https://simpleflying.com/learjet-60-fatally-crashes-missile-like-crash-mar-a-lago/",
+          "published": "2026-11-02T08:38:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Beyond the Million-Mile Threshold: Alternative Paths to Lifetime Airline Status",
+      "slug": "beyond-the-million-mile-threshold-alternative-paths-to-lifetime-airline-status",
+      "url": "originals/beyond-the-million-mile-threshold-alternative-paths-to-lifetime-airline-status.html",
+      "summary": "While US carriers often rely on distance-based milestones, international airlines are increasingly utilizing credit-based systems to reward long-term loyalty.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:26.246917+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/a380-redeployment-20261026-195229.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "6 Airlines Offering Lifetime Elite Status Without Flying A Million Miles",
+          "url": "https://simpleflying.com/airlines-offering-lifetime-elite-status-without-flying-million-miles/",
+          "feed_url": "https://simpleflying.com/airlines-offering-lifetime-elite-status-without-flying-million-miles/",
+          "published": "2026-11-02T06:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "AutoFlight Unveils V5000 Matrix eVTOL for Regional Operations",
+      "slug": "autoflight-unveils-v5000-matrix-evtol-for-regional-operations",
+      "url": "originals/autoflight-unveils-v5000-matrix-evtol-for-regional-operations.html",
+      "summary": "The newly revealed 10-seat hybrid-electric aircraft aims to expand the operational scope of vertical take-off and landing technology.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:29.271680+00:00",
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=85",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Autoflight V5000 Matrix",
+          "url": "https://aviationweek.com/node/4994461",
+          "feed_url": "https://aviationweek.com/node/4994461",
+          "published": "2026-03-31T07:48:56+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Turkey Finalizes $11 Billion Eurofighter Typhoon Acquisition",
+      "slug": "turkey-finalizes-11-billion-eurofighter-typhoon-acquisition",
+      "url": "originals/turkey-finalizes-11-billion-eurofighter-typhoon-acquisition.html",
+      "summary": "Ankara secures deal for 20 new-build combat aircraft with potential for further expansion through second-hand purchases.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:32.352288+00:00",
+      "image": "https://aviationweek.com/sites/default/files/2025-10/typhoon_1600px.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Turkey Signs $11 Billion Eurofighter Deal",
+          "url": "https://aviationweek.com/defense/aircraft-propulsion/turkey-signs-11-billion-eurofighter-deal",
+          "feed_url": "https://aviationweek.com/defense/aircraft-propulsion/turkey-signs-11-billion-eurofighter-deal",
+          "published": "2025-10-27T18:19:46+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Northrop Grumman Develops Secret Autonomous Aircraft Under Project Lotus",
+      "slug": "northrop-grumman-develops-secret-autonomous-aircraft-under-project-lotus",
+      "url": "originals/northrop-grumman-develops-secret-autonomous-aircraft-under-project-lotus.html",
+      "summary": "A new uncrewed aircraft system has been identified at the Scaled Composites facility in Mojave, signaling a potential entry into the U.S. Air Force’s next-generation combat drone program.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:47.677463+00:00",
+      "image": "https://aviationweek.com/sites/default/files/2025-10/screenshot_2025-10-27_scaled_composites_from_gmaps.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Project Lotus, Northrop Grumman’s Secret Autonomous Aircraft Revealed",
+          "url": "https://aviationweek.com/defense/aircraft-propulsion/project-lotus-northrop-grummans-secret-autonomous-aircraft-revealed",
+          "feed_url": "https://aviationweek.com/defense/aircraft-propulsion/project-lotus-northrop-grummans-secret-autonomous-aircraft-revealed",
+          "published": "2025-10-27T18:05:46+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Second B-21 Raider Test Aircraft Completes Maiden Flight in Palmdale",
+      "slug": "second-b-21-raider-test-aircraft-completes-maiden-flight-in-palmdale",
+      "url": "originals/second-b-21-raider-test-aircraft-completes-maiden-flight-in-palmdale.html",
+      "summary": "The U.S. Air Force and Northrop Grumman reach a significant development milestone as a second flight-test airframe takes to the skies.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:50.429616+00:00",
+      "image": "https://aviationweek.com/sites/default/files/2025-09/b21awin_usairforce.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Second B-21 Enters Flight Test In Palmdale",
+          "url": "https://aviationweek.com/defense/aircraft-propulsion/second-b-21-enters-flight-test-palmdale",
+          "feed_url": "https://aviationweek.com/defense/aircraft-propulsion/second-b-21-enters-flight-test-palmdale",
+          "published": "2025-09-11T18:36:44+00:00"
+        }
+      ]
+    },
+    {
+      "title": "EHang Advances VT35 eVTOL Development with Ongoing Flight Testing",
+      "slug": "ehang-advances-vt35-evtol-development-with-ongoing-flight-testing",
+      "url": "originals/ehang-advances-vt35-evtol-development-with-ongoing-flight-testing.html",
+      "summary": "The Chinese manufacturer moves toward a December 2025 public debut for its new two-seat autonomous lift-plus-cruise aircraft.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:52.884549+00:00",
+      "image": "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=1400&q=85",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "EHang VT35",
+          "url": "https://aviationweek.com/node/4780076",
+          "feed_url": "https://aviationweek.com/node/4780076",
+          "published": "2025-07-29T08:58:34+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Diamond Aircraft Advances V.MO eVTOL Development Following Volkswagen Technology Transfer",
+      "slug": "diamond-aircraft-advances-v-mo-evtol-development-following-volkswagen-technology-t",
+      "url": "originals/diamond-aircraft-advances-v-mo-evtol-development-following-volkswagen-technology-t.html",
+      "summary": "The lift-and-cruise electric vertical takeoff and landing aircraft, originally conceived by Volkswagen China, is now under the stewardship of Diamond Aircraft Industries.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:20:58.072604+00:00",
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=85",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Diamond V.MO",
+          "url": "https://aviationweek.com/node/4773341",
+          "feed_url": "https://aviationweek.com/node/4773341",
+          "published": "2025-07-02T09:55:06+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Zero Gravity Unveils ZG-T6 Tiltrotor eVTOL Concept",
+      "slug": "zero-gravity-unveils-zg-t6-tiltrotor-evtol-concept",
+      "url": "originals/zero-gravity-unveils-zg-t6-tiltrotor-evtol-concept.html",
+      "summary": "The Chinese manufacturer targets a 2028 entry-to-service for its six-passenger electric aircraft designed for urban mobility and cargo operations.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:21:01.838600+00:00",
+      "image": "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=1400&q=85",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Zero Gravity ZG-T6",
+          "url": "https://aviationweek.com/node/4773331",
+          "feed_url": "https://aviationweek.com/node/4773331",
+          "published": "2025-07-02T09:51:25+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Business Aviation Sector Experiences Growth Amid Increased Industry Event Activity",
+      "slug": "business-aviation-sector-experiences-growth-amid-increased-industry-event-activity",
+      "url": "originals/business-aviation-sector-experiences-growth-amid-increased-industry-event-activity.html",
+      "summary": "Aviation Week highlights the strategic importance of industry gatherings in shaping current market trends and executive decision-making.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:21:10.293433+00:00",
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=85",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "BCA Special Edition Newsletter",
+          "url": "https://aviationweek.com/node/4740936",
+          "feed_url": "https://aviationweek.com/node/4740936",
+          "published": "2025-03-07T23:30:14+00:00"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Department of Defense Awards Major Aviation and Technology Contracts",
+      "slug": "u-s-department-of-defense-awards-major-aviation-and-technology-contracts",
+      "url": "originals/u-s-department-of-defense-awards-major-aviation-and-technology-contracts.html",
+      "summary": "A review of military procurement activity from March 6 to March 10, 2017, highlights significant investments in KC-10 logistics and atmospheric sensing technology.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:21:12.964444+00:00",
+      "image": "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1400&q=85",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Selected U.S. Military Contracts for the Week of March 6 - March 10, 2017",
+          "url": "https://aviationweek.com/selected-us-military-contracts-week-march-6-march-10-2017",
+          "feed_url": "https://aviationweek.com/selected-us-military-contracts-week-march-6-march-10-2017",
+          "published": "2017-03-15T01:41:00+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Evaluating Product Realization Strategies in Aerospace Manufacturing",
+      "slug": "evaluating-product-realization-strategies-in-aerospace-manufacturing",
+      "url": "originals/evaluating-product-realization-strategies-in-aerospace-manufacturing.html",
+      "summary": "A look at the evolving methodologies for integrating manufacturing processes into the early stages of aerospace development.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-02T13:21:15.013274+00:00",
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=85",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Product Realization Pop Quiz",
+          "url": "https://aviationweek.com/aerospace/product-realization-pop-quiz-0",
+          "feed_url": "https://aviationweek.com/aerospace/product-realization-pop-quiz-0",
+          "published": "2016-04-18T17:42:07+00:00"
+        }
+      ]
+    },
     {
       "title": "Air India Suspends Service to Eight Destinations Amid Fuel Costs and Airspace Restrictions",
       "slug": "air-india-suspends-service-to-eight-destinations-amid-fuel-costs-and-airspace-rest",
