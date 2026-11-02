@@ -55,7 +55,7 @@ footer a{color:#a7c8e4}
 <header class="topbar">
  <a class="brand" href="/" aria-label="Aviation by Aarav home"><img src="/assets/aviation-by-aarav-logo.svg" alt="Aviation by Aarav"></a>
  <nav aria-label="Main navigation">
-  <a href="/news/">News</a><a href="/#india">India</a><a href="/#aircraft">Aircraft</a><a href="/radar/" aria-current="page">Live radar</a>
+  <a href="/news/">News</a><a href="/#india">India</a><a href="/#aircraft">Aircraft</a><a href="/radar.html" aria-current="page">Live radar</a>
  </nav>
  <a class="social" href="https://www.instagram.com/aviation_byaarav/" target="_blank" rel="noreferrer">INSTAGRAM ↗</a>
 </header>
@@ -63,22 +63,22 @@ footer a{color:#a7c8e4}
  <section class="heading">
   <div class="eyebrow"><span class="live-dot"></span> LIVE FLIGHT TRACKING <span>·</span> INDIA VIEW</div>
   <h1>Live flight <em>radar.</em></h1>
-  <p class="intro">Explore aircraft moving across Indian airspace and the surrounding region. Select an aircraft on the map to inspect the flight information currently being received.</p>
+  <p class="intro">Explore live aircraft positions from the independent ADSB.lol community receiver network. Start over India, zoom and pan freely, and select aircraft for available flight details.</p>
  </section>
  <section class="map-shell" aria-label="Live aircraft tracking map">
-  <div class="map-topline"><span>AVIATION BY AARAV / LIVE RADAR</span><span class="map-state"><span class="live-dot"></span> LIVE DATA</span></div>
+  <div class="map-topline"><span>AVIATION BY AARAV / LIVE RADAR</span><span class="map-state"><span class="live-dot"></span> ADSB.LOL LIVE FEED</span></div>
   <div class="map-frame">
-   <iframe src="https://avioadsb.org/embed/map?lat=22.5&amp;lon=79&amp;zoom=4" width="100%" height="700" style="display:block;width:100%;height:700px;min-height:520px;border:0;max-width:100%;background:#0b1724" title="Live flight tracker map by AvioADSB" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <iframe src="https://adsb.lol/?lat=22.5&lon=79&zoom=4" width="100%" height="700" style="display:block;width:100%;height:700px;min-height:520px;border:0;max-width:100%;background:#0b1724" title="Live aircraft tracking map by ADSB.lol" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-  <div class="map-caption"><span>Live positions refresh every few seconds. Aircraft details may appear when you tap or select a marker. If the embedded map does not load in your browser, <a href="https://avioadsb.org/embed/map?lat=22.5&amp;lon=79&amp;zoom=4" target="_blank" rel="noopener noreferrer">open the live radar directly ↗</a>.</span><span>Map widget by <a href="https://avioadsb.org/flight-tracker-widget" target="_blank" rel="noreferrer">AvioADSB ↗</a></span></div>
+  <div class="map-caption"><span>Aircraft positions are supplied by ADSB.lol's community network. Coverage varies by receiver location, so not every aircraft will appear. If the embedded map is blocked by your browser, <a href="https://adsb.lol/?lat=22.5&lon=79&zoom=4" target="_blank" rel="noopener noreferrer">open the live India map directly ↗</a>.</span><span>Data: <a href="https://adsb.lol/" target="_blank" rel="noreferrer">ADSB.lol</a> · Map: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> · <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noreferrer">ODbL 1.0</a></span></div>
  </section>
  <section class="info-grid" aria-label="Radar information">
   <article class="info-card"><small>01 / AIRCRAFT DETAILS</small><p>Select a visible aircraft marker to view the callsign, altitude and speed where those details are available.</p></article>
-  <article class="info-card"><small>02 / LIVE COVERAGE</small><p>The map displays aircraft received by the community ADS-B network. Coverage varies by receiver location, so it may not show every aircraft.</p></article>
+  <article class="info-card"><small>02 / LIVE COVERAGE</small><p>ADSB.lol combines reports from independent community receivers. Coverage varies across regions and altitude, so some aircraft may be missing.</p></article>
   <article class="info-card"><small>03 / IMPORTANT NOTE</small><p>This is a community flight-tracking display for information and exploration, not a certified or safety-critical aviation source.</p></article>
  </section>
 </main>
-<footer><span>© <span id="year"></span> AVIATION BY AARAV</span><a href="/">BACK TO HOME ↗</a><span>DATA WIDGET: AVIOADSB</span></footer>
+<footer><span>© <span id="year"></span> AVIATION BY AARAV</span><a href="/">BACK TO HOME ↗</a><span>LIVE DATA: ADSB.LOL</span></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
