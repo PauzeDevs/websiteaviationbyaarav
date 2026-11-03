@@ -1,6 +1,86 @@
 {
-  "updated": "2026-11-02T14:02:02.546967+00:00",
+  "updated": "2026-11-03T09:57:14.290054+00:00",
   "articles": [
+    {
+      "title": "Four-Pilot Crews Remain Mandatory for Ultra‑Long‑Haul Takeoffs",
+      "slug": "four-pilot-crews-remain-mandatory-for-ultra-long-haul-takeoffs",
+      "url": "originals/four-pilot-crews-remain-mandatory-for-ultra-long-haul-takeoffs.html",
+      "summary": "Regulatory duty limits and fatigue mitigation keep two captains and two first officers on the flight deck during the most demanding phase of 17‑hour plus routes, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-03T09:56:54.934295+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/06/ultra-long-haul-flights.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Ultra-Long-Haul Flights Still Need 4 Pilots In The Cockpit For Takeoff",
+          "url": "https://simpleflying.com/ultra-long-haul-flights-still-need-4-pilots-cockpit-takeoff/",
+          "feed_url": "https://simpleflying.com/ultra-long-haul-flights-still-need-4-pilots-cockpit-takeoff/",
+          "published": "2026-11-03T09:52:32+00:00"
+        }
+      ]
+    },
+    {
+      "title": "United flight departs with checked luggage but without passengers, tennis star Jessica Pegula says",
+      "slug": "united-flight-departs-with-checked-luggage-but-without-passengers-tennis-star-jess",
+      "url": "originals/united-flight-departs-with-checked-luggage-but-without-passengers-tennis-star-jess.html",
+      "summary": "Jessica Pegula took to social media after a United Airlines flight left the gate with her bags aboard despite the aircraft being cleared for departure without her and other passengers on board.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-03T09:56:57.787726+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/005-united-airlines-airbus-a321-robinguess-_-shutterstock.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "US Tennis Star Slams United After ‘Canceled’ Flight Suddenly Takes Off With Her Bags",
+          "url": "https://simpleflying.com/united-airlines-jessica-pegula-canceled-flight-bags/",
+          "feed_url": "https://simpleflying.com/united-airlines-jessica-pegula-canceled-flight-bags/",
+          "published": "2026-11-03T09:05:38+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Delta trims Delta One meal pre‑order deadline to 18 hours, the tightest window among U.S. carriers",
+      "slug": "delta-trims-delta-one-meal-pre-order-deadline-to-18-hours-the-tightest-window-amon",
+      "url": "originals/delta-trims-delta-one-meal-pre-order-deadline-to-18-hours-the-tightest-window-amon.html",
+      "summary": "The Atlanta‑based airline shortens its premium‑cabin meal ordering cut‑off from 24 to 18 hours ahead of departure, part of a broader Delta One refresh slated for 2027",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-03T09:57:00.942814+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/10/delta-air-lines-18-hour-meal.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Delta Air Lines' 18-Hour Meal Pre-Order Window Is The Closest To Departure Of Any US Carrier",
+          "url": "https://simpleflying.com/delta-air-lines-18-hour-meal-pre-order-window-closest-departure-any-us-carrier/",
+          "feed_url": "https://simpleflying.com/delta-air-lines-18-hour-meal-pre-order-window-closest-departure-any-us-carrier/",
+          "published": "2026-11-03T09:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing 747-8 Pilot Pay in 2026 Varies Widely Across Cargo Operators",
+      "slug": "boeing-747-8-pilot-pay-in-2026-varies-widely-across-cargo-operators",
+      "url": "originals/boeing-747-8-pilot-pay-in-2026-varies-widely-across-cargo-operators.html",
+      "summary": "An analysis of Simple Flying’s 2026 salary data shows that compensation for Boeing 747-8 pilots depends heavily on airline, seniority and role, with top cargo carriers offering six‑figure to four‑hundred‑plus‑thousand‑dollar packages.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-03T09:57:03.785952+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/10/how-much-do-boeing-747-8-pilots-make-in-2026.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Much Do Boeing 747-8 Pilots Make In 2026?",
+          "url": "https://simpleflying.com/how-much-boeing-747-8-pilots-make-2026/",
+          "feed_url": "https://simpleflying.com/how-much-boeing-747-8-pilots-make-2026/",
+          "published": "2026-11-03T06:00:17+00:00"
+        }
+      ]
+    },
     {
       "title": "Boeing 747‑400 Still Outshines 747‑8 in Commercial Success, Simple Flying Reports",
       "slug": "boeing-747-400-still-outshines-747-8-in-commercial-success-simple-flying-reports",
