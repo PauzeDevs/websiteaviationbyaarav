@@ -5,6 +5,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -236,24 +237,41 @@ def call_gemini(user_prompt):
     return validate_article(content)
 
 
+def call_with_retries(writer, user_prompt, provider_name, attempts=3):
+    """Retry transient provider failures with bounded backoff before failing this story."""
+    last_error = None
+    for attempt in range(1, attempts + 1):
+        try:
+            return writer(user_prompt)
+        except (HTTPError, TimeoutError, OSError, ValueError, KeyError) as exc:
+            last_error = exc
+            retryable = not isinstance(exc, HTTPError) or exc.code == 429 or exc.code >= 500
+            if not retryable or attempt == attempts:
+                break
+            delay = min(2 ** (attempt - 1) * 3, 12)
+            print(f"{provider_name} attempt {attempt}/{attempts} failed ({exc}); retrying in {delay}s.", file=sys.stderr)
+            time.sleep(delay)
+    raise last_error
+
+
 def call_model(group, provider_state):
     _, user_prompt = source_payload(group)
     provider = provider_state["provider"]
     if provider == "gemini":
-        print("Writing report with Gemini fallback.")
-        return call_gemini(user_prompt)
+        print("Writing report with Gemini.")
+        return call_with_retries(call_gemini, user_prompt, "Gemini")
 
     try:
-        return call_groq(user_prompt)
-    except HTTPError as exc:
-        if exc.code != 429 and exc.code < 500:
+        return call_with_retries(call_groq, user_prompt, "Groq")
+    except Exception as exc:
+        # Groq model/endpoint errors (including non-retryable 4xx responses)
+        # must not silently strand a story when Gemini is configured.
+        if not os.getenv("GEMINI_API_KEY", "").strip():
             raise
-        print(f"Groq returned HTTP {exc.code}; switching remaining reports to Gemini.", file=sys.stderr)
-    except (TimeoutError, OSError) as exc:
-        print(f"Groq request failed ({exc}); switching remaining reports to Gemini.", file=sys.stderr)
+        print(f"Groq unavailable ({exc}); switching remaining reports to Gemini.", file=sys.stderr)
 
     provider_state["provider"] = "gemini"
-    return call_gemini(user_prompt)
+    return call_with_retries(call_gemini, user_prompt, "Gemini")
 
 def slugify(value):
     slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")[:82]
