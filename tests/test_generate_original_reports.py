@@ -37,6 +37,38 @@ class NewsroomTests(unittest.TestCase):
         self.assertTrue(all(len(group) == 1 for group in groups))
         self.assertEqual({group[0]["url"] for group in groups}, {item["url"] for item in items})
 
+    def test_groq_failure_falls_back_to_gemini(self):
+        group = [{"publisher": "P", "domain": "p.example", "title": "Aviation update",
+                  "published": "2026-11-04", "url": "https://p.example/story",
+                  "feed_url": "https://p.example/story", "summary": "Evidence", "page_text": "Evidence"}]
+        expected = {"headline": "Fallback report"}
+        with patch.dict("os.environ", {"GROQ_API_KEY": "groq", "GEMINI_API_KEY": "gemini", "AI_PRIMARY_PROVIDER": "groq"}):
+            with patch.object(newsroom, "call_groq", side_effect=RuntimeError("Groq down")), \
+                 patch.object(newsroom, "call_gemini", return_value=expected) as gemini:
+                self.assertEqual(newsroom.call_model(group), expected)
+                gemini.assert_called_once()
+
+    def test_gemini_failure_falls_back_to_groq(self):
+        group = [{"publisher": "P", "domain": "p.example", "title": "Aviation update",
+                  "published": "2026-11-04", "url": "https://p.example/story",
+                  "feed_url": "https://p.example/story", "summary": "Evidence", "page_text": "Evidence"}]
+        expected = {"headline": "Fallback report"}
+        with patch.dict("os.environ", {"GROQ_API_KEY": "groq", "GEMINI_API_KEY": "gemini", "AI_PRIMARY_PROVIDER": "gemini"}):
+            with patch.object(newsroom, "call_gemini", side_effect=RuntimeError("Gemini down")), \
+                 patch.object(newsroom, "call_groq", return_value=expected) as groq:
+                self.assertEqual(newsroom.call_model(group), expected)
+                groq.assert_called_once()
+
+    def test_both_provider_failures_are_reported(self):
+        group = [{"publisher": "P", "domain": "p.example", "title": "Aviation update",
+                  "published": "2026-11-04", "url": "https://p.example/story",
+                  "feed_url": "https://p.example/story", "summary": "Evidence", "page_text": "Evidence"}]
+        with patch.dict("os.environ", {"GROQ_API_KEY": "groq", "GEMINI_API_KEY": "gemini", "AI_PRIMARY_PROVIDER": "groq"}):
+            with patch.object(newsroom, "call_groq", side_effect=RuntimeError("Groq down")), \
+                 patch.object(newsroom, "call_gemini", side_effect=RuntimeError("Gemini down")):
+                with self.assertRaisesRegex(RuntimeError, "All configured AI providers failed"):
+                    newsroom.call_model(group)
+
     def test_article_html_escapes_untrusted_text_and_lists_sources(self):
         article = {
             "headline": "Aviation <update>",
