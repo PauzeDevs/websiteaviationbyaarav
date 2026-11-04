@@ -21,16 +21,17 @@
 .lounge-art-label,.lounge-art-foot{position:absolute;left:22px;font:9px 'DM Mono',monospace;letter-spacing:.18em;color:#b8cbd1}.lounge-art-label{top:20px}.lounge-art-foot{bottom:20px}.lounge-art-title{position:absolute;right:22px;bottom:38px;font:400 34px/.85 'Instrument Serif',serif;text-align:right;color:#e8c49e}
 @media(max-width:760px){.lounge-feature{padding:38px 20px}.lounge-feature-card{grid-template-columns:1fr;gap:25px;padding:23px;border-radius:22px}.lounge-feature-art{min-height:210px}.lounge-feature-copy h2{font-size:3.5rem}}
 
-/* Final lounge glass correction: deliberately darker, still translucent */
+/* Lounge card: opaque midnight-navy matte surface, no translucent glass layer */
 .lounge-feature-card{
-  background:linear-gradient(135deg,rgba(3,10,16,.94) 0%,rgba(7,20,29,.91) 52%,rgba(4,12,19,.95) 100%)!important;
-  border:1px solid rgba(177,211,225,.26)!important;
-  box-shadow:0 30px 86px rgba(0,0,0,.48),inset 0 1px 0 rgba(226,243,249,.18),inset 0 -1px 0 rgba(145,187,205,.10)!important;
-  -webkit-backdrop-filter:blur(34px) saturate(155%) contrast(112%)!important;
-  backdrop-filter:blur(34px) saturate(155%) contrast(112%)!important;
+  background:#07111a!important;
+  border:1px solid rgba(137,165,180,.18)!important;
+  box-shadow:0 28px 72px rgba(0,0,0,.58),inset 0 1px 0 rgba(190,211,222,.055)!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
 }
 .lounge-feature-card:before{
-  background:radial-gradient(ellipse at 12% 0%,rgba(172,210,226,.10),transparent 42%),linear-gradient(115deg,rgba(255,255,255,.035),transparent 44%,rgba(93,153,179,.045))!important;
+  content:none!important;
+  display:none!important;
 }
 
 </style>
