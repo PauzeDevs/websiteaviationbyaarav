@@ -254,24 +254,40 @@ def call_with_retries(writer, user_prompt, provider_name, attempts=3):
     raise last_error
 
 
-def call_model(group, provider_state):
+def call_model(group, provider_state=None):
+    """Try both configured providers in order, falling back in either direction.
+
+    Each provider gets bounded retries. The provider order is recalculated for
+    every story, so a temporary outage does not permanently pin the whole run
+    to the provider that happened to fail first.
+    """
     _, user_prompt = source_payload(group)
-    provider = provider_state["provider"]
-    if provider == "gemini":
-        print("Writing report with Gemini.")
-        return call_with_retries(call_gemini, user_prompt, "Gemini")
+    configured = {
+        "groq": bool(os.getenv("GROQ_API_KEY", "").strip()),
+        "gemini": bool(os.getenv("GEMINI_API_KEY", "").strip()),
+    }
+    preferred = os.getenv("AI_PRIMARY_PROVIDER", "groq").strip().lower()
+    if preferred not in {"groq", "gemini"}:
+        preferred = "groq"
+    order = [preferred, "gemini" if preferred == "groq" else "groq"]
+    writers = {"groq": call_groq, "gemini": call_gemini}
+    errors = []
 
-    try:
-        return call_with_retries(call_groq, user_prompt, "Groq")
-    except Exception as exc:
-        # Groq model/endpoint errors (including non-retryable 4xx responses)
-        # must not silently strand a story when Gemini is configured.
-        if not os.getenv("GEMINI_API_KEY", "").strip():
-            raise
-        print(f"Groq unavailable ({exc}); switching remaining reports to Gemini.", file=sys.stderr)
+    for provider in order:
+        if not configured[provider]:
+            errors.append(f"{provider}: API key not configured")
+            continue
+        try:
+            print(f"Generating report with {provider.title()}.")
+            article = call_with_retries(writers[provider], user_prompt, provider.title())
+            if provider_state is not None:
+                provider_state["last_successful_provider"] = provider
+            return article
+        except Exception as exc:
+            errors.append(f"{provider}: {exc}")
+            print(f"{provider.title()} failed; trying the alternate provider if configured: {exc}", file=sys.stderr)
 
-    provider_state["provider"] = "gemini"
-    return call_with_retries(call_gemini, user_prompt, "Gemini")
+    raise RuntimeError("All configured AI providers failed. " + " | ".join(errors))
 
 def slugify(value):
     slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")[:82]
@@ -356,8 +372,8 @@ def main():
     ARTICLE_DIR.mkdir(parents=True, exist_ok=True)
     created = []
     failed = []
-    provider_state = {"provider": "groq" if os.getenv("GROQ_API_KEY", "").strip() else "gemini"}
-    if provider_state["provider"] == "gemini" and not os.getenv("GEMINI_API_KEY", "").strip():
+    provider_state = {}
+    if not os.getenv("GROQ_API_KEY", "").strip() and not os.getenv("GEMINI_API_KEY", "").strip():
         print("Neither GROQ_API_KEY nor GEMINI_API_KEY is configured; original report drafting is unavailable.", file=sys.stderr)
         return
     for group in groups:
