@@ -71,7 +71,7 @@ jobs:
         run: python scripts/fetch_news.py
       - name: Test AI newsroom helpers
         run: python -m unittest discover -s tests -p 'test_*.py' -v
-      - name: Research and write original aviation reports (non-blocking)
+      - name: Research and write original aviation reports
         continue-on-error: true
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -109,6 +109,29 @@ jobs:
               Path("data/original-reports.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
               print("Repaired missing legacy report image metadata with category fallback images.")
           print(f"Validated {len(data.get('articles', []))} original report(s).")
+          news = json.loads(Path("data/news.json").read_text(encoding="utf-8"))
+          stories = news.get("articles", [])
+          reports = data.get("articles", [])
+          covered = {
+              (source.get("feed_url") or source.get("url", "")).split("#")[0].rstrip("/")
+              for report in reports for source in report.get("sources", [])
+          }
+          missing = [
+              story for story in stories
+              if story.get("url", "").split("#")[0].rstrip("/") not in covered
+          ]
+          print(f"Original-report coverage: {len(stories) - len(missing)}/{len(stories)} newsroom stories.")
+          if missing:
+              print("Stories still awaiting source resolution or AI generation:")
+              for story in missing:
+                  print(" - " + story.get("title", story.get("url", "Untitled")))
+          summary = Path(__import__("os").environ.get("GITHUB_STEP_SUMMARY", "/dev/null"))
+          with summary.open("a", encoding="utf-8") as stream:
+              stream.write(f"### Original report coverage\\n\\n{len(stories) - len(missing)}/{len(stories)} newsroom stories have an original report.\\n")
+              if missing:
+                  stream.write("\\nStill queued (will retry next run):\\n")
+                  for story in missing:
+                      stream.write(f"- {story.get('title', 'Untitled')}\\n")
           PY
       - name: Validate refreshed reports and original-source links
         run: |
