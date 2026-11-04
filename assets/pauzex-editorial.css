@@ -268,3 +268,65 @@ main,.newsroom-page{background:transparent!important}
   }
 }
 @media(prefers-reduced-motion:reduce){#ambient-three-canvas{opacity:1}}
+
+
+/* Liquid glass refinement: brighter, clearer refraction */
+:root{
+  --glass:rgba(238,247,249,.48);
+  --glass-strong:rgba(244,249,250,.68);
+  --glass-border:rgba(250,254,255,.82);
+  --glass-shadow:0 22px 64px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.92),inset 0 -1px 0 rgba(255,255,255,.22);
+}
+.aircraft-card,.story-card,.model-card,.discovery-card,.glass-panel,.india-section,
+.newsroom-teaser,.instagram-card,.report,.loading-card,.empty-state,.hero-glass{
+  background:linear-gradient(135deg,rgba(239,247,249,.66) 0%,rgba(215,230,235,.42) 48%,rgba(245,250,251,.54) 100%)!important;
+  border:1px solid rgba(250,254,255,.82)!important;
+  box-shadow:0 22px 64px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.94),inset 0 -1px 0 rgba(255,255,255,.20)!important;
+  -webkit-backdrop-filter:blur(30px) saturate(165%) contrast(105%)!important;
+  backdrop-filter:blur(30px) saturate(165%) contrast(105%)!important;
+}
+.story-content h3,.model-copy h2,.aircraft-info h3,.report h1,.report h2,
+.india-copy h2,.newsroom-teaser h2,.hero-glass strong{
+  color:#142e3b!important;
+}
+.story-content p,.model-copy p,.aircraft-info p,.report p,
+.india-copy p,.newsroom-teaser p,.hero-glass small{
+  color:#405b68!important;
+}
+.story-meta,.story-source,.model-copy small,.model-spec,.model-source,
+.source-note,.tag,.meta,.panel-top,.glass-panel>small{
+  color:#526f7c!important;
+}
+.india-stat{border-color:rgba(31,58,70,.14)!important}
+.india-stat strong{color:#557d94!important}
+.india-stat span{color:#314d5a!important}
+.instagram-card strong{color:#142e3b!important}
+.instagram-card small{color:#526f7c!important}
+.glass-panel .panel-live{color:#477d63!important}
+.filter,.instagram-link,.button.secondary{
+  background:linear-gradient(135deg,rgba(245,250,251,.54),rgba(215,230,235,.34))!important;
+  border:1px solid rgba(250,254,255,.76)!important;
+  color:#183542!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.88),0 8px 28px rgba(0,0,0,.10)!important;
+  -webkit-backdrop-filter:blur(24px) saturate(160%)!important;
+  backdrop-filter:blur(24px) saturate(160%)!important;
+}
+.filter.active,.filter:hover{
+  background:#b78355!important;color:#10191e!important;border-color:#d5a574!important;
+}
+@media(max-width:760px){
+  .hero.hero-immersive{
+    min-height:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:18px!important;
+    padding:62px 19px 26px!important;
+  }
+  .hero-immersive .hero-copy-block{padding:0!important}
+  .hero-immersive .hero-meta{
+    margin-top:0!important;
+    padding-top:22px!important;
+  }
+  .hero-immersive .hero-actions{gap:16px 22px!important}
+}
