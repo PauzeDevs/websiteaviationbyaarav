@@ -1,6 +1,206 @@
 {
-  "updated": "2026-11-05T09:47:35.949749+00:00",
+  "updated": "2026-11-06T09:46:54.173806+00:00",
   "articles": [
+    {
+      "title": "US‑Australia Transpacific Market Shows Robust Capacity in 2026, Simple Flying Reports",
+      "slug": "us-australia-transpacific-market-shows-robust-capacity-in-2026-simple-flying-repor",
+      "url": "originals/us-australia-transpacific-market-shows-robust-capacity-in-2026-simple-flying-repor.html",
+      "summary": "Simple Flying’s latest data shows four airlines operating 8,820 scheduled flights between major US gateways and Australian hubs, delivering over 2.6 million seats and more than 18 billion seat‑miles.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:45:50.669886+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/10/airline-flying-from-the-us.png",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Every Airline Flying From The US To Australia & The Routes Served In 2026",
+          "url": "https://simpleflying.com/every-airline-flying-us-australia-2026-routes-operating/",
+          "feed_url": "https://simpleflying.com/every-airline-flying-us-australia-2026-routes-operating/",
+          "published": "2026-11-06T09:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Navigating the Extremes: How Pilots Manage Flights Through Polar Airspace",
+      "slug": "navigating-the-extremes-how-pilots-manage-flights-through-polar-airspace",
+      "url": "originals/navigating-the-extremes-how-pilots-manage-flights-through-polar-airspace.html",
+      "summary": "An overview of the operational realities, infrastructure support, and navigation challenges that shape polar routes, based on Simple Flying’s recent coverage.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:45:53.587748+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/08/polar-airspace.png",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 Procedures Pilots Follow When Flying Through Polar Airspace",
+          "url": "https://simpleflying.com/pilot-procedures-arctic-circle-operations/",
+          "feed_url": "https://simpleflying.com/pilot-procedures-arctic-circle-operations/",
+          "published": "2026-11-06T06:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Singapore Airlines Unveils New First‑Class and Business‑Class Suites for Boeing 777‑9",
+      "slug": "singapore-airlines-unveils-new-first-class-and-business-class-suites-for-boeing-77",
+      "url": "originals/singapore-airlines-unveils-new-first-class-and-business-class-suites-for-boeing-77.html",
+      "summary": "The carrier announced a S$2 billion‑plus cabin refresh that includes larger suites, upgraded IFE and Starlink Wi‑Fi, with rollout expected from the second half of next year across its 777‑9 and select A350 fleet.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:45:57.366326+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/singapore-airlines-a350-777-9-skyline-live.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Live: Singapore Airlines Unveils All-New First & Business Class Suites For Its Boeing 777-9",
+          "url": "https://simpleflying.com/singapore-airlines-new-first-business-class-suites-boeing-777-9/",
+          "feed_url": "https://simpleflying.com/singapore-airlines-new-first-business-class-suites-boeing-777-9/",
+          "published": "2026-11-06T05:36:32+00:00"
+        }
+      ]
+    },
+    {
+      "title": "How the MD‑80 Outlasted Its Supposed Successor, the MD‑90",
+      "slug": "how-the-md-80-outlasted-its-supposed-successor-the-md-90",
+      "url": "originals/how-the-md-80-outlasted-its-supposed-successor-the-md-90.html",
+      "summary": "An examination of why the older MD‑80 remained in service longer than the newer MD‑90, based on Simple Flying’s recent analysis.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:46:00.568755+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/07/how-the-mcdonnell-douglas-md-80-outlasted-the-jet-built-to-replace-it.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How The McDonnell Douglas MD-80 Outlasted The Jet Built To Replace It",
+          "url": "https://simpleflying.com/how-mcdonnell-douglas-md-80-outlast-jet-replace-it/",
+          "feed_url": "https://simpleflying.com/how-mcdonnell-douglas-md-80-outlast-jet-replace-it/",
+          "published": "2026-11-06T02:45:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "The Cold War Origins of the Boeing 747",
+      "slug": "the-cold-war-origins-of-the-boeing-747",
+      "url": "originals/the-cold-war-origins-of-the-boeing-747.html",
+      "summary": "How a failed military transport bid shaped the future of commercial aviation.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:46:12.622442+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/747-cover-pic.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Boeing Losing To Lockheed's C-5 Galaxy Gave The World The 747",
+          "url": "https://simpleflying.com/boeing-losing-lockheed-c-5-galaxy-gave-world-747/",
+          "feed_url": "https://simpleflying.com/boeing-losing-lockheed-c-5-galaxy-gave-world-747/",
+          "published": "2026-11-06T01:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "American Airlines grapples with legacy A321neo fleet inherited from Alaska‑Virgin transition",
+      "slug": "american-airlines-grapples-with-legacy-a321neo-fleet-inherited-from-alaska-virgin-",
+      "url": "originals/american-airlines-grapples-with-legacy-a321neo-fleet-inherited-from-alaska-virgin-.html",
+      "summary": "Ten Airbus A321neo aircraft that entered American’s roster via Alaska’s acquisition of Virgin America were built before a key cabin redesign, creating configuration and seat‑selection challenges for the carrier.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:46:15.820837+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/world-s-1st-airbus-a321neo.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Problem American Airlines Ran Into When It Inherited The World's 1st Airbus A321neo",
+          "url": "https://simpleflying.com/problem-american-airlines-ran-into-inherited-worlds-1st-airbus-a321neo/",
+          "feed_url": "https://simpleflying.com/problem-american-airlines-ran-into-inherited-worlds-1st-airbus-a321neo/",
+          "published": "2026-11-06T00:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Southwest Airlines Trails North American Peers in October Punctuality Rankings",
+      "slug": "southwest-airlines-trails-north-american-peers-in-october-punctuality-rankings",
+      "url": "originals/southwest-airlines-trails-north-american-peers-in-october-punctuality-rankings.html",
+      "summary": "New data from Cirium highlights a significant performance gap between Southwest Airlines and industry leaders as the carrier undergoes a major business model transformation.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:46:28.348772+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/southwest_airlines_1920x1080.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Southwest Airlines Named Least Punctual Carrier Among 10 Airlines In North America",
+          "url": "https://simpleflying.com/southwest-airlines-least-punctual-carrier-10-airlines-north-america/",
+          "feed_url": "https://simpleflying.com/southwest-airlines-least-punctual-carrier-10-airlines-north-america/",
+          "published": "2026-11-05T23:30:26+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing 787‑9 Dreamliner Engine Prices Estimated at $25‑30 Million per Unit, Simple Flying Reports",
+      "slug": "boeing-787-9-dreamliner-engine-prices-estimated-at-25-30-million-per-unit-simple-f",
+      "url": "originals/boeing-787-9-dreamliner-engine-prices-estimated-at-25-30-million-per-unit-simple-f.html",
+      "summary": "Simple Flying indicates that the two power‑plant choices for the 787‑9 – the GE GEnx‑1B and the Rolls‑Royce Trent 1000 – carry list‑price estimates in the mid‑$20 million range, though actual transaction values depend on contract specifics.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:46:31.687898+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-787-engine-1-20261102-174721.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Much Does A Boeing 787-9 Engine Cost?",
+          "url": "https://simpleflying.com/boeing-787-9-engine-cost-explained/",
+          "feed_url": "https://simpleflying.com/boeing-787-9-engine-cost-explained/",
+          "published": "2026-11-05T23:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "The Rise of Premium Narrowbody Travel: A321XLR Cabin Configurations",
+      "slug": "the-rise-of-premium-narrowbody-travel-a321xlr-cabin-configurations",
+      "url": "originals/the-rise-of-premium-narrowbody-travel-a321xlr-cabin-configurations.html",
+      "summary": "As the Airbus A321XLR redefines long-haul economics, airlines are increasingly prioritizing passenger comfort through lie-flat business class installations.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:46:50.694067+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/5-airlines-flying-the-airbus-a.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 Airlines Flying The Airbus A321XLR With Lie-Flat Business Class Seats",
+          "url": "https://simpleflying.com/5-airlines-flying-airbus-a321xlr-lie-flat-business-class-seats/",
+          "feed_url": "https://simpleflying.com/5-airlines-flying-airbus-a321xlr-lie-flat-business-class-seats/",
+          "published": "2026-11-05T22:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing Shifts 737 MAX 10 Assembly to Everett to Alleviate Renton Bottleneck",
+      "slug": "boeing-shifts-737-max-10-assembly-to-everett-to-alleviate-renton-bottleneck",
+      "url": "originals/boeing-shifts-737-max-10-assembly-to-everett-to-alleviate-renton-bottleneck.html",
+      "summary": "The first 737 MAX 10 rolled off Boeing’s new North Line in Everett on Oct. 26, 2026, ending a decades‑long tradition of building every 737 variant in Renton and addressing spatial constraints that threatened production flexibility.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-06T09:46:54.173450+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-s-renton-factory.png",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Boeing's Renton Factory Must Stagger The 737 MAX 10 With Smaller Jets, But Everett Can Run Nose-To-Tail",
+          "url": "https://simpleflying.com/boeing-renton-factory-stagger-737-max-10-smaller-jets-everett-run-nose-tail/",
+          "feed_url": "https://simpleflying.com/boeing-renton-factory-stagger-737-max-10-smaller-jets-everett-run-nose-tail/",
+          "published": "2026-11-05T21:01:18+00:00"
+        }
+      ]
+    },
     {
       "title": "United’s 43‑inch pitch seats on Boeing 767‑400ER serve as crew‑rest, not passenger luxury",
       "slug": "united-s-43-inch-pitch-seats-on-boeing-767-400er-serve-as-crew-rest-not-passenger-",
