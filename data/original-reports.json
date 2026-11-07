@@ -1,6 +1,206 @@
 {
-  "updated": "2026-11-06T09:46:54.173806+00:00",
+  "updated": "2026-11-07T09:10:53.863286+00:00",
   "articles": [
+    {
+      "title": "U.S. Airports Redesign Gates to Accommodate Mainline Narrow‑Body Jets",
+      "slug": "u-s-airports-redesign-gates-to-accommodate-mainline-narrow-body-jets",
+      "url": "originals/u-s-airports-redesign-gates-to-accommodate-mainline-narrow-body-jets.html",
+      "summary": "A wave of terminal projects is replacing regional‑jet concourses with infrastructure suited for Airbus A320 and Boeing 737 families, driven by carrier economics, pilot shortages and congestion, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:08:29.280347+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/washington-dulles-expansion-20261102-173753.png",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "10 US Airport Projects Replacing Regional Gates With Mainline Jet Capacity",
+          "url": "https://simpleflying.com/us-airports-replacing-regional-jet-gates/",
+          "feed_url": "https://simpleflying.com/us-airports-replacing-regional-jet-gates/",
+          "published": "2026-11-07T09:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "NTSB Finds Missed Inspections Let Storm‑Damaged Southwest 737 MAX Operate 44 Flights Before Dutch‑Roll Event",
+      "slug": "ntsb-finds-missed-inspections-let-storm-damaged-southwest-737-max-operate-44-fligh",
+      "url": "originals/ntsb-finds-missed-inspections-let-storm-damaged-southwest-737-max-operate-44-fligh.html",
+      "summary": "A post‑storm inspection lapse allowed a Southwest Boeing 737 MAX‑8 with hidden tail damage to complete dozens of flights before a brief Dutch‑roll episode prompted a safety investigation.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:08:32.942940+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/southwest-airlines-boeing-737-max-8-close-up.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "NTSB: Missed Inspections Let Storm-Damaged Southwest 737 MAX Fly 44 Times Before Dutch Roll Accident",
+          "url": "https://simpleflying.com/ntsb-missed-inspections-southwest-boeing-737-max-dutch-roll/",
+          "feed_url": "https://simpleflying.com/ntsb-missed-inspections-southwest-boeing-737-max-dutch-roll/",
+          "published": "2026-11-07T06:15:35+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Qantas to train 360+ pilots and 1,200 cabin crew for twelve Airbus A350‑1000ULR aircraft",
+      "slug": "qantas-to-train-360-pilots-and-1-200-cabin-crew-for-twelve-airbus-a350-1000ulr-air",
+      "url": "originals/qantas-to-train-360-pilots-and-1-200-cabin-crew-for-twelve-airbus-a350-1000ulr-air.html",
+      "summary": "The Australian carrier announced a massive training effort to support its Project Sunrise ultra‑long‑range fleet, targeting 30 pilots and 100 cabin crew per aircraft.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:08:35.964013+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/qantas-is-training-360-pilots-1-200-cabin-crew-for-just-12-airbus-a350-1000ulrs.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Qantas Is Training 360+ Pilots & 1,200 Cabin Crew For Just 12 Airbus A350-1000ULRs",
+          "url": "https://simpleflying.com/qantas-training-360-pilots-1200-cabin-crew-12-airbus-a350-1000ulrs/",
+          "feed_url": "https://simpleflying.com/qantas-training-360-pilots-1200-cabin-crew-12-airbus-a350-1000ulrs/",
+          "published": "2026-11-07T06:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Cathay Pacific Extends Premium‑Economy Service to Sub‑Six‑Hour Routes",
+      "slug": "cathay-pacific-extends-premium-economy-service-to-sub-six-hour-routes",
+      "url": "originals/cathay-pacific-extends-premium-economy-service-to-sub-six-hour-routes.html",
+      "summary": "Simple Flying reports that Cathay Pacific is deploying its internationally configured premium‑economy cabins on regional flights of three to five hours, offering a middle‑ground product between economy and business class.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:08:48.526663+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/6-airlines-offering-premium-economy.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "6 Airlines Offering Premium Economy On Flights Shorter Than 6 Hours",
+          "url": "https://simpleflying.com/6-airlines-premium-economy-flights-shorter-6-hours/",
+          "feed_url": "https://simpleflying.com/6-airlines-premium-economy-flights-shorter-6-hours/",
+          "published": "2026-11-07T05:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing 777X Features Specialized Overhead Crew Rest Compartment",
+      "slug": "boeing-777x-features-specialized-overhead-crew-rest-compartment",
+      "url": "originals/boeing-777x-features-specialized-overhead-crew-rest-compartment.html",
+      "summary": "Beyond passenger-facing innovations, the 777X incorporates a concealed upper-deck rest area designed to support long-haul operational endurance.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:09:41.767669+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/03/777x-secret-upper-deckv.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Insanely Modern: Inside The Boeing 777X's Secret Upper Deck",
+          "url": "https://simpleflying.com/inside-boeing-boeing-777x-modern-secret-upper-deck/",
+          "feed_url": "https://simpleflying.com/inside-boeing-boeing-777x-modern-secret-upper-deck/",
+          "published": "2026-11-07T02:45:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Turboprop Ownership Costs Remain Significantly Lower Than Light Jets in 2026",
+      "slug": "turboprop-ownership-costs-remain-significantly-lower-than-light-jets-in-2026",
+      "url": "originals/turboprop-ownership-costs-remain-significantly-lower-than-light-jets-in-2026.html",
+      "summary": "Simple Flying reports that operating a modern turboprop can be 30‑45% cheaper per hour than comparable light jets, though speed and altitude advantages still favor jets for time‑critical missions.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:09:44.841975+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/changed-aviation-20261102-172240.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Much Cheaper Is A Turboprop To Own Than A Light Jet In 2026?",
+          "url": "https://simpleflying.com/turboprop-vs-light-jet-ownership-costs-2026/",
+          "feed_url": "https://simpleflying.com/turboprop-vs-light-jet-ownership-costs-2026/",
+          "published": "2026-11-07T02:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "EVA Air Expands Premium Economy with 42‑Inch Seat and Direct Taipei‑Washington Service",
+      "slug": "eva-air-expands-premium-economy-with-42-inch-seat-and-direct-taipei-washington-ser",
+      "url": "originals/eva-air-expands-premium-economy-with-42-inch-seat-and-direct-taipei-washington-ser.html",
+      "summary": "Simple Flying reports that EVA Air, the airline credited with inventing premium economy, has introduced a 42‑inch seat and launched a nonstop Taipei‑Washington route, aiming to capture high‑yield traffic and reshape long‑haul competition.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:09:48.438252+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/06/42-inch-seat.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Airline That Invented Premium Economy Just Built A 42-Inch Seat Nobody Else Can",
+          "url": "https://simpleflying.com/airline-invented-premium-economy-built-42-inch-seat-nobody-else/",
+          "feed_url": "https://simpleflying.com/airline-invented-premium-economy-built-42-inch-seat-nobody-else/",
+          "published": "2026-11-07T01:32:06+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing 747-400 Marks Shift to Two‑Pilot Flight Decks in Jumbo Jets",
+      "slug": "boeing-747-400-marks-shift-to-two-pilot-flight-decks-in-jumbo-jets",
+      "url": "originals/boeing-747-400-marks-shift-to-two-pilot-flight-decks-in-jumbo-jets.html",
+      "summary": "The 747‑400’s automation eliminated the flight‑engineer role, setting a new standard for large‑aircraft cockpit staffing, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:09:51.408418+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-747-400.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why The Boeing 747-400 Was A Turning Point For Two-Pilot Cockpits",
+          "url": "https://simpleflying.com/boeing-747-400-two-pilot-cockpit-evolution/",
+          "feed_url": "https://simpleflying.com/boeing-747-400-two-pilot-cockpit-evolution/",
+          "published": "2026-11-07T01:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Qantas Leverages Boeing 787-9 for Ultra-Long-Haul Network Expansion",
+      "slug": "qantas-leverages-boeing-787-9-for-ultra-long-haul-network-expansion",
+      "url": "originals/qantas-leverages-boeing-787-9-for-ultra-long-haul-network-expansion.html",
+      "summary": "An analysis of how Australia's flag carrier utilizes the Dreamliner to maintain connectivity across some of the world's longest flight corridors.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:10:50.643946+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/8-000-miles.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 Qantas Boeing 787-9 Routes Longer Than 8,000 Miles",
+          "url": "https://simpleflying.com/5-qatas-boeing-787-9-routes-longer-8000-miles/",
+          "feed_url": "https://simpleflying.com/5-qatas-boeing-787-9-routes-longer-8000-miles/",
+          "published": "2026-11-07T00:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Southwest 737-700 Loses Engine After Takeoff, Lands Safely at LAX",
+      "slug": "southwest-737-700-loses-engine-after-takeoff-lands-safely-at-lax",
+      "url": "originals/southwest-737-700-loses-engine-after-takeoff-lands-safely-at-lax.html",
+      "summary": "A 19‑year‑old Southwest Airlines Boeing 737‑700 experienced a loss of power on its right‑hand engine shortly after departing John Wayne Airport, prompting an emergency diversion to Los Angeles International Airport where the aircraft touched down without injury.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-07T09:10:53.863003+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/southwest-airlines-boeing-737-700-departure.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "19-Year-Old Southwest Airlines Boeing 737 Loses #2 Engine After Takeoff, Declares Emergency",
+          "url": "https://simpleflying.com/19-year-old-southwest-airlines-boeing-737-loses-engine-takeoff-emergency/",
+          "feed_url": "https://simpleflying.com/19-year-old-southwest-airlines-boeing-737-loses-engine-takeoff-emergency/",
+          "published": "2026-11-06T23:23:01+00:00"
+        }
+      ]
+    },
     {
       "title": "US‑Australia Transpacific Market Shows Robust Capacity in 2026, Simple Flying Reports",
       "slug": "us-australia-transpacific-market-shows-robust-capacity-in-2026-simple-flying-repor",
