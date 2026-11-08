@@ -1,6 +1,186 @@
 {
-  "updated": "2026-11-07T09:10:53.863286+00:00",
+  "updated": "2026-11-08T09:25:52.127454+00:00",
   "articles": [
+    {
+      "title": "US Airlines Seat Pitch Landscape Shifts Ahead of JetBlue’s BlueFirst Launch",
+      "slug": "us-airlines-seat-pitch-landscape-shifts-ahead-of-jetblue-s-bluefirst-launch",
+      "url": "originals/us-airlines-seat-pitch-landscape-shifts-ahead-of-jetblue-s-bluefirst-launch.html",
+      "summary": "Simple Flying’s recent seat‑pitch audit shows JetBlue currently leads with the most generous economy spacing, but a forthcoming cabin re‑configuration could narrow the gap with legacy carriers and ultra‑low‑cost rivals.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:24:56.479282+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/jetblue_coreexperience_passengers-touchscreen.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Airline Legroom Ranked: The US Carriers With The Most Economy Seat Pitch",
+          "url": "https://simpleflying.com/us-carriers-most-economy-seat-pitch/",
+          "feed_url": "https://simpleflying.com/us-carriers-most-economy-seat-pitch/",
+          "published": "2026-11-08T09:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Cessna 172 Overturns on John Wayne Airport Ramp Amid Jet Blast Claims and Wind Concerns",
+      "slug": "cessna-172-overturns-on-john-wayne-airport-ramp-amid-jet-blast-claims-and-wind-con",
+      "url": "originals/cessna-172-overturns-on-john-wayne-airport-ramp-amid-jet-blast-claims-and-wind-con.html",
+      "summary": "A Cessna 172 carrying a flight instructor and student flipped onto its roof at John Wayne Airport on Nov. 7, 2026. Airport officials cite strong winds, while the aircraft’s operator points to jet blast from a departing United or Southwest 737 as the likely cause.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:24:59.179971+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/united-airlines-boeing-737-max-8-taxiing.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "United 737 Jet Blast Reportedly Flips Cessna At John Wayne Airport, But Officials Blame Wind",
+          "url": "https://simpleflying.com/united-737-jet-blast-flips-cessna-john-wayne-airport-wind/",
+          "feed_url": "https://simpleflying.com/united-737-jet-blast-flips-cessna-john-wayne-airport-wind/",
+          "published": "2026-11-08T07:54:10+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Air France A350 and American A321 Narrow Miss Over LAX Highlights Departure Procedure Risks",
+      "slug": "air-france-a350-and-american-a321-narrow-miss-over-lax-highlights-departure-proced",
+      "url": "originals/air-france-a350-and-american-a321-narrow-miss-over-lax-highlights-departure-proced.html",
+      "summary": "A near‑midair collision involving an Air France A350‑900 bound for Papeete and an American Airlines A321 headed to Dallas unfolded minutes after takeoff from Los Angeles International Airport, prompting immediate ATC intervention.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:25:02.526351+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/air-france-airbus-a350-900-on-the-runway.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Air France A350 Nearly Collides Midair With American A321 After Wrong Turn At LAX",
+          "url": "https://simpleflying.com/air-france-a350-american-airlines-a321-near-midair-collision-lax/",
+          "feed_url": "https://simpleflying.com/air-france-a350-american-airlines-a321-near-midair-collision-lax/",
+          "published": "2026-11-08T07:35:47+00:00"
+        }
+      ]
+    },
+    {
+      "title": "From Square to Oval: How Engineering, Economics and Psychology Shape Airplane Window Design",
+      "slug": "from-square-to-oval-how-engineering-economics-and-psychology-shape-airplane-window",
+      "url": "originals/from-square-to-oval-how-engineering-economics-and-psychology-shape-airplane-window.html",
+      "summary": "An analysis of the historical shift from early square windows to today’s oval panes, the structural trade‑offs that drive their design, and the emerging debate over replacing them with digital displays, based on reporting by Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:25:08.309887+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/09/this-is-why-plane-windows-are-round.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Evolution Of Airplane Window Design",
+          "url": "https://simpleflying.com/evolution-airplane-window-design/",
+          "feed_url": "https://simpleflying.com/evolution-airplane-window-design/",
+          "published": "2026-11-08T06:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Navigating Long-Haul Travel: Insights from Cabin Crew on Maintaining Well-being",
+      "slug": "navigating-long-haul-travel-insights-from-cabin-crew-on-maintaining-well-being",
+      "url": "originals/navigating-long-haul-travel-insights-from-cabin-crew-on-maintaining-well-being.html",
+      "summary": "Seasoned flight attendants share strategies for managing the physical challenges of extended air travel, with a primary focus on hydration.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:25:20.220659+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/10/flight-attendant.png",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "A Flight Attendant's Hidden Secrets To Braving Long-Haul Flights",
+          "url": "https://simpleflying.com/flight-attenant-hidden-secrets-braving-long-haul-flights/",
+          "feed_url": "https://simpleflying.com/flight-attenant-hidden-secrets-braving-long-haul-flights/",
+          "published": "2026-11-08T05:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "EVA Air credited with pioneering Premium Economy in the early 1990s",
+      "slug": "eva-air-credited-with-pioneering-premium-economy-in-the-early-1990s",
+      "url": "originals/eva-air-credited-with-pioneering-premium-economy-in-the-early-1990s.html",
+      "summary": "Simple Flying reports that EVA Air was the first carrier to launch a dedicated Premium Economy cabin on its Boeing 747 fleet, a move that set the template for a class now common on long‑haul routes worldwide.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:25:23.733125+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/02/the-airline-that-introduced-premium-economy-to-the-world.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Airline That Introduced Premium Economy To The World",
+          "url": "https://simpleflying.com/the-airline-introduced-premium-economy-to-world/",
+          "feed_url": "https://simpleflying.com/the-airline-introduced-premium-economy-to-world/",
+          "published": "2026-11-08T02:45:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Air Canada Adjusts Transatlantic Strategy by Deploying Airbus A321XLR on Select Routes",
+      "slug": "air-canada-adjusts-transatlantic-strategy-by-deploying-airbus-a321xlr-on-select-ro",
+      "url": "originals/air-canada-adjusts-transatlantic-strategy-by-deploying-airbus-a321xlr-on-select-ro.html",
+      "summary": "The carrier is shifting its network strategy by replacing Boeing 787 widebodies with the more efficient, lower-capacity Airbus A321XLR on specific European services.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:25:36.365297+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/replacing-some-boeing-787-flights.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Air Canada Is Replacing Some Boeing 787 Flights With Airbus A321XLRs",
+          "url": "https://simpleflying.com/air-canada-replacing-some-boeing-787-flights-airbus-a321xlrs/",
+          "feed_url": "https://simpleflying.com/air-canada-replacing-some-boeing-787-flights-airbus-a321xlrs/",
+          "published": "2026-11-08T01:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "A380 Spotting Hotspots in 2026: Ten Airports Lead the Superjumbo’s Global Presence",
+      "slug": "a380-spotting-hotspots-in-2026-ten-airports-lead-the-superjumbo-s-global-presence",
+      "url": "originals/a380-spotting-hotspots-in-2026-ten-airports-lead-the-superjumbo-s-global-presence.html",
+      "summary": "Simple Flying’s flight‑tracker data for October‑November 2026 shows the Airbus A380 still criss‑crossing the world, with a handful of airports offering the richest viewing opportunities for enthusiasts and evidence of the type’s lingering commercial relevance.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:25:39.759741+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/airbus-a380-in-2026.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Where To Spot The Airbus A380 In 2026: The 10 Airports With The Most Superjumbo Flights",
+          "url": "https://simpleflying.com/where-to-spot-airbus-a380-airports-most-flights/",
+          "feed_url": "https://simpleflying.com/where-to-spot-airbus-a380-airports-most-flights/",
+          "published": "2026-11-08T00:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "The Evolution of Premium Narrowbody Travel: Lie-Flat Seats on the Airbus A321neo",
+      "slug": "the-evolution-of-premium-narrowbody-travel-lie-flat-seats-on-the-airbus-a321neo",
+      "url": "originals/the-evolution-of-premium-narrowbody-travel-lie-flat-seats-on-the-airbus-a321neo.html",
+      "summary": "Once the exclusive domain of widebody aircraft, lie-flat business class seating has become a defining feature of the Airbus A321neo and its long-range variants.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-08T09:25:52.127158+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/5-airbus-a321neo-routes-with-lie-flat-business-class-seats.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 Airbus A321neo Routes With Lie-Flat Business Class Seats",
+          "url": "https://simpleflying.com/5-airbus-a321neo-routes-lie-flat-business-class-seats/",
+          "feed_url": "https://simpleflying.com/5-airbus-a321neo-routes-lie-flat-business-class-seats/",
+          "published": "2026-11-07T23:01:17+00:00"
+        }
+      ]
+    },
     {
       "title": "U.S. Airports Redesign Gates to Accommodate Mainline Narrow‑Body Jets",
       "slug": "u-s-airports-redesign-gates-to-accommodate-mainline-narrow-body-jets",
