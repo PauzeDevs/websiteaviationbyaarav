@@ -1,6 +1,186 @@
 {
-  "updated": "2026-11-08T09:25:52.127454+00:00",
+  "updated": "2026-11-09T10:12:35.596825+00:00",
   "articles": [
+    {
+      "title": "Lufthansa 747‑8 Forced to Stop After American 787‑8 Encroaches on Taxiway at Miami International",
+      "slug": "lufthansa-747-8-forced-to-stop-after-american-787-8-encroaches-on-taxiway-at-miami",
+      "url": "originals/lufthansa-747-8-forced-to-stop-after-american-787-8-encroaches-on-taxiway-at-miami.html",
+      "summary": "A near‑miss on the ground at MIA highlights procedural lapses and the reliance on pilot compliance with ATC instructions, according to Simple Flying’s coverage of the November 5 event.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:11:13.729250+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/lufthansa_-retro_livery-_boeing_747-830-_d-abyt_-23922618159-_cropped.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Lufthansa 747 “Very Close To An Accident” In Miami As American Airlines 787 Turns Into Its Path",
+          "url": "https://simpleflying.com/lufthansa-boeing-747-american-airlines-787-miami-close-accident/",
+          "feed_url": "https://simpleflying.com/lufthansa-boeing-747-american-airlines-787-miami-close-accident/",
+          "published": "2026-11-09T09:33:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "KLM’s Fleet Renewal: Introducing 22 Airbus A350s to Replace Aging Wide‑bodies",
+      "slug": "klm-s-fleet-renewal-introducing-22-airbus-a350s-to-replace-aging-wide-bodies",
+      "url": "originals/klm-s-fleet-renewal-introducing-22-airbus-a350s-to-replace-aging-wide-bodies.html",
+      "summary": "KLM has begun integrating Airbus A350‑900s into its long‑haul network, aiming for a 25% cut in fuel consumption and CO₂ emissions as part of a multi‑billion‑dollar modernization program.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:11:16.853640+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/why-klm-is-replacing-older-widebodies-with-22-airbus-a350s-that-cut-fuel-burn-co2-by-25.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why KLM Is Replacing Older Widebodies With 22 Airbus A350s That Cut Fuel Burn & CO2 By 25%",
+          "url": "https://simpleflying.com/klm-replacing-older-widebodies-22-airbus-a350s-cut-fuel-burn-co2-25-percent/",
+          "feed_url": "https://simpleflying.com/klm-replacing-older-widebodies-22-airbus-a350s-cut-fuel-burn-co2-25-percent/",
+          "published": "2026-11-09T09:01:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Ryanair’s Unwavering Commitment to the Boeing 737: Fleet Profile and Strategic Implications",
+      "slug": "ryanair-s-unwavering-commitment-to-the-boeing-737-fleet-profile-and-strategic-impl",
+      "url": "originals/ryanair-s-unwavering-commitment-to-the-boeing-737-fleet-profile-and-strategic-impl.html",
+      "summary": "An analysis of Ryanair’s all‑Boeing 737 fleet, its historical evolution, current composition and the strategic calculations behind the carrier’s single‑type strategy, based on Simple Flying reporting.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:11:20.246535+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/shutterstock_4213733029-1.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Real Reason Why Ryanair Still Flies Only Boeing 737s",
+          "url": "https://simpleflying.com/ryanair-boeing-737-fleet-strategy/",
+          "feed_url": "https://simpleflying.com/ryanair-boeing-737-fleet-strategy/",
+          "published": "2026-11-09T06:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing 777 Passenger‑to‑Freighter Conversions Fill Cargo Gap Amid Shrinking Jet Supply",
+      "slug": "boeing-777-passenger-to-freighter-conversions-fill-cargo-gap-amid-shrinking-jet-su",
+      "url": "originals/boeing-777-passenger-to-freighter-conversions-fill-cargo-gap-amid-shrinking-jet-su.html",
+      "summary": "Simple Flying reports that converted 777s are a stop‑gap solution for the global freight market, but rising operating costs and a dwindling pool of suitable airframes threaten their long‑term viability.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:11:32.912182+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/the-boeing-freighter-quietly-replacing-the-747-on-factory-floors-right-now-20261106-123304.jpeg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Boeing 777 Freighter Conversions Are A Stopgap Built On A Shrinking Supply Of Used Jets",
+          "url": "https://simpleflying.com/boeing-777-freigher-conversions-stop-gap/",
+          "feed_url": "https://simpleflying.com/boeing-777-freigher-conversions-stop-gap/",
+          "published": "2026-11-09T04:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Navigating Economy Class: A Strategic Guide to Widebody Seating",
+      "slug": "navigating-economy-class-a-strategic-guide-to-widebody-seating",
+      "url": "originals/navigating-economy-class-a-strategic-guide-to-widebody-seating.html",
+      "summary": "Selecting the optimal seat on long-haul widebody aircraft requires balancing personal priorities against the inherent layout of the cabin.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:11:50.290409+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/long-haul-flight.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "What Are The Best Seats To Book On A Widebody Long-Haul Flight?",
+          "url": "https://simpleflying.com/what-are-the-best-seats-to-book-on-a-widebody-long-haul-flight/",
+          "feed_url": "https://simpleflying.com/what-are-the-best-seats-to-book-on-a-widebody-long-haul-flight/",
+          "published": "2026-11-09T02:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Airlines Split Between Airbus A350‑1000 and Boeing 777‑9 as Flagship Choices Diverge",
+      "slug": "airlines-split-between-airbus-a350-1000-and-boeing-777-9-as-flagship-choices-diver",
+      "url": "originals/airlines-split-between-airbus-a350-1000-and-boeing-777-9-as-flagship-choices-diver.html",
+      "summary": "Simple Flying reports that differing fleet ages, delivery schedules and strategic priorities are driving carriers such as Air Canada, Emirates, Qatar Airways and United to adopt opposite wide‑body flagships, with the A350‑1000 gaining ground while the 777‑9 remains delayed.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:11:54.520411+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/airbus-a350-1.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Airbus A350 Has Become The New Flagship Of Some Airlines While Others Stick With The Boeing 777",
+          "url": "https://simpleflying.com/airbus-a350-new-flagship-some-airlines-others-stick-boeing-777/",
+          "feed_url": "https://simpleflying.com/airbus-a350-new-flagship-some-airlines-others-stick-boeing-777/",
+          "published": "2026-11-09T01:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "IndiGo's Airbus A321XLR Operations on Mumbai-Amsterdam Route Highlight Airspace Constraints",
+      "slug": "indigo-s-airbus-a321xlr-operations-on-mumbai-amsterdam-route-highlight-airspace-co",
+      "url": "originals/indigo-s-airbus-a321xlr-operations-on-mumbai-amsterdam-route-highlight-airspace-co.html",
+      "summary": "The world's longest scheduled A321XLR route is currently navigating significant detours to avoid restricted airspace, yet maintains competitive flight times.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:12:06.578108+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/a321xlr-flight.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "We Tracked The World's Longest Airbus A321XLR Flight: Here's The Detour It Takes Every Day",
+          "url": "https://simpleflying.com/indigo-worlds-longest-airbus-a321xlr-flight-tracked/",
+          "feed_url": "https://simpleflying.com/indigo-worlds-longest-airbus-a321xlr-flight-tracked/",
+          "published": "2026-11-09T00:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "American Airlines Refuses $650 Compensation to Bumped Passenger, Citing Aircraft Downgrade",
+      "slug": "american-airlines-refuses-650-compensation-to-bumped-passenger-citing-aircraft-dow",
+      "url": "originals/american-airlines-refuses-650-compensation-to-bumped-passenger-citing-aircraft-dow.html",
+      "summary": "A passenger denied boarding on a New York‑Cleveland flight was offered a $650 settlement at the gate, but the airline later reduced the payout, arguing that a change to a smaller aircraft removed the obligation for regulated compensation.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:12:22.562124+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/10/american-airlines-boeing-737-800-on-the-runway.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "American Airlines Backs Out Of $650 Promise To Bumped Passenger, Citing Smaller Plane",
+          "url": "https://simpleflying.com/american-airlines-backs-out-650-bumped-passenger-smaller-plane/",
+          "feed_url": "https://simpleflying.com/american-airlines-backs-out-650-bumped-passenger-smaller-plane/",
+          "published": "2026-11-08T23:27:47+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Strong Jet Stream Triggers Overspeed Alerts on Transatlantic Flights, Including BA777",
+      "slug": "strong-jet-stream-triggers-overspeed-alerts-on-transatlantic-flights-including-ba7",
+      "url": "originals/strong-jet-stream-triggers-overspeed-alerts-on-transatlantic-flights-including-ba7.html",
+      "summary": "A powerful upper‑level jet stream over the North Atlantic caused several long‑haul aircraft to exceed their operational speed limits, with British Airways Flight 252 briefly surpassing its ceiling by up to 10 knots before crews adjusted altitude to regain control.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-09T10:12:35.596554+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/shutterstock_4216388735_cropped.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Strong Jet Stream Leads To Transatlantic Flights Reporting Overspeed Incidents",
+          "url": "https://simpleflying.com/strong-jet-stream-leads-transatlantic-flights-reporting-overspeed-incidents/",
+          "feed_url": "https://simpleflying.com/strong-jet-stream-leads-transatlantic-flights-reporting-overspeed-incidents/",
+          "published": "2026-11-08T23:11:42+00:00"
+        }
+      ]
+    },
     {
       "title": "US Airlines Seat Pitch Landscape Shifts Ahead of JetBlue’s BlueFirst Launch",
       "slug": "us-airlines-seat-pitch-landscape-shifts-ahead-of-jetblue-s-bluefirst-launch",
