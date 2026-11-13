@@ -1,6 +1,206 @@
 {
-  "updated": "2026-11-12T10:11:30.316016+00:00",
+  "updated": "2026-11-13T09:55:49.379387+00:00",
   "articles": [
+    {
+      "title": "Boeing 757’s climb performance still eclipses Airbus A321XLR, according to Simple Flying analysis",
+      "slug": "boeing-757-s-climb-performance-still-eclipses-airbus-a321xlr-according-to-simple-f",
+      "url": "originals/boeing-757-s-climb-performance-still-eclipses-airbus-a321xlr-according-to-simple-f.html",
+      "summary": "A side‑by‑side look at thrust‑to‑weight ratios and climb behavior highlights why the legacy 757 accelerates faster than the newer A321XLR, though the comparison rests on a single industry source.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:54:36.335913+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/iberia.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Boeing 757 Famously Climbs Like A Rocket While The Airbus A321XLR Struggles To Quickly Reach Cruising Altitude",
+          "url": "https://simpleflying.com/boeing-757-climbs-like-rocket-airbus-a321xlr-stuggles-reach-cruising-altitude-quickly/",
+          "feed_url": "https://simpleflying.com/boeing-757-climbs-like-rocket-airbus-a321xlr-stuggles-reach-cruising-altitude-quickly/",
+          "published": "2026-11-13T09:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "British Airways Grounds A321neo After Double Tail‑Strike at Heathrow",
+      "slug": "british-airways-grounds-a321neo-after-double-tail-strike-at-heathrow",
+      "url": "originals/british-airways-grounds-a321neo-after-double-tail-strike-at-heathrow.html",
+      "summary": "A British Airways Airbus A321neo suffered two successive tail‑strikes during a landing attempt at London Heathrow on 13 Nov 2026, prompting a temporary grounding while investigations commence.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:54:39.463527+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1794541635186.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "British Airways Grounds Airbus A321neo After Double Tail Strike During Landing In London",
+          "url": "https://simpleflying.com/british-airways-grounds-airbus-a321neo-double-tail-strike-landing-london/",
+          "feed_url": "https://simpleflying.com/british-airways-grounds-airbus-a321neo-double-tail-strike-landing-london/",
+          "published": "2026-11-13T08:51:38+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Severe hailstorm prompts inspections of over two dozen American Airlines jets at Philadelphia International Airport",
+      "slug": "severe-hailstorm-prompts-inspections-of-over-two-dozen-american-airlines-jets-at-p",
+      "url": "originals/severe-hailstorm-prompts-inspections-of-over-two-dozen-american-airlines-jets-at-p.html",
+      "summary": "A sudden hail event in the Philadelphia region forced ground stops, extensive aircraft inspections and widespread flight delays across the Northeast, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:54:42.512953+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/american-eagle-airlines-embraer-erj-145-n694ae-at-philadelphia-international-airport-pennsylvania-usa.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Severe Hail Storm Forces Inspections Of Over 2 Dozen American Airlines Jets In Philadelphia",
+          "url": "https://simpleflying.com/severe-hail-storm-inspections-2-dozen-american-airlines-jets-philadelphia/",
+          "feed_url": "https://simpleflying.com/severe-hail-storm-inspections-2-dozen-american-airlines-jets-philadelphia/",
+          "published": "2026-11-13T06:15:11+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Intersecting Runways at Major U.S. Hubs Pose Capacity and Coordination Challenges, Simple Flying Reports",
+      "slug": "intersecting-runways-at-major-u-s-hubs-pose-capacity-and-coordination-challenges-s",
+      "url": "originals/intersecting-runways-at-major-u-s-hubs-pose-capacity-and-coordination-challenges-s.html",
+      "summary": "Simple Flying outlines how intersecting runway layouts at busy airports such as LaGuardia limit operational capacity and demand heightened air‑traffic control coordination, while noting that pinwheel designs like Denver’s avoid these issues but require extensive land.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:54:49.159219+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/5-busy-airports-where-intersecting-runways-complicate-takeoffs-landings.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 Busy Airports Where Intersecting Runways Complicate Takeoffs & Landings",
+          "url": "https://simpleflying.com/5-busy-airports-intersecting-runways-complicate-takeoffs-landings/",
+          "feed_url": "https://simpleflying.com/5-busy-airports-intersecting-runways-complicate-takeoffs-landings/",
+          "published": "2026-11-13T06:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing Secures F-47 Contract: A Strategic Shift in US Air Dominance",
+      "slug": "boeing-secures-f-47-contract-a-strategic-shift-in-us-air-dominance",
+      "url": "originals/boeing-secures-f-47-contract-a-strategic-shift-in-us-air-dominance.html",
+      "summary": "The selection of Boeing for the F-47 program marks a significant departure from Lockheed Martin's long-standing dominance in stealth fighter development.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:55:01.677039+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/10/f47s.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Real Reason Why Boeing Is Building The F-47 Stealth Fighter And Not Lockheed",
+          "url": "https://simpleflying.com/real-reason-why-boeing-is-building-f-47-stealth-fighter-and-not-lockheed/",
+          "feed_url": "https://simpleflying.com/real-reason-why-boeing-is-building-f-47-stealth-fighter-and-not-lockheed/",
+          "published": "2026-11-13T02:45:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing Sticks With Aluminum on 747‑8 While Airbus Opted for Hybrid GLARE on A380",
+      "slug": "boeing-sticks-with-aluminum-on-747-8-while-airbus-opted-for-hybrid-glare-on-a380",
+      "url": "originals/boeing-sticks-with-aluminum-on-747-8-while-airbus-opted-for-hybrid-glare-on-a380.html",
+      "summary": "Simple Flying explains that Boeing’s material decision was driven by production continuity and cost, whereas Airbus pursued limited hybrid use despite similar market pressures.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:55:07.748254+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/why-boeing-chose-traditional-aluminum-for-the-747-8-s-fuselage-when-airbus-used-hybrid-material-on-the-a380.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Boeing Chose Traditional Aluminum For The 747-8's Fuselage When Airbus Used Hybrid Material On The A380",
+          "url": "https://simpleflying.com/why-boeing-chose-traditional-aluminum-747-8-fuselage-airbus-hybrid-material-a380/",
+          "feed_url": "https://simpleflying.com/why-boeing-chose-traditional-aluminum-747-8-fuselage-airbus-hybrid-material-a380/",
+          "published": "2026-11-13T02:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Understanding Cabin Crew Reporting Protocols and Pre-Flight Responsibilities",
+      "slug": "understanding-cabin-crew-reporting-protocols-and-pre-flight-responsibilities",
+      "url": "originals/understanding-cabin-crew-reporting-protocols-and-pre-flight-responsibilities.html",
+      "summary": "An examination of the standardized reporting timelines and essential safety duties performed by cabin crew before passenger boarding.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:55:21.209075+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/flight-attendants-2.png",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Early Do Flight Attendants Need To Be At The Airport Before Working A Flight?",
+          "url": "https://simpleflying.com/early-flight-attendants-airport-before-flight/",
+          "feed_url": "https://simpleflying.com/early-flight-attendants-airport-before-flight/",
+          "published": "2026-11-13T01:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "C‑17 Globemaster III’s Built‑In Reverse‑Taxi Capability Sets It Apart Among Strategic Airlifters",
+      "slug": "c-17-globemaster-iii-s-built-in-reverse-taxi-capability-sets-it-apart-among-strate",
+      "url": "originals/c-17-globemaster-iii-s-built-in-reverse-taxi-capability-sets-it-apart-among-strate.html",
+      "summary": "Simple Flying explains how the Boeing C‑17’s design enables it to back up under its own power, a rare trait for large jet transports that enhances flexibility on austere runways.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:55:33.486067+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/raf-globemaster-iii-on-snowy-field.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why The C-17 Globemaster Can Taxi Backwards Without A Tow Truck",
+          "url": "https://simpleflying.com/why-c-17-globemaster-taxi-backward-no-tow-truck/",
+          "feed_url": "https://simpleflying.com/why-c-17-globemaster-taxi-backward-no-tow-truck/",
+          "published": "2026-11-13T00:01:49+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Alaska Airlines Announces Five-Route Expansion from Seattle-Tacoma Hub for 2027",
+      "slug": "alaska-airlines-announces-five-route-expansion-from-seattle-tacoma-hub-for-2027",
+      "url": "originals/alaska-airlines-announces-five-route-expansion-from-seattle-tacoma-hub-for-2027.html",
+      "summary": "Despite recent financial headwinds, the carrier is set to bolster its Pacific Northwest network with new domestic and international service.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:55:46.176453+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/alaska_airlines_centered_1920x1080.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Alaska Airlines Grows More With 4 New US Cities From Seattle & 1 Seasonal Route To Mexico In 2027",
+          "url": "https://simpleflying.com/alaska-airlines-grows-4-new-us-cities-seattle-1-seasonal-route-mexico/",
+          "feed_url": "https://simpleflying.com/alaska-airlines-grows-4-new-us-cities-seattle-1-seasonal-route-mexico/",
+          "published": "2026-11-12T23:38:31+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing 787‑9 Operators Face Divergent Maintenance Costs Between GE and Rolls‑Royce Powerplants",
+      "slug": "boeing-787-9-operators-face-divergent-maintenance-costs-between-ge-and-rolls-royce",
+      "url": "originals/boeing-787-9-operators-face-divergent-maintenance-costs-between-ge-and-rolls-royce.html",
+      "summary": "Simple Flying explains how engineering differences between the GEnx‑1B and Trent 1000 engines translate into multi‑million‑dollar cost gaps for 787‑9 airlines, and why the original dual‑engine strategy now creates distinct financial commitments.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-13T09:55:49.379092+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/why-boeing-787-9-airlines-face-different-maintenance-costs-with-rolls-royce-ge-engines.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Boeing 787-9 Airlines Face Different Maintenance Costs With Rolls-Royce & GE Engines",
+          "url": "https://simpleflying.com/why-boeing-787-9-airlines-face-different-maintenance-costs-rolls-royce-ge-engines/",
+          "feed_url": "https://simpleflying.com/why-boeing-787-9-airlines-face-different-maintenance-costs-rolls-royce-ge-engines/",
+          "published": "2026-11-12T23:00:38+00:00"
+        }
+      ]
+    },
     {
       "title": "Qantas Reduces Economy Seats on New A321XLR to Add Extra Lavatory",
       "slug": "qantas-reduces-economy-seats-on-new-a321xlr-to-add-extra-lavatory",
@@ -1798,206 +1998,6 @@
           "url": "https://simpleflying.com/boeing-787-faa-fuel-tank-inspections-lightning-strike/",
           "feed_url": "https://simpleflying.com/boeing-787-faa-fuel-tank-inspections-lightning-strike/",
           "published": "2026-11-04T09:54:09+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Avolon Secures Record 140‑Jet Order for Boeing 737 MAX 10",
-      "slug": "avolon-secures-record-140-jet-order-for-boeing-737-max-10",
-      "url": "originals/avolon-secures-record-140-jet-order-for-boeing-737-max-10.html",
-      "summary": "Irish lessor Avolon announced a purchase of 140 Boeing 737 MAX 10 aircraft, the largest single‑order from a leasing firm, shortly after the model received FAA type certification, according to Simple Flying.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T11:24:04.768758+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-avolon-737_cropped-1.jpg",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Fresh Off FAA Approval, Boeing Lands 140-Jet 737 MAX 10 Order From Major Lessor",
-          "url": "https://simpleflying.com/avolon-boeing-737-max-10-order/",
-          "feed_url": "https://simpleflying.com/avolon-boeing-737-max-10-order/",
-          "published": "2026-11-04T09:18:12+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Perth Ascends as Australia’s Primary Direct Link to Europe",
-      "slug": "perth-ascends-as-australia-s-primary-direct-link-to-europe",
-      "url": "originals/perth-ascends-as-australia-s-primary-direct-link-to-europe.html",
-      "summary": "Geography, modern twin‑engine fleets and strategic airport upgrades have turned Perth International Airport into the nation’s main gateway for non‑stop flights to the continent, according to Simple Flying.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T11:24:37.183938+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/how-perth-easily-became-australia-s-gateway-to-europe.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How Perth Easily Became Australia's Gateway To Europe",
-          "url": "https://simpleflying.com/perth-became-australia-gateway-europe/",
-          "feed_url": "https://simpleflying.com/perth-became-australia-gateway-europe/",
-          "published": "2026-11-04T05:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "WestJet and Porter Airlines Compete Over Premium Offerings in Canada’s 2026 Market",
-      "slug": "westjet-and-porter-airlines-compete-over-premium-offerings-in-canada-s-2026-market",
-      "url": "originals/westjet-and-porter-airlines-compete-over-premium-offerings-in-canada-s-2026-market.html",
-      "summary": "Simple Flying outlines how WestJet’s upgraded Boeing 787‑9 business class and Porter’s all‑economy enhancements shape the definition of premium travel for Canadian passengers.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T02:10:05.589036+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/westjet-vs-porter-airlines-which-carrier-is-more-premium-in-2026.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "WestJet Vs. Porter Airlines: Which Carrier Is More Premium In 2026?",
-          "url": "https://simpleflying.com/westjet-porter-airlines-carrier-more-premium-2026/",
-          "feed_url": "https://simpleflying.com/westjet-porter-airlines-carrier-more-premium-2026/",
-          "published": "2026-11-04T00:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "JetBlue Raises First Checked‑Bag Fee to $50, Marking a 43% Increase Over Two Years",
-      "slug": "jetblue-raises-first-checked-bag-fee-to-50-marking-a-43-increase-over-two-years",
-      "url": "originals/jetblue-raises-first-checked-bag-fee-to-50-marking-a-43-increase-over-two-years.html",
-      "summary": "Simple Flying reports that JetBlue’s latest baggage‑fee hike lifts the minimum charge for a first checked bag on most North American and Caribbean routes from $39 to $50, a move the airline says offsets rising fuel and operating costs.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T02:10:08.781412+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/jetblue_a321neo_1920x1080.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "JetBlue Hikes Checked Bag Fees Again To $50, A 43% Increase In Just 2 Years",
-          "url": "https://simpleflying.com/jetblue-hikes-checked-bag-fees-50-43pc-increase-2-years/",
-          "feed_url": "https://simpleflying.com/jetblue-hikes-checked-bag-fees-50-43pc-increase-2-years/",
-          "published": "2026-11-03T21:27:09+00:00"
-        }
-      ]
-    },
-    {
-      "title": "How the 737‑300 Rescued Boeing’s Narrow‑Body Portfolio",
-      "slug": "how-the-737-300-rescued-boeing-s-narrow-body-portfolio",
-      "url": "originals/how-the-737-300-rescued-boeing-s-narrow-body-portfolio.html",
-      "summary": "Simple Flying explains how the introduction of the 737‑300 in 1984 gave Boeing a fuel‑efficient, higher‑capacity alternative that shifted the 737 from a regional workhorse to the world’s second‑best‑selling jetliner.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T02:10:11.768079+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/the-one-737-variant-that-saved-boeing-s-narrowbody-line-20261103-185720.jpeg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The One 737 Variant That Saved Boeing's Narrowbody Line",
-          "url": "https://simpleflying.com/one-737-variant-saved-boeing-narrowbody-line/",
-          "feed_url": "https://simpleflying.com/one-737-variant-saved-boeing-narrowbody-line/",
-          "published": "2026-11-03T21:01:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Lufthansa Group Finalizes Agreement to Acquire 44.9% Stake in TAP Air Portugal",
-      "slug": "lufthansa-group-finalizes-agreement-to-acquire-44-9-stake-in-tap-air-portugal",
-      "url": "originals/lufthansa-group-finalizes-agreement-to-acquire-44-9-stake-in-tap-air-portugal.html",
-      "summary": "The German aviation giant has signed a deal valued at over $1 billion to integrate Lisbon as its seventh hub, aiming to bolster its presence in the South American market.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T02:10:40.663886+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/tap_air_portugal_a320neo_1920x1080_final.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "It's Official: Lufthansa Signs $1.2 Billion Deal To Purchase 44.9% Of TAP Air Portugal",
-          "url": "https://simpleflying.com/lufthansa-signs-12b-deal-purchase-449pc-tap-air-portugal/",
-          "feed_url": "https://simpleflying.com/lufthansa-signs-12b-deal-purchase-449pc-tap-air-portugal/",
-          "published": "2026-11-03T20:52:16+00:00"
-        }
-      ]
-    },
-    {
-      "title": "United Airlines Expands International Network with 11 Winter Seasonal Routes",
-      "slug": "united-airlines-expands-international-network-with-11-winter-seasonal-routes",
-      "url": "originals/united-airlines-expands-international-network-with-11-winter-seasonal-routes.html",
-      "summary": "The carrier is leveraging five major US hubs to bolster its international presence through March 2027.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T02:10:48.907068+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/06/768-united-airlines-boeing-777-200-robin-guess-_-shutterstock-2.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "United Airlines Launches 11 New International Routes This Winter: See Full List Now",
-          "url": "https://simpleflying.com/united-airlines-launches-11-new-international-routes/",
-          "feed_url": "https://simpleflying.com/united-airlines-launches-11-new-international-routes/",
-          "published": "2026-11-03T20:30:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Air Canada Discontinues Toronto-Mumbai Route Amid Network Realignment",
-      "slug": "air-canada-discontinues-toronto-mumbai-route-amid-network-realignment",
-      "url": "originals/air-canada-discontinues-toronto-mumbai-route-amid-network-realignment.html",
-      "summary": "The Star Alliance carrier confirms it will not resume its long-haul service to India, shifting focus as Air India prepares to take over the route.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T02:10:55.028787+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/air-canada-boeing-787-9-frankfurt.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Air Canada Cancels All Flights To This Long-Haul Destination: See Map Now",
-          "url": "https://simpleflying.com/air-canada-cancels-all-flights-to-this-long-haul-destinations/",
-          "feed_url": "https://simpleflying.com/air-canada-cancels-all-flights-to-this-long-haul-destinations/",
-          "published": "2026-11-03T20:15:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "US Army Black Hawk Narrowly Avoids Pyrotechnics During Seattle NFL Flyover",
-      "slug": "us-army-black-hawk-narrowly-avoids-pyrotechnics-during-seattle-nfl-flyover",
-      "url": "originals/us-army-black-hawk-narrowly-avoids-pyrotechnics-during-seattle-nfl-flyover.html",
-      "summary": "A military helicopter formation experienced a close encounter with stadium fireworks during a pregame ceremony at Lumen Field, prompting safety concerns.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T02:10:57.603546+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/shutterstock_2571851337_cropped.jpg",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "US Army Black Hawk Helicopter Nearly Struck By Fireworks During Dramatic NFL Flyover",
-          "url": "https://simpleflying.com/us-army-black-hawk-helicopter-struck-fireworks-dramatic-nfl-flyover/",
-          "feed_url": "https://simpleflying.com/us-army-black-hawk-helicopter-struck-fireworks-dramatic-nfl-flyover/",
-          "published": "2026-11-03T20:13:08+00:00"
-        }
-      ]
-    },
-    {
-      "title": "JetBlue Streamlines International Network with 13 Route Cancellations",
-      "slug": "jetblue-streamlines-international-network-with-13-route-cancellations",
-      "url": "originals/jetblue-streamlines-international-network-with-13-route-cancellations.html",
-      "summary": "The carrier has exited several international markets across the Caribbean, Mexico, and Central America as it pivots its strategic focus.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-04T02:11:00.371862+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/08/174-jetblue-airbus-a320-aerospace-trek-the-global-guy-_-shutterstock.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "JetBlue Cancels 13 International Nonstop Routes: See Full List Now",
-          "url": "https://simpleflying.com/jetblue-cancels-13-international-nonstop-routes/",
-          "feed_url": "https://simpleflying.com/jetblue-cancels-13-international-nonstop-routes/",
-          "published": "2026-11-03T19:30:17+00:00"
         }
       ]
     }
