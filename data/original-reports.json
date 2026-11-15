@@ -1,6 +1,206 @@
 {
-  "updated": "2026-11-14T09:19:53.112801+00:00",
+  "updated": "2026-11-15T09:49:59.318126+00:00",
   "articles": [
+    {
+      "title": "US airlines plan larger first‑class cabins on the newly certified Boeing 737 MAX 10",
+      "slug": "us-airlines-plan-larger-first-class-cabins-on-the-newly-certified-boeing-737-max-1",
+      "url": "originals/us-airlines-plan-larger-first-class-cabins-on-the-newly-certified-boeing-737-max-1.html",
+      "summary": "Four major U.S. carriers intend to equip the incoming 737 MAX 10 with 24 first‑class seats, a step up from the 20‑seat layouts previously expected, as they chase growing premium demand.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:48:50.480764+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-737-max-10.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How The Boeing 737 MAX 10 Is Growing First Class On US Airlines",
+          "url": "https://simpleflying.com/how-boeing-737-max-10-growing-first-class-flying-us/",
+          "feed_url": "https://simpleflying.com/how-boeing-737-max-10-growing-first-class-flying-us/",
+          "published": "2026-11-15T08:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "UPS Boeing 767 freighter collides with Copa Airlines 737 on Miami taxiway",
+      "slug": "ups-boeing-767-freighter-collides-with-copa-airlines-737-on-miami-taxiway",
+      "url": "originals/ups-boeing-767-freighter-collides-with-copa-airlines-737-on-miami-taxiway.html",
+      "summary": "A taxiway incident at Miami International Airport left two crew members with minor injuries and prompted an FAA investigation, after the cargo aircraft failed to yield to the arriving passenger jet.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:48:53.406778+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/ups-airlines-boeing-767-on-the-runway.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "‘Somebody Hit Us’: UPS Boeing 767 Collides With Copa 737 In Miami After Taxiing Too Far",
+          "url": "https://simpleflying.com/ups-boeing-767-collides-copa-737-miami-airport-taxiway/",
+          "feed_url": "https://simpleflying.com/ups-boeing-767-collides-copa-737-miami-airport-taxiway/",
+          "published": "2026-11-15T06:48:04+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Emirates Refits A380s While Qantas Accelerates Superjumbo Retirement, Simple Flying Reports",
+      "slug": "emirates-refits-a380s-while-qantas-accelerates-superjumbo-retirement-simple-flying",
+      "url": "originals/emirates-refits-a380s-while-qantas-accelerates-superjumbo-retirement-simple-flying.html",
+      "summary": "Simple Flying notes that Emirates is stripping its Airbus A380s back to the airframe and investing heavily in interior rebuilds, whereas Qantas is pulling its A380s out of service four years ahead of schedule, highlighting contrasting approaches to the world’s largest passenger jet.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:48:56.920779+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/cover-pic-1.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Emirates Is Stripping Its Airbus A380s To 'Bare Metal' While Qantas Retires Its Superjumbos 4 Years Early",
+          "url": "https://simpleflying.com/emirates-stripping-airbus-a380s-bare-metal-qantas-retires-superjumbos-4-years-early/",
+          "feed_url": "https://simpleflying.com/emirates-stripping-airbus-a380s-bare-metal-qantas-retires-superjumbos-4-years-early/",
+          "published": "2026-11-15T05:30:01+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Delta Remains Sole US Carrier Operating Mainline Jets Under 110 Seats",
+      "slug": "delta-remains-sole-us-carrier-operating-mainline-jets-under-110-seats",
+      "url": "originals/delta-remains-sole-us-carrier-operating-mainline-jets-under-110-seats.html",
+      "summary": "Delta’s continued use of the 109‑seat A220‑100 and 110‑seat Boeing 717 reflects a mix of pilot agreements, acquisition cost advantages and niche market needs, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:48:59.494548+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/cover-photo.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Hidden Math Behind Delta Air Lines Being The Only US Carrier Flying Mainline Jets With Under 110 Seats",
+          "url": "https://simpleflying.com/hidden-math-delta-air-lines-only-us-carrer-mainline-jets-under-110-seats/",
+          "feed_url": "https://simpleflying.com/hidden-math-delta-air-lines-only-us-carrer-mainline-jets-under-110-seats/",
+          "published": "2026-11-14T23:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Evolving Compensation Structures for Boeing 737 MAX Pilots in the United States",
+      "slug": "evolving-compensation-structures-for-boeing-737-max-pilots-in-the-united-states",
+      "url": "originals/evolving-compensation-structures-for-boeing-737-max-pilots-in-the-united-states.html",
+      "summary": "Recent collective bargaining agreements have significantly elevated earning potential for narrowbody flight crews, narrowing the historical pay gap between domestic and long-haul operations.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:49:11.535213+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/07/why-united-airlines-stopped-trusting-boeing-s-timeline-bet-180-jets-on-airbus-instead.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Much Do Boeing 737 MAX Pilots Actually Earn At US Carriers In 2026?",
+          "url": "https://simpleflying.com/how-much-boeing-737-max-pilots-earn-us-carriers/",
+          "feed_url": "https://simpleflying.com/how-much-boeing-737-max-pilots-earn-us-carriers/",
+          "published": "2026-11-14T22:30:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Emirates Leans Heavily on Boeing 777X Amid Growing A350-900 Orders, Simple Flying Reports",
+      "slug": "emirates-leans-heavily-on-boeing-777x-amid-growing-a350-900-orders-simple-flying-r",
+      "url": "originals/emirates-leans-heavily-on-boeing-777x-amid-growing-a350-900-orders-simple-flying-r.html",
+      "summary": "An analysis of Emirates’ fleet composition reveals a strategic tilt toward the Boeing 777X despite a sizable backlog of Airbus A350‑900s, reflecting the carrier’s need for capacity flexibility across its all‑widebody network.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:49:18.630133+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/11/329735_ead_7779_hr_1297937149_0925-1.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Did Emirates Order The Boeing 777X And Not More Airbus A350s?",
+          "url": "https://simpleflying.com/why-did-emirates-order-more-boeing-777x-than-a350/",
+          "feed_url": "https://simpleflying.com/why-did-emirates-order-more-boeing-777x-than-a350/",
+          "published": "2026-11-14T22:30:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "IATA Highlights Stagnant Reporting Rates in Global Aviation Accident Investigations",
+      "slug": "iata-highlights-stagnant-reporting-rates-in-global-aviation-accident-investigation",
+      "url": "originals/iata-highlights-stagnant-reporting-rates-in-global-aviation-accident-investigation.html",
+      "summary": "Nearly half of all aviation accident investigations remain incomplete, raising concerns about the industry's ability to implement critical safety improvements.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:49:31.123573+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/729-air-india-boeing-787-vytautas-kielaitis-_-shutterstock.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "IATA: Nearly 50% Of Air Accident Investigations Lack Final Reports, Hindering Safety Progress",
+          "url": "https://simpleflying.com/iata-half-air-accident-investigations-lack-final-reports/",
+          "feed_url": "https://simpleflying.com/iata-half-air-accident-investigations-lack-final-reports/",
+          "published": "2026-11-14T22:23:38+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing’s Chevrons: Noise‑Reduction Innovation That Costs Thrust",
+      "slug": "boeing-s-chevrons-noise-reduction-innovation-that-costs-thrust",
+      "url": "originals/boeing-s-chevrons-noise-reduction-innovation-that-costs-thrust.html",
+      "summary": "An examination of the serrated engine‑exhaust nozzles on the 737 MAX, 747‑8 and 787 Dreamliner reveals a trade‑off between community‑friendly sound levels and measurable performance penalties, a dilemma not shared by rival manufacturers.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:49:34.075005+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/05/737-max.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How The Boeing 737 MAX, 747-8, & 787 Dreamliner's Engines Create Problems No Other Modern Jet Faces",
+          "url": "https://simpleflying.com/how-boeing-737-max-747-8-787-dreamliner-engine-create-problems-no-other-modern-jet-face/",
+          "feed_url": "https://simpleflying.com/how-boeing-737-max-747-8-787-dreamliner-engine-create-problems-no-other-modern-jet-face/",
+          "published": "2026-11-14T21:41:19+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Leaked Rosters Expose Strain on U.S. Air Traffic Control Operations",
+      "slug": "leaked-rosters-expose-strain-on-u-s-air-traffic-control-operations",
+      "url": "originals/leaked-rosters-expose-strain-on-u-s-air-traffic-control-operations.html",
+      "summary": "Internal scheduling documents reveal mandatory overtime and extended shift rotations as the FAA grapples with a significant controller deficit.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:49:46.477338+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/air-traffic-control-tower-and-delta-southwest-aircraft-at-atlanta.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Overworked? Leaked ATC Schedule Reveals Mandatory Overtime & 10-Hour Shifts",
+          "url": "https://simpleflying.com/leaked-atc-schedule-reveals-mandatory-overtime-10-hour-shifts/",
+          "feed_url": "https://simpleflying.com/leaked-atc-schedule-reveals-mandatory-overtime-10-hour-shifts/",
+          "published": "2026-11-14T21:29:13+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Commercial-Derived Engines Power Key Military Transport Platforms, Simple Flying Reports",
+      "slug": "commercial-derived-engines-power-key-military-transport-platforms-simple-flying-re",
+      "url": "originals/commercial-derived-engines-power-key-military-transport-platforms-simple-flying-re.html",
+      "summary": "Simple Flying outlines how the Pratt & Whitney PW2000 family, originally built for civilian jets, underpins the C‑17 Globemaster III’s performance, highlighting cost, reliability and operational benefits for the U.S. Air Force.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-15T09:49:59.317779+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/5-military-aircraft-powered-by-engines.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 Military Aircraft Powered By Engines Found On Commercial Airliners",
+          "url": "https://simpleflying.com/military-aircraft-powered-commercial-airliner-engines/",
+          "feed_url": "https://simpleflying.com/military-aircraft-powered-commercial-airliner-engines/",
+          "published": "2026-11-14T21:00:17+00:00"
+        }
+      ]
+    },
     {
       "title": "Premium Economy Gains Momentum as Airlines Expand Mid‑Cabin Offerings",
       "slug": "premium-economy-gains-momentum-as-airlines-expand-mid-cabin-offerings",
@@ -1798,206 +1998,6 @@
           "url": "https://simpleflying.com/singapore-airlines-new-first-business-class-suites-boeing-777-9/",
           "feed_url": "https://simpleflying.com/singapore-airlines-new-first-business-class-suites-boeing-777-9/",
           "published": "2026-11-06T05:36:32+00:00"
-        }
-      ]
-    },
-    {
-      "title": "How the MD‑80 Outlasted Its Supposed Successor, the MD‑90",
-      "slug": "how-the-md-80-outlasted-its-supposed-successor-the-md-90",
-      "url": "originals/how-the-md-80-outlasted-its-supposed-successor-the-md-90.html",
-      "summary": "An examination of why the older MD‑80 remained in service longer than the newer MD‑90, based on Simple Flying’s recent analysis.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-06T09:46:00.568755+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/07/how-the-mcdonnell-douglas-md-80-outlasted-the-jet-built-to-replace-it.jpg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How The McDonnell Douglas MD-80 Outlasted The Jet Built To Replace It",
-          "url": "https://simpleflying.com/how-mcdonnell-douglas-md-80-outlast-jet-replace-it/",
-          "feed_url": "https://simpleflying.com/how-mcdonnell-douglas-md-80-outlast-jet-replace-it/",
-          "published": "2026-11-06T02:45:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "The Cold War Origins of the Boeing 747",
-      "slug": "the-cold-war-origins-of-the-boeing-747",
-      "url": "originals/the-cold-war-origins-of-the-boeing-747.html",
-      "summary": "How a failed military transport bid shaped the future of commercial aviation.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-06T09:46:12.622442+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/747-cover-pic.png",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How Boeing Losing To Lockheed's C-5 Galaxy Gave The World The 747",
-          "url": "https://simpleflying.com/boeing-losing-lockheed-c-5-galaxy-gave-world-747/",
-          "feed_url": "https://simpleflying.com/boeing-losing-lockheed-c-5-galaxy-gave-world-747/",
-          "published": "2026-11-06T01:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "American Airlines grapples with legacy A321neo fleet inherited from Alaska‑Virgin transition",
-      "slug": "american-airlines-grapples-with-legacy-a321neo-fleet-inherited-from-alaska-virgin-",
-      "url": "originals/american-airlines-grapples-with-legacy-a321neo-fleet-inherited-from-alaska-virgin-.html",
-      "summary": "Ten Airbus A321neo aircraft that entered American’s roster via Alaska’s acquisition of Virgin America were built before a key cabin redesign, creating configuration and seat‑selection challenges for the carrier.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-06T09:46:15.820837+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/world-s-1st-airbus-a321neo.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The Problem American Airlines Ran Into When It Inherited The World's 1st Airbus A321neo",
-          "url": "https://simpleflying.com/problem-american-airlines-ran-into-inherited-worlds-1st-airbus-a321neo/",
-          "feed_url": "https://simpleflying.com/problem-american-airlines-ran-into-inherited-worlds-1st-airbus-a321neo/",
-          "published": "2026-11-06T00:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Southwest Airlines Trails North American Peers in October Punctuality Rankings",
-      "slug": "southwest-airlines-trails-north-american-peers-in-october-punctuality-rankings",
-      "url": "originals/southwest-airlines-trails-north-american-peers-in-october-punctuality-rankings.html",
-      "summary": "New data from Cirium highlights a significant performance gap between Southwest Airlines and industry leaders as the carrier undergoes a major business model transformation.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-06T09:46:28.348772+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/southwest_airlines_1920x1080.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Southwest Airlines Named Least Punctual Carrier Among 10 Airlines In North America",
-          "url": "https://simpleflying.com/southwest-airlines-least-punctual-carrier-10-airlines-north-america/",
-          "feed_url": "https://simpleflying.com/southwest-airlines-least-punctual-carrier-10-airlines-north-america/",
-          "published": "2026-11-05T23:30:26+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Boeing 787‑9 Dreamliner Engine Prices Estimated at $25‑30 Million per Unit, Simple Flying Reports",
-      "slug": "boeing-787-9-dreamliner-engine-prices-estimated-at-25-30-million-per-unit-simple-f",
-      "url": "originals/boeing-787-9-dreamliner-engine-prices-estimated-at-25-30-million-per-unit-simple-f.html",
-      "summary": "Simple Flying indicates that the two power‑plant choices for the 787‑9 – the GE GEnx‑1B and the Rolls‑Royce Trent 1000 – carry list‑price estimates in the mid‑$20 million range, though actual transaction values depend on contract specifics.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-06T09:46:31.687898+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-787-engine-1-20261102-174721.jpg",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How Much Does A Boeing 787-9 Engine Cost?",
-          "url": "https://simpleflying.com/boeing-787-9-engine-cost-explained/",
-          "feed_url": "https://simpleflying.com/boeing-787-9-engine-cost-explained/",
-          "published": "2026-11-05T23:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "The Rise of Premium Narrowbody Travel: A321XLR Cabin Configurations",
-      "slug": "the-rise-of-premium-narrowbody-travel-a321xlr-cabin-configurations",
-      "url": "originals/the-rise-of-premium-narrowbody-travel-a321xlr-cabin-configurations.html",
-      "summary": "As the Airbus A321XLR redefines long-haul economics, airlines are increasingly prioritizing passenger comfort through lie-flat business class installations.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-06T09:46:50.694067+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/5-airlines-flying-the-airbus-a.png",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "5 Airlines Flying The Airbus A321XLR With Lie-Flat Business Class Seats",
-          "url": "https://simpleflying.com/5-airlines-flying-airbus-a321xlr-lie-flat-business-class-seats/",
-          "feed_url": "https://simpleflying.com/5-airlines-flying-airbus-a321xlr-lie-flat-business-class-seats/",
-          "published": "2026-11-05T22:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Boeing Shifts 737 MAX 10 Assembly to Everett to Alleviate Renton Bottleneck",
-      "slug": "boeing-shifts-737-max-10-assembly-to-everett-to-alleviate-renton-bottleneck",
-      "url": "originals/boeing-shifts-737-max-10-assembly-to-everett-to-alleviate-renton-bottleneck.html",
-      "summary": "The first 737 MAX 10 rolled off Boeing’s new North Line in Everett on Oct. 26, 2026, ending a decades‑long tradition of building every 737 variant in Renton and addressing spatial constraints that threatened production flexibility.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-06T09:46:54.173450+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-s-renton-factory.png",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Boeing's Renton Factory Must Stagger The 737 MAX 10 With Smaller Jets, But Everett Can Run Nose-To-Tail",
-          "url": "https://simpleflying.com/boeing-renton-factory-stagger-737-max-10-smaller-jets-everett-run-nose-tail/",
-          "feed_url": "https://simpleflying.com/boeing-renton-factory-stagger-737-max-10-smaller-jets-everett-run-nose-tail/",
-          "published": "2026-11-05T21:01:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "United’s 43‑inch pitch seats on Boeing 767‑400ER serve as crew‑rest, not passenger luxury",
-      "slug": "united-s-43-inch-pitch-seats-on-boeing-767-400er-serve-as-crew-rest-not-passenger-",
-      "url": "originals/united-s-43-inch-pitch-seats-on-boeing-767-400er-serve-as-crew-rest-not-passenger-.html",
-      "summary": "Simple Flying reports that four unusually spacious seats on United’s 767‑400ER aircraft are intended for flight‑attendant rest, though they are sometimes offered to passengers on shorter routes",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-05T09:46:37.290164+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/united-airlines-unusual-boeing-767-400er-seats.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why United Airlines' Unusual Boeing 767-400ER Seats With 43 Inches Of Pitch Aren't For Passengers",
-          "url": "https://simpleflying.com/united-airlines-boeing-767-400er-seats-43-inches-pitch-arent-passengers/",
-          "feed_url": "https://simpleflying.com/united-airlines-boeing-767-400er-seats-43-inches-pitch-arent-passengers/",
-          "published": "2026-11-05T09:01:19+00:00"
-        }
-      ]
-    },
-    {
-      "title": "KLM Announces €1 B Earnings Drive Coupled with 15% Workforce Reduction",
-      "slug": "klm-announces-1-b-earnings-drive-coupled-with-15-workforce-reduction",
-      "url": "originals/klm-announces-1-b-earnings-drive-coupled-with-15-workforce-reduction.html",
-      "summary": "The Dutch carrier outlines a restructuring plan aimed at boosting profitability amid geopolitical and fuel price pressures, but details remain unverified beyond the airline’s own statement.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-05T09:46:40.429484+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/181-klm-airbus-a330-300-andrew-balcombe-minhanphotos-_-shutterstock.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "KLM Forced Into 'Painful' €1B Financial Overhaul",
-          "url": "https://simpleflying.com/klm-trims-workforce-to-strengthen-amsterdam-hub/",
-          "feed_url": "https://simpleflying.com/klm-trims-workforce-to-strengthen-amsterdam-hub/",
-          "published": "2026-11-05T08:53:27+00:00"
-        }
-      ]
-    },
-    {
-      "title": "TSA’s New CT Scanners Ease Laptop Checks but Pose Risks to Sensitive Gear",
-      "slug": "tsa-s-new-ct-scanners-ease-laptop-checks-but-pose-risks-to-sensitive-gear",
-      "url": "originals/tsa-s-new-ct-scanners-ease-laptop-checks-but-pose-risks-to-sensitive-gear.html",
-      "summary": "Advanced computed tomography scanners are reducing the need to remove electronics at U.S. checkpoints, yet travelers with analog film and other delicate items may face unexpected damage, according to Simple Flying.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-05T09:46:43.157375+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/07/tsa-scanner.jpg",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The Same TSA Scanner That Lets Laptops Stay In Your Bag Is Quietly Ruining Other Gear",
-          "url": "https://simpleflying.com/same-tsa-scanner-laptops-stay-in-bag-quietly-ruining-other-gear/",
-          "feed_url": "https://simpleflying.com/same-tsa-scanner-laptops-stay-in-bag-quietly-ruining-other-gear/",
-          "published": "2026-11-05T07:32:53+00:00"
         }
       ]
     }
