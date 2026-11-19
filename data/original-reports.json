@@ -1,6 +1,206 @@
 {
-  "updated": "2026-11-18T10:37:50.132148+00:00",
+  "updated": "2026-11-19T10:43:00.281838+00:00",
   "articles": [
+    {
+      "title": "Airbus A350’s Quiet Design Gives It Edge in Heathrow Night Slots",
+      "slug": "airbus-a350-s-quiet-design-gives-it-edge-in-heathrow-night-slots",
+      "url": "originals/airbus-a350-s-quiet-design-gives-it-edge-in-heathrow-night-slots.html",
+      "summary": "Simple Flying explains how the A350’s lower noise footprint lets airlines preserve valuable night‑quota capacity at London Heathrow, where strict QC limits curb louder wide‑bodies.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:41:48.576845+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/07/why-the-airbus-a350-can-fly-late-night-slots-at-london-heathrow-that-ground-competing-widebodies.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why The Airbus A350 Can Fly Late-Night Slots At London Heathrow That Ground Competing Widebodies",
+          "url": "https://simpleflying.com/why-airbus-a350-fly-late-night-slots-london-heathrow-that-ground-competing-widebodies/",
+          "feed_url": "https://simpleflying.com/why-airbus-a350-fly-late-night-slots-london-heathrow-that-ground-competing-widebodies/",
+          "published": "2026-11-19T10:15:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "United Airlines Revives Cleveland Hub After 12‑Year Hiatus",
+      "slug": "united-airlines-revives-cleveland-hub-after-12-year-hiatus",
+      "url": "originals/united-airlines-revives-cleveland-hub-after-12-year-hiatus.html",
+      "summary": "United is expanding service at Cleveland Hopkins International, marking the carrier’s most significant domestic network move in years, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:41:51.436545+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/united-airlines-cleveland.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "United Airlines Coming Back To A Hub It De-Hubbed Over A Decade Ago Could Be Its Biggest Domestic Bet In Years",
+          "url": "https://simpleflying.com/united-airlines-coming-back-hub-de-hubbed-decade-ago-biggest-domestic-bet-years/",
+          "feed_url": "https://simpleflying.com/united-airlines-coming-back-hub-de-hubbed-decade-ago-biggest-domestic-bet-years/",
+          "published": "2026-11-19T09:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Hollywood Burbank Airport Tower Goes ‘ATC Zero’ Twice, Pilots Self‑Coordinate Takeoffs and Landings",
+      "slug": "hollywood-burbank-airport-tower-goes-atc-zero-twice-pilots-self-coordinate-takeoff",
+      "url": "originals/hollywood-burbank-airport-tower-goes-atc-zero-twice-pilots-self-coordinate-takeoff.html",
+      "summary": "Pilots from Southwest and Alaska Airlines used the common traffic advisory frequency after the Burbank tower lost controllers for two 30‑minute periods on Wednesday evening, a situation attributed by sources to staffing constraints but not confirmed by the FAA or airport officials.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:41:54.433641+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/southwest-airlines-boeing-737-at-hollywood-burbank-airport.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Empty ATC Tower At Hollywood Burbank Airport Leaves Pilots To Clear Own Takeoffs & Landings",
+          "url": "https://simpleflying.com/hollywood-burbank-airport-empty-atc-tower-pilots-takeoffs-landings/",
+          "feed_url": "https://simpleflying.com/hollywood-burbank-airport-empty-atc-tower-pilots-takeoffs-landings/",
+          "published": "2026-11-19T08:16:28+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing pours $3 billion into 737 MAX engine upgrade as 767 production heads for 2027 sunset",
+      "slug": "boeing-pours-3-billion-into-737-max-engine-upgrade-as-767-production-heads-for-202",
+      "url": "originals/boeing-pours-3-billion-into-737-max-engine-upgrade-as-767-production-heads-for-202.html",
+      "summary": "Simple Flying reports that Boeing has installed new CFM LEAP‑1B turbofans on the 737 MAX while continuing to build the older 767 with its legacy engines, a split strategy driven by market demand and cargo‑fleet transitions.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:41:57.895377+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1-of-its-2-longest-running-aircraft.png",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Boeing Added New Engines To 1 Of Its 2 Longest-Running Aircraft In Production",
+          "url": "https://simpleflying.com/boeing-added-new-engines-1-2-longest-running-aircraft-production/",
+          "feed_url": "https://simpleflying.com/boeing-added-new-engines-1-2-longest-running-aircraft-production/",
+          "published": "2026-11-19T06:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Southwest Airlines' Evolving Cabin Strategy: Beyond the Recent Reconfiguration",
+      "slug": "southwest-airlines-evolving-cabin-strategy-beyond-the-recent-reconfiguration",
+      "url": "originals/southwest-airlines-evolving-cabin-strategy-beyond-the-recent-reconfiguration.html",
+      "summary": "Following the end of its open seating policy, industry observers are questioning if Southwest Airlines will pursue further interior modifications, including the potential for a premium cabin class.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:42:12.228416+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/02/cabininterior.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Southwest Airlines Might Change Its Cabin Interior Again",
+          "url": "https://simpleflying.com/why-southwest-airlines-might-change-its-cabin-interior-again/",
+          "feed_url": "https://simpleflying.com/why-southwest-airlines-might-change-its-cabin-interior-again/",
+          "published": "2026-11-19T02:45:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "American Airlines expands A321neo fleet to 90, targets three more deliveries before year‑end",
+      "slug": "american-airlines-expands-a321neo-fleet-to-90-targets-three-more-deliveries-before",
+      "url": "originals/american-airlines-expands-a321neo-fleet-to-90-targets-three-more-deliveries-before.html",
+      "summary": "American Airlines’ narrow‑body fleet grew to 90 Airbus A321neos, with two additional A321neos and an A321XLR slated for delivery by the close of 2026, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:42:18.572364+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/american_a321neo_golden_hour_1920x1080.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "American Airlines’ Airbus A321neo Fleet Grows To 90, Expects 2 More & 1 A321XLR By Year’s End",
+          "url": "https://simpleflying.com/american-airlines-airbus-a321neo-fleet-grows-90-2-more-1-a321xlr-years-end/",
+          "feed_url": "https://simpleflying.com/american-airlines-airbus-a321neo-fleet-grows-90-2-more-1-a321xlr-years-end/",
+          "published": "2026-11-19T01:23:53+00:00"
+        }
+      ]
+    },
+    {
+      "title": "The Rapid Development of the Boeing 747: A 29-Month Milestone",
+      "slug": "the-rapid-development-of-the-boeing-747-a-29-month-milestone",
+      "url": "originals/the-rapid-development-of-the-boeing-747-a-29-month-milestone.html",
+      "summary": "Examining the accelerated production timeline that brought the 'Queen of the Skies' from concept to rollout in under three years.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:42:31.132133+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/debut-boeing-747.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why The World's Debut Boeing 747 Was Built In Half The Time Of Other Aircraft Of Its Size In 1968",
+          "url": "https://simpleflying.com/worlds-debut-boeing-747-built-half-time-other-aircraft-size-1968/",
+          "feed_url": "https://simpleflying.com/worlds-debut-boeing-747-built-half-time-other-aircraft-size-1968/",
+          "published": "2026-11-19T01:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing stretches 737 MAX 7 to meet Southwest’s demand, FAA certifies new dimensions",
+      "slug": "boeing-stretches-737-max-7-to-meet-southwest-s-demand-faa-certifies-new-dimensions",
+      "url": "originals/boeing-stretches-737-max-7-to-meet-southwest-s-demand-faa-certifies-new-dimensions.html",
+      "summary": "The 737 MAX 7 received FAA approval in August 2026 after Boeing lengthened the jet by six feet and added weight to boost capacity, a change driven largely by Southwest Airlines’ sizable order book.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:42:43.477049+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/the-boeing-737-max-7.png",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Here's How Much Larger The Boeing 737 MAX 7 Is Over The Jet It Directly Replaces",
+          "url": "https://simpleflying.com/how-much-larger-boeing-737-max-7-jet-directly-replaces/",
+          "feed_url": "https://simpleflying.com/how-much-larger-boeing-737-max-7-jet-directly-replaces/",
+          "published": "2026-11-18T23:01:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "US Air Force Explores Transforming Cargo Fleet into Missile Launch Platforms",
+      "slug": "us-air-force-explores-transforming-cargo-fleet-into-missile-launch-platforms",
+      "url": "originals/us-air-force-explores-transforming-cargo-fleet-into-missile-launch-platforms.html",
+      "summary": "The transition from the Rapid Dragon program to the Dragon Cart initiative aims to integrate palletized cruise missile capabilities into the C-17 and C-130 fleet.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:42:57.294020+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/c-17-cover-pic.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The New Changes That Could Make The US Air Force's C-17 Globemasters Become Fighters Instead Of Transport Aircraft",
+          "url": "https://simpleflying.com/usaf-c-17-globemasters-fighters-instead-transport-aircraft/",
+          "feed_url": "https://simpleflying.com/usaf-c-17-globemasters-fighters-instead-transport-aircraft/",
+          "published": "2026-11-18T22:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Delta Introduces Basic Business Fare, Retains Lie‑Flat Seats but Cuts Lounge Access After 2027",
+      "slug": "delta-introduces-basic-business-fare-retains-lie-flat-seats-but-cuts-lounge-access",
+      "url": "originals/delta-introduces-basic-business-fare-retains-lie-flat-seats-but-cuts-lounge-access.html",
+      "summary": "Delta's new entry‑level business product keeps the core cabin experience while stripping several pre‑ and post‑flight perks, with lounge access slated to end in early 2027.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-19T10:43:00.281526+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/delta-air-lines-basic-business.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Delta Air Lines' Basic Business Fare Keeps The Lie-Flat Seat, But Lounge Access Ends In 2027",
+          "url": "https://simpleflying.com/delta-air-lines-basic-business-fare-lie-flat-seat-one-lounge-access-ends-2027/",
+          "feed_url": "https://simpleflying.com/delta-air-lines-basic-business-fare-lie-flat-seat-one-lounge-access-ends-2027/",
+          "published": "2026-11-18T20:00:19+00:00"
+        }
+      ]
+    },
     {
       "title": "Qantas opts for proven Rolls‑Royce powerplant on A350‑1000ULR for Project Sunrise",
       "slug": "qantas-opts-for-proven-rolls-royce-powerplant-on-a350-1000ulr-for-project-sunrise",
@@ -1798,206 +1998,6 @@
           "url": "https://simpleflying.com/the-airlines-with-the-worlds-newest-premium-economy-seats-in-2026/",
           "feed_url": "https://simpleflying.com/the-airlines-with-the-worlds-newest-premium-economy-seats-in-2026/",
           "published": "2026-11-10T10:15:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "United Flight UA2174 Reports Attempted Cockpit Breach and Bomb Threat",
-      "slug": "united-flight-ua2174-reports-attempted-cockpit-breach-and-bomb-threat",
-      "url": "originals/united-flight-ua2174-reports-attempted-cockpit-breach-and-bomb-threat.html",
-      "summary": "A United Airlines Boeing 737 MAX 9 en route from Newark to New Orleans on Nov 9, 2026 experienced a passenger‑initiated attempt to enter the cockpit and claimed a backpack contained a bomb, prompting the crew to squawk 7500 and issue a Level 4 threat alert.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:17:43.389223+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/010-united-airlines-boeing-737-max-9-wirestock-creators-_-shutterstock.jpg",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "United Pilots Squawk Hijack Code As Passenger Tries To Storm Cockpit, Says He Has A Bomb",
-          "url": "https://simpleflying.com/united-pilots-squawk-hijack-code-passenger-storm-cockpit-bomb/",
-          "feed_url": "https://simpleflying.com/united-pilots-squawk-hijack-code-passenger-storm-cockpit-bomb/",
-          "published": "2026-11-10T09:01:53+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Aer Lingus taps Airbus A321XLR for transatlantic and intra‑European hops",
-      "slug": "aer-lingus-taps-airbus-a321xlr-for-transatlantic-and-intra-european-hops",
-      "url": "originals/aer-lingus-taps-airbus-a321xlr-for-transatlantic-and-intra-european-hops.html",
-      "summary": "Simple Flying reports that Ireland’s flag carrier is using its six A321XLRs on routes ranging from 48‑minute Dublin‑London hops to nine‑hour Dublin‑Nashville flights, illustrating the type’s flexibility despite its design for long‑thin sectors.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:17:47.283013+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/air-canada-a321-in-flight.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The 7 Airlines Flying Airbus A321XLRs On Both Short & Long-Haul Routes",
-          "url": "https://simpleflying.com/7-airlines-flying-airbus-a321xlr-both-short-long-haul/",
-          "feed_url": "https://simpleflying.com/7-airlines-flying-airbus-a321xlr-both-short-long-haul/",
-          "published": "2026-11-10T09:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Airbus A340‑600’s Length: Design Choices Behind the World’s Longest Passenger Jet",
-      "slug": "airbus-a340-600-s-length-design-choices-behind-the-world-s-longest-passenger-jet",
-      "url": "originals/airbus-a340-600-s-length-design-choices-behind-the-world-s-longest-passenger-jet.html",
-      "summary": "An examination of why Airbus stretched the A340‑600’s fuselage, focusing on market competition, engineering constraints, and the aircraft’s eventual legacy, based on Simple Flying reporting.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:17:53.417056+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/iberia-a340-600.png",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why Did Airbus Build The A340-600 With Such A Long Fuselage?",
-          "url": "https://simpleflying.com/airbus-build-a340-600-such-long-fuselage/",
-          "feed_url": "https://simpleflying.com/airbus-build-a340-600-such-long-fuselage/",
-          "published": "2026-11-10T06:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "United Airlines Debuts 'Elevated' Polaris Interior on Boeing 787 Fleet",
-      "slug": "united-airlines-debuts-elevated-polaris-interior-on-boeing-787-fleet",
-      "url": "originals/united-airlines-debuts-elevated-polaris-interior-on-boeing-787-fleet.html",
-      "summary": "The carrier's second-generation business class suite introduces privacy doors and expanded cabin configurations as part of a broader fleet modernization strategy.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:18:06.069278+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/02/businessclass-seatsd.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The Airlines With The World’s Most Innovative Business Class Seats In 2026",
-          "url": "https://simpleflying.com/airlines-with-worlds-most-innovative-business-class-seats-in-2026/",
-          "feed_url": "https://simpleflying.com/airlines-with-worlds-most-innovative-business-class-seats-in-2026/",
-          "published": "2026-11-10T02:45:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "American Airlines’ Mixed‑A321neo Subfleet Creates Ongoing Seat‑Map Inconsistencies",
-      "slug": "american-airlines-mixed-a321neo-subfleet-creates-ongoing-seat-map-inconsistencies",
-      "url": "originals/american-airlines-mixed-a321neo-subfleet-creates-ongoing-seat-map-inconsistencies.html",
-      "summary": "A group of ten Airbus A321neo jets acquired from Alaska Airlines in 2023 retain a distinct emergency‑exit layout, preventing American from standardising cabin capacity across its 32Q fleet designation.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:18:12.067651+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/unique-airbus-a321neo.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "American Airlines Has A Unique Airbus A321neo Subfleet That Unavoidably Breaks Daily Consistency",
-          "url": "https://simpleflying.com/american-airlines-unique-airbus-a321neo-subfleet-unavoidably-breaks-consistency/",
-          "feed_url": "https://simpleflying.com/american-airlines-unique-airbus-a321neo-subfleet-unavoidably-breaks-consistency/",
-          "published": "2026-11-10T02:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "NTSB Retrieves Cockpit Voice Recorder After Learjet 60 Crash in South Florida",
-      "slug": "ntsb-retrieves-cockpit-voice-recorder-after-learjet-60-crash-in-south-florida",
-      "url": "originals/ntsb-retrieves-cockpit-voice-recorder-after-learjet-60-crash-in-south-florida.html",
-      "summary": "The board concluded the on‑scene phase of the Nov. 1 Learjet 60 accident that killed nine people, recovering the CVR and uncovering debris suggesting an in‑flight breakup amid severe weather.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:18:25.002196+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/learjet_n722bd_landing_1920x1080.jpg",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "NTSB Recovers Cockpit Voice Recorder From Miami Crash As On-Scene Investigation Ends",
-          "url": "https://simpleflying.com/ntsb-recovers-cockpit-voice-recorder-miami-crash-on-scene-investigation/",
-          "feed_url": "https://simpleflying.com/ntsb-recovers-cockpit-voice-recorder-miami-crash-on-scene-investigation/",
-          "published": "2026-11-10T00:02:59+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Evaluating the Value Proposition of Premium Economy Versus Business Class",
-      "slug": "evaluating-the-value-proposition-of-premium-economy-versus-business-class",
-      "url": "originals/evaluating-the-value-proposition-of-premium-economy-versus-business-class.html",
-      "summary": "While business class offers superior amenities, industry analysis suggests premium economy may provide a more prudent financial alternative for many travelers.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:18:55.642915+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/5-reasons-premium-economy-can-beat-business-class-on-value.jpg",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "5 Reasons Premium Economy Can Beat Business Class On Value",
-          "url": "https://simpleflying.com/5-reasons-premium-economy-beat-business-class-value/",
-          "feed_url": "https://simpleflying.com/5-reasons-premium-economy-beat-business-class-value/",
-          "published": "2026-11-10T00:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Delta’s First A350‑1000 Rolls Out in Full Livery Ahead of Planned 2027 Launch",
-      "slug": "delta-s-first-a350-1000-rolls-out-in-full-livery-ahead-of-planned-2027-launch",
-      "url": "originals/delta-s-first-a350-1000-rolls-out-in-full-livery-ahead-of-planned-2027-launch.html",
-      "summary": "Simple Flying reports that the inaugural Airbus A350‑1000 for Delta Air Lines has been photographed at Airbus’ Toulouse plant, marking a visual milestone before the carrier’s expected June 2027 entry into service.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:18:58.011167+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/simpleflying-airbus-a350-1000-delta-air-lines-1793577507863.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Delta’s 1st A350-1000 Spotted In Full Livery Ahead Of June 2027 Debut",
-          "url": "https://simpleflying.com/delta-1st-a350-1000-spotted-debut-june-2027/",
-          "feed_url": "https://simpleflying.com/delta-1st-a350-1000-spotted-debut-june-2027/",
-          "published": "2026-11-09T23:48:43+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Boeing to Trim 2,500 Jobs in Commercial Airplane Division Amid Slowed Production Ramp‑Up",
-      "slug": "boeing-to-trim-2-500-jobs-in-commercial-airplane-division-amid-slowed-production-r",
-      "url": "originals/boeing-to-trim-2-500-jobs-in-commercial-airplane-division-amid-slowed-production-r.html",
-      "summary": "The aerospace giant announced a roughly 5% reduction in its commercial airplane workforce as supply‑chain and factory stability issues force a recalibration of output targets for the 737 MAX and 787 Dreamliner programs.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-10T10:19:10.095997+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/klm-boeing-787-10.jpg",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Boeing To Cut 2,500 Commercial Airplane Jobs As Production Ramp-Up Slows",
-          "url": "https://simpleflying.com/boeing-cuts-5pc-commercial-airplanes-workforce-production-slows/",
-          "feed_url": "https://simpleflying.com/boeing-cuts-5pc-commercial-airplanes-workforce-production-slows/",
-          "published": "2026-11-09T23:25:34+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Lufthansa 747‑8 Forced to Stop After American 787‑8 Encroaches on Taxiway at Miami International",
-      "slug": "lufthansa-747-8-forced-to-stop-after-american-787-8-encroaches-on-taxiway-at-miami",
-      "url": "originals/lufthansa-747-8-forced-to-stop-after-american-787-8-encroaches-on-taxiway-at-miami.html",
-      "summary": "A near‑miss on the ground at MIA highlights procedural lapses and the reliance on pilot compliance with ATC instructions, according to Simple Flying’s coverage of the November 5 event.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-09T10:11:13.729250+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/lufthansa_-retro_livery-_boeing_747-830-_d-abyt_-23922618159-_cropped.jpg",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Lufthansa 747 “Very Close To An Accident” In Miami As American Airlines 787 Turns Into Its Path",
-          "url": "https://simpleflying.com/lufthansa-boeing-747-american-airlines-787-miami-close-accident/",
-          "feed_url": "https://simpleflying.com/lufthansa-boeing-747-american-airlines-787-miami-close-accident/",
-          "published": "2026-11-09T09:33:18+00:00"
         }
       ]
     }
