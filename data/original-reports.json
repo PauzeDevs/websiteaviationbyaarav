@@ -1,6 +1,306 @@
 {
-  "updated": "2026-11-21T10:10:10.660192+00:00",
+  "updated": "2026-11-22T10:12:03.724845+00:00",
   "articles": [
+    {
+      "title": "De Havilland Comet: From Pioneering Jetliner to Cautionary Tale",
+      "slug": "de-havilland-comet-from-pioneering-jetliner-to-cautionary-tale",
+      "url": "originals/de-havilland-comet-from-pioneering-jetliner-to-cautionary-tale.html",
+      "summary": "A review of the Comet’s groundbreaking design, the fatal accidents that exposed metal‑fatigue flaws, and the lasting lessons for modern aviation, based on Simple Flying’s account.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:09:54.215852+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1795112550623.png",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Rise & Fall Of The World’s First Commercial Jetliner",
+          "url": "https://simpleflying.com/rise-fall-first-commercial-jetliner/",
+          "feed_url": "https://simpleflying.com/rise-fall-first-commercial-jetliner/",
+          "published": "2026-11-22T08:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Alaska Airlines Crew Distressed After ICE Arrests on Seattle Jet Bridge",
+      "slug": "alaska-airlines-crew-distressed-after-ice-arrests-on-seattle-jet-bridge",
+      "url": "originals/alaska-airlines-crew-distressed-after-ice-arrests-on-seattle-jet-bridge.html",
+      "summary": "Simple Flying reports that a pilot walked off and two flight attendants asked for replacement during boarding of Alaska flight AS1306 after ICE detained two passengers, causing a three‑hour delay.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:09:57.044223+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/alaska-airlines-boeing-737-max-8-in-seattle.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Alaska Airlines Crew Reportedly Too Shaken To Fly After ICE Arrests On Seattle Jet Bridge",
+          "url": "https://simpleflying.com/alaska-airlines-crew-shaken-ice-arrests-seattle-jet-bridge/",
+          "feed_url": "https://simpleflying.com/alaska-airlines-crew-shaken-ice-arrests-seattle-jet-bridge/",
+          "published": "2026-11-22T05:54:38+00:00"
+        }
+      ]
+    },
+    {
+      "title": "United and American Airlines Clash Over Gate Allocation at Chicago O’Hare",
+      "slug": "united-and-american-airlines-clash-over-gate-allocation-at-chicago-o-hare",
+      "url": "originals/united-and-american-airlines-clash-over-gate-allocation-at-chicago-o-hare.html",
+      "summary": "A rivalry over gate assignments, schedule expansions and federal limits has turned O’Hare into a contested arena for the two legacy carriers, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:09:59.814526+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/02/vs.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why United & American Airlines Are Fighting Over The Future Of Chicago O’Hare",
+          "url": "https://simpleflying.com/united-airlines-american-airlines/chicago-o-hare/",
+          "feed_url": "https://simpleflying.com/united-airlines-american-airlines/chicago-o-hare/",
+          "published": "2026-11-22T05:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Airlines Embrace Heavier A321XLR on Sub‑Hour Flights, Citing Fleet Commonality and Range Flexibility",
+      "slug": "airlines-embrace-heavier-a321xlr-on-sub-hour-flights-citing-fleet-commonality-and-",
+      "url": "originals/airlines-embrace-heavier-a321xlr-on-sub-hour-flights-citing-fleet-commonality-and-.html",
+      "summary": "Simple Flying reports that carriers are operating the Airbus A321XLR at its 101.5‑tonne maximum take‑off weight on routes shorter than an hour, accepting the weight penalty for operational benefits despite limited independent verification.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:10:06.042209+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/101-5-tonne-maximum-takeoff.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Airlines Accept The Airbus A321XLR's Heavier 101.5-Tonne Maximum Takeoff Weight On Flights Shorter Than An Hour",
+          "url": "https://simpleflying.com/airlines-accept-airbus-a321xlr-heavier-101-tonne-maximum-takeoff-weight-flights-shorter-hour/",
+          "feed_url": "https://simpleflying.com/airlines-accept-airbus-a321xlr-heavier-101-tonne-maximum-takeoff-weight-flights-shorter-hour/",
+          "published": "2026-11-22T02:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Analyzing the Economic Realities of the Airbus A330neo and Boeing 787-9",
+      "slug": "analyzing-the-economic-realities-of-the-airbus-a330neo-and-boeing-787-9",
+      "url": "originals/analyzing-the-economic-realities-of-the-airbus-a330neo-and-boeing-787-9.html",
+      "summary": "Evaluating the competitive landscape between two widebody giants requires looking beyond inflated list prices to understand true market value.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:10:19.215074+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1795178269710.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The True Cost Airbus Charges For An A330neo Compared With Boeing's 787-9 Dreamliner",
+          "url": "https://simpleflying.com/true-cost-airbus-charges-a330neo-compared-boeing-787-9-dreamliner/",
+          "feed_url": "https://simpleflying.com/true-cost-airbus-charges-a330neo-compared-boeing-787-9-dreamliner/",
+          "published": "2026-11-22T01:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Delta Keeps ETOPS Certification on Select 737‑900ERs Despite Domestic‑Only Use",
+      "slug": "delta-keeps-etops-certification-on-select-737-900ers-despite-domestic-only-use",
+      "url": "originals/delta-keeps-etops-certification-on-select-737-900ers-despite-domestic-only-use.html",
+      "summary": "Simple Flying reports that Delta Air Lines maintains ETOPS‑180 approval on a portion of its 737‑900ER fleet, a move unusual for aircraft that do not operate transoceanic routes.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:10:31.244226+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/why-delta-air-lines-quietly-added-etops-certification-to-its-boeing-737-900ers.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Delta Air Lines Quietly Added ETOPS Certification To Its Boeing 737-900ERs Even Though They Don't Fly Transatlantic & Pacific Legs",
+          "url": "https://simpleflying.com/why-delta-air-lines-quietly-added-etops-boeing-737-900ers-dont-fly-transatlantic-pacific-legs/",
+          "feed_url": "https://simpleflying.com/why-delta-air-lines-quietly-added-etops-boeing-737-900ers-dont-fly-transatlantic-pacific-legs/",
+          "published": "2026-11-21T23:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Delta Flight Delays Taxiway Departure After Cabin Cat Escapes Kennel at Boston Logan",
+      "slug": "delta-flight-delays-taxiway-departure-after-cabin-cat-escapes-kennel-at-boston-log",
+      "url": "originals/delta-flight-delays-taxiway-departure-after-cabin-cat-escapes-kennel-at-boston-log.html",
+      "summary": "A Delta Air Lines flight bound for Tampa halted on a Boston taxiway for roughly 15 minutes when a cat got loose in the cabin, prompting a brief ATC hold and a light‑hearted exchange with controllers.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:10:43.738775+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/delta_n868dn_boeing_737-900_atlanta_-_april_2018_49054896001-golden-1795312984926-1.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Delta Air Lines Flight Halts Taxi In Boston After Cat Escapes Kennel, Runs Loose In Cabin",
+          "url": "https://simpleflying.com/delta-air-lines-flight-halts-taxi-boston-cat-escapes-kennel-runs-loose-cabin/",
+          "feed_url": "https://simpleflying.com/delta-air-lines-flight-halts-taxi-boston-cat-escapes-kennel-runs-loose-cabin/",
+          "published": "2026-11-21T21:40:38+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing Faces Continued Production Hurdles and Potential Workforce Reductions",
+      "slug": "boeing-faces-continued-production-hurdles-and-potential-workforce-reductions",
+      "url": "originals/boeing-faces-continued-production-hurdles-and-potential-workforce-reductions.html",
+      "summary": "As the manufacturer struggles to stabilize 737 MAX output, uncertainty remains regarding the scope of future layoffs.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:10:56.677084+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/row-of-boeing-737-max-airliners-parked-outside-the-renton-factory.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Boeing Weighs More Layoffs As 737 MAX Output Boost Slows",
+          "url": "https://simpleflying.com/boeing-wieighs-more-layoffs-737-max-output-slows/",
+          "feed_url": "https://simpleflying.com/boeing-wieighs-more-layoffs-737-max-output-slows/",
+          "published": "2026-11-21T21:14:01+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Why Commercial Jets Prefer the 35,000‑Foot Band for Cruise",
+      "slug": "why-commercial-jets-prefer-the-35-000-foot-band-for-cruise",
+      "url": "originals/why-commercial-jets-prefer-the-35-000-foot-band-for-cruise.html",
+      "summary": "Simple Flying explains that a blend of aerodynamics, engine efficiency, weather avoidance and operational constraints makes the mid‑upper stratosphere the sweet spot for most airliners, though the analysis rests on a single, uncorroborated source.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:11:08.617181+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1795114698425.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Airliners Cruise Around 35,000 Feet Instead Of Flying Lower Or Higher",
+          "url": "https://simpleflying.com/why-airliners-cruise-35000-feet/",
+          "feed_url": "https://simpleflying.com/why-airliners-cruise-35000-feet/",
+          "published": "2026-11-21T21:01:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing 777X Program Faces Multi-Year Delays as Airlines Prepare for Fleet Transitions",
+      "slug": "boeing-777x-program-faces-multi-year-delays-as-airlines-prepare-for-fleet-transiti",
+      "url": "originals/boeing-777x-program-faces-multi-year-delays-as-airlines-prepare-for-fleet-transiti.html",
+      "summary": "With over 600 orders on the books, the Boeing 777-9 remains a critical component of long-haul fleet strategies despite significant certification setbacks.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:11:22.943610+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1795178248341.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Airlines Set To Replace Their Boeing 777s With New 777-9s Throughout The 2030s",
+          "url": "https://simpleflying.com/airlines-replace-boeing-777s-new-7779s-throughout-2030s/",
+          "feed_url": "https://simpleflying.com/airlines-replace-boeing-777s-new-7779s-throughout-2030s/",
+          "published": "2026-11-21T20:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "AutoFlight Europe unveils the V5000 Matrix hybrid‑electric eVTOL",
+      "slug": "autoflight-europe-unveils-the-v5000-matrix-hybrid-electric-evtol",
+      "url": "originals/autoflight-europe-unveils-the-v5000-matrix-hybrid-electric-evtol.html",
+      "summary": "The 10‑seat V5000 Matrix, a lift‑plus‑cruise design with a lavatory and regional focus, has begun flight testing and is targeting CAAC certification, according to Aviation Week.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:11:26.414273+00:00",
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=85",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Autoflight V5000 Matrix",
+          "url": "https://aviationweek.com/node/4994461",
+          "feed_url": "https://aviationweek.com/node/4994461",
+          "published": "2026-03-31T07:48:56+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Turkey Finalizes $11 Billion Eurofighter Typhoon Acquisition",
+      "slug": "turkey-finalizes-11-billion-eurofighter-typhoon-acquisition",
+      "url": "originals/turkey-finalizes-11-billion-eurofighter-typhoon-acquisition.html",
+      "summary": "Ankara secures deal for 20 new-build combat aircraft with potential for further expansion through second-hand acquisitions.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:11:39.220399+00:00",
+      "image": "https://aviationweek.com/sites/default/files/2025-10/typhoon_1600px.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Turkey Signs $11 Billion Eurofighter Deal",
+          "url": "https://aviationweek.com/defense/aircraft-propulsion/turkey-signs-11-billion-eurofighter-deal",
+          "feed_url": "https://aviationweek.com/defense/aircraft-propulsion/turkey-signs-11-billion-eurofighter-deal",
+          "published": "2025-10-27T18:19:46+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Northrop Grumman’s Project Lotus Unveiled as Potential CCA Prototype",
+      "slug": "northrop-grumman-s-project-lotus-unveiled-as-potential-cca-prototype",
+      "url": "originals/northrop-grumman-s-project-lotus-unveiled-as-potential-cca-prototype.html",
+      "summary": "A previously hidden uncrewed aircraft system spotted at Scaled Composites may be Northrop’s entry for the Air Force’s Collaborative Combat Aircraft Increment 2 program, according to Aviation Week.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:11:45.111754+00:00",
+      "image": "https://aviationweek.com/sites/default/files/2025-10/screenshot_2025-10-27_scaled_composites_from_gmaps.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Project Lotus, Northrop Grumman’s Secret Autonomous Aircraft Revealed",
+          "url": "https://aviationweek.com/defense/aircraft-propulsion/project-lotus-northrop-grummans-secret-autonomous-aircraft-revealed",
+          "feed_url": "https://aviationweek.com/defense/aircraft-propulsion/project-lotus-northrop-grummans-secret-autonomous-aircraft-revealed",
+          "published": "2025-10-27T18:05:46+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Second B-21 Raider Test Aircraft Completes Maiden Flight",
+      "slug": "second-b-21-raider-test-aircraft-completes-maiden-flight",
+      "url": "originals/second-b-21-raider-test-aircraft-completes-maiden-flight.html",
+      "summary": "The U.S. Air Force and Northrop Grumman have reached a significant program milestone as a second B-21 flight-test airframe takes to the skies in California.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:11:57.675647+00:00",
+      "image": "https://aviationweek.com/sites/default/files/2025-09/b21awin_usairforce.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "Second B-21 Enters Flight Test In Palmdale",
+          "url": "https://aviationweek.com/defense/aircraft-propulsion/second-b-21-enters-flight-test-palmdale",
+          "feed_url": "https://aviationweek.com/defense/aircraft-propulsion/second-b-21-enters-flight-test-palmdale",
+          "published": "2025-09-11T18:36:44+00:00"
+        }
+      ]
+    },
+    {
+      "title": "EHang Advances VT35 eVTOL Toward Flight Testing Phase",
+      "slug": "ehang-advances-vt35-evtol-toward-flight-testing-phase",
+      "url": "originals/ehang-advances-vt35-evtol-toward-flight-testing-phase.html",
+      "summary": "Aviation Week reports that the Chinese maker’s two‑seat lift‑plus‑cruise electric vertical take‑off and landing aircraft has completed assembly and is slated for its inaugural public flight in December 2025, with certification pursued through the CAAC.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-22T10:12:03.724570+00:00",
+      "image": "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=1400&q=85",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Aviation Week",
+          "title": "EHang VT35",
+          "url": "https://aviationweek.com/node/4780076",
+          "feed_url": "https://aviationweek.com/node/4780076",
+          "published": "2025-07-29T08:58:34+00:00"
+        }
+      ]
+    },
     {
       "title": "Lufthansa Receives First A350‑1000 While Boeing 777‑9 Remains Delayed",
       "slug": "lufthansa-receives-first-a350-1000-while-boeing-777-9-remains-delayed",
@@ -1698,306 +1998,6 @@
           "url": "https://simpleflying.com/boeing-757-climbs-like-rocket-airbus-a321xlr-stuggles-reach-cruising-altitude-quickly/",
           "feed_url": "https://simpleflying.com/boeing-757-climbs-like-rocket-airbus-a321xlr-stuggles-reach-cruising-altitude-quickly/",
           "published": "2026-11-13T09:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "British Airways Grounds A321neo After Double Tail‑Strike at Heathrow",
-      "slug": "british-airways-grounds-a321neo-after-double-tail-strike-at-heathrow",
-      "url": "originals/british-airways-grounds-a321neo-after-double-tail-strike-at-heathrow.html",
-      "summary": "A British Airways Airbus A321neo suffered two successive tail‑strikes during a landing attempt at London Heathrow on 13 Nov 2026, prompting a temporary grounding while investigations commence.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:54:39.463527+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1794541635186.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "British Airways Grounds Airbus A321neo After Double Tail Strike During Landing In London",
-          "url": "https://simpleflying.com/british-airways-grounds-airbus-a321neo-double-tail-strike-landing-london/",
-          "feed_url": "https://simpleflying.com/british-airways-grounds-airbus-a321neo-double-tail-strike-landing-london/",
-          "published": "2026-11-13T08:51:38+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Severe hailstorm prompts inspections of over two dozen American Airlines jets at Philadelphia International Airport",
-      "slug": "severe-hailstorm-prompts-inspections-of-over-two-dozen-american-airlines-jets-at-p",
-      "url": "originals/severe-hailstorm-prompts-inspections-of-over-two-dozen-american-airlines-jets-at-p.html",
-      "summary": "A sudden hail event in the Philadelphia region forced ground stops, extensive aircraft inspections and widespread flight delays across the Northeast, according to Simple Flying.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:54:42.512953+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/american-eagle-airlines-embraer-erj-145-n694ae-at-philadelphia-international-airport-pennsylvania-usa.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Severe Hail Storm Forces Inspections Of Over 2 Dozen American Airlines Jets In Philadelphia",
-          "url": "https://simpleflying.com/severe-hail-storm-inspections-2-dozen-american-airlines-jets-philadelphia/",
-          "feed_url": "https://simpleflying.com/severe-hail-storm-inspections-2-dozen-american-airlines-jets-philadelphia/",
-          "published": "2026-11-13T06:15:11+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Intersecting Runways at Major U.S. Hubs Pose Capacity and Coordination Challenges, Simple Flying Reports",
-      "slug": "intersecting-runways-at-major-u-s-hubs-pose-capacity-and-coordination-challenges-s",
-      "url": "originals/intersecting-runways-at-major-u-s-hubs-pose-capacity-and-coordination-challenges-s.html",
-      "summary": "Simple Flying outlines how intersecting runway layouts at busy airports such as LaGuardia limit operational capacity and demand heightened air‑traffic control coordination, while noting that pinwheel designs like Denver’s avoid these issues but require extensive land.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:54:49.159219+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/5-busy-airports-where-intersecting-runways-complicate-takeoffs-landings.jpg",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "5 Busy Airports Where Intersecting Runways Complicate Takeoffs & Landings",
-          "url": "https://simpleflying.com/5-busy-airports-intersecting-runways-complicate-takeoffs-landings/",
-          "feed_url": "https://simpleflying.com/5-busy-airports-intersecting-runways-complicate-takeoffs-landings/",
-          "published": "2026-11-13T06:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Boeing Secures F-47 Contract: A Strategic Shift in US Air Dominance",
-      "slug": "boeing-secures-f-47-contract-a-strategic-shift-in-us-air-dominance",
-      "url": "originals/boeing-secures-f-47-contract-a-strategic-shift-in-us-air-dominance.html",
-      "summary": "The selection of Boeing for the F-47 program marks a significant departure from Lockheed Martin's long-standing dominance in stealth fighter development.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:55:01.677039+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/10/f47s.jpg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The Real Reason Why Boeing Is Building The F-47 Stealth Fighter And Not Lockheed",
-          "url": "https://simpleflying.com/real-reason-why-boeing-is-building-f-47-stealth-fighter-and-not-lockheed/",
-          "feed_url": "https://simpleflying.com/real-reason-why-boeing-is-building-f-47-stealth-fighter-and-not-lockheed/",
-          "published": "2026-11-13T02:45:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Boeing Sticks With Aluminum on 747‑8 While Airbus Opted for Hybrid GLARE on A380",
-      "slug": "boeing-sticks-with-aluminum-on-747-8-while-airbus-opted-for-hybrid-glare-on-a380",
-      "url": "originals/boeing-sticks-with-aluminum-on-747-8-while-airbus-opted-for-hybrid-glare-on-a380.html",
-      "summary": "Simple Flying explains that Boeing’s material decision was driven by production continuity and cost, whereas Airbus pursued limited hybrid use despite similar market pressures.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:55:07.748254+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/why-boeing-chose-traditional-aluminum-for-the-747-8-s-fuselage-when-airbus-used-hybrid-material-on-the-a380.jpg",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why Boeing Chose Traditional Aluminum For The 747-8's Fuselage When Airbus Used Hybrid Material On The A380",
-          "url": "https://simpleflying.com/why-boeing-chose-traditional-aluminum-747-8-fuselage-airbus-hybrid-material-a380/",
-          "feed_url": "https://simpleflying.com/why-boeing-chose-traditional-aluminum-747-8-fuselage-airbus-hybrid-material-a380/",
-          "published": "2026-11-13T02:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Understanding Cabin Crew Reporting Protocols and Pre-Flight Responsibilities",
-      "slug": "understanding-cabin-crew-reporting-protocols-and-pre-flight-responsibilities",
-      "url": "originals/understanding-cabin-crew-reporting-protocols-and-pre-flight-responsibilities.html",
-      "summary": "An examination of the standardized reporting timelines and essential safety duties performed by cabin crew before passenger boarding.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:55:21.209075+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/flight-attendants-2.png",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How Early Do Flight Attendants Need To Be At The Airport Before Working A Flight?",
-          "url": "https://simpleflying.com/early-flight-attendants-airport-before-flight/",
-          "feed_url": "https://simpleflying.com/early-flight-attendants-airport-before-flight/",
-          "published": "2026-11-13T01:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "C‑17 Globemaster III’s Built‑In Reverse‑Taxi Capability Sets It Apart Among Strategic Airlifters",
-      "slug": "c-17-globemaster-iii-s-built-in-reverse-taxi-capability-sets-it-apart-among-strate",
-      "url": "originals/c-17-globemaster-iii-s-built-in-reverse-taxi-capability-sets-it-apart-among-strate.html",
-      "summary": "Simple Flying explains how the Boeing C‑17’s design enables it to back up under its own power, a rare trait for large jet transports that enhances flexibility on austere runways.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:55:33.486067+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/raf-globemaster-iii-on-snowy-field.png",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why The C-17 Globemaster Can Taxi Backwards Without A Tow Truck",
-          "url": "https://simpleflying.com/why-c-17-globemaster-taxi-backward-no-tow-truck/",
-          "feed_url": "https://simpleflying.com/why-c-17-globemaster-taxi-backward-no-tow-truck/",
-          "published": "2026-11-13T00:01:49+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Alaska Airlines Announces Five-Route Expansion from Seattle-Tacoma Hub for 2027",
-      "slug": "alaska-airlines-announces-five-route-expansion-from-seattle-tacoma-hub-for-2027",
-      "url": "originals/alaska-airlines-announces-five-route-expansion-from-seattle-tacoma-hub-for-2027.html",
-      "summary": "Despite recent financial headwinds, the carrier is set to bolster its Pacific Northwest network with new domestic and international service.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:55:46.176453+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/alaska_airlines_centered_1920x1080.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Alaska Airlines Grows More With 4 New US Cities From Seattle & 1 Seasonal Route To Mexico In 2027",
-          "url": "https://simpleflying.com/alaska-airlines-grows-4-new-us-cities-seattle-1-seasonal-route-mexico/",
-          "feed_url": "https://simpleflying.com/alaska-airlines-grows-4-new-us-cities-seattle-1-seasonal-route-mexico/",
-          "published": "2026-11-12T23:38:31+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Boeing 787‑9 Operators Face Divergent Maintenance Costs Between GE and Rolls‑Royce Powerplants",
-      "slug": "boeing-787-9-operators-face-divergent-maintenance-costs-between-ge-and-rolls-royce",
-      "url": "originals/boeing-787-9-operators-face-divergent-maintenance-costs-between-ge-and-rolls-royce.html",
-      "summary": "Simple Flying explains how engineering differences between the GEnx‑1B and Trent 1000 engines translate into multi‑million‑dollar cost gaps for 787‑9 airlines, and why the original dual‑engine strategy now creates distinct financial commitments.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-13T09:55:49.379092+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/why-boeing-787-9-airlines-face-different-maintenance-costs-with-rolls-royce-ge-engines.jpg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why Boeing 787-9 Airlines Face Different Maintenance Costs With Rolls-Royce & GE Engines",
-          "url": "https://simpleflying.com/why-boeing-787-9-airlines-face-different-maintenance-costs-rolls-royce-ge-engines/",
-          "feed_url": "https://simpleflying.com/why-boeing-787-9-airlines-face-different-maintenance-costs-rolls-royce-ge-engines/",
-          "published": "2026-11-12T23:00:38+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Qantas Reduces Economy Seats on New A321XLR to Add Extra Lavatory",
-      "slug": "qantas-reduces-economy-seats-on-new-a321xlr-to-add-extra-lavatory",
-      "url": "originals/qantas-reduces-economy-seats-on-new-a321xlr-to-add-extra-lavatory.html",
-      "summary": "The Australian carrier reconfigured its first long‑range narrow‑body jet, swapping three economy seats for a fourth bathroom after passenger backlash, a move reported solely by Simple Flying.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-12T10:09:25.174479+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/the-qantas-airbus-a321xlr-that-has-3-fewer-economy-seats.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The Qantas Airbus A321XLR That Has 3 Fewer Economy Seats",
-          "url": "https://simpleflying.com/qantas-airbus-a321xlr-3-fewer-economy-seats/",
-          "feed_url": "https://simpleflying.com/qantas-airbus-a321xlr-3-fewer-economy-seats/",
-          "published": "2026-11-12T09:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Alaska Airlines passengers left on Red Cross cots after Yakima diversion, no hotel assistance provided",
-      "slug": "alaska-airlines-passengers-left-on-red-cross-cots-after-yakima-diversion-no-hotel-",
-      "url": "originals/alaska-airlines-passengers-left-on-red-cross-cots-after-yakima-diversion-no-hotel-.html",
-      "summary": "A weather‑forced diversion of flight AS322 to Yakima Air Terminal resulted in an overnight stay on Red Cross cots, with the carrier citing the diversion as weather‑related and declining to offer hotel rooms or meal vouchers, according to Simple Flying.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-12T10:09:28.531310+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/alaska-airlines-boeing-737-900er-on-the-runway.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Diverted Alaska Airlines Passengers Sleep On Red Cross Cots As Carrier Won't Cover Hotels",
-          "url": "https://simpleflying.com/alaska-airlines-yakima-diversion-red-cross-cots-no-hotels/",
-          "feed_url": "https://simpleflying.com/alaska-airlines-yakima-diversion-red-cross-cots-no-hotels/",
-          "published": "2026-11-12T07:29:10+00:00"
-        }
-      ]
-    },
-    {
-      "title": "United Airlines Bars AI Assistants from Booking and Check‑In",
-      "slug": "united-airlines-bars-ai-assistants-from-booking-and-check-in",
-      "url": "originals/united-airlines-bars-ai-assistants-from-booking-and-check-in.html",
-      "summary": "The carrier adds a clause to its Contract of Carriage prohibiting third‑party AI tools from creating, altering or servicing tickets, citing data‑security and regulatory risks.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-12T10:09:31.353308+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/united-airlines-planes-at-the-gate-2.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "United Airlines Officially Bans AI Agents From Booking Your Flights And Checking You In",
-          "url": "https://simpleflying.com/united-airlines-bans-ai-agents-booking-flights-check-in/",
-          "feed_url": "https://simpleflying.com/united-airlines-bans-ai-agents-booking-flights-check-in/",
-          "published": "2026-11-12T07:00:12+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Sole‑Source Engine Partnerships Shape Modern Airliner Design",
-      "slug": "sole-source-engine-partnerships-shape-modern-airliner-design",
-      "url": "originals/sole-source-engine-partnerships-shape-modern-airliner-design.html",
-      "summary": "Manufacturers such as Boeing and Airbus increasingly lock new models to a single engine maker, a strategy that streamlines engineering but concentrates risk, according to Simple Flying.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-12T10:09:43.171339+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/mostboeingflights-20261102-175353.jpg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why Some Modern Airliners Have Just One Engine Supplier",
-          "url": "https://simpleflying.com/why-modern-airliners-have-single-engine-suppliers/",
-          "feed_url": "https://simpleflying.com/why-modern-airliners-have-single-engine-suppliers/",
-          "published": "2026-11-12T06:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "The Stargazer: Examining the Last Airworthy Lockheed L-1011 TriStar",
-      "slug": "the-stargazer-examining-the-last-airworthy-lockheed-l-1011-tristar",
-      "url": "originals/the-stargazer-examining-the-last-airworthy-lockheed-l-1011-tristar.html",
-      "summary": "As the aviation industry moves toward modern efficiency, one Lockheed L-1011 TriStar remains operational, serving a specialized role in aerospace research and satellite deployment.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-12T10:09:58.800954+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/08/the-last-lockheed-l-1011-tristar-still-airworthy.jpg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The Last Lockheed L‑1011 TriStar Still Airworthy",
-          "url": "https://simpleflying.com/the-last-lockheed-tristar-still-airworthy/",
-          "feed_url": "https://simpleflying.com/the-last-lockheed-tristar-still-airworthy/",
-          "published": "2026-11-12T02:45:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Guam International Airport Serves as Key United Hub in the Pacific, Though Its Tourist Pull Wanes",
-      "slug": "guam-international-airport-serves-as-key-united-hub-in-the-pacific-though-its-tour",
-      "url": "originals/guam-international-airport-serves-as-key-united-hub-in-the-pacific-though-its-tour.html",
-      "summary": "Simple Flying reports that Antonio B. Won Pat International Airport anchors United’s island‑hopping network across Micronesia, yet the facility faces declining tourism and limited connectivity beyond the region.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-12T10:10:02.060909+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/guam-airport-20261111-110608.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "3 Hours At Immigration: My Journey Through One Of America's Most Remote Airport Hubs",
-          "url": "https://simpleflying.com/review-guam-international-airport/",
-          "feed_url": "https://simpleflying.com/review-guam-international-airport/",
-          "published": "2026-11-12T02:00:17+00:00"
         }
       ]
     }
