@@ -1,6 +1,206 @@
 {
-  "updated": "2026-11-24T12:54:05.723517+00:00",
+  "updated": "2026-11-25T11:40:59.631797+00:00",
   "articles": [
+    {
+      "title": "Gulfstream G700 Leads 2026’s Push for Automated, Fatigue‑Reducing Flight Decks, Simple Flying Reports",
+      "slug": "gulfstream-g700-leads-2026-s-push-for-automated-fatigue-reducing-flight-decks-simp",
+      "url": "originals/gulfstream-g700-leads-2026-s-push-for-automated-fatigue-reducing-flight-decks-simp.html",
+      "summary": "A Simple Flying feature highlights the Gulfstream G700’s linked sidesticks, dual HUDs and fresh‑air cabin system as exemplars of the year’s move toward greater situational awareness and pilot workload reduction, while noting limited coverage of other aircraft.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:38:37.435405+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/04/technologically-advanced.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 Aircraft That Pilots Say Are The Most Technologically Advanced",
+          "url": "https://simpleflying.com/5-aircraft-pilots-say-are-most-technologically-advanced/",
+          "feed_url": "https://simpleflying.com/5-aircraft-pilots-say-are-most-technologically-advanced/",
+          "published": "2026-11-25T10:15:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "British Airways retires 747‑400 fleet, pivots to Airbus A350‑1000",
+      "slug": "british-airways-retires-747-400-fleet-pivots-to-airbus-a350-1000",
+      "url": "originals/british-airways-retires-747-400-fleet-pivots-to-airbus-a350-1000.html",
+      "summary": "The UK flag carrier has phased out its historic quad‑jet fleet, replacing it with a modest fleet of twin‑engine A350‑1000s, a shift accelerated by the COVID‑19 pandemic.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:38:41.294290+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/04/airline-economics.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why British Airways Decided To Replace Its Longstanding Quadjet Fleet With Large Twin-Engine Airbus A350-1000s",
+          "url": "https://simpleflying.com/why-british-airways-decided-replace-longstanding-quadjet-fleet-large-twin-engine-airbus-a350s/",
+          "feed_url": "https://simpleflying.com/why-british-airways-decided-replace-longstanding-quadjet-fleet-large-twin-engine-airbus-a350s/",
+          "published": "2026-11-25T09:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Malaysia Airlines Orders Boeing 787‑10 Dreamliners to Phase Out A350 Fleet",
+      "slug": "malaysia-airlines-orders-boeing-787-10-dreamliners-to-phase-out-a350-fleet",
+      "url": "originals/malaysia-airlines-orders-boeing-787-10-dreamliners-to-phase-out-a350-fleet.html",
+      "summary": "The carrier has signed a deal for up to 16 stretched Dreamliners, with deliveries slated for the early‑to‑mid‑2030s, marking Malaysia’s first Boeing 787 operation and a major step in its fleet renewal plan.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:38:44.469641+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/simpleflying-boeing-787-10-malaysia-airlines-1795594451259.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Malaysia Airlines Picks Boeing Over Airbus For Its First 787 Dreamliners To Replace A350s",
+          "url": "https://simpleflying.com/malaysia-airlines-picks-boeing-over-airbus-787-10-dreamliners-replace-a350s/",
+          "feed_url": "https://simpleflying.com/malaysia-airlines-picks-boeing-over-airbus-787-10-dreamliners-replace-a350s/",
+          "published": "2026-11-25T08:51:11+00:00"
+        }
+      ]
+    },
+    {
+      "title": "British Airways 787-10 Declares Emergency Over North Atlantic Amid Second Oil Leak in Ten Days",
+      "slug": "british-airways-787-10-declares-emergency-over-north-atlantic-amid-second-oil-leak",
+      "url": "originals/british-airways-787-10-declares-emergency-over-north-atlantic-amid-second-oil-leak.html",
+      "summary": "A British Airways Dreamliner (G‑ZBLC) reported an engine oil leak on a transatlantic flight to Boston, squawking 7700 and landing safely after a controlled descent, marking the aircraft's second oil‑related incident within ten days, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:38:48.246904+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/british-airways-boeing-787-10-being-towed-on-runway.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Boston-Bound British Airways 787-10 Declares Emergency Over Second Oil Leak In 10 Days",
+          "url": "https://simpleflying.com/british-airways-boeing-787-10-boston-emergency-second-oil-leak-10-days/",
+          "feed_url": "https://simpleflying.com/british-airways-boeing-787-10-boston-emergency-second-oil-leak-10-days/",
+          "published": "2026-11-25T06:57:09+00:00"
+        }
+      ]
+    },
+    {
+      "title": "The Boeing 747's Unexpected Return to the Delta Air Lines Fleet",
+      "slug": "the-boeing-747-s-unexpected-return-to-the-delta-air-lines-fleet",
+      "url": "originals/the-boeing-747-s-unexpected-return-to-the-delta-air-lines-fleet.html",
+      "summary": "After retiring its original fleet in the 1970s, Delta Air Lines found itself operating the 'Queen of the Skies' once more following a major corporate merger.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:39:02.691489+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/10/delta.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Delta Air Lines Thought It Said Goodbye To Queen Of The Skies Until It Had No Choice But To Fly It Again 31 Years Later",
+          "url": "https://simpleflying.com/delta-air-lines-goodbye-queen-skies-no-choice-fly-again-31-years-later/",
+          "feed_url": "https://simpleflying.com/delta-air-lines-goodbye-queen-skies-no-choice-fly-again-31-years-later/",
+          "published": "2026-11-25T06:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "US Army Plans to Resume Helicopter Training Near Washington DC After 2025 Fatal Crash",
+      "slug": "us-army-plans-to-resume-helicopter-training-near-washington-dc-after-2025-fatal-cr",
+      "url": "originals/us-army-plans-to-resume-helicopter-training-near-washington-dc-after-2025-fatal-cr.html",
+      "summary": "The service seeks FAA approval to restart Black Hawk training flights in the restricted Potomac corridor the week of Dec. 6, 2026, two years after a mid‑air collision killed 67 people.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:39:06.163232+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2024/08/artboard-16_9-51.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "US Army Moves To Restart Washington DC Helicopter Training Flights 2 Years After Deadly Crash",
+          "url": "https://simpleflying.com/us-army-restart-washington-dc-helicopter-training-flights-2-years-crash/",
+          "feed_url": "https://simpleflying.com/us-army-restart-washington-dc-helicopter-training-flights-2-years-crash/",
+          "published": "2026-11-25T02:13:22+00:00"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Military Eyes Yap International Airport Expansion to Diversify Pacific Air Presence",
+      "slug": "u-s-military-eyes-yap-international-airport-expansion-to-diversify-pacific-air-pre",
+      "url": "originals/u-s-military-eyes-yap-international-airport-expansion-to-diversify-pacific-air-pre.html",
+      "summary": "Simple Flying reports that the United States plans to upgrade Yap’s airfield under its Agile Combat Employment doctrine, aiming to lessen reliance on Guam amid rising China‑U.S. competition.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:39:19.669853+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/040422-f-0000s-002-1.jpeg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why The US Military Is Expanding A Remote Pacific Airport To Reduce Its Reliance On Guam",
+          "url": "https://simpleflying.com/us-military-pacific-airport-expansion-guam/",
+          "feed_url": "https://simpleflying.com/us-military-pacific-airport-expansion-guam/",
+          "published": "2026-11-25T00:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "American Airlines Concludes Legal Challenge Over Chicago O'Hare Gate Allocation",
+      "slug": "american-airlines-concludes-legal-challenge-over-chicago-o-hare-gate-allocation",
+      "url": "originals/american-airlines-concludes-legal-challenge-over-chicago-o-hare-gate-allocation.html",
+      "summary": "After an 18-month dispute regarding infrastructure at Chicago O'Hare, American Airlines has moved to dismiss its lawsuit, signaling a shift in strategy despite ongoing competitive tensions.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:39:34.754118+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/american_chicago_skyline_1920x1080.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "American Airlines Drops Chicago Gate Lawsuit, But Doubles Down On Turf War With United",
+          "url": "https://simpleflying.com/american-airlines-chicago-lawsuit-turf-war-united/",
+          "feed_url": "https://simpleflying.com/american-airlines-chicago-lawsuit-turf-war-united/",
+          "published": "2026-11-24T22:32:21+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Air France Extends Airbus A318 Service to March 2027, Spotting Opportunities Emerge",
+      "slug": "air-france-extends-airbus-a318-service-to-march-2027-spotting-opportunities-emerge",
+      "url": "originals/air-france-extends-airbus-a318-service-to-march-2027-spotting-opportunities-emerge.html",
+      "summary": "Air France’s last four A318s will continue operating domestic and intra‑European routes from Paris CDG until late March 2027, with the carrier gradually replacing them with A220‑300s.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:39:47.321428+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/spot-the-air-france-airbus-1.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Where To Spot The Air France Airbus A318 Before It Finally Retires",
+          "url": "https://simpleflying.com/where-to-spot-air-france-airbus-a318/",
+          "feed_url": "https://simpleflying.com/where-to-spot-air-france-airbus-a318/",
+          "published": "2026-11-24T22:00:19+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Air Canada Adjusts International Network with Eight Route Cancellations",
+      "slug": "air-canada-adjusts-international-network-with-eight-route-cancellations",
+      "url": "originals/air-canada-adjusts-international-network-with-eight-route-cancellations.html",
+      "summary": "The Canadian flag carrier is scaling back its international footprint, citing a combination of long-haul economic pressures and a significant decline in US-bound flight volume.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-25T11:40:59.631496+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/111.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Air Canada Axes 8 International Routes: See Full List Now",
+          "url": "https://simpleflying.com/air-canada-axes-8-international-routes/",
+          "feed_url": "https://simpleflying.com/air-canada-axes-8-international-routes/",
+          "published": "2026-11-24T21:00:19+00:00"
+        }
+      ]
+    },
     {
       "title": "Selfridge Air National Guard Base to Receive $1.15 B Runway Expansion for Next‑Gen Fighters",
       "slug": "selfridge-air-national-guard-base-to-receive-1-15-b-runway-expansion-for-next-gen-",
@@ -1798,206 +1998,6 @@
           "url": "https://simpleflying.com/what-a-2nd-captain-adds-to-the-cost-of-american-airlines-16-hour-jfk-delhi-flight/",
           "feed_url": "https://simpleflying.com/what-a-2nd-captain-adds-to-the-cost-of-american-airlines-16-hour-jfk-delhi-flight/",
           "published": "2026-11-16T03:00:28+00:00"
-        }
-      ]
-    },
-    {
-      "title": "US Air Force Increases Security Posture at Overseas Bases Amid Ongoing Iran Conflict",
-      "slug": "us-air-force-increases-security-posture-at-overseas-bases-amid-ongoing-iran-confli",
-      "url": "originals/us-air-force-increases-security-posture-at-overseas-bases-amid-ongoing-iran-confli.html",
-      "summary": "Strategic evacuations and heightened alert levels reported at UK installations following regional instability.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:06:13.710103+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/why-the-us-air-force-is-on-high-alert-over-security-levels-at-overseas-bases.jpg",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why The US Air Force Is On High Alert Over Security Levels At Overseas Bases",
-          "url": "https://simpleflying.com/usaf-high-alter-security-levels-overseas-bases/",
-          "feed_url": "https://simpleflying.com/usaf-high-alter-security-levels-overseas-bases/",
-          "published": "2026-11-16T02:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Boeing 747’s Iconic Upper Deck Was Born From Cargo‑Nose Planning, Not Luxury Intent",
-      "slug": "boeing-747-s-iconic-upper-deck-was-born-from-cargo-nose-planning-not-luxury-intent",
-      "url": "originals/boeing-747-s-iconic-upper-deck-was-born-from-cargo-nose-planning-not-luxury-intent.html",
-      "summary": "Simple Flying explains that the famous hump on the original 747 resulted from a 1965 design decision to accommodate future freighter conversion, not from a desire to create a high‑end passenger lounge.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:06:25.879044+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/pia_boeing_747-300_sds-1-1.jpg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The Boeing 747's Most Recognizable & Luxurious Feature Wasn't Originally Intended For Passengers",
-          "url": "https://simpleflying.com/boeing-747-most-recognizable-luxurious-feature-wasnt-originally-intended-passengers/",
-          "feed_url": "https://simpleflying.com/boeing-747-most-recognizable-luxurious-feature-wasnt-originally-intended-passengers/",
-          "published": "2026-11-16T01:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "United Airlines Continues Operations with World's Oldest Active Boeing 777",
-      "slug": "united-airlines-continues-operations-with-world-s-oldest-active-boeing-777",
-      "url": "originals/united-airlines-continues-operations-with-world-s-oldest-active-boeing-777.html",
-      "summary": "As the second airframe produced in the 777 series, N7774UA maintains a rigorous schedule of domestic and Hawaii-bound routes three decades after its maiden flight.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:06:38.618585+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/world-s-oldest-boeing-777.png",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "We Tracked The World’s Oldest Boeing 777 For A Week",
-          "url": "https://simpleflying.com/tracked-world-oldest-boeing-777-week/",
-          "feed_url": "https://simpleflying.com/tracked-world-oldest-boeing-777-week/",
-          "published": "2026-11-16T01:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Boeing 757-300: The Longest Narrow‑Body Twinjet That Defies Retirement",
-      "slug": "boeing-757-300-the-longest-narrow-body-twinjet-that-defies-retirement",
-      "url": "originals/boeing-757-300-the-longest-narrow-body-twinjet-that-defies-retirement.html",
-      "summary": "Despite modest sales and mixed market reception, the stretched 757‑300 remains in service with United and Delta, creating a unique replacement dilemma for legacy carriers.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:06:45.015700+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/757-1.jpg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why The Longest Single-Aisle Twinjet Ever Built Is An Aircraft Hard For Airlines To Get Rid Of",
-          "url": "https://simpleflying.com/longest-single-aisle-twinjet-ever-built-aircraft-hard-airlines-get-rid-of/",
-          "feed_url": "https://simpleflying.com/longest-single-aisle-twinjet-ever-built-aircraft-hard-airlines-get-rid-of/",
-          "published": "2026-11-16T00:00:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "The Engineering Behind the KC-135Q: Supporting the SR-71 Blackbird",
-      "slug": "the-engineering-behind-the-kc-135q-supporting-the-sr-71-blackbird",
-      "url": "originals/the-engineering-behind-the-kc-135q-supporting-the-sr-71-blackbird.html",
-      "summary": "How specialized aerial refueling tankers were engineered to manage the unique fuel requirements of the world's fastest crewed jet.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:06:57.677672+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/why-the-sr-71-blackbird-needed-special-kc-135-tankers-just-to-refuel.jpg",
-      "category": "Aircraft",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why The SR-71 Blackbird Needed Special KC-135 Tankers Just To Refuel",
-          "url": "https://simpleflying.com/why-sr-71-blackbird-needed-special-kc-135-tankers/",
-          "feed_url": "https://simpleflying.com/why-sr-71-blackbird-needed-special-kc-135-tankers/",
-          "published": "2026-11-15T23:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Live Snakes Found in Checked Luggage at Ontario International Airport",
-      "slug": "live-snakes-found-in-checked-luggage-at-ontario-international-airport",
-      "url": "originals/live-snakes-found-in-checked-luggage-at-ontario-international-airport.html",
-      "summary": "TSA officers uncovered two live snakes, including a rattlesnake, hidden in a passenger’s suitcase, prompting a brief security shutdown and police involvement.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:07:00.270906+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/shutterstock_2593894317_cropped.jpg",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Slithery Discovery: Ontario International Airport TSA Agents Find 2 Live Snakes In Checked Bag",
-          "url": "https://simpleflying.com/ontario-international-airport-tsa-agents-find-2-live-snakes-checked-bag/",
-          "feed_url": "https://simpleflying.com/ontario-international-airport-tsa-agents-find-2-live-snakes-checked-bag/",
-          "published": "2026-11-15T22:55:54+00:00"
-        }
-      ]
-    },
-    {
-      "title": "US airlines plan larger first‑class cabins on the newly certified Boeing 737 MAX 10",
-      "slug": "us-airlines-plan-larger-first-class-cabins-on-the-newly-certified-boeing-737-max-1",
-      "url": "originals/us-airlines-plan-larger-first-class-cabins-on-the-newly-certified-boeing-737-max-1.html",
-      "summary": "Four major U.S. carriers intend to equip the incoming 737 MAX 10 with 24 first‑class seats, a step up from the 20‑seat layouts previously expected, as they chase growing premium demand.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-15T09:48:50.480764+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-737-max-10.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How The Boeing 737 MAX 10 Is Growing First Class On US Airlines",
-          "url": "https://simpleflying.com/how-boeing-737-max-10-growing-first-class-flying-us/",
-          "feed_url": "https://simpleflying.com/how-boeing-737-max-10-growing-first-class-flying-us/",
-          "published": "2026-11-15T08:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "UPS Boeing 767 freighter collides with Copa Airlines 737 on Miami taxiway",
-      "slug": "ups-boeing-767-freighter-collides-with-copa-airlines-737-on-miami-taxiway",
-      "url": "originals/ups-boeing-767-freighter-collides-with-copa-airlines-737-on-miami-taxiway.html",
-      "summary": "A taxiway incident at Miami International Airport left two crew members with minor injuries and prompted an FAA investigation, after the cargo aircraft failed to yield to the arriving passenger jet.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-15T09:48:53.406778+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/ups-airlines-boeing-767-on-the-runway.jpg",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "‘Somebody Hit Us’: UPS Boeing 767 Collides With Copa 737 In Miami After Taxiing Too Far",
-          "url": "https://simpleflying.com/ups-boeing-767-collides-copa-737-miami-airport-taxiway/",
-          "feed_url": "https://simpleflying.com/ups-boeing-767-collides-copa-737-miami-airport-taxiway/",
-          "published": "2026-11-15T06:48:04+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Emirates Refits A380s While Qantas Accelerates Superjumbo Retirement, Simple Flying Reports",
-      "slug": "emirates-refits-a380s-while-qantas-accelerates-superjumbo-retirement-simple-flying",
-      "url": "originals/emirates-refits-a380s-while-qantas-accelerates-superjumbo-retirement-simple-flying.html",
-      "summary": "Simple Flying notes that Emirates is stripping its Airbus A380s back to the airframe and investing heavily in interior rebuilds, whereas Qantas is pulling its A380s out of service four years ahead of schedule, highlighting contrasting approaches to the world’s largest passenger jet.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-15T09:48:56.920779+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/cover-pic-1.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Emirates Is Stripping Its Airbus A380s To 'Bare Metal' While Qantas Retires Its Superjumbos 4 Years Early",
-          "url": "https://simpleflying.com/emirates-stripping-airbus-a380s-bare-metal-qantas-retires-superjumbos-4-years-early/",
-          "feed_url": "https://simpleflying.com/emirates-stripping-airbus-a380s-bare-metal-qantas-retires-superjumbos-4-years-early/",
-          "published": "2026-11-15T05:30:01+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Delta Remains Sole US Carrier Operating Mainline Jets Under 110 Seats",
-      "slug": "delta-remains-sole-us-carrier-operating-mainline-jets-under-110-seats",
-      "url": "originals/delta-remains-sole-us-carrier-operating-mainline-jets-under-110-seats.html",
-      "summary": "Delta’s continued use of the 109‑seat A220‑100 and 110‑seat Boeing 717 reflects a mix of pilot agreements, acquisition cost advantages and niche market needs, according to Simple Flying.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-15T09:48:59.494548+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/cover-photo.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The Hidden Math Behind Delta Air Lines Being The Only US Carrier Flying Mainline Jets With Under 110 Seats",
-          "url": "https://simpleflying.com/hidden-math-delta-air-lines-only-us-carrer-mainline-jets-under-110-seats/",
-          "feed_url": "https://simpleflying.com/hidden-math-delta-air-lines-only-us-carrer-mainline-jets-under-110-seats/",
-          "published": "2026-11-14T23:00:18+00:00"
         }
       ]
     }
