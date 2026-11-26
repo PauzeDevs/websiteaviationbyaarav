@@ -1,6 +1,166 @@
 {
-  "updated": "2026-11-25T11:40:59.631797+00:00",
+  "updated": "2026-11-26T11:26:31.560809+00:00",
   "articles": [
+    {
+      "title": "Boeing 777X cabin redesign promises efficiency and comfort gains",
+      "slug": "boeing-777x-cabin-redesign-promises-efficiency-and-comfort-gains",
+      "url": "originals/boeing-777x-cabin-redesign-promises-efficiency-and-comfort-gains.html",
+      "summary": "Simple Flying reports that the new 777X interior, inspired by the 787, offers wider fuselage, larger windows and re‑shaped overhead bins, aiming to boost airline economics and passenger experience.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-26T11:23:48.680106+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/11/the-boeing-777x-s-unique-cabin-design-that-sets-it-apart-from-others.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why The Boeing 777X’s New Cabin Architecture Will Be Such A Game Changer For Airlines",
+          "url": "https://simpleflying.com/boeing-777x-new-cabin-architecture-game-changer-for-airlines/",
+          "feed_url": "https://simpleflying.com/boeing-777x-new-cabin-architecture-game-changer-for-airlines/",
+          "published": "2026-11-26T10:15:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Proposed 10% Tariff on Embraer Jets Could Impact US Regional Fleets",
+      "slug": "proposed-10-tariff-on-embraer-jets-could-impact-us-regional-fleets",
+      "url": "originals/proposed-10-tariff-on-embraer-jets-could-impact-us-regional-fleets.html",
+      "summary": "A U.S. trade proposal to levy a 10% duty on Brazilian‑made aircraft may add hundreds of millions to the price of Embraer jets already ordered by American carriers, according to Simple Flying.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-26T11:23:51.898404+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/american-eagle-embraer-erj175.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Hundreds Of New Embraer Jets Headed To US Airlines Caught Up In Trump's 10% Tariff Plan",
+          "url": "https://simpleflying.com/embraer-jets-us-airlines-trump-10-percent-tariff-plan/",
+          "feed_url": "https://simpleflying.com/embraer-jets-us-airlines-trump-10-percent-tariff-plan/",
+          "published": "2026-11-26T09:33:20+00:00"
+        }
+      ]
+    },
+    {
+      "title": "United Airlines to Phase Out Boeing 767‑300ERs on Chicago‑Heathrow Route with New 787‑9 “Elevated” Dreamliners",
+      "slug": "united-airlines-to-phase-out-boeing-767-300ers-on-chicago-heathrow-route-with-new-",
+      "url": "originals/united-airlines-to-phase-out-boeing-767-300ers-on-chicago-heathrow-route-with-new-.html",
+      "summary": "United plans to replace its aging 767‑300ER business‑shuttle fleet on the Chicago O’Hare‑London Heathrow corridor with a 222‑seat, high‑density Boeing 787‑9 configuration, targeting full 767 retirement by 2030.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-26T11:23:55.154852+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1795374108077.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Aircraft Replacing The Boeing 767-300ER On United Airlines’ Chicago O’Hare To London Heathrow Route",
+          "url": "https://simpleflying.com/aircraft-replacing-boeing-767-300er-united-airlines-chicago-ohare-london-heathrow-route/",
+          "feed_url": "https://simpleflying.com/aircraft-replacing-boeing-767-300er-united-airlines-chicago-ohare-london-heathrow-route/",
+          "published": "2026-11-26T09:01:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Behind the Scenes: What Flight Attendants Do the Moment the Cabin Door Closes",
+      "slug": "behind-the-scenes-what-flight-attendants-do-the-moment-the-cabin-door-closes",
+      "url": "originals/behind-the-scenes-what-flight-attendants-do-the-moment-the-cabin-door-closes.html",
+      "summary": "An examination of the safety‑focused tasks flight attendants perform immediately after the boarding door shuts, based on Simple Flying’s recent feature.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-26T11:24:07.005229+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/07/average-2026-salaries.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "What Flight Attendants Do The Second The Boarding Door Closes That Passengers Never See",
+          "url": "https://simpleflying.com/what-flight-attendants-do-door-closes/",
+          "feed_url": "https://simpleflying.com/what-flight-attendants-do-door-closes/",
+          "published": "2026-11-26T08:56:21+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Norse Atlantic Airways Halts All Operations Amid Critical Liquidity Crisis",
+      "slug": "norse-atlantic-airways-halts-all-operations-amid-critical-liquidity-crisis",
+      "url": "originals/norse-atlantic-airways-halts-all-operations-amid-critical-liquidity-crisis.html",
+      "summary": "The UK‑based low‑cost long‑haul carrier announced a full suspension of flights on 26 Nov 2026, cancelling nine scheduled or planned routes and leaving its future dependent on uncertain financing or a takeover.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-26T11:24:19.956885+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/202-norse-atlantic-airways-boeing-787-9-thor-jorgen-udvang-_-shutterstock.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Norse Atlantic Suspends All Flights: 9 Long-Haul Routes Canceled",
+          "url": "https://simpleflying.com/norse-atlantic-suspends-all-flights-9-long-haul-routes-canceled/",
+          "feed_url": "https://simpleflying.com/norse-atlantic-suspends-all-flights-9-long-haul-routes-canceled/",
+          "published": "2026-11-26T08:56:09+00:00"
+        }
+      ]
+    },
+    {
+      "title": "World War II Fighter Wrecks Reclaimed by Jungle on Yap Island",
+      "slug": "world-war-ii-fighter-wrecks-reclaimed-by-jungle-on-yap-island",
+      "url": "originals/world-war-ii-fighter-wrecks-reclaimed-by-jungle-on-yap-island.html",
+      "summary": "A Simple Flying feature documents the abandoned Japanese and Allied aircraft littering Yap’s jungle, tracing the island’s colonial past and its bypass during the 1944 island‑hopping campaign.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-26T11:26:25.055746+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/japanese-zero-fighter.jpeg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "The Forgotten Pacific Airfield Where WWII Fighter Planes Are Being Reclaimed By The Jungle",
+          "url": "https://simpleflying.com/forgotten-pacific-island-wwii-fighter-airfield/",
+          "feed_url": "https://simpleflying.com/forgotten-pacific-island-wwii-fighter-airfield/",
+          "published": "2026-11-26T05:00:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "FedEx MD-11 Overruns Miami Runway, Prompting FAA Ground Stop",
+      "slug": "fedex-md-11-overruns-miami-runway-prompting-faa-ground-stop",
+      "url": "originals/fedex-md-11-overruns-miami-runway-prompting-faa-ground-stop.html",
+      "summary": "A 34‑year‑old FedEx Express MD‑11 skidded off the runway at Miami International Airport on Nov. 25, 2026, triggering a temporary ground halt and extensive delays during the Thanksgiving travel surge.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-26T11:26:28.289322+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/gemini_generated_image_ar9u71ar9u71ar9u.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "34-Year-Old FedEx McDonnell Douglas MD-11 Overshoots Runway In Miami, Triggers Ground Stop",
+          "url": "https://simpleflying.com/fedex-mcdonnell-douglas-md-11-overshoots-runway-miami-triggers-ground-stop/",
+          "feed_url": "https://simpleflying.com/fedex-mcdonnell-douglas-md-11-overshoots-runway-miami-triggers-ground-stop/",
+          "published": "2026-11-26T02:52:52+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Boeing 747’s Fuel Burn Translates to Roughly 0.19 Miles per Gallon, but Per‑Passenger Efficiency Looks Better",
+      "slug": "boeing-747-s-fuel-burn-translates-to-roughly-0-19-miles-per-gallon-but-per-passeng",
+      "url": "originals/boeing-747-s-fuel-burn-translates-to-roughly-0-19-miles-per-gallon-but-per-passeng.html",
+      "summary": "Simple Flying reports that a cruising 747 consumes between 3,500 and 3,800 gallons of fuel per hour, yielding about 0.18‑0.19 mpg overall, while passenger‑level mileage reaches roughly 65 mpg when fully loaded.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-26T11:26:31.560510+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/06/gallon.jpg",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Many Miles Per Gallon Does A Boeing 747 Get?",
+          "url": "https://simpleflying.com/how-many-miles-per-gallon-boeing-747-gets-analysis/",
+          "feed_url": "https://simpleflying.com/how-many-miles-per-gallon-boeing-747-gets-analysis/",
+          "published": "2026-11-26T02:45:18+00:00"
+        }
+      ]
+    },
     {
       "title": "Gulfstream G700 Leads 2026’s Push for Automated, Fatigue‑Reducing Flight Decks, Simple Flying Reports",
       "slug": "gulfstream-g700-leads-2026-s-push-for-automated-fatigue-reducing-flight-decks-simp",
@@ -1838,166 +1998,6 @@
           "url": "https://simpleflying.com/alaska-airlines-is-moving-hub-based-operations-why/",
           "feed_url": "https://simpleflying.com/alaska-airlines-is-moving-hub-based-operations-why/",
           "published": "2026-11-17T02:45:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Evolution of Cockpit Security: From Reinforced Doors to Secondary Barriers",
-      "slug": "evolution-of-cockpit-security-from-reinforced-doors-to-secondary-barriers",
-      "url": "originals/evolution-of-cockpit-security-from-reinforced-doors-to-secondary-barriers.html",
-      "summary": "A look at the regulatory and technological shifts in flight deck protection following the September 11 attacks.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:02:59.130331+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/airline-cockpit-doors.png",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Airline Cockpit Doors: How Reinforced Flight Decks Keep Intruders Out",
-          "url": "https://simpleflying.com/airline-cockpit-doors-reinforced-flight-decks-keep-intruders-out/",
-          "feed_url": "https://simpleflying.com/airline-cockpit-doors-reinforced-flight-decks-keep-intruders-out/",
-          "published": "2026-11-17T02:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Air Canada Leverages Quebec‑Built A220s to Anchor Its Domestic Network",
-      "slug": "air-canada-leverages-quebec-built-a220s-to-anchor-its-domestic-network",
-      "url": "originals/air-canada-leverages-quebec-built-a220s-to-anchor-its-domestic-network.html",
-      "summary": "Simple Flying reports that the carrier’s reliance on the Airbus A220‑300, a former Bombardier CSeries, underpins schedule density across 50 Canadian airports and key U.S. gateways.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:03:03.291085+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/how-canada-s-homegrown-jets-anchor-its-flag-carrier-s-network.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How Canada's Homegrown Jets Anchor Its Flag Carrier's Network",
-          "url": "https://simpleflying.com/canada-homegrown-jets-anchor-flag-carrier-network/",
-          "feed_url": "https://simpleflying.com/canada-homegrown-jets-anchor-flag-carrier-network/",
-          "published": "2026-11-17T00:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "United Airlines Implements Nationwide Ground Stop Following Technical System Failure",
-      "slug": "united-airlines-implements-nationwide-ground-stop-following-technical-system-failu",
-      "url": "originals/united-airlines-implements-nationwide-ground-stop-following-technical-system-failu.html",
-      "summary": "A critical software outage impacting weight and balance calculations forced a temporary halt to mainline departures, marking the second major aviation disruption in the United States within a week.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:03:16.926488+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/united-airlines-aircraft-at-houston-sunset-2.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "United Airlines Suffers “Widespread System Outage,” Grounds Flights Nationwide 3 Days After ATC Meltdown",
-          "url": "https://simpleflying.com/united-airlines-system-outage-grounds-us-flights/",
-          "feed_url": "https://simpleflying.com/united-airlines-system-outage-grounds-us-flights/",
-          "published": "2026-11-16T22:52:21+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Southwest Airlines Announces Interline Partnership with French bee to Extend International Reach",
-      "slug": "southwest-airlines-announces-interline-partnership-with-french-bee-to-extend-inter",
-      "url": "originals/southwest-airlines-announces-interline-partnership-with-french-bee-to-extend-inter.html",
-      "summary": "Southwest’s new interline agreement with French bee links its domestic network to the French carrier’s long‑haul routes via LAX, MIA and SFO, offering single‑ticket travel to Europe, the Indian Ocean and upcoming Asian destinations.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:03:23.012191+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/southwest_airlines_1920x1080-1.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "From Texas To France: Southwest Expands Global Reach With New French bee Partnership",
-          "url": "https://simpleflying.com/southwest-global-reach-french-bee-partnership/",
-          "feed_url": "https://simpleflying.com/southwest-global-reach-french-bee-partnership/",
-          "published": "2026-11-16T22:10:21+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Delta’s Amazon‑Powered In‑Flight Wi‑Fi Rollout Faces Uncertainty After Rocket Failure",
-      "slug": "delta-s-amazon-powered-in-flight-wi-fi-rollout-faces-uncertainty-after-rocket-fail",
-      "url": "originals/delta-s-amazon-powered-in-flight-wi-fi-rollout-faces-uncertainty-after-rocket-fail.html",
-      "summary": "A United Launch Alliance Vulcan launch on 15 Nov 2026 lost 40 Amazon Leo satellites, prompting concerns that Delta Air Lines’ planned high‑speed connectivity could be delayed beyond its 2028 target.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:05:50.963079+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/127-delta-air-lines-boeing-757-300-markus-mainka-_-shutterstock.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Delta’s Amazon Wi-Fi At Risk Of Delay As Boeing-Lockheed Rocket Failure Destroys 40 Satellites",
-          "url": "https://simpleflying.com/delta-amazon-leo-wifi-delay-risk-boeing-lockheed-rocket-failure/",
-          "feed_url": "https://simpleflying.com/delta-amazon-leo-wifi-delay-risk-boeing-lockheed-rocket-failure/",
-          "published": "2026-11-16T09:00:09+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Korean Air’s Absorption of Asiana A380s Creates Pacific’s Largest Superjumbo Fleet, Yet Highlights Divergent Cabin Strategies",
-      "slug": "korean-air-s-absorption-of-asiana-a380s-creates-pacific-s-largest-superjumbo-fleet",
-      "url": "originals/korean-air-s-absorption-of-asiana-a380s-creates-pacific-s-largest-superjumbo-fleet.html",
-      "summary": "Simple Flying reports that Korean Air will add Asiana’s six Airbus A380s to its five, forming an 11‑aircraft superjumbo fleet – the biggest over the Pacific – but the two carriers employ markedly different seat‑map philosophies, raising questions about future utilization.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:05:54.806705+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/2-airlines-forming.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "The 2 Airlines Forming The Largest Carrier Over The Pacific Operate Superjumbo Aircraft That Are Drastically Different",
-          "url": "https://simpleflying.com/2-airlines-forming-largest-carrier-pacific-superjumbo-aircraft-drastically-different/",
-          "feed_url": "https://simpleflying.com/2-airlines-forming-largest-carrier-pacific-superjumbo-aircraft-drastically-different/",
-          "published": "2026-11-16T06:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Qantas Leveraged the Boeing 747SP to Serve Wellington’s Short Runway",
-      "slug": "qantas-leveraged-the-boeing-747sp-to-serve-wellington-s-short-runway",
-      "url": "originals/qantas-leveraged-the-boeing-747sp-to-serve-wellington-s-short-runway.html",
-      "summary": "A look at how the Australian carrier used Boeing’s shortened 747 variant to overcome Wellington Airport’s sub‑6,000‑ft runway, maintaining high‑capacity trans‑Tasman service despite early wide‑body limitations.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:05:57.716897+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/06/conquer-wellington.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How Qantas Used The Boeing 747SP To Conquer Wellington's Notoriously Short Runway",
-          "url": "https://simpleflying.com/how-qantas-used-boeing-747sp-conquer-wellington-short-runway/",
-          "feed_url": "https://simpleflying.com/how-qantas-used-boeing-747sp-conquer-wellington-short-runway/",
-          "published": "2026-11-16T04:30:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Extra Captain Adds Up to $20,000 to American Airlines’ JFK‑Delhi Ultra‑Long‑Haul Flight",
-      "slug": "extra-captain-adds-up-to-20-000-to-american-airlines-jfk-delhi-ultra-long-haul-fli",
-      "url": "originals/extra-captain-adds-up-to-20-000-to-american-airlines-jfk-delhi-ultra-long-haul-fli.html",
-      "summary": "Simple Flying reports that U.S. regulations force a four‑pilot crew on the 15‑17 hour New York‑Delhi route, making the cost of a second senior captain as high as $20,000 per flight for American Airlines.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-16T10:06:00.723018+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/2nd-captain-adds.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "What A 2nd Captain Adds To The Cost Of American Airlines' 16-Hour JFK-Delhi Flight",
-          "url": "https://simpleflying.com/what-a-2nd-captain-adds-to-the-cost-of-american-airlines-16-hour-jfk-delhi-flight/",
-          "feed_url": "https://simpleflying.com/what-a-2nd-captain-adds-to-the-cost-of-american-airlines-16-hour-jfk-delhi-flight/",
-          "published": "2026-11-16T03:00:28+00:00"
         }
       ]
     }
