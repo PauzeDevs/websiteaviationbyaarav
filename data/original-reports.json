@@ -1,6 +1,206 @@
 {
-  "updated": "2026-11-26T11:26:31.560809+00:00",
+  "updated": "2026-11-27T11:19:40.179345+00:00",
   "articles": [
+    {
+      "title": "Boeing’s 1997 McDonnell Douglas Merger: How the MD‑95 Became the Boeing 717",
+      "slug": "boeing-s-1997-mcdonnell-douglas-merger-how-the-md-95-became-the-boeing-717",
+      "url": "originals/boeing-s-1997-mcdonnell-douglas-merger-how-the-md-95-became-the-boeing-717.html",
+      "summary": "Simple Flying outlines the engineering continuity from McDonnell Douglas to Boeing, focusing on the MD‑95’s rebranding as the 717‑200 and its role in Boeing’s post‑merger product line.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:18:19.467963+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/09/122-delta-air-lines-boeing-717-markus-mainka-_-shutterstock.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "5 McDonnell Douglas Engineering Decisions That Became Permanent Features Of Boeing Aircraft After The 1997 Merger",
+          "url": "https://simpleflying.com/mcdonnell-douglas-designs-survived-at-boeing/",
+          "feed_url": "https://simpleflying.com/mcdonnell-douglas-designs-survived-at-boeing/",
+          "published": "2026-11-27T11:06:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Rolls‑Royce redesign boosts Trent 1000 overhaul interval threefold",
+      "slug": "rolls-royce-redesign-boosts-trent-1000-overhaul-interval-threefold",
+      "url": "originals/rolls-royce-redesign-boosts-trent-1000-overhaul-interval-threefold.html",
+      "summary": "A single‑blade modification announced by Rolls‑Royce is reported to extend the time between heavy overhauls on the Trent 1000 engine used on Boeing 787 Dreamliners, potentially reshaping the 787 power‑plant market.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:18:22.800882+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/08/boeing-787-engine-1.png",
+      "category": "Aircraft",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Rolls-Royce Has Tripled The Time Between Boeing 787 Engine Overhauls With 1 Blade Redesign",
+          "url": "https://simpleflying.com/rolls-royce-tripled-the-time-between-boeing-787-engine-overhauls-1-blade-redesign/",
+          "feed_url": "https://simpleflying.com/rolls-royce-tripled-the-time-between-boeing-787-engine-overhauls-1-blade-redesign/",
+          "published": "2026-11-27T10:15:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Qantas Nears Decision on Long‑Haul Fleet Renewal, Boeing 787 Favoured, Simple Flying Reports",
+      "slug": "qantas-nears-decision-on-long-haul-fleet-renewal-boeing-787-favoured-simple-flying",
+      "url": "originals/qantas-nears-decision-on-long-haul-fleet-renewal-boeing-787-favoured-simple-flying.html",
+      "summary": "According to Simple Flying, the Australian flag carrier is close to finalising a roughly 20‑aircraft wide‑body order that would lean heavily on Boeing’s 787 Dreamliner, with Airbus A350s filling the balance, though no formal commitment has been announced.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:18:26.323036+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/317-qantas-boeing-787-9-the-global-guy-_-shutterstock.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Boeing Reportedly Poised To Win Most Of Qantas' Long-Haul Order With 787 Dreamliners",
+          "url": "https://simpleflying.com/boeing-poised-win-qantas-long-haul-order-787-dreamliners/",
+          "feed_url": "https://simpleflying.com/boeing-poised-win-qantas-long-haul-order-787-dreamliners/",
+          "published": "2026-11-27T09:50:21+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Retired Boeing 747s Can Yield Multi‑Million Dollar Returns From Parts, Simple Flying Reports",
+      "slug": "retired-boeing-747s-can-yield-multi-million-dollar-returns-from-parts-simple-flyin",
+      "url": "originals/retired-boeing-747s-can-yield-multi-million-dollar-returns-from-parts-simple-flyin.html",
+      "summary": "Simple Flying outlines how dismantling a former ‘Queen of the Skies’ can generate between $5 million and $20 million, while scrap metal alone is worth only a fraction of that sum.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:18:32.092296+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/boeing-747.avif",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Much Is A Retired Boeing 747 Worth In Parts?",
+          "url": "https://simpleflying.com/how-much-retired-boeing-747-worth-parts/",
+          "feed_url": "https://simpleflying.com/how-much-retired-boeing-747-worth-parts/",
+          "published": "2026-11-27T09:00:19+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Southwest Airlines Faces Scrutiny Over Disputed Stroller Damage Compensation",
+      "slug": "southwest-airlines-faces-scrutiny-over-disputed-stroller-damage-compensation",
+      "url": "originals/southwest-airlines-faces-scrutiny-over-disputed-stroller-damage-compensation.html",
+      "summary": "A public disagreement between a passenger and Southwest Airlines has escalated following conflicting reports regarding compensation for a damaged stroller.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:18:44.100865+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/southwest-airlines-boeing-737-aircraft-on-tarmac.jpg",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Southwest Airlines Lied To Major News Publication About Compensating Man’s Broken Stroller",
+          "url": "https://simpleflying.com/southwest-airlines-lied-major-news-publication-compensating-broken-stroller/",
+          "feed_url": "https://simpleflying.com/southwest-airlines-lied-major-news-publication-compensating-broken-stroller/",
+          "published": "2026-11-27T07:12:05+00:00"
+        }
+      ]
+    },
+    {
+      "title": "American Airlines’ Veteran A320‑200 Fleet Still Flying in 2026",
+      "slug": "american-airlines-veteran-a320-200-fleet-still-flying-in-2026",
+      "url": "originals/american-airlines-veteran-a320-200-fleet-still-flying-in-2026.html",
+      "summary": "Despite a modern‑looking flight‑line, American Airlines continues to operate a 48‑aircraft Airbus A320‑200 sub‑fleet that averages more than 25 years of service, a legacy of legacy carrier mergers.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:18:58.274371+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1795376261052.png",
+      "category": "Airlines",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "This Is American Airlines’ Oldest Aircraft Type Flying In 2026",
+          "url": "https://simpleflying.com/american-airlines-oldest-aircraft-type-flying-2026/",
+          "feed_url": "https://simpleflying.com/american-airlines-oldest-aircraft-type-flying-2026/",
+          "published": "2026-11-27T06:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "The Economic Impact of Transatlantic Airline Joint Ventures",
+      "slug": "the-economic-impact-of-transatlantic-airline-joint-ventures",
+      "url": "originals/the-economic-impact-of-transatlantic-airline-joint-ventures.html",
+      "summary": "Antitrust-immunized partnerships between major carriers are under scrutiny for their influence on transatlantic pricing and competitive dynamics.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:19:10.318962+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/shutterstock_2592146711-1.jpg",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Airline Joint Ventures Are Accused Of Keeping Transatlantic Fares High",
+          "url": "https://simpleflying.com/airline-ventures-transatlantic-fares/",
+          "feed_url": "https://simpleflying.com/airline-ventures-transatlantic-fares/",
+          "published": "2026-11-27T02:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "Study Finds 97% of Boeing 777 Captains Persist with Unstable Approaches",
+      "slug": "study-finds-97-of-boeing-777-captains-persist-with-unstable-approaches",
+      "url": "originals/study-finds-97-of-boeing-777-captains-persist-with-unstable-approaches.html",
+      "summary": "Simple Flying reports that an overwhelming majority of Boeing 777 crews land despite not meeting established stable‑approach criteria, highlighting a gap between SOPs and pilot behaviour.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:19:16.559979+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/07/why-97-of-boeing-777-pilots-continue-an-unstable-approach-instead-of-going-around.jpg",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why 97% Of Boeing 777 Pilots Continue An Unstable Approach Instead Of Going Around",
+          "url": "https://simpleflying.com/why-97-of-boeing-777-pilots-continue-an-unstable-approach-instead-of-going-around/",
+          "feed_url": "https://simpleflying.com/why-97-of-boeing-777-pilots-continue-an-unstable-approach-instead-of-going-around/",
+          "published": "2026-11-27T01:30:18+00:00"
+        }
+      ]
+    },
+    {
+      "title": "The Safety Rationale Behind Rear-Facing Cabin Crew Jumpseats",
+      "slug": "the-safety-rationale-behind-rear-facing-cabin-crew-jumpseats",
+      "url": "originals/the-safety-rationale-behind-rear-facing-cabin-crew-jumpseats.html",
+      "summary": "Aviation by Aarav examines the design principles behind why flight attendants occupy rear-facing jumpseats during critical phases of flight.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:19:28.270908+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/1795616508429.png",
+      "category": "Safety",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "Why Flight Attendants Sit Facing Backward During Takeoff & Landing",
+          "url": "https://simpleflying.com/why-flight-attendants-face-backwards/",
+          "feed_url": "https://simpleflying.com/why-flight-attendants-face-backwards/",
+          "published": "2026-11-27T01:00:17+00:00"
+        }
+      ]
+    },
+    {
+      "title": "US Air Force’s C‑5M Super Galaxy Fleet Shrinks to 52 Aircraft as Retirement Plans Extend to 2050",
+      "slug": "us-air-force-s-c-5m-super-galaxy-fleet-shrinks-to-52-aircraft-as-retirement-plans-",
+      "url": "originals/us-air-force-s-c-5m-super-galaxy-fleet-shrinks-to-52-aircraft-as-retirement-plans-.html",
+      "summary": "Simple Flying reports that 52 C‑5M Super Galaxies remain operational in 2026, with the Air Force targeting service through FY2050 despite a mission‑capable rate below 40%.",
+      "source": "Aviation by Aarav",
+      "published": "2026-11-27T11:19:40.179077+00:00",
+      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/06/c5galaxy.avif",
+      "category": "Industry",
+      "type": "original",
+      "sources": [
+        {
+          "publisher": "Simple Flying",
+          "title": "How Many Lockheed C-5 Galaxies Are Left In 2026?",
+          "url": "https://simpleflying.com/how-many-lockheed-c-5-galaxies-left/",
+          "feed_url": "https://simpleflying.com/how-many-lockheed-c-5-galaxies-left/",
+          "published": "2026-11-27T00:30:17+00:00"
+        }
+      ]
+    },
     {
       "title": "Boeing 777X cabin redesign promises efficiency and comfort gains",
       "slug": "boeing-777x-cabin-redesign-promises-efficiency-and-comfort-gains",
@@ -1798,206 +1998,6 @@
           "url": "https://simpleflying.com/why-premium-economy-award-tickets-quietly-becoming-smartest-use-frequent-flyer-points-in-2026/",
           "feed_url": "https://simpleflying.com/why-premium-economy-award-tickets-quietly-becoming-smartest-use-frequent-flyer-points-in-2026/",
           "published": "2026-11-18T02:45:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Air New Zealand Expands Christchurch Long-Haul Network with Seasonal Services",
-      "slug": "air-new-zealand-expands-christchurch-long-haul-network-with-seasonal-services",
-      "url": "originals/air-new-zealand-expands-christchurch-long-haul-network-with-seasonal-services.html",
-      "summary": "The Star Alliance carrier is reintroducing nonstop flights to Tokyo and Perth, aiming to bolster South Island connectivity.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-18T10:37:27.732953+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/air-new-zealand-787-9-at-sunrise.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Air New Zealand Launches New 12-Hour Nonstop Route In 1 Week: See Map Now",
-          "url": "https://simpleflying.com/air-new-zealand-launches-12-route-route-1-week/",
-          "feed_url": "https://simpleflying.com/air-new-zealand-launches-12-route-route-1-week/",
-          "published": "2026-11-18T01:15:16+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Medical Certificates Remain Critical Gatekeepers for Airline Pilots, Simple Flying Reports",
-      "slug": "medical-certificates-remain-critical-gatekeepers-for-airline-pilots-simple-flying-",
-      "url": "originals/medical-certificates-remain-critical-gatekeepers-for-airline-pilots-simple-flying-.html",
-      "summary": "A single source outlines how first‑class medical certificates dictate pilot eligibility, with age‑based validity periods and automatic downgrades that can limit flight duties when not renewed on time.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-18T10:37:33.759054+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/medical-certificates.png",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Here's How Medical Certificates Can Actually Ground Airline Pilots",
-          "url": "https://simpleflying.com/how-medical-certificates-ground-airline-pilots/",
-          "feed_url": "https://simpleflying.com/how-medical-certificates-ground-airline-pilots/",
-          "published": "2026-11-18T01:00:16+00:00"
-        }
-      ]
-    },
-    {
-      "title": "American Airlines Announces Significant Expansion of Phoenix Sky Harbor Lounge Network",
-      "slug": "american-airlines-announces-significant-expansion-of-phoenix-sky-harbor-lounge-net",
-      "url": "originals/american-airlines-announces-significant-expansion-of-phoenix-sky-harbor-lounge-net.html",
-      "summary": "The carrier plans to triple its lounge footprint at PHX to accommodate premium travelers and alleviate congestion at its major hub.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-18T10:37:46.273089+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/03/650227283_1356461089844840_6253844482590135885_n.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "American Airlines Will 3x Phoenix Lounge Footprint In Bid For Premium Travelers",
-          "url": "https://simpleflying.com/american-airlines-triple-phoenix-lounge-footprint-premium-travelers/",
-          "feed_url": "https://simpleflying.com/american-airlines-triple-phoenix-lounge-footprint-premium-travelers/",
-          "published": "2026-11-18T00:54:23+00:00"
-        }
-      ]
-    },
-    {
-      "title": "TSA PreCheck Touchless ID expands to 65 U.S. airports, using facial‑recognition for faster security",
-      "slug": "tsa-precheck-touchless-id-expands-to-65-u-s-airports-using-facial-recognition-for-",
-      "url": "originals/tsa-precheck-touchless-id-expands-to-65-u-s-airports-using-facial-recognition-for-.html",
-      "summary": "Simple Flying reports that the optional Touchless ID program, launched in 2021, now operates at 65 airports with five major airlines, but travelers must still carry a physical passport and the rollout details remain incomplete.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-18T10:37:50.131861+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/250528-tsa-touchless-id-hero.png",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "TSA PreCheck Touchless ID: How Facial Recognition Replaces Your Driver’s License",
-          "url": "https://simpleflying.com/tsa-precheck-touchless-id-facial-recognition-replace-boarding-pass/",
-          "feed_url": "https://simpleflying.com/tsa-precheck-touchless-id-facial-recognition-replace-boarding-pass/",
-          "published": "2026-11-18T00:00:16+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Private Jet Charter Costs in 2026: Hourly Rates, Aircraft Types and Hidden Fees",
-      "slug": "private-jet-charter-costs-in-2026-hourly-rates-aircraft-types-and-hidden-fees",
-      "url": "originals/private-jet-charter-costs-in-2026-hourly-rates-aircraft-types-and-hidden-fees.html",
-      "summary": "Simple Flying outlines the wide range of hourly charter prices in 2026, explains how aircraft choice and ancillary charges shape the final bill, and highlights the opacity that still surrounds private‑jet pricing.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:02:01.301600+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/06/how-much-a-private-jet-flight-actually-costs-per-hour-in-2026.jpg",
-      "category": "Industry",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "How Much A Private Jet Flight Actually Costs Per Hour In 2026",
-          "url": "https://simpleflying.com/how-much-private-jet-flight-cost-per-hour-2026/",
-          "feed_url": "https://simpleflying.com/how-much-private-jet-flight-cost-per-hour-2026/",
-          "published": "2026-11-17T10:45:09+00:00"
-        }
-      ]
-    },
-    {
-      "title": "US airlines still lack nonstop service to Thailand despite safety rating upgrade",
-      "slug": "us-airlines-still-lack-nonstop-service-to-thailand-despite-safety-rating-upgrade",
-      "url": "originals/us-airlines-still-lack-nonstop-service-to-thailand-despite-safety-rating-upgrade.html",
-      "summary": "Simple Flying notes that no US carrier operates a direct flight to Bangkok, citing the recent Category 1 safety rating and United’s one‑stop service as the only current link between the two markets.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:02:04.688059+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/08/planes.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why Don’t Any US Airlines Fly Nonstop To Thailand?",
-          "url": "https://simpleflying.com/why-dont-us-airlines-fly-to-thailand-nonstop-today/",
-          "feed_url": "https://simpleflying.com/why-dont-us-airlines-fly-to-thailand-nonstop-today/",
-          "published": "2026-11-17T10:15:18+00:00"
-        }
-      ]
-    },
-    {
-      "title": "United Passengers Endure Up to Eight‑Hour Tarmac Delay at Chicago O’Hare Amid Nationwide FAA Ground Stop",
-      "slug": "united-passengers-endure-up-to-eight-hour-tarmac-delay-at-chicago-o-hare-amid-nati",
-      "url": "originals/united-passengers-endure-up-to-eight-hour-tarmac-delay-at-chicago-o-hare-amid-nati.html",
-      "summary": "During the longest U.S. ground stop since the 9/11 attacks, United Airlines kept passengers aboard for up to eight hours, raising questions about regulatory compliance and airline communication practices.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:02:08.018393+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/012-united-airlines-boeing-737-700-nathan-klemstein-_-shutterstock.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "United Passengers Spent Up To 8 Hours Stuck On Chicago O’Hare Tarmac During FAA Ground Stop",
-          "url": "https://simpleflying.com/united-airlines-passengers-stuck-chicago-ohare-tarmac-8-hours-faa-ground-stop/",
-          "feed_url": "https://simpleflying.com/united-airlines-passengers-stuck-chicago-ohare-tarmac-8-hours-faa-ground-stop/",
-          "published": "2026-11-17T09:14:54+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Philippine Airlines Earns On‑Time Award Yet Faces Hub and Policy Headwinds",
-      "slug": "philippine-airlines-earns-on-time-award-yet-faces-hub-and-policy-headwinds",
-      "url": "originals/philippine-airlines-earns-on-time-award-yet-faces-hub-and-policy-headwinds.html",
-      "summary": "A Simple Flying review highlights PAL’s strong inflight service and recent on‑time accolade, but points to Manila’s congested hub, a cramped A350‑1000 layout and a strict onward‑ticket rule as persistent pain points.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:02:20.314704+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/shutterstock_2692165897.png",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "I Flew With An On-Time Award-Winning Airline, But Its Overcrowded Hub Let It Down",
-          "url": "https://simpleflying.com/flight-review-philippine-airlines/",
-          "feed_url": "https://simpleflying.com/flight-review-philippine-airlines/",
-          "published": "2026-11-17T09:00:17+00:00"
-        }
-      ]
-    },
-    {
-      "title": "FBI Detains Passenger Following Mid-Air Altercation on Qatar Airways Flight to Chicago",
-      "slug": "fbi-detains-passenger-following-mid-air-altercation-on-qatar-airways-flight-to-chi",
-      "url": "originals/fbi-detains-passenger-following-mid-air-altercation-on-qatar-airways-flight-to-chi.html",
-      "summary": "A Boeing 777-300ER arriving from Doha was met by federal authorities at O'Hare International Airport after a reported physical confrontation between two passengers.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:02:32.574918+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/11/qatar-airways-777-300er-at-zurich.jpg",
-      "category": "Safety",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "FBI Awaits Qatar Airways Boeing 777 At Chicago O’Hare After Midair Attack On Passenger",
-          "url": "https://simpleflying.com/fbi-qatar-airways-boeing-777-chicago-ohare-attack-passenger/",
-          "feed_url": "https://simpleflying.com/fbi-qatar-airways-boeing-777-chicago-ohare-attack-passenger/",
-          "published": "2026-11-17T05:49:54+00:00"
-        }
-      ]
-    },
-    {
-      "title": "Alaska Airlines Shifts Toward Hub‑Centric Model After Hawaiian Merger",
-      "slug": "alaska-airlines-shifts-toward-hub-centric-model-after-hawaiian-merger",
-      "url": "originals/alaska-airlines-shifts-toward-hub-centric-model-after-hawaiian-merger.html",
-      "summary": "Following its 2024 acquisition of Hawaiian Airlines, Alaska Airlines is re‑orienting its network around Seattle‑Tacoma International Airport, leveraging new wide‑body aircraft to expand international service and consolidate its position as a West Coast hub carrier.",
-      "source": "Aviation by Aarav",
-      "published": "2026-11-17T11:02:44.936736+00:00",
-      "image": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2025/07/hubbased.jpg",
-      "category": "Airlines",
-      "type": "original",
-      "sources": [
-        {
-          "publisher": "Simple Flying",
-          "title": "Why Alaska Airlines Is Moving Toward Hub-Based Operations",
-          "url": "https://simpleflying.com/alaska-airlines-is-moving-hub-based-operations-why/",
-          "feed_url": "https://simpleflying.com/alaska-airlines-is-moving-hub-based-operations-why/",
-          "published": "2026-11-17T02:45:17+00:00"
         }
       ]
     }
